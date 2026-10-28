@@ -52,14 +52,15 @@ const config: Config = {
         line: "var(--line, #1D3A3E)",
       },
       fontFamily: {
-        heading: ["'Clash Display'", "var(--font-clash)", "sans-serif"],
-        body: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
-        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+        heading: ["'Clash Display'", "sans-serif"],
+        body: ["'Clash Display'", "sans-serif"],
+        sans: ["'Clash Display'", "sans-serif"],
+        mono: ["'Clash Display'", "ui-monospace", "monospace"],
       },
       letterSpacing: {
         heading: "-0.025em",
         display: "-0.035em",
-        cyber: "0.15em",
+        cyber: "0.12em",
       },
       maxWidth: {
         container: "1240px",

@@ -91,10 +91,17 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        {/* Preload primary Clash Display weights for instantaneous load */}
+        {/* Preload all 4 Clash Display weights for 100% font coverage */}
         <link
           rel="preload"
-          href="/fonts/ClashDisplay-Bold.woff2"
+          href="/fonts/ClashDisplay-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/ClashDisplay-Medium.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
@@ -108,7 +115,7 @@ export default function RootLayout({
         />
         <link
           rel="preload"
-          href="/fonts/ClashDisplay-Medium.woff2"
+          href="/fonts/ClashDisplay-Bold.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
@@ -118,7 +125,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col font-body bg-ink-950 text-slate-300 antialiased selection:bg-accent-500 selection:text-ink-950">
+      <body className="min-h-screen flex flex-col font-heading bg-ink-950 text-slate-300 antialiased selection:bg-accent-500 selection:text-ink-950">
         <Header />
         <main id="main-content" className="flex-1 focus:outline-none">
           {children}

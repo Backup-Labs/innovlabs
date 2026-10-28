@@ -2,7 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* Local Clash Display Font Declarations */
+/* Local Clash Display Font Declarations - Universal Across Entire Site */
 @font-face {
   font-family: 'Clash Display';
   src: url('/fonts/ClashDisplay-Regular.woff2') format('woff2');
@@ -36,9 +36,9 @@
 }
 
 :root {
-  /* Futuristic AfriYouth Design Tokens */
+  /* Universal Clash Display Typography */
   --font-clash: 'Clash Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Clash Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   --ink-950: #040D0E;
   --ink-900: #061517;
@@ -63,9 +63,15 @@
   --surface-dark: #071719;
 }
 
+*,
+*::before,
+*::after {
+  font-family: 'Clash Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-family: 'Clash Display', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--ink-950);
   color: #E2E8F0;
 }
@@ -84,6 +90,8 @@ html {
 }
 
 body {
+  font-family: 'Clash Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.65;
   color: #CBD5E1;
@@ -97,9 +105,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Futuristic Headings with Clash Display */
+/* All headings, buttons, inputs use Clash Display explicitly */
+h1, h2, h3, h4, h5, h6,
+button, input, select, textarea,
+p, span, a, label, li {
+  font-family: 'Clash Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-clash), 'Clash Display', sans-serif;
   font-weight: 700;
   letter-spacing: -0.025em;
   color: #FFFFFF;
@@ -175,7 +188,7 @@ textarea:focus-visible {
   padding: 0.75rem 1.5rem;
   background-color: var(--primary-700);
   color: #FFFFFF;
-  font-family: var(--font-clash);
+  font-family: 'Clash Display', sans-serif;
   font-weight: 600;
   border-radius: 8px;
   border: 1px solid var(--accent-500);
