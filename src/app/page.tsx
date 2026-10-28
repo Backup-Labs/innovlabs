@@ -23,8 +23,8 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col bg-[#F4F4F6] text-black">
-      {/* 1. Hero Section matching the photo exactly */}
-      <section className="relative w-full overflow-hidden min-h-[90vh] lg:min-h-[92vh] flex flex-col justify-between py-12 sm:py-16 lg:py-20 bg-[#161D20]">
+      {/* 1. Hero Section: Fits 100% of viewport with no scrolling needed on desktop */}
+      <section className="relative w-full overflow-hidden bg-[#161D20] min-h-[calc(100dvh-5rem)] lg:h-[calc(100dvh-5rem)] flex flex-col justify-between">
         {/* Atmospheric Fresco Mural Background Artwork */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -37,63 +37,63 @@ export default function HomePage() {
         </div>
 
         {/* Ambient Dark Gradient Overlay for Maximum Text Legibility */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/85 via-black/40 to-black/70 pointer-events-none" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/85 via-black/45 to-black/75 pointer-events-none" />
 
-        {/* Hero Content Container */}
-        <div className="relative z-10 max-w-container mx-auto px-6 sm:px-8 lg:px-12 w-full flex-1 flex flex-col justify-between">
-          {/* Top Kicker matching photo: ⊕ COUNSEL TO +40 LEADERSHIP TEAMS */}
+        {/* Hero Content Container: Fits strictly without overflowing */}
+        <div className="relative z-10 max-w-container mx-auto px-6 sm:px-8 lg:px-12 w-full h-full flex flex-col justify-between py-6 sm:py-8 lg:py-10">
+          {/* Top Kicker matching photo: ⊕ PAN-AFRICAN YOUTH INNOVATION NEXUS */}
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mb-8 sm:mb-12"
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="mb-2 sm:mb-4 lg:mb-6"
           >
-            <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-widest uppercase text-white/80 font-mono">
-              <PlusCircle className="w-4 h-4 text-white" />
+            <div className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-widest uppercase text-white/80 font-mono">
+              <PlusCircle className="w-3.5 h-3.5 text-white" />
               <span>Pan-African Youth Innovation Nexus</span>
             </div>
           </motion.div>
 
           {/* Huge Editorial Headline matching photo */}
           <motion.div
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-4xl my-auto py-6 sm:py-10"
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="max-w-4xl my-auto py-2 sm:py-4 lg:py-6"
           >
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl xl:text-[88px] font-extrabold text-white tracking-tight leading-[1.04] font-heading">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-[76px] font-extrabold text-white tracking-tight leading-[1.04] font-heading">
               The quiet work <br className="hidden sm:inline" />
               behind bold decisions.
             </h1>
           </motion.div>
 
           {/* Bottom Area: Left Description & Buttons + Right Floating Case Study Card */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pt-8 sm:pt-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-end pt-4 sm:pt-6">
             {/* Left: 3-line statement and 2 pill buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-              className="lg:col-span-7 space-y-6"
+              transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
+              className="lg:col-span-7 space-y-4 lg:space-y-5"
             >
-              <p className="text-base sm:text-lg text-white/85 leading-relaxed font-normal max-w-xl">
+              <p className="text-sm sm:text-base text-white/85 leading-relaxed font-normal max-w-lg">
                 AfriYouth is an integrated innovation practice for boards, founders, and policymakers—rigorous research, plain evidence, and solutions that still hold long after the engagement concludes.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 pt-2">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-1">
                 {/* White pill button matching photo: Book a call → */}
                 <Link
                   href="/contact?intent=service"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-black hover:bg-neutral-100 transition-all duration-200 active:scale-95 shadow-lg group"
+                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 rounded-full text-xs sm:text-sm font-semibold bg-white text-black hover:bg-neutral-100 transition-all duration-200 active:scale-95 shadow-lg group"
                 >
                   <span>Book a call</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                 </Link>
 
-                {/* Translucent pill button matching photo: View pricing / Explore opportunities → */}
+                {/* Translucent pill button matching photo: Explore opportunities → */}
                 <Link
                   href="/opportunities"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/25 transition-all duration-200 active:scale-95 group"
+                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 rounded-full text-xs sm:text-sm font-semibold bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/25 transition-all duration-200 active:scale-95 group"
                 >
                   <span>Explore opportunities</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -103,14 +103,14 @@ export default function HomePage() {
 
             {/* Right: Floating Case Study Card matching photo */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.94, y: 30 }}
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.7, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
               className="lg:col-span-5 flex justify-start lg:justify-end"
             >
-              <div className="w-full max-w-sm rounded-3xl bg-[#F4F4F6] p-5 shadow-2xl border border-white/40 text-black backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1">
+              <div className="w-full max-w-xs sm:max-w-[320px] rounded-2xl bg-[#F4F4F6] p-4 shadow-2xl border border-white/40 text-black backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1">
                 {/* Architectural engraving thumbnail */}
-                <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden bg-gray-200 mb-4 shadow-inner">
+                <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden bg-gray-200 mb-3 shadow-inner">
                   <Image
                     src="/images/case-study-hero.svg"
                     alt="Classical architectural watermill case study"
@@ -121,27 +121,27 @@ export default function HomePage() {
 
                 {/* Dark pill badge: Case study */}
                 <div className="mb-2">
-                  <span className="inline-block px-3 py-1 rounded-full text-[11px] font-semibold bg-black text-white font-mono">
+                  <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-black text-white font-mono">
                     Case study
                   </span>
                 </div>
 
                 {/* Description matching photo */}
-                <p className="text-xs sm:text-sm text-gray-800 leading-snug font-normal mb-4">
+                <p className="text-xs text-gray-800 leading-snug font-normal mb-3">
                   Twelve years of youth enterprise data with no order of priority. We sequenced it by risk.
                 </p>
 
                 {/* Metric stat at bottom */}
-                <div className="pt-3 border-t border-gray-300 flex items-baseline justify-between">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-xl sm:text-2xl font-extrabold text-black tracking-tight font-heading">
+                <div className="pt-2 border-t border-gray-300 flex items-baseline justify-between">
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-lg sm:text-xl font-extrabold text-black tracking-tight font-heading">
                       48.5k
                     </span>
-                    <span className="text-[11px] text-gray-500 font-medium">
+                    <span className="text-[10px] text-gray-500 font-medium">
                       Youth mobilized
                     </span>
                   </div>
-                  <span className="text-[11px] font-mono font-bold text-black uppercase">
+                  <span className="text-[10px] font-mono font-bold text-black uppercase">
                     91% Survival
                   </span>
                 </div>
