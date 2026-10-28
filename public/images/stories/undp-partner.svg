@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" fill="none">
+  <rect width="600" height="380" rx="12" fill="#0B2B2E" />
+  <circle cx="300" cy="190" r="160" fill="#0F5C4D" fill-opacity="0.25" />
+  
+  <g transform="translate(60, 50)">
+    <rect x="0" y="0" width="480" height="280" rx="16" fill="#133D41" stroke="#1D4E53" stroke-width="2" />
+    
+    <!-- Institutional Governance Seal & Network Nodes -->
+    <circle cx="240" cy="120" r="50" fill="#0B2B2E" stroke="#F2A900" stroke-width="3" />
+    <path d="M225 125 L235 135 L255 110" stroke="#F2A900" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    
+    <rect x="40" y="30" width="180" height="40" rx="8" fill="#0B2B2E" />
+    <text x="55" y="55" font-family="'Manrope', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF">Policy Partnership</text>
+    <text x="55" y="245" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#B8E3D7">5 Regional Programs • $14M Youth Fund Advised</text>
+  </g>
+</svg>

@@ -1,0 +1,178 @@
+[
+  {
+    "id": "policy-futures-fellowship",
+    "slug": "policy-futures-fellowship",
+    "title": "African Youth Policy & Futures Fellowship",
+    "area": "Policy & Foresight",
+    "tagline": "Training the next generation of African technocrats, policy architects, and strategic futurists.",
+    "description": "A 9-month immersive fellowship connecting emerging researchers with African Union, regional economic community, and municipal policy advisors. Fellows translate field data into actionable legislative frameworks and horizon roadmaps.",
+    "duration": "9 Months (Hybrid: Kigali & Remote)",
+    "cohortSize": "40 Fellows / Cohort",
+    "status": "Accepting Applications",
+    "eligibility": [
+      "Aged 21–32 residing in or of the African diaspora committed to return",
+      "Demonstrated background in public policy, economics, law, sociology, or STEM",
+      "Evidence of prior community research, publication, or civic grassroots engagement",
+      "Commitment of 15 hours/week for synchronous sessions and fieldwork"
+    ],
+    "howToParticipate": [
+      {
+        "step": 1,
+        "title": "Online Application",
+        "description": "Submit CV, academic credentials, and a 500-word policy statement addressing an African socio-economic challenge."
+      },
+      {
+        "step": 2,
+        "title": "Futures Challenge Brief",
+        "description": "Shortlisted candidates complete a 48-hour diagnostic policy brief analyzing horizon trends."
+      },
+      {
+        "step": 3,
+        "title": "Panel Interview",
+        "description": "Meet with AfriYouth senior faculty and institutional partner representatives."
+      },
+      {
+        "step": 4,
+        "title": "Onboarding & Placement",
+        "description": "Commence induction in Kigali and receive assignment to an AU/national policy desk."
+      }
+    ],
+    "curriculumHighlights": [
+      "Applied Econometrics & Grassroots Polling",
+      "Strategic Foresight & Horizon Scanning Methodologies",
+      "Parliamentary Drafting & Policy Advocacy",
+      "Human-Centered Public Sector Service Design"
+    ],
+    "outcomes": "86% of alumni now advising ministries, international NGOs, or multilateral agencies across 22 African nations.",
+    "featured": true
+  },
+  {
+    "id": "civic-tech-venture-lab",
+    "slug": "civic-tech-venture-lab",
+    "title": "CivicTech & Social Enterprise Incubator",
+    "area": "Entrepreneurship & Innovation",
+    "tagline": "De-risking and scaling tech-enabled solutions that solve public delivery bottlenecks.",
+    "description": "An intensive 6-month incubator providing early-stage African founders with seed funding, technical mentorship, HCD validation, and regulatory sandbox access across Eastern and Western Africa.",
+    "duration": "6 Months (Intensive Cohort)",
+    "cohortSize": "15 Startups / Cycle",
+    "status": "Active Cohort (Next cycle opens June)",
+    "eligibility": [
+      "Founding team majority aged 18–35 with African nationality",
+      "Functional MVP with verified initial user traction or pilot deployment",
+      "Focus areas: AgriTech, HealthTech, Climate Resilience, EdTech, or GovTech",
+      "At least one full-time technical or research co-founder"
+    ],
+    "howToParticipate": [
+      {
+        "step": 1,
+        "title": "Venture Dossier",
+        "description": "Submit pitch deck, operational metrics, demo video, and theory of change."
+      },
+      {
+        "step": 2,
+        "title": "Technical & Field Review",
+        "description": "AfriYouth venture team conducts product audit, community impact review, and code inspection."
+      },
+      {
+        "step": 3,
+        "title": "Pitch Day Selection",
+        "description": "Top 25 ventures pitch before investment committee and partner impact funds."
+      },
+      {
+        "step": 4,
+        "title": "Lab Deployment",
+        "description": "$25,000 catalytic grant disbursed with access to AfriYouth prototyping labs and legal advisors."
+      }
+    ],
+    "curriculumHighlights": [
+      "Human-Centered Product Sprints for Low-Bandwidth Environments",
+      "Regulatory Navigation & Cross-Border Pan-African Expansion",
+      "Unit Economics & Sustainable Monetization in Frontier Markets",
+      "Impact Measurement & ESG Reporting Standards"
+    ],
+    "outcomes": "$4.2M follow-on funding raised by cohort companies; 180,000+ citizens served.",
+    "featured": true
+  },
+  {
+    "id": "hcd-action-studios",
+    "slug": "hcd-action-studios",
+    "title": "Community HCD Action Studios",
+    "area": "Human-Centered Design",
+    "tagline": "Grassroots co-design studios that bridge community lived experience directly into institutional design.",
+    "description": "A 12-week design sprint pairing grassroots youth organizers with municipal planners to solve localized infrastructure, health access, and waste management challenges using empathetic design methodologies.",
+    "duration": "12 Weeks (Localized Studio)",
+    "cohortSize": "60 Community Researchers",
+    "status": "Accepting Applications",
+    "eligibility": [
+      "Community youth advocates, informal settlement leaders, or local innovators aged 18–30",
+      "Active residency in pilot municipalities (Nairobi County, Accra Metropolitan, Kigali City)",
+      "Strong desire to master participatory research, user journey mapping, and physical rapid prototyping"
+    ],
+    "howToParticipate": [
+      {
+        "step": 1,
+        "title": "Community Nomination or Application",
+        "description": "Apply individually or receive nomination through local youth council or community CBO."
+      },
+      {
+        "step": 2,
+        "title": "Studio Workshop Audition",
+        "description": "Participate in a collaborative 1-day sprint addressing an active municipal challenge."
+      },
+      {
+        "step": 3,
+        "title": "Field Deployment",
+        "description": "Embedded in local ward research teams with direct stipend and prototype budget."
+      }
+    ],
+    "curriculumHighlights": [
+      "Ethnographic Research in African Urban Contexts",
+      "Rapid Prototyping with Recycled & Low-Cost Materials",
+      "Stakeholder Power Mapping & Civic Advocacy",
+      "Transitioning Community Solutions into Sustainable Enterprise"
+    ],
+    "outcomes": "34 municipal service improvements co-designed and officially adopted across 4 capital cities.",
+    "featured": true
+  },
+  {
+    "id": "evidence-to-policy-labs",
+    "slug": "evidence-to-policy-labs",
+    "title": "Grassroots Evidence-to-Policy Labs",
+    "area": "Research & Evidence",
+    "tagline": "Empowering youth researchers to gather hyper-local data and author credible policy briefs.",
+    "description": "Collaborative research cohorts running real-time field surveys, crowdsourced citizen science, and policy impact assessments across agricultural, climate, and informal labor sectors.",
+    "duration": "4 Months (Project Based)",
+    "cohortSize": "30 Researchers",
+    "status": "Rolling Enrollment",
+    "eligibility": [
+      "Young researchers, data analysts, or postgraduate scholars with statistical or qualitative proficiency",
+      "Working knowledge of R, Python, SPSS, or mobile survey tools (ODK, KoboToolbox)",
+      "Passion for public sector transparency and evidence-based governance"
+    ],
+    "howToParticipate": [
+      {
+        "step": 1,
+        "title": "Research Profile Submission",
+        "description": "Provide sample research writing, quantitative analysis sample, and areas of thematic interest."
+      },
+      {
+        "step": 2,
+        "title": "Methodology Briefing",
+        "description": "Align with AfriYouth Research Council standards and data ethics protocols."
+      },
+      {
+        "step": 3,
+        "title": "Commission Assignment",
+        "description": "Join an active research consortium backed by bilateral development partners."
+      }
+    ],
+    "curriculumHighlights": [
+      "Decolonized Research Methodologies",
+      "Digital Data Collection & Mobile Field Management",
+      "Data Storytelling for Policymakers & Parliamentarians",
+      "Open Data Standards and Peer Review Practices"
+    ],
+    "outcomes": "Over 50 policy papers cited by UNECA, African Development Bank, and national ministries.",
+    "featured": false
+  }
+]

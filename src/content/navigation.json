@@ -1,0 +1,78 @@
+{
+  "mainNav": [
+    { "label": "About", "href": "/about" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Programs", "href": "/programs" },
+    { "label": "Opportunities", "href": "/opportunities", "badge": "Open" },
+    { "label": "Impact", "href": "/impact" },
+    { "label": "Resources", "href": "/resources" },
+    { "label": "Partner With Us", "href": "/partner-with-us" }
+  ],
+  "primaryCta": {
+    "label": "Get Involved",
+    "href": "/opportunities"
+  },
+  "audiencePortals": [
+    {
+      "id": "youth",
+      "label": "I'm a Young Person",
+      "subtext": "Access fellowships, grants, mentorship & lab spaces",
+      "href": "/opportunities",
+      "ctaText": "Explore Open Opportunities"
+    },
+    {
+      "id": "organization",
+      "label": "I'm an Organization",
+      "subtext": "Commission evidence, co-design programs & advisory",
+      "href": "/services",
+      "ctaText": "Explore Client Services"
+    },
+    {
+      "id": "partner",
+      "label": "I'm a Partner / Funder",
+      "subtext": "Invest in systemic scale, research consortia & labs",
+      "href": "/partner-with-us",
+      "ctaText": "Collaborate With Us"
+    }
+  ],
+  "footer": {
+    "organizationSummary": "AfriYouth Innovation Labs connects research, policy, human-centered design, entrepreneurship, and foresight to transform youth agency into systemic African socio-economic prosperity.",
+    "links": [
+      {
+        "title": "Organization",
+        "items": [
+          { "label": "About Us & Approach", "href": "/about" },
+          { "label": "Leadership & Labs", "href": "/about#team" },
+          { "label": "Integrated Model", "href": "/about#integrated-model" },
+          { "label": "Impact & Metrics", "href": "/impact" },
+          { "label": "Case Studies", "href": "/impact#stories" }
+        ]
+      },
+      {
+        "title": "Engage",
+        "items": [
+          { "label": "Client Services", "href": "/services" },
+          { "label": "Flagship Programs", "href": "/programs" },
+          { "label": "Open Opportunities", "href": "/opportunities" },
+          { "label": "Partner With Us", "href": "/partner-with-us" },
+          { "label": "Contact & Inquiries", "href": "/contact" }
+        ]
+      },
+      {
+        "title": "Knowledge & Insights",
+        "items": [
+          { "label": "Policy Briefs & Reports", "href": "/resources?type=policy-brief" },
+          { "label": "HCD Toolkits", "href": "/resources?type=toolkit" },
+          { "label": "Foresight Forecasts", "href": "/resources?type=foresight" },
+          { "label": "Open Data Portal", "href": "/resources" }
+        ]
+      }
+    ],
+    "copyright": "© 2026 AfriYouth Innovation Labs. All rights reserved.",
+    "subLinks": [
+      { "label": "Privacy Policy", "href": "/privacy" },
+      { "label": "Terms of Engagement", "href": "/terms" },
+      { "label": "Safeguarding Policy", "href": "/safeguarding" }
+    ]
+  }
+}

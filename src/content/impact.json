@@ -1,0 +1,64 @@
+{
+  "summary": "AfriYouth Innovation Labs tracks longitudinal indicators to ensure that every youth fellowship, research study, and enterprise grant translates into measurable socio-economic resilience.",
+  "metrics": [
+    {
+      "value": "48,500+",
+      "label": "Young African Leaders Engaged",
+      "detail": "Participated in research cohorts, design sprints, policy consultations, and innovation labs across the continent."
+    },
+    {
+      "value": "26",
+      "label": "African Countries Active",
+      "detail": "Direct grassroots field operations, university research nodes, and regional policymaking partnerships."
+    },
+    {
+      "value": "38",
+      "label": "Policy Frameworks Influenced",
+      "detail": "Adopted by municipal councils, national ministries, and regional economic commissions with youth evidence."
+    },
+    {
+      "value": "$6.4M+",
+      "label": "Catalytic Capital Mobilized",
+      "detail": "Equity-free grants, research stipends, and venture co-investments unlocked for youth-led solutions."
+    },
+    {
+      "value": "240+",
+      "label": "Youth Enterprises Incubated",
+      "detail": "High-survival social ventures and civic tech tools solving public delivery bottlenecks."
+    },
+    {
+      "value": "91%",
+      "label": "Program Survival & Scale Rate",
+      "detail": "Ventures and policy taskforces sustaining operations 24 months post-lab participation."
+    }
+  ],
+  "pillars": [
+    {
+      "title": "Evidence That Shapes Governance",
+      "metric": "38 Legislative Interventions",
+      "description": "Our researchers don't write reports for dusty bookshelves. Every policy paper connects to a parliamentary sponsor, an African Union desk, or a municipal mayor's office, resulting in tangible statutory changes like youth startup acts and municipal green procurement guidelines."
+    },
+    {
+      "title": "Ventures That Employ & Deliver",
+      "metric": "3,400+ Direct Green & Tech Jobs",
+      "description": "By grounding youth entrepreneurs in human-centered design before providing catalytic seed capital, AfriYouth enterprises achieve an 91% 2-year survival rate—more than double the regional SME average."
+    },
+    {
+      "title": "Grassroots Democratic Agency",
+      "metric": "140+ Citizen Co-Design Sprints",
+      "description": "From informal urban settlement sanitation in Nairobi to agro-pastoral water distribution in the Sahel, our HCD studios center the citizens most impacted as lead designers of public solutions."
+    }
+  ],
+  "geographicReach": [
+    { "region": "Eastern Africa", "countries": ["Kenya", "Rwanda", "Uganda", "Tanzania", "Ethiopia"] },
+    { "region": "Western Africa", "countries": ["Ghana", "Nigeria", "Senegal", "Sierra Leone", "Côte d'Ivoire"] },
+    { "region": "Southern Africa", "countries": ["South Africa", "Zambia", "Zimbabwe", "Mozambique", "Botswana"] },
+    { "region": "Northern Africa", "countries": ["Egypt", "Morocco", "Tunisia"] },
+    { "region": "Central Africa", "countries": ["DR Congo", "Cameroon", "Gabon"] }
+  ],
+  "methodology": {
+    "title": "Evidence-First Impact Methodology",
+    "description": "AfriYouth adheres to gold-standard mixed-method monitoring, combining randomized survey samples, qualitative ethnographic tracking, and 3-year longitudinal career and venture milestone monitoring.",
+    "frameworks": ["DCED Standard for Results Measurement", "OECD DAC Evaluation Criteria", "AfriYouth Human-Centered Impact Index (HCII)"]
+  }
+}

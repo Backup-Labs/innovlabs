@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" fill="none">
+  <!-- Brand Emblem / Mark -->
+  <g transform="translate(4, 4)">
+    <rect x="0" y="0" width="48" height="48" rx="12" fill="#137A64" />
+    <path d="M12 36L24 12L36 36L24 28L12 36Z" fill="#F2A900" />
+    <circle cx="24" cy="22" r="4.5" fill="#FFFFFF" stroke="#0B2B2E" stroke-width="2" />
+    <circle cx="16" cy="32" r="3" fill="#2B8CBE" />
+    <circle cx="32" cy="32" r="3" fill="#B8E3D7" />
+  </g>
+  <!-- Wordmark -->
+  <text x="64" y="30" font-family="'Manrope', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="21" fill="#FFFFFF" letter-spacing="-0.03em">
+    Afri<tspan fill="#F2A900">Youth</tspan>
+  </text>
+  <text x="64" y="44" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="600" font-size="9" fill="#B8E3D7" letter-spacing="0.12em">
+    INNOVATION LABS
+  </text>
+</svg>

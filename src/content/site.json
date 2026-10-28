@@ -1,0 +1,85 @@
+{
+  "name": "AfriYouth Innovation Labs",
+  "shortName": "AfriYouth",
+  "tagline": "Connecting Research, Policy, Design & Youth Enterprise",
+  "mission": "To empower Africa's youth to generate evidence, shape policy, and develop innovative solutions to pressing socio-economic challenges through research, human-centered design, and entrepreneurship.",
+  "vision": "An Africa where empowered young people use evidence, innovation, and entrepreneurship to drive inclusive and sustainable socio-economic transformation.",
+  "positioning": "AfriYouth connects research, policy, human-centered design, entrepreneurship, and foresight. We are not just a youth organization, incubator, think tank, or training provider—we operate the integrated nexus that turns youth-generated evidence into systemic policy and viable ventures.",
+  "brandPillars": [
+    {
+      "title": "Innovation",
+      "description": "Catalyzing grassroots, technological, and socio-economic breakthroughs designed by and for African communities."
+    },
+    {
+      "title": "Youth Empowerment",
+      "description": "Equipping young leaders with agency, research capabilities, and venture capital readiness."
+    },
+    {
+      "title": "Sustainability",
+      "description": "Anchoring all interventions in long-term environmental, economic, and institutional resilience."
+    },
+    {
+      "title": "Global Impact",
+      "description": "Amplifying African youth solutions on regional and international policy stages."
+    },
+    {
+      "title": "Human-Centered Design",
+      "description": "Grounding interventions in deep community listening, co-design, and iterative prototyping."
+    },
+    {
+      "title": "Leadership Development",
+      "description": "Fostering ethical, visionary changemakers prepared to steward public and private institutions."
+    }
+  ],
+  "areasOfWork": [
+    {
+      "id": "research",
+      "name": "Applied Youth Research",
+      "summary": "Equipping youth researchers with rigorous mixed-method toolkits to generate actionable grassroots data.",
+      "icon": "Microscope"
+    },
+    {
+      "id": "policy",
+      "name": "Policy Shaping & Advocacy",
+      "summary": "Bridging youth evidence directly into regional, national, and continental policymaking bodies.",
+      "icon": "Landmark"
+    },
+    {
+      "id": "hcd",
+      "name": "Human-Centered Design",
+      "summary": "Facilitating multi-stakeholder design sprints that co-create public services and social innovations.",
+      "icon": "Compass"
+    },
+    {
+      "id": "entrepreneurship",
+      "name": "Venture Incubation",
+      "summary": "De-risking and scaling youth-led social and technological enterprises across African markets.",
+      "icon": "Rocket"
+    },
+    {
+      "id": "foresight",
+      "name": "Strategic Foresight",
+      "summary": "Mapping horizon trends, demographic shifts, and futures intelligence to anticipate emergent needs.",
+      "icon": "Eye"
+    },
+    {
+      "id": "impact",
+      "name": "Impact Measurement",
+      "summary": "Standardizing evidence-based metrics to prove return on investment for development partners.",
+      "icon": "BarChart3"
+    }
+  ],
+  "contact": {
+    "email": "collaborate@afriyouth.org",
+    "phone": "+254 (0) 20 800 2400",
+    "location": "Regional Hubs: Nairobi • Kigali • Accra • Johannesburg",
+    "headquarters": "Nairobi Innovation Hub, Kilimani, Nairobi, Kenya",
+    "officeHours": "Monday - Friday, 08:30 - 17:30 EAT"
+  },
+  "socials": [
+    { "platform": "LinkedIn", "url": "https://linkedin.com/company/afriyouth-innovation-labs" },
+    { "platform": "Twitter / X", "url": "https://x.com/AfriYouthLabs" },
+    { "platform": "YouTube", "url": "https://youtube.com/@AfriYouthLabs" },
+    { "platform": "GitHub", "url": "https://github.com/afriyouth" }
+  ]
+}

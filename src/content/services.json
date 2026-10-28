@@ -1,0 +1,92 @@
+[
+  {
+    "id": "applied-research",
+    "slug": "applied-youth-research",
+    "title": "Applied Youth-Led Research & Field Diagnostics",
+    "summary": "Commission rigorous, participatory field data across African demographics to inform strategic investments, public programs, and market entries.",
+    "deliverables": [
+      "Representative grassroots surveys with 10,000+ youth respondents across 15+ African countries",
+      "Qualitative ethnographic field immersions and focus group synthesis",
+      "Actionable market feasibility and behavioral diagnostics",
+      "Interactive data dashboards and open-access datasets"
+    ],
+    "clientTypes": ["Multilateral Development Banks", "UN Agencies", "Global Foundations", "National Ministries"],
+    "typicalDuration": "6 to 16 Weeks",
+    "icon": "Microscope"
+  },
+  {
+    "id": "policy-design",
+    "slug": "policy-design-advisory",
+    "title": "Policy Design, Youth-Proofing & Legislative Sprints",
+    "summary": "Translate complex community evidence into implementable parliamentary bills, national youth strategies, and regional regulatory frameworks.",
+    "deliverables": [
+      "Youth-Proofing Audits on existing and pending national legislation",
+      "Model legal frameworks and statutory instruments for innovation & startup acts",
+      "Multi-stakeholder consensus workshops with ministries and youth councils",
+      "Parliamentary testimony briefs and cross-party white papers"
+    ],
+    "clientTypes": ["Parliamentary Committees", "Regional Economic Communities (AU, ECOWAS, EAC)", "Policy Think Tanks"],
+    "typicalDuration": "4 to 12 Weeks",
+    "icon": "Landmark"
+  },
+  {
+    "id": "hcd-sprints",
+    "slug": "hcd-co-design-sprints",
+    "title": "Human-Centered Design (HCD) Sprints & Citizen Labs",
+    "summary": "Co-design public services, digital products, and community infrastructure directly with end-users using rapid field prototyping.",
+    "deliverables": [
+      "Facilitated multi-day design sprints bringing citizens and decision-makers together",
+      "User journey mapping, empathy archetypes, and friction point diagnostics",
+      "Low-fidelity and digital clickable prototypes tested in informal and urban markets",
+      "Implementation roadmaps and change management playbooks"
+    ],
+    "clientTypes": ["Municipal City Governments", "Civic Tech Startups", "Healthcare & Education Providers"],
+    "typicalDuration": "2 to 8 Weeks",
+    "icon": "Compass"
+  },
+  {
+    "id": "venture-acceleration",
+    "slug": "venture-incubation-management",
+    "title": "Venture Incubation & Accelerator Ecosystem Management",
+    "summary": "Turn donor and corporate CSR capital into high-survival youth ventures through end-to-end program design, mentorship networks, and seed funding distribution.",
+    "deliverables": [
+      "Custom challenge design, pan-African applicant recruitment, and rigorous evaluation rubrics",
+      "Localized acceleration curriculum tailored to African market infrastructure",
+      "Pre-seed capital disbursement governance and compliance oversight",
+      "Investor demo day curation with top African VC and angel networks"
+    ],
+    "clientTypes": ["Corporate Foundations", "Impact Investment Funds", "Bilateral Development Agencies"],
+    "typicalDuration": "6 to 12 Months",
+    "icon": "Rocket"
+  },
+  {
+    "id": "strategic-foresight",
+    "slug": "strategic-foresight-trend-forecasting",
+    "title": "Strategic Foresight & Horizon Trend Forecasting",
+    "summary": "Equip leadership teams with anticipatory intelligence on African demographic expansion, future of work, green transition, and technology adoption.",
+    "deliverables": [
+      "2030–2050 Scenario Planning reports addressing emergent African youth dynamics",
+      "Horizon scanning digests monitoring weak signals across urban hubs",
+      "Stress-testing organizational strategies against climate and macroeconomic shocks",
+      "Custom executive foresight masterclasses and simulation games"
+    ],
+    "clientTypes": ["Executive Leadership Teams", "Development Boards", "Strategic Planning Directorates"],
+    "typicalDuration": "3 to 8 Weeks",
+    "icon": "Eye"
+  },
+  {
+    "id": "impact-evaluation",
+    "slug": "impact-measurement-evaluation",
+    "title": "Impact Measurement, M&E & Evidence Synthesis",
+    "summary": "Deploy gold-standard monitoring, evaluation, and learning (MEL) systems that measure both quantitative outcomes and grassroots transformational change.",
+    "deliverables": [
+      "Theory of Change formulation with verifiable key performance indicators",
+      "Mixed-method baseline, mid-term, and endline evaluations",
+      "Third-party verification for donor reporting and ESG compliance",
+      "Data storytelling artifacts, executive summaries, and interactive impact microsites"
+    ],
+    "clientTypes": ["Philanthropic Donors", "Development Programs", "Social Enterprises"],
+    "typicalDuration": "Ongoing / Multi-Year",
+    "icon": "BarChart3"
+  }
+]

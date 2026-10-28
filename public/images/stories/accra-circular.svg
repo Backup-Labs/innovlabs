@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" fill="none">
+  <rect width="600" height="380" rx="12" fill="#0B2B2E" />
+  <circle cx="100" cy="100" r="160" fill="#F2A900" fill-opacity="0.15" />
+  <circle cx="480" cy="280" r="120" fill="#0F5C4D" fill-opacity="0.3" />
+  
+  <g transform="translate(60, 50)">
+    <rect x="0" y="0" width="480" height="280" rx="16" fill="#133D41" stroke="#1D4E53" stroke-width="2" />
+    
+    <!-- Circular Economy Loop Iconography -->
+    <path d="M160 140 C160 80, 240 80, 240 140 C240 200, 320 200, 320 140 C320 80, 240 80, 240 140" stroke="#F2A900" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M310 120 L325 140 L345 125" stroke="#F2A900" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M170 160 L155 140 L135 155" stroke="#F2A900" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <rect x="40" y="30" width="180" height="40" rx="8" fill="#0B2B2E" />
+    <text x="55" y="55" font-family="'Manrope', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF">Kantamanto CircuTex</text>
+    <text x="55" y="245" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#FEF4D6">40 Tons Diverted • 65 Youth Circular Jobs</text>
+  </g>
+</svg>

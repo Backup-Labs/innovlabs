@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" fill="none">
+  <!-- Brand Emblem / Mark -->
+  <g transform="translate(4, 4)">
+    <!-- Base geometric hexagon/polygon representing research & nexus -->
+    <rect x="0" y="0" width="48" height="48" rx="12" fill="#0B2B2E" />
+    <!-- Golden energy / youth innovation path -->
+    <path d="M12 36L24 12L36 36L24 28L12 36Z" fill="#F2A900" />
+    <!-- Connecting node / policy nexus point -->
+    <circle cx="24" cy="22" r="4.5" fill="#137A64" stroke="#FFFFFF" stroke-width="2" />
+    <circle cx="16" cy="32" r="3" fill="#2B8CBE" />
+    <circle cx="32" cy="32" r="3" fill="#0F5C4D" />
+  </g>
+  <!-- Wordmark -->
+  <text x="64" y="30" font-family="'Manrope', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="21" fill="#0B2B2E" letter-spacing="-0.03em">
+    Afri<tspan fill="#0F5C4D">Youth</tspan>
+  </text>
+  <text x="64" y="44" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="600" font-size="9" fill="#64748B" letter-spacing="0.12em">
+    INNOVATION LABS
+  </text>
+</svg>

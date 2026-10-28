@@ -1,0 +1,92 @@
+{
+  "mission": "To empower Africa's youth to generate evidence, shape policy, and develop innovative solutions to pressing socio-economic challenges through research, human-centered design, and entrepreneurship.",
+  "vision": "An Africa where empowered young people use evidence, innovation, and entrepreneurship to drive inclusive and sustainable socio-economic transformation.",
+  "integratedApproach": {
+    "title": "The AfriYouth Integrated Nexus",
+    "subtitle": "Why single-track youth interventions fail and how our five-gear engine delivers systemic change.",
+    "description": "Traditional programs operate in isolation: think tanks publish papers that sit unread; incubators fund startups lacking regulatory pathways; youth forums talk without empirical backing. AfriYouth binds all five critical engines together in one closed-loop cycle.",
+    "pillars": [
+      {
+        "id": "research",
+        "title": "1. Applied Youth Research",
+        "description": "Grassroots young researchers collect rigorous quantitative and qualitative evidence from urban informal settlements, rural farms, and digital creative hubs.",
+        "input": "Community lived experience & grassroots data",
+        "output": "Peer-reviewed findings & open datasets"
+      },
+      {
+        "id": "policy",
+        "title": "2. Policy Shaping & Youth-Proofing",
+        "description": "We translate research evidence into parliamentary bills, regulatory sandbox proposals, and regional development frameworks.",
+        "input": "Field evidence & comparative legal analysis",
+        "output": "Legislative reforms & national strategy adoption"
+      },
+      {
+        "id": "hcd",
+        "title": "3. Human-Centered Co-Design",
+        "description": "Multidisciplinary design sprints bring youth, local civil servants, and citizens together to prototype public service and civic solutions.",
+        "input": "User friction points & empathy studies",
+        "output": "Tested physical & digital prototypes"
+      },
+      {
+        "id": "entrepreneurship",
+        "title": "4. Venture Acceleration & Enterprise",
+        "description": "Proven prototypes enter our incubator to receive catalytic grants, business modeling support, and investor syndication.",
+        "input": "Validated prototypes & committed young founders",
+        "output": "Sustainable enterprises creating dignified jobs"
+      },
+      {
+        "id": "foresight",
+        "title": "5. Strategic Foresight & Evaluation",
+        "description": "We monitor longitudinal impact and scan demographic, climate, and tech horizons to anticipate the next decade of African youth needs.",
+        "input": "2-year longitudinal data & horizon signals",
+        "output": "Futures roadmaps & adaptive institutional strategy"
+      }
+    ]
+  },
+  "team": {
+    "intro": "AfriYouth Innovation Labs is guided by seasoned African development economists, civic technologists, human-centered designers, and youth organizers across the continent.",
+    "leadership": [
+      {
+        "name": "Dr. Chidinma Okafor",
+        "role": "Executive Director & Head of Foresight",
+        "bio": "Former senior advisor at UNECA and Rhodes Scholar with 15+ years orchestrating pan-African youth economic policy and foresight initiatives.",
+        "image": "/images/team/chidinma.svg"
+      },
+      {
+        "name": "Tariq El-Haddad",
+        "role": "Director of Applied Research & Open Data",
+        "bio": "Econometrician and data ethicist who previously headed statistical diagnostics across 12 African national statistics offices.",
+        "image": "/images/team/tariq.svg"
+      },
+      {
+        "name": "Mireille Kayitesi",
+        "role": "Head of Human-Centered Design & Citizen Labs",
+        "bio": "Pioneer in participatory urban design in East Africa, leading community design sprints across Kigali, Nairobi, and Dar es Salaam.",
+        "image": "/images/team/mireille.svg"
+      },
+      {
+        "name": "Kwame Boateng",
+        "role": "Director of Venture Incubation & Capital",
+        "bio": "Serial civic technologist and angel investor who has backed over 30 seed-stage African impact startups across West and Southern Africa.",
+        "image": "/images/team/kwame.svg"
+      }
+    ],
+    "advisoryCouncil": [
+      {
+        "name": "Prof. Almaz Tadesse",
+        "role": "Chairperson, Research Advisory Council",
+        "affiliation": "Institute for Pan-African Policy Studies"
+      },
+      {
+        "name": "Hon. Patricia Mutua",
+        "role": "Advisor, Parliamentary Youth Caucus",
+        "affiliation": "East African Legislative Assembly"
+      },
+      {
+        "name": "Jean-Paul Habimana",
+        "role": "Advisor, Venture Governance",
+        "affiliation": "Pan-African Impact Investor Network"
+      }
+    ]
+  }
+}

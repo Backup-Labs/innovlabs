@@ -1,0 +1,50 @@
+[
+  {
+    "id": "story-kigali-air",
+    "title": "CleanAir Kigali: From Community Sensors to City Clean Air Action Plan",
+    "tag": "Policy & Tech Case Study",
+    "author": "Amina Umutoni",
+    "role": "2024 Policy & Futures Fellow, Rwanda",
+    "quote": "AfriYouth didn't just teach us research theory; they put our grassroots air quality dataset directly into the hands of the City Planning Board, resulting in the new 2025 Kigali Clean Air Directive.",
+    "summary": "How a team of 4 young mechanical engineers and data advocates built low-cost IoT particulate sensors and transformed 12 months of community data into municipal policy.",
+    "metrics": "140 Hyperlocal Sensors Deployed • 1 Municipal Policy Enacted",
+    "location": "Kigali, Rwanda",
+    "image": "/images/stories/kigali-air.svg"
+  },
+  {
+    "id": "story-accra-circular",
+    "title": "Kantamanto Circular Design Lab: Upcycling Africa's Textile Waste",
+    "tag": "Venture Acceleration",
+    "author": "Kofi Mensah",
+    "role": "Founder, CircuTex & CivicTech Lab Alum",
+    "quote": "The venture incubation team gave us our first $25k catalytic grant and connected us to export logistics. We transformed 40 tons of secondhand discarded textile into soundproof building insulation.",
+    "summary": "Scaling a circular manufacturing enterprise that provides dignified employment for 65 youth while tackling fast-fashion dumping in West Africa.",
+    "metrics": "40 Tons Diverted • 65 Green Jobs Created",
+    "location": "Accra, Ghana",
+    "image": "/images/stories/accra-circular.svg"
+  },
+  {
+    "id": "story-nairobi-water",
+    "title": "MajiData: Decentralized Water Access Auditing in Informal Settlements",
+    "tag": "HCD Action Studio",
+    "author": "Grace Wanjiku",
+    "role": "Community Lead, Mukuru Youth Research Hub",
+    "quote": "Before AfriYouth's HCD Studio, utilities planned without us. We mapped 112 illegal water cartels and broken mains, giving the water company the exact GPS roadmap to install 14 prepaid public kiosks.",
+    "summary": "Using open mobile mapping and human-centered community hearings to eliminate exorbitant informal water vendor pricing in East Nairobi.",
+    "metrics": "28,000 Residents With Clean Water Access • 60% Cost Reduction",
+    "location": "Nairobi, Kenya",
+    "image": "/images/stories/nairobi-water.svg"
+  },
+  {
+    "id": "story-partner-undp",
+    "title": "Institutional Testimonial: Regional Integration with Youth-Proofing",
+    "tag": "Partner Perspective",
+    "author": "Dr. Sarah Dlamini",
+    "role": "Senior Advisor, African Governance & Development Initiative",
+    "quote": "AfriYouth Innovation Labs offers what typical youth consultancies cannot: high-rigor evidence married with genuine grassroots credibility. Their youth-proofing framework is now standard in our regional portfolio.",
+    "summary": "Evaluating AfriYouth's multi-year partnership with international development agencies and African continental bodies.",
+    "metrics": "5 Multilateral Programs Evaluated • $14M Regional Youth Fund Advised",
+    "location": "Addis Ababa, Ethiopia",
+    "image": "/images/stories/undp-partner.svg"
+  }
+]

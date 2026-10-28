@@ -1,0 +1,32 @@
+[
+  {
+    "category": "Multilateral & Governance Bodies",
+    "description": "Collaborating on continental policy harmonization, youth-proofing, and public service innovation.",
+    "partners": [
+      { "name": "African Union Youth Division", "type": "Policy Sponsor", "logoText": "AU Youth" },
+      { "name": "UNECA Innovation & Tech Hub", "type": "Research Partner", "logoText": "UNECA" },
+      { "name": "UNDP Regional Bureau for Africa", "type": "Program Co-Designer", "logoText": "UNDP Africa" },
+      { "name": "East African Community Secretariat", "type": "Policy Framework Partner", "logoText": "EAC" }
+    ]
+  },
+  {
+    "category": "Academic & Research Consortia",
+    "description": "Joint fieldwork, peer-reviewed publications, open data repositories, and postgraduate fellowships.",
+    "partners": [
+      { "name": "University of Nairobi Innovation Center", "type": "Academic Node", "logoText": "UoN Labs" },
+      { "name": "University of Rwanda Centre for Excellence", "type": "Research Node", "logoText": "UR CoE" },
+      { "name": "Ashesi University Design Lab", "type": "Curriculum Partner", "logoText": "Ashesi D-Lab" },
+      { "name": "Wits School of Governance", "type": "Policy Fellow Host", "logoText": "Wits Gov" }
+    ]
+  },
+  {
+    "category": "Impact Foundations & Catalytic Investors",
+    "description": "Financing youth innovation grants, equity-free venture incubators, and sovereign lab facilities.",
+    "partners": [
+      { "name": "Mastercard Foundation Youth Hub", "type": "Anchor Funder", "logoText": "Mastercard Fdn" },
+      { "name": "Rockefeller Foundation Africa", "type": "Catalytic Grantor", "logoText": "Rockefeller" },
+      { "name": "Tony Elumelu Foundation Network", "type": "Venture Syndicate", "logoText": "TEF Network" },
+      { "name": "Open Society Foundations Africa", "type": "Civic Accountability Funder", "logoText": "OSF Africa" }
+    ]
+  }
+]

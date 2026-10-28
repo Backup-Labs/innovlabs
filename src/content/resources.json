@@ -1,0 +1,62 @@
+[
+  {
+    "id": "res-01",
+    "title": "African Youth Employment in the Green Transition: 2026–2035 Horizon Forecast",
+    "category": "Strategic Foresight",
+    "format": "PDF Report • 48 Pages",
+    "date": "October 2026",
+    "readTime": "15 min read",
+    "summary": "An empirical analysis projecting 12 million potential green jobs across renewable mini-grids, climate-smart agriculture, and circular urban waste in Africa.",
+    "author": "AfriYouth Foresight Directorate in collaboration with UNECA",
+    "downloadUrl": "#",
+    "tags": ["Green Economy", "Future of Work", "Policy"]
+  },
+  {
+    "id": "res-02",
+    "title": "The Community HCD Sprint Playbook: A Facilitator's Guide for African Cities",
+    "category": "Toolkits & Frameworks",
+    "format": "Toolkit & Worksheets • 34 Pages",
+    "date": "August 2026",
+    "readTime": "Practical Guide",
+    "summary": "Step-by-step participatory design methodology specifically adapted for low-connectivity, multi-lingual informal urban environments.",
+    "author": "AfriYouth Human-Centered Design Studio",
+    "downloadUrl": "#",
+    "tags": ["Design Thinking", "Urban Planning", "Civic Tech"]
+  },
+  {
+    "id": "res-03",
+    "title": "Youth-Proofing National Legislation: A Model Audit Framework for African Parliaments",
+    "category": "Policy Briefs",
+    "format": "Policy Brief • 16 Pages",
+    "date": "July 2026",
+    "readTime": "8 min read",
+    "summary": "Diagnostic criteria for legislators to evaluate statutory bills against young demographic economic rights, digital inclusion, and fiscal sustainability.",
+    "author": "Pan-African Youth Policy Fellowship Council",
+    "downloadUrl": "#",
+    "tags": ["Governance", "Youth-Proofing", "Legislative"]
+  },
+  {
+    "id": "res-04",
+    "title": "Grassroots Surveying in Frontier Contexts: Data Ethics & Open Standards",
+    "category": "Research Papers",
+    "format": "Technical Paper • 28 Pages",
+    "date": "May 2026",
+    "readTime": "12 min read",
+    "summary": "Standard operating protocols for community data collectors to protect citizen anonymity, prevent surveillance, and preserve data sovereignty.",
+    "author": "Tariq El-Haddad & AfriYouth Research Fellows",
+    "downloadUrl": "#",
+    "tags": ["Data Sovereignty", "Methodology", "Ethics"]
+  },
+  {
+    "id": "res-05",
+    "title": "Early-Stage CivicTech Survival in Africa: Lessons from 50 Seed Cohorts",
+    "category": "Research Papers",
+    "format": "Venture Review • 22 Pages",
+    "date": "March 2026",
+    "readTime": "10 min read",
+    "summary": "Longitudinal evaluation of survival factors, revenue models, and regulatory frictions among African tech founders solving public sector bottlenecks.",
+    "author": "AfriYouth Venture Lab & Investor Syndicate",
+    "downloadUrl": "#",
+    "tags": ["Venture Incubation", "Startups", "Civic Tech"]
+  }
+]
