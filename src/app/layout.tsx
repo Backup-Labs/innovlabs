@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { site } from "@/lib/content";
 
 export const viewport: Viewport = {
-  themeColor: "#0B2B2E",
+  themeColor: "#061517",
   width: "device-width",
   initialScale: 1,
 };
@@ -13,19 +13,18 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://afriyouth.org"),
   title: {
-    default: "AfriYouth Innovation Labs | Connecting Research, Policy, Design & Youth Enterprise",
+    default: "AfriYouth Innovation Labs | Next-Gen Research, Policy & Venture Engine",
     template: "%s | AfriYouth Innovation Labs",
   },
   description:
-    "AfriYouth Innovation Labs empowers Africa's youth to generate evidence, shape policy, and develop innovative solutions through research, human-centered design, and entrepreneurship.",
+    "Empowering Africa's youth through the futuristic nexus of applied research, parliamentary policy drafting, human-centered design, and high-velocity venture acceleration.",
   keywords: [
     "AfriYouth",
     "African youth innovation",
-    "youth policy Africa",
-    "African research labs",
+    "future policy Africa",
+    "African research nexus",
     "human-centered design Africa",
     "civic tech Africa",
-    "youth fellowships Africa",
     "venture acceleration",
   ],
   authors: [{ name: "AfriYouth Innovation Labs" }],
@@ -35,7 +34,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://afriyouth.org",
-    title: "AfriYouth Innovation Labs | Connecting Research, Policy, Design & Youth Enterprise",
+    title: "AfriYouth Innovation Labs | Next-Gen Research, Policy & Venture Engine",
     description:
       "Transforming African youth agency into systemic socio-economic policy and sustainable ventures across 26 countries.",
     siteName: "AfriYouth Innovation Labs",
@@ -59,13 +58,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
 };
 
@@ -97,20 +89,36 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Preload primary Clash Display weights for instantaneous load */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
-          rel="stylesheet"
+          rel="preload"
+          href="/fonts/ClashDisplay-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/ClashDisplay-Semibold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/ClashDisplay-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col font-body bg-white text-slate-700 antialiased">
+      <body className="min-h-screen flex flex-col font-body bg-ink-950 text-slate-300 antialiased selection:bg-accent-500 selection:text-ink-950">
         <Header />
         <main id="main-content" className="flex-1 focus:outline-none">
           {children}

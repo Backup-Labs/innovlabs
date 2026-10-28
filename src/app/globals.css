@@ -2,46 +2,72 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-:root {
-  /* Strict AfriYouth Design Tokens */
-  --font-manrope: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --ink-900: #0B2B2E;
-  --primary-700: #0F5C4D;
-  --primary-600: #137A64;
-  --accent-500: #F2A900;
-  --sky-500: #2B8CBE;
-  --slate-700: #334155;
-  --slate-500: #64748B;
-  --line: #E2E8F0;
-  --surface: #F6F8F7;
-  --background: #FFFFFF;
-  --foreground: #334155;
-  --card-bg: #FFFFFF;
+/* Local Clash Display Font Declarations */
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ink-900: #071D1F;
-    --primary-700: #137A64;
-    --primary-600: #19987C;
-    --accent-500: #F2A900;
-    --sky-500: #3EA6DB;
-    --slate-700: #E2E8F0;
-    --slate-500: #94A3B8;
-    --line: #1D3A3E;
-    --surface: #0C2427;
-    --background: #081B1D;
-    --foreground: #CBD5E1;
-    --card-bg: #0F2D30;
-  }
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+:root {
+  /* Futuristic AfriYouth Design Tokens */
+  --font-clash: 'Clash Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --ink-950: #040D0E;
+  --ink-900: #061517;
+  --ink-850: #081E21;
+  --ink-800: #0B2B2E;
+  --ink-700: #133D41;
+  --primary-700: #0F5C4D;
+  --primary-600: #137A64;
+  --primary-500: #10B981;
+  --primary-400: #34D399;
+  --accent-500: #F2A900;
+  --accent-400: #FBBF24;
+  --sky-500: #2B8CBE;
+  --sky-400: #38BDF8;
+  --slate-700: #334155;
+  --slate-500: #64748B;
+  --slate-400: #94A3B8;
+  --slate-300: #CBD5E1;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --surface-glass: rgba(8, 30, 33, 0.65);
+  --surface-dark: #071719;
 }
 
 html {
   scroll-behavior: smooth;
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
-  color: var(--foreground);
-  background-color: var(--background);
+  background-color: var(--ink-950);
+  color: #E2E8F0;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -60,27 +86,76 @@ html {
 body {
   font-size: 16px;
   line-height: 1.65;
-  color: var(--foreground);
-  background-color: var(--background);
+  color: #CBD5E1;
+  background-color: var(--ink-950);
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(15, 92, 77, 0.25), transparent),
+    radial-gradient(circle 600px at 90% 40%, rgba(43, 140, 190, 0.08), transparent),
+    radial-gradient(circle 500px at 10% 70%, rgba(242, 169, 0, 0.05), transparent);
+  background-attachment: fixed;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Typography Utilities */
+/* Futuristic Headings with Clash Display */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-manrope), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-clash), 'Clash Display', sans-serif;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--ink-900);
+  letter-spacing: -0.025em;
+  color: #FFFFFF;
 }
 
-@media (prefers-color-scheme: dark) {
-  h1, h2, h3, h4, h5, h6 {
-    color: #F8FAFC;
-  }
+/* Cyber Grid Background Utility */
+.cyber-grid {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
-/* Accessible focus states */
+.cyber-grid-dense {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(16, 185, 129, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.04) 1px, transparent 1px);
+}
+
+/* Futuristic Glass Card */
+.glass-panel {
+  background: rgba(8, 30, 33, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.glass-panel:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.6), 0 0 25px -5px rgba(16, 185, 129, 0.15);
+}
+
+.glass-card-interactive {
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1), border-color 220ms ease-out, box-shadow 220ms ease-out;
+}
+
+.glass-card-interactive:hover {
+  transform: translateY(-4px);
+}
+
+/* Glowing text and accent utilities */
+.text-glow-gold {
+  text-shadow: 0 0 25px rgba(242, 169, 0, 0.5);
+}
+
+.text-glow-emerald {
+  text-shadow: 0 0 25px rgba(16, 185, 129, 0.5);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+}
+
+/* Futuristic Focus Outline */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -88,6 +163,7 @@ select:focus-visible,
 textarea:focus-visible {
   outline: 2px solid var(--accent-500);
   outline-offset: 3px;
+  box-shadow: 0 0 15px rgba(242, 169, 0, 0.4);
 }
 
 /* Skip link */
@@ -99,8 +175,10 @@ textarea:focus-visible {
   padding: 0.75rem 1.5rem;
   background-color: var(--primary-700);
   color: #FFFFFF;
+  font-family: var(--font-clash);
   font-weight: 600;
   border-radius: 8px;
+  border: 1px solid var(--accent-500);
   transition: top 200ms ease-out;
 }
 
@@ -108,10 +186,17 @@ textarea:focus-visible {
   top: 1rem;
 }
 
-/* Card hover animation */
-.card-lift {
-  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1), border-color 200ms ease-out;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
-.card-lift:hover {
-  transform: translateY(-3px);
+::-webkit-scrollbar-track {
+  background: #040D0E;
+}
+::-webkit-scrollbar-thumb {
+  background: #0F5C4D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #137A64;
 }

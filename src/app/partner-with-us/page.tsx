@@ -1,10 +1,9 @@
 import React from "react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { PartnerShowcase } from "@/components/common/PartnerShowcase";
 import { ContactForm } from "@/components/common/ContactForm";
-import { Handshake, Building2, ShieldCheck, Rocket, Globe2, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Handshake, Building2, ShieldCheck, Rocket, Globe2, CheckCircle2, Terminal } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Partner With Us & Collaborative Consortia",
@@ -14,19 +13,21 @@ export const metadata: Metadata = {
 
 export default function PartnerWithUsPage() {
   return (
-    <div className="bg-white">
+    <div className="relative overflow-hidden">
       {/* Top Header & Breadcrumb */}
-      <div className="bg-surface border-b border-line">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="border-b border-white/[0.08] relative overflow-hidden pt-8 pb-14">
+        <div className="absolute inset-0 cyber-grid-dense pointer-events-none opacity-30" />
+        <div className="relative max-w-container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={[{ label: "Partner With Us" }]} />
-          <div className="max-w-3xl mt-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-accent-600 bg-accent-50 px-3 py-1 rounded-full border border-accent-100">
-              Institutional Alliances
-            </span>
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-ink-900 tracking-heading mt-3">
+          <div className="max-w-3xl mt-4 space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-500/10 border border-accent-500/20 text-xs font-mono text-accent-400">
+              <Terminal className="w-3.5 h-3.5" />
+              <span>// INSTITUTIONAL CONSORTIA</span>
+            </div>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-heading font-heading">
               Co-Invest in Africa&apos;s Integrated Youth Ecosystem
             </h1>
-            <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
               We collaborate with multilateral bodies, philanthropic foundations, African sovereign ministries, and academic consortia to scale high-impact, evidence-based programs with a 91% survival rate.
             </p>
           </div>
@@ -34,13 +35,13 @@ export default function PartnerWithUsPage() {
       </div>
 
       {/* 4 Strategic Partnership Models */}
-      <section className="py-16 sm:py-24" aria-labelledby="collab-models-heading">
+      <section className="py-20 sm:py-28" aria-labelledby="collab-models-heading">
         <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 id="collab-models-heading" className="text-2xl sm:text-4xl font-extrabold text-ink-900 tracking-heading">
+            <h2 id="collab-models-heading" className="text-3xl sm:text-5xl font-extrabold text-white tracking-heading">
               Four Collaboration Frameworks
             </h2>
-            <p className="text-slate-600 text-sm sm:text-base mt-2">
+            <p className="text-slate-400 text-sm sm:text-base mt-3 font-normal">
               Every partnership is tailored to deliver verifiable social return on investment, policy adoption, and pan-African scale.
             </p>
           </div>
@@ -90,22 +91,22 @@ export default function PartnerWithUsPage() {
             ].map((model, i) => {
               const IconComp = model.icon;
               return (
-                <div key={i} className="bg-surface rounded-card border border-line p-8 flex flex-col justify-between shadow-subtle card-lift">
+                <div key={i} className="glass-panel rounded-card border border-white/10 p-8 flex flex-col justify-between shadow-cyberCard glass-card-interactive">
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-white border border-line text-primary-700 flex items-center justify-center mb-6 shadow-sm">
+                    <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-6 shadow-sm">
                       <IconComp className="w-6 h-6" />
                     </div>
-                    <h3 className="text-xl font-bold text-ink-900 mb-3 font-heading">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 font-heading tracking-tight">
                       {model.title}
                     </h3>
-                    <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6 font-normal">
                       {model.summary}
                     </p>
 
-                    <div className="space-y-2 pt-2 border-t border-line/60">
+                    <div className="space-y-2 pt-2 border-t border-white/[0.08]">
                       {model.features.map((feat, fIdx) => (
-                        <div key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
-                          <CheckCircle2 className="w-4 h-4 text-primary-700 shrink-0 mt-0.5" />
+                        <div key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                           <span>{feat}</span>
                         </div>
                       ))}
@@ -122,44 +123,44 @@ export default function PartnerWithUsPage() {
       <PartnerShowcase />
 
       {/* Start a Conversation Box */}
-      <section className="py-16 sm:py-24 bg-white" aria-labelledby="partner-dialogue-heading">
+      <section className="py-20 sm:py-28 border-t border-white/[0.08]" aria-labelledby="partner-dialogue-heading">
         <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-5 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-primary-700 bg-primary-50 px-3 py-1 rounded-full">
-                Direct Dialogue
+              <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
+                // DIRECT INQUIRY PROTOCOL
               </span>
-              <h2 id="partner-dialogue-heading" className="text-2xl sm:text-4xl font-extrabold text-ink-900 tracking-heading">
-                Start a Strategic Partnership Conversation
+              <h2 id="partner-dialogue-heading" className="text-3xl sm:text-5xl font-extrabold text-white tracking-heading font-heading">
+                Initiate a Strategic Partnership
               </h2>
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-normal">
                 Connect with our Executive Directorate and Head of Strategic Partnerships to discuss collaboration avenues, co-funding opportunities, or institutional MOUs.
               </p>
 
-              <div className="space-y-4 pt-4 border-t border-line text-sm text-slate-700">
+              <div className="space-y-4 pt-4 border-t border-white/[0.08] text-sm font-mono text-slate-300">
                 <div className="flex items-start gap-3">
-                  <ShieldCheck className="w-5 h-5 text-primary-700 shrink-0 mt-0.5" />
+                  <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                   <div>
-                    <strong className="block text-ink-900 font-heading">Governance & Due Diligence</strong>
-                    <span className="text-xs text-slate-500">Full compliance with international anti-corruption, ESG, and financial audit standards.</span>
+                    <strong className="block text-white font-heading">GOVERNANCE & DUE DILIGENCE</strong>
+                    <span className="text-xs text-slate-400 font-sans">Full compliance with international anti-corruption, ESG, and financial audit standards.</span>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Building2 className="w-5 h-5 text-primary-700 shrink-0 mt-0.5" />
+                  <Building2 className="w-5 h-5 text-accent-500 shrink-0 mt-0.5" />
                   <div>
-                    <strong className="block text-ink-900 font-heading">Regional Presence</strong>
-                    <span className="text-xs text-slate-500">Offices and legal entities registered across Kenya, Rwanda, Ghana, and South Africa.</span>
+                    <strong className="block text-white font-heading">SOVEREIGN LEGAL ENTITIES</strong>
+                    <span className="text-xs text-slate-400 font-sans">Offices and legal entities registered across Kenya, Rwanda, Ghana, and South Africa.</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="lg:col-span-7 bg-surface rounded-card border border-line p-6 sm:p-10 shadow-card">
-              <h3 className="text-xl font-bold text-ink-900 mb-2 font-heading">
+            <div className="lg:col-span-7 glass-panel rounded-card border border-white/10 p-6 sm:p-10 shadow-cyberCard">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 font-heading tracking-tight">
                 Partnership Expression of Interest
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 mb-6">
-                Tell us about your organization and proposed collaboration scope.
+              <p className="text-xs sm:text-sm text-slate-400 mb-6 font-normal">
+                Submit your institutional mandate and proposed collaboration scope.
               </p>
 
               <ContactForm

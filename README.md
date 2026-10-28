@@ -238,3 +238,4 @@ The contact form in `src/components/common/ContactForm.tsx` and API route in `sr
 - **Skip Link**: Accessible `<a href="#main-content" class="skip-to-content">` for keyboard users.
 - **Reduced Motion**: Honored via `@media (prefers-reduced-motion: reduce)`.
 - **Search Engine Optimization**: Full dynamic JSON-LD schema, open graph tags, XML sitemap, and robots.txt.
+

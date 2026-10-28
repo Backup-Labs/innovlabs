@@ -12,3 +12,4 @@ export const Icon: React.FC<IconProps> = ({ name, size = 20, className = "", ...
   const Component = (LucideIcons as any)[name] || LucideIcons.Sparkles;
   return <Component size={size} className={className} aria-hidden="true" {...props} />;
 };
+

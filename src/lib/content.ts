@@ -44,3 +44,4 @@ export function getOpportunityBySlug(slug: string): Opportunity | undefined {
 export function getServiceBySlug(slug: string): Service | undefined {
   return services.find((s) => s.slug === slug);
 }
+
