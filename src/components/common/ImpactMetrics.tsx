@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import { impact } from "@/lib/content";
 
 interface ImpactMetricsProps {
@@ -8,32 +11,45 @@ interface ImpactMetricsProps {
 
 export const ImpactMetrics: React.FC<ImpactMetricsProps> = ({ showTitle = true, className = "" }) => {
   return (
-    <section className={`py-24 sm:py-36 bg-stone-150/50 hairline-b hairline-t ${className}`} aria-labelledby="impact-metrics-heading">
+    <section className={`py-24 sm:py-36 bg-[#F4F4F6] hairline-b hairline-t ${className}`} aria-labelledby="impact-metrics-heading">
       <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
         {showTitle && (
-          <div className="max-w-xl mb-16 sm:mb-24 space-y-3">
-            <span className="text-[11px] font-semibold uppercase tracking-widePill text-stone-500">
-              Verified Scale
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6 }}
+            className="max-w-xl mb-16 sm:mb-24 space-y-3"
+          >
+            <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
+              // Verified Telemetry
             </span>
-            <h2 id="impact-metrics-heading" className="text-3xl sm:text-5xl font-extrabold text-stone-900 tracking-display">
+            <h2 id="impact-metrics-heading" className="text-3xl sm:text-5xl font-extrabold text-black tracking-display">
               Results across the continent.
             </h2>
-          </div>
+          </motion.div>
         )}
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-y-16 gap-x-12">
           {impact.metrics.map((item, index) => (
-            <div key={index} className="space-y-3 border-l border-stone-300 pl-6 sm:pl-8">
-              <span className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-stone-900 tracking-display block font-heading">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="space-y-3 border-l border-gray-300 pl-6 sm:pl-8 group"
+            >
+              <span className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-black tracking-display block font-heading group-hover:translate-x-1 transition-transform">
                 {item.value}
               </span>
-              <h3 className="text-base sm:text-lg font-bold text-stone-900 tracking-tight">
+              <h3 className="text-base sm:text-lg font-bold text-black tracking-tight">
                 {item.label}
               </h3>
-              <p className="text-xs sm:text-sm text-stone-600 leading-relaxed max-w-xs">
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed max-w-xs">
                 {item.detail}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

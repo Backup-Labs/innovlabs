@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CheckCircle2, AlertCircle, Loader2, ArrowUpRight } from "lucide-react";
 
 interface ContactFormProps {
@@ -21,6 +21,27 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     message: "",
     botCheckWebsite: "",
   });
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const paramIntent = params.get("intent");
+      const paramSubject = params.get("subject");
+
+      if (paramIntent || paramSubject) {
+        setFormData((prev) => ({
+          ...prev,
+          audience:
+            paramIntent === "service"
+              ? "organization"
+              : paramIntent === "partner"
+              ? "partner"
+              : prev.audience,
+          subject: paramSubject || prev.subject,
+        }));
+      }
+    }
+  }, []);
 
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -78,15 +99,15 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     return (
       <div
         role="status"
-        className="bg-white border border-stone-300 rounded-card p-10 text-center space-y-4"
+        className="bg-white border border-gray-300 rounded-card p-10 text-center space-y-4"
       >
-        <div className="w-12 h-12 bg-botanical-100 text-botanical-700 rounded-full flex items-center justify-center mx-auto">
+        <div className="w-12 h-12 bg-gray-100 text-black rounded-full flex items-center justify-center mx-auto border border-gray-300">
           <CheckCircle2 className="w-6 h-6" />
         </div>
-        <h3 className="text-2xl font-bold text-stone-900 font-heading">
+        <h3 className="text-2xl font-bold text-black font-heading">
           Inquiry Transmitted
         </h3>
-        <p className="text-sm text-stone-600 max-w-sm mx-auto leading-relaxed">
+        <p className="text-sm text-gray-600 max-w-sm mx-auto leading-relaxed">
           Thank you, <strong>{formData.name}</strong>. Our directorate will respond within 2 business days.
         </p>
         <div className="pt-4">
@@ -103,7 +124,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 botCheckWebsite: "",
               });
             }}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-pill text-xs font-semibold bg-stone-900 text-white"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-semibold bg-black text-white hover:bg-neutral-800 transition-colors"
           >
             Submit Another Inquiry
           </button>
@@ -131,7 +152,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       {status === "error" && (
         <div
           role="alert"
-          className="p-4 rounded-xl bg-terracotta-50 border border-terracotta-200 text-terracotta-600 text-xs flex items-center gap-2"
+          className="p-4 rounded-xl bg-gray-100 border border-black text-black text-xs flex items-center gap-2 font-mono"
         >
           <AlertCircle className="w-4 h-4 shrink-0" />
           <span>{errorMessage}</span>
@@ -141,8 +162,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       {/* Row 1: Name and Email */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="contact-name" className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-2">
-            Your Name <span className="text-terracotta-500">*</span>
+          <label htmlFor="contact-name" className="block text-xs font-semibold uppercase tracking-wider text-black mb-2 font-mono">
+            Your Name *
           </label>
           <input
             id="contact-name"
@@ -152,13 +173,13 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             value={formData.name}
             onChange={handleChange}
             placeholder="Amina Umutoni"
-            className="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm text-stone-900 bg-white placeholder-stone-400 focus:outline-none focus:border-stone-900"
+            className="w-full px-4 py-3 rounded-xl border border-gray-300 text-sm text-black bg-white placeholder-gray-400 focus:outline-none focus:border-black font-mono"
           />
         </div>
 
         <div>
-          <label htmlFor="contact-email" className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-2">
-            Email Address <span className="text-terracotta-500">*</span>
+          <label htmlFor="contact-email" className="block text-xs font-semibold uppercase tracking-wider text-black mb-2 font-mono">
+            Email Address *
           </label>
           <input
             id="contact-email"
@@ -168,7 +189,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             value={formData.email}
             onChange={handleChange}
             placeholder="amina@example.org"
-            className="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm text-stone-900 bg-white placeholder-stone-400 focus:outline-none focus:border-stone-900"
+            className="w-full px-4 py-3 rounded-xl border border-gray-300 text-sm text-black bg-white placeholder-gray-400 focus:outline-none focus:border-black font-mono"
           />
         </div>
       </div>
@@ -176,7 +197,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       {/* Row 2: Organization & Audience Persona */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="contact-org" className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-2">
+          <label htmlFor="contact-org" className="block text-xs font-semibold uppercase tracking-wider text-black mb-2 font-mono">
             Organization / University
           </label>
           <input
@@ -186,20 +207,20 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             value={formData.organization}
             onChange={handleChange}
             placeholder="Kigali Innovation Hub"
-            className="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm text-stone-900 bg-white placeholder-stone-400 focus:outline-none focus:border-stone-900"
+            className="w-full px-4 py-3 rounded-xl border border-gray-300 text-sm text-black bg-white placeholder-gray-400 focus:outline-none focus:border-black font-mono"
           />
         </div>
 
         <div>
-          <label htmlFor="contact-audience" className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-2">
-            You Are Engaging As <span className="text-terracotta-500">*</span>
+          <label htmlFor="contact-audience" className="block text-xs font-semibold uppercase tracking-wider text-black mb-2 font-mono">
+            You Are Engaging As *
           </label>
           <select
             id="contact-audience"
             name="audience"
             value={formData.audience}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm text-stone-900 bg-white focus:outline-none focus:border-stone-900"
+            className="w-full px-4 py-3 rounded-xl border border-gray-300 text-sm text-black bg-white focus:outline-none focus:border-black font-mono"
           >
             <option value="youth">Youth Innovator / Researcher</option>
             <option value="organization">Government / NGO Client</option>
@@ -211,7 +232,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 
       {/* Row 3: Subject */}
       <div>
-        <label htmlFor="contact-subject" className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-2">
+        <label htmlFor="contact-subject" className="block text-xs font-semibold uppercase tracking-wider text-black mb-2 font-mono">
           Subject / Inquiry Topic
         </label>
         <input
@@ -221,14 +242,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           value={formData.subject}
           onChange={handleChange}
           placeholder="e.g. Applied Research Service or Fellowship"
-          className="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm text-stone-900 bg-white placeholder-stone-400 focus:outline-none focus:border-stone-900"
+          className="w-full px-4 py-3 rounded-xl border border-gray-300 text-sm text-black bg-white placeholder-gray-400 focus:outline-none focus:border-black font-mono"
         />
       </div>
 
       {/* Row 4: Message */}
       <div>
-        <label htmlFor="contact-message" className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-2">
-          Message <span className="text-terracotta-500">*</span>
+        <label htmlFor="contact-message" className="block text-xs font-semibold uppercase tracking-wider text-black mb-2 font-mono">
+          Message *
         </label>
         <textarea
           id="contact-message"
@@ -238,7 +259,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           value={formData.message}
           onChange={handleChange}
           placeholder="Provide background, proposed collaboration, or specific question..."
-          className="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm text-stone-900 bg-white placeholder-stone-400 focus:outline-none focus:border-stone-900 leading-relaxed"
+          className="w-full px-4 py-3 rounded-xl border border-gray-300 text-sm text-black bg-white placeholder-gray-400 focus:outline-none focus:border-black leading-relaxed font-mono"
         />
       </div>
 
@@ -247,7 +268,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-pill text-xs font-semibold bg-stone-900 text-white hover:bg-stone-800 disabled:opacity-60 transition-colors"
+          className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-xs font-semibold bg-black text-white hover:bg-neutral-800 disabled:opacity-60 transition-colors"
         >
           {status === "submitting" ? (
             <>

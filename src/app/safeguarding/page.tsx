@@ -8,28 +8,28 @@ export const metadata: Metadata = {
 
 export default function SafeguardingPage() {
   return (
-    <div className="bg-stone-100 text-stone-900">
+    <div className="bg-[#F4F4F6] text-black">
       <section className="hairline-b pt-12 pb-20 sm:pb-28">
         <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
           <Breadcrumbs items={[{ label: "Safeguarding Policy" }]} />
           <div className="max-w-3xl mt-8 space-y-4">
-            <span className="text-[11px] font-semibold uppercase tracking-widePill text-stone-500">
-              Institutional Governance
+            <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
+              // Institutional Governance
             </span>
-            <h1 className="text-4xl sm:text-6xl font-extrabold text-stone-900 tracking-display">
+            <h1 className="text-4xl sm:text-6xl font-extrabold text-black tracking-display">
               Safeguarding & ethics protocol.
             </h1>
-            <p className="text-xs text-stone-500">
+            <p className="text-xs text-gray-500 font-mono">
               Operational across all 26 sovereign national sites
             </p>
           </div>
         </div>
       </section>
 
-      <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 py-24 sm:py-36">
-        <div className="max-w-3xl space-y-8 text-sm text-stone-600 leading-relaxed">
-          <div className="minimal-card rounded-card p-8 sm:p-10 space-y-3">
-            <h2 className="text-xl font-bold text-stone-900">
+      <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 py-24 sm:py-36 bg-white">
+        <div className="max-w-3xl space-y-8 text-sm text-gray-600 leading-relaxed">
+          <div className="minimal-card rounded-card p-8 sm:p-10 space-y-3 bg-[#F4F4F6] border border-gray-300">
+            <h2 className="text-xl font-bold text-black font-heading">
               1. Zero Tolerance for Harassment & Discrimination
             </h2>
             <p>
@@ -37,8 +37,8 @@ export default function SafeguardingPage() {
             </p>
           </div>
 
-          <div className="minimal-card rounded-card p-8 sm:p-10 space-y-3">
-            <h2 className="text-xl font-bold text-stone-900">
+          <div className="minimal-card rounded-card p-8 sm:p-10 space-y-3 bg-[#F4F4F6] border border-gray-300">
+            <h2 className="text-xl font-bold text-black font-heading">
               2. Community Fieldwork Consent
             </h2>
             <p>
@@ -46,13 +46,13 @@ export default function SafeguardingPage() {
             </p>
           </div>
 
-          <div className="minimal-card rounded-card p-8 sm:p-10 space-y-3">
-            <h2 className="text-xl font-bold text-stone-900">
+          <div className="minimal-card rounded-card p-8 sm:p-10 space-y-3 bg-[#F4F4F6] border border-gray-300">
+            <h2 className="text-xl font-bold text-black font-heading">
               3. Independent Ombudsperson
             </h2>
             <p>
               Anyone can report ethical concerns directly to our independent ombudsperson via{" "}
-              <a href="mailto:safeguarding@afriyouth.org" className="text-stone-900 underline font-semibold">
+              <a href="mailto:safeguarding@afriyouth.org" className="text-black underline font-semibold font-mono">
                 safeguarding@afriyouth.org
               </a>.
             </p>

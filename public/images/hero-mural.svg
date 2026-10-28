@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" fill="none">
+  <defs>
+    <!-- Deep atmospheric fresco background gradients -->
+    <radialGradient id="fresco-glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#2D3A40" stop-opacity="0.9" />
+      <stop offset="45%" stop-color="#202A2E" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#141B1E" stop-opacity="1" />
+    </radialGradient>
+    <linearGradient id="lighting" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3A4A52" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#202A2E" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#0E1315" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Fresco wall crack / patina filter -->
+    <filter id="wall-patina" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.12 0" />
+      <feBlend mode="multiply" in="SourceGraphic" result="blend" />
+    </filter>
+
+    <!-- Skin tone chiaroscuro gradients for hands -->
+    <linearGradient id="hand-left" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#3B2E24" stop-opacity="0.3" />
+      <stop offset="40%" stop-color="#8C7058" stop-opacity="0.75" />
+      <stop offset="80%" stop-color="#B89A7E" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#D4BC9F" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="hand-right" x1="100%" y1="50%" x2="0%" y2="50%">
+      <stop offset="0%" stop-color="#2A2018" stop-opacity="0.3" />
+      <stop offset="40%" stop-color="#7A5F48" stop-opacity="0.75" />
+      <stop offset="80%" stop-color="#AA8C70" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#CBB194" stop-opacity="0.95" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base Canvas -->
+  <rect width="1600" height="900" fill="#182024" />
+  <rect width="1600" height="900" fill="url(#fresco-glow)" />
+  <rect width="1600" height="900" fill="url(#lighting)" />
+
+  <!-- Classical Fresco Cracks & Geological Texture lines -->
+  <g opacity="0.18" stroke="#000000" stroke-width="1.2" fill="none">
+    <path d="M420 0 L430 180 L415 320 L440 450 L460 620 L450 900" />
+    <path d="M430 180 L520 220 L640 210 L780 260 L920 250 L1100 290" />
+    <path d="M920 250 L950 420 L930 580 L960 740 L940 900" />
+    <path d="M1200 0 L1180 190 L1220 340 L1190 560 L1210 900" />
+    <path d="M150 400 L280 430 L440 450 L580 480 L720 460" />
+  </g>
+
+  <!-- Mural Artwork: Hands Reaching (Creation of Adam homage / African Youth Solidarity) -->
+  <g id="mural-hands" opacity="0.65" transform="translate(100, 40)">
+    <!-- Left Arm & Hand reaching rightward -->
+    <path d="M180 540 C 320 530, 440 480, 560 450 C 640 430, 720 410, 800 420 C 850 426, 890 430, 940 450 C 970 462, 990 470, 1020 472 C 1035 473, 1045 470, 1050 468 C 1045 464, 1030 456, 1005 450 C 970 442, 930 438, 890 432 C 840 425, 780 410, 710 395 C 620 375, 520 410, 420 440 C 310 475, 200 500, 150 515 Z" fill="url(#hand-left)" />
+
+    <!-- Forefinger and thumb extending -->
+    <path d="M940 450 C 980 455, 1020 462, 1050 465 C 1070 467, 1085 468, 1092 468 C 1095 468, 1098 467, 1098 465 C 1098 463, 1094 461, 1085 459 C 1060 453, 1020 445, 985 440 Z" fill="#D8C2A8" />
+    <!-- Bent supporting fingers -->
+    <path d="M920 465 C 950 480, 980 495, 1005 500 C 1020 503, 1025 498, 1020 492 C 1005 482, 980 470, 950 460 Z" fill="#9C8068" />
+    <path d="M900 480 C 930 500, 960 518, 980 522 C 992 524, 996 520, 990 514 C 975 502, 950 488, 920 475 Z" fill="#8A6E56" />
+
+    <!-- Right Hand reaching leftward to meet -->
+    <path d="M1650 360 C 1520 380, 1420 405, 1320 425 C 1250 440, 1180 450, 1140 455 C 1120 458, 1108 462, 1104 464 C 1106 466, 1115 468, 1125 470 C 1160 476, 1220 485, 1280 490 C 1370 498, 1480 510, 1600 520 Z" fill="url(#hand-right)" />
+    <!-- Extended right index finger -->
+    <path d="M1140 455 C 1125 458, 1112 462, 1105 464 C 1102 465, 1101 466, 1101 465 C 1101 464, 1105 462, 1115 459 C 1130 454, 1150 448, 1170 444 Z" fill="#D8C2A8" />
+  </g>
+
+  <!-- Ambient Shadow overlay for editorial text contrast -->
+  <linearGradient id="text-backdrop" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#0E1315" stop-opacity="0.75" />
+    <stop offset="50%" stop-color="#0E1315" stop-opacity="0.4" />
+    <stop offset="100%" stop-color="#0E1315" stop-opacity="0.85" />
+  </linearGradient>
+  <rect width="1600" height="900" fill="url(#text-backdrop)" />
+
+  <!-- Vignette edges -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="60%" stop-color="#000000" stop-opacity="0" />
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.7" />
+  </radialGradient>
+  <rect width="1600" height="900" fill="url(#vignette)" />
+</svg>
+
