@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
         Skip to main content
       </a>
 
-      {/* Header Bar matching photo */}
+      {/* Header Bar matching photo (slim, compact height for 100vh fit) */}
       <header
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
           scrolled
@@ -49,7 +49,7 @@ export const Header: React.FC = () => {
             : "bg-[#F4F4F6] border-b border-gray-300/60"
         }`}
       >
-        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 h-20 sm:h-22 flex items-center justify-between">
+        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 h-16 sm:h-18 flex items-center justify-between">
           {/* Logo on Left: Architectural Grid Symbol + AfriYouth Wordmark */}
           <Link
             href="/"
@@ -57,24 +57,24 @@ export const Header: React.FC = () => {
             aria-label="AfriYouth Innovation Labs Home"
           >
             {/* Architectural Cross / Quadrant Icon matching photo */}
-            <div className="w-8 h-8 rounded-lg bg-black text-white flex items-center justify-center transition-transform group-hover:scale-105 duration-200">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-black text-white flex items-center justify-center transition-transform group-hover:scale-105 duration-200">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="3" y="3" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="2" />
                 <rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="2" />
                 <rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="2" />
                 <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="2" />
               </svg>
             </div>
-            <span className="text-xl sm:text-2xl font-bold tracking-tight text-black font-heading">
+            <span className="text-lg sm:text-xl font-bold tracking-tight text-black font-heading">
               AfriYouth
             </span>
           </Link>
 
           {/* Right Actions matching photo: [Book a call] pill + [ = ] circular menu toggle */}
-          <div className="flex items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-2.5 sm:gap-3">
             <Link
               href="/contact?intent=service"
-              className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-black text-white hover:bg-neutral-800 transition-all duration-200 active:scale-95"
+              className="inline-flex items-center justify-center px-4 sm:px-5 py-2 rounded-full text-xs font-semibold bg-black text-white hover:bg-neutral-800 transition-all duration-200 active:scale-95"
             >
               <span>Book a call</span>
             </Link>
@@ -82,17 +82,17 @@ export const Header: React.FC = () => {
             {/* Circular Hamburger Menu button with 2 horizontal white bars matching photo */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="w-10 h-10 rounded-full bg-black text-white flex flex-col items-center justify-center gap-1.5 hover:bg-neutral-800 transition-all duration-200 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-black"
+              className="w-9 h-9 rounded-full bg-black text-white flex flex-col items-center justify-center gap-1.5 hover:bg-neutral-800 transition-all duration-200 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-black"
               aria-expanded={menuOpen}
               aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               <span
-                className={`w-4 h-0.5 bg-white rounded-full transition-transform duration-200 ${
+                className={`w-3.5 h-0.5 bg-white rounded-full transition-transform duration-200 ${
                   menuOpen ? "rotate-45 translate-y-2" : ""
                 }`}
               />
               <span
-                className={`w-4 h-0.5 bg-white rounded-full transition-transform duration-200 ${
+                className={`w-3.5 h-0.5 bg-white rounded-full transition-transform duration-200 ${
                   menuOpen ? "-rotate-45 -translate-y-0" : ""
                 }`}
               />
