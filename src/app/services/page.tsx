@@ -5,7 +5,7 @@ import { services } from "@/lib/content";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ServiceCard } from "@/components/common/ServiceCard";
 import { PartnerShowcase } from "@/components/common/PartnerShowcase";
-import { ArrowUpRight, Terminal, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Client Services & Institutional Advisory",
@@ -15,36 +15,37 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <div className="relative overflow-hidden">
-      {/* Top Header & Breadcrumb */}
-      <div className="border-b border-white/[0.08] relative overflow-hidden pt-8 pb-14">
-        <div className="absolute inset-0 cyber-grid-dense pointer-events-none opacity-30" />
-        <div className="relative max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-stone-100 text-stone-900">
+      {/* Editorial Header */}
+      <section className="hairline-b pt-12 pb-20 sm:pb-28">
+        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
           <Breadcrumbs items={[{ label: "Client Services" }]} />
-          <div className="max-w-3xl mt-4 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono text-emerald-400">
-              <Terminal className="w-3.5 h-3.5" />
-              <span>// INSTITUTIONAL CAPABILITIES</span>
-            </div>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-heading font-heading">
-              Advisory, Applied Research & Venture Labs
+          <div className="max-w-3xl mt-8 space-y-6">
+            <span className="text-[11px] font-semibold uppercase tracking-widePill text-stone-500">
+              Institutional Capabilities
+            </span>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-stone-900 tracking-display leading-tight">
+              Advisory, applied research & venture labs.
             </h1>
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-              We partner with ministries, multilateral development banks, and international philanthropies to commission empirical youth data, co-design citizen services, and operate high-survival startup incubators.
+            <p className="text-lg sm:text-xl text-stone-600 leading-relaxed font-normal">
+              We partner with ministries, multilateral banks, and philanthropic institutions to commission empirical youth evidence, co-design citizen services, and operate high-survival startup incubators.
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Services Grid */}
-      <section className="py-20 sm:py-28" aria-labelledby="all-services-heading">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 id="all-services-heading" className="text-3xl sm:text-5xl font-extrabold text-white tracking-heading">
-              Our 6 Core Service Offerings
+      <section className="py-24 sm:py-36 hairline-b" aria-labelledby="all-services-heading">
+        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="max-w-2xl mb-16 sm:mb-20 space-y-3">
+            <span className="text-[11px] font-semibold uppercase tracking-widePill text-stone-500">
+              Specialized Engagements
+            </span>
+            <h2 id="all-services-heading" className="text-3xl sm:text-5xl font-extrabold text-stone-900 tracking-display">
+              Our six core offerings.
             </h2>
-            <p className="text-slate-400 text-sm sm:text-base mt-3 font-normal">
-              Every service includes dedicated project leadership, transparent milestone monitoring, and decolonized participatory ethics.
+            <p className="text-base text-stone-600 pt-2">
+              Every mandate includes dedicated project stewardship, verifiable milestones, and decolonized participatory ethics.
             </p>
           </div>
 
@@ -57,53 +58,55 @@ export default function ServicesPage() {
       </section>
 
       {/* How Organizations Engage (4 Step Process) */}
-      <section className="py-20 sm:py-28 border-t border-white/[0.08] relative overflow-hidden" aria-labelledby="engagement-heading">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-mono uppercase tracking-widest text-accent-500 bg-accent-500/10 border border-accent-500/20 px-3 py-1 rounded-full">
-              // COMMISSIONING PROTOCOL
+      <section className="py-24 sm:py-36 hairline-b bg-stone-150/40" aria-labelledby="engagement-heading">
+        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="max-w-2xl mb-16 sm:mb-20 space-y-3">
+            <span className="text-[11px] font-semibold uppercase tracking-widePill text-stone-500">
+              Commissioning Protocol
             </span>
-            <h2 id="engagement-heading" className="text-3xl sm:text-4xl font-extrabold text-white tracking-heading mt-3">
-              How We Work with Clients
+            <h2 id="engagement-heading" className="text-3xl sm:text-5xl font-extrabold text-stone-900 tracking-display">
+              Four steps from brief to adoption.
             </h2>
-            <p className="text-slate-400 text-sm sm:text-base mt-3 font-normal">
-              From initial terms of reference to final policy handover, our engagement cycle is transparent and collaborative.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 step: "01",
                 title: "Diagnostic Scoping",
-                desc: "We align on problem statements, geographical focus, demographic cohorts, and desired institutional outcomes.",
+                desc: "Align on problem statements, geographical focus, demographic cohorts, and desired institutional outcomes.",
               },
               {
                 step: "02",
                 title: "Co-Design Proposal",
-                desc: "AfriYouth submits a tailored methodology, field logistics plan, sample size calculations, and itemized budget.",
+                desc: "AfriYouth submits a tailored methodology, field logistics architecture, sample size, and clear deliverables.",
               },
               {
                 step: "03",
-                title: "Field Deployment & Sprints",
-                desc: "Our grassroots teams, enumerators, and design facilitators execute in-country with real-time client telemetry dashboards.",
+                title: "Field Deployment",
+                desc: "Grassroots teams, enumerators, and design facilitators execute in-country with real-time client telemetry.",
               },
               {
                 step: "04",
-                title: "Handover & Policy Adoption",
-                desc: "We co-present findings to steering committees, parliamentary sponsors, or executive boards to ensure lasting impact.",
+                title: "Handover & Adoption",
+                desc: "Co-present findings to steering committees, parliamentary sponsors, or boards for durable policy integration.",
               },
             ].map((st) => (
-              <div key={st.step} className="glass-panel p-6 sm:p-7 rounded-card border border-white/10 shadow-cyberCard glass-card-interactive">
-                <span className="text-2xl font-black text-accent-500 font-heading block mb-2 font-mono">
-                  {st.step}
-                </span>
-                <h3 className="text-base sm:text-lg font-bold text-white mb-2 font-heading tracking-tight">
-                  {st.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-                  {st.desc}
-                </p>
+              <div
+                key={st.step}
+                className="minimal-card rounded-card p-8 sm:p-10 flex flex-col justify-between group hover:border-stone-400 transition-colors"
+              >
+                <div>
+                  <span className="text-2xl font-black text-stone-900 font-mono block mb-6">
+                    {st.step}
+                  </span>
+                  <h3 className="text-xl font-bold text-stone-900 mb-3 tracking-tight group-hover:text-botanical-600 transition-colors">
+                    {st.title}
+                  </h3>
+                  <p className="text-sm text-stone-600 leading-relaxed">
+                    {st.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -114,22 +117,22 @@ export default function ServicesPage() {
       <PartnerShowcase />
 
       {/* CTA Box */}
-      <section className="py-20 bg-gradient-to-r from-ink-900 via-primary-900/40 to-ink-950 text-white text-center border-t border-white/10">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto space-y-5">
-            <h2 className="text-2xl sm:text-4xl font-extrabold font-heading text-white tracking-tight">
-              Ready to Commission Research or Co-Design a Lab?
+      <section className="py-24 sm:py-32 bg-stone-900 text-stone-100">
+        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 text-center">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-display">
+              Ready to commission research or structure an innovation lab?
             </h2>
-            <p className="text-slate-300 text-sm sm:text-base font-normal">
-              Speak with our Directorate of Applied Research or Venture Incubation teams to structure your engagement parameters.
+            <p className="text-stone-300 text-base leading-relaxed">
+              Speak with our Directorate of Applied Research or Venture Incubation teams to define your engagement parameters.
             </p>
-            <div className="pt-2">
+            <div className="pt-4">
               <Link
                 href="/contact?intent=service"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold font-heading bg-accent-500 text-ink-950 hover:bg-accent-400 transition-colors shadow-glowGold"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-pill text-xs font-semibold uppercase tracking-wider bg-white text-stone-900 hover:bg-stone-200 transition-colors"
               >
                 <span>Request Client Consultation</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           </div>

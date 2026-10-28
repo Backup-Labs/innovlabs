@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { site } from "@/lib/content";
 
 export const viewport: Viewport = {
-  themeColor: "#061517",
+  themeColor: "#F5F2EB",
   width: "device-width",
   initialScale: 1,
 };
@@ -13,11 +13,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://afriyouth.org"),
   title: {
-    default: "AfriYouth Innovation Labs | Next-Gen Research, Policy & Venture Engine",
+    default: "AfriYouth Innovation Labs | Research, Policy & Youth Enterprise",
     template: "%s | AfriYouth Innovation Labs",
   },
   description:
-    "Empowering Africa's youth through the futuristic nexus of applied research, parliamentary policy drafting, human-centered design, and high-velocity venture acceleration.",
+    "Empowering Africa's youth through applied research, policy shaping, human-centered design, and high-velocity venture acceleration.",
   keywords: [
     "AfriYouth",
     "African youth innovation",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://afriyouth.org",
-    title: "AfriYouth Innovation Labs | Next-Gen Research, Policy & Venture Engine",
+    title: "AfriYouth Innovation Labs | Research, Policy & Youth Enterprise",
     description:
       "Transforming African youth agency into systemic socio-economic policy and sustainable ventures across 26 countries.",
     siteName: "AfriYouth Innovation Labs",
@@ -89,9 +89,8 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
-        {/* Preload all 4 Clash Display weights for 100% font coverage */}
         <link
           rel="preload"
           href="/fonts/ClashDisplay-Regular.woff2"
@@ -125,7 +124,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col font-heading bg-ink-950 text-slate-300 antialiased selection:bg-accent-500 selection:text-ink-950">
+      <body className="min-h-screen flex flex-col font-body bg-stone-100 text-stone-900 antialiased selection:bg-stone-900 selection:text-stone-100">
         <Header />
         <main id="main-content" className="flex-1 focus:outline-none">
           {children}

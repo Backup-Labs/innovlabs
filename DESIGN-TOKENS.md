@@ -1,74 +1,90 @@
-# AfriYouth Innovation Labs — Futuristic Design System & Tokens
+# AfriYouth Innovation Labs — Minimalist Architectural Design System
 
-This document details the **futuristic design system** and **Clash Display typography tokens** implemented for the AfriYouth Innovation Labs web platform.
+This document specifies the **minimalist architectural design system**, **universal Clash Display typography**, and **warm gallery stone palette** for AfriYouth Innovation Labs, referencing the high-end consulting aesthetic of `https://palladio.framer.website/`.
 
 ---
 
-## 1. Typography: Clash Display + Inter
+## 1. Design Principles & Ethos
 
-AfriYouth uses **Clash Display** as its primary display/heading typeface for a bold, geometric, futuristic presence, complemented by **Inter** for technical readability and **Monospace** for live system telemetry.
+1. **Warm Stone Minimalism**: Grounded in natural gallery stone, ivory bone, and deep charcoal ink. Eliminates loud saturated gradients and heavy drop shadows in favor of 1px delicate hairlines and generous breathing room.
+2. **Universal Clash Display Typography**: Every textual element—from 72px editorial display headlines down to 10px metadata pills and input fields—renders in **Clash Display** for a consistent, geometric, and sculptured identity.
+3. **Restraint & White Space**: Generous vertical section rhythm (`py-24 sm:py-36`), 1200px max-width container, clean 1px hairline dividers, and high contrast.
+4. **Outcome-Led & Concise**: Reduced prose with high visual emphasis on photography, quantitative proof-points, and clear 2-to-3 click user journeys.
 
-### Typeface Families
-- **Display & Headings**: `"Clash Display"` (Fontshare / Local woff2).
-  - Weights: `700` (Bold), `600` (Semibold), `500` (Medium), `400` (Regular).
-  - Letter-spacing: `-0.025em` to `-0.035em` for display scale.
-  - Bundled locally in `/public/fonts/` for 0ms font blocking and 100% offline reliability.
-- **Body & Data**: `"Inter"`, system-ui, -apple-system, sans-serif.
-  - Base: `16px`, Line-height: `1.65`.
-- **Telemetry & Metadata**: `ui-monospace, SFMono-Regular, Menlo, monospace`.
-  - Uppercase, letter-spacing `+0.12em` to `+0.15em`.
+---
 
-### Typographic Scale
+## 2. Universal Typography: Clash Display
 
-| Step | Size | Line Height | Tracking | Font Family | Usage |
+All text elements across the entire platform render using **Clash Display** via local `.woff2` font files in `public/fonts/` (Regular 400, Medium 500, Semibold 600, Bold 700).
+
+```css
+*, *::before, *::after, html, body, button, input, select, textarea, p, span, a, label, li {
+  font-family: 'Clash Display', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+```
+
+### Typographic Hierarchy & Scale
+
+| Step | Size | Line Height | Tracking | Weight | Usage |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Hero Display** | `64px`–`72px` | `1.08` | `-0.035em` | Clash Display 800/700 | Main Hero Headline |
-| **H1** | `48px`–`56px` | `1.12` | `-0.025em` | Clash Display 700 | Page Titles |
-| **H2** | `32px`–`40px` | `1.2` | `-0.025em` | Clash Display 700 | Section Headers |
-| **H3** | `22px`–`26px` | `1.3` | `-0.015em` | Clash Display 600 | Card Headings |
-| **Telemetry HUD** | `48px`–`60px` | `1.0` | `-0.03em` | Clash Display 800 | Metric Numerals (`48,500+`) |
-| **Body Base** | `16px` | `1.65` | `normal` | Inter 400 | Paragraphs & Descriptions |
-| **Body Small** | `14px` | `1.5` | `normal` | Inter 400/500 | Card Subtext |
-| **Cyber Badge** | `10px`–`11px` | `1.2` | `+0.15em` | Monospace 700 | Tags, Status Chips, Node IDs |
+| **Editorial Display** | `56px`–`76px` | `1.05` | `-0.035em` | Bold 700 / 800 | Homepage hero statement, primary page headlines |
+| **Section Title (H2)**| `36px`–`48px` | `1.15` | `-0.025em` | Bold 700 | Major section themes |
+| **Card Header (H3)**  | `22px`–`28px` | `1.25` | `-0.015em` | Bold 700 | Program, service, and opportunity cards |
+| **Telemetry Numerals**| `48px`–`64px` | `1.0` | `-0.03em` | Bold 700 | Quantitative impact counters (`48,500+`) |
+| **Lead / Subhead**    | `18px`–`22px` | `1.6` | `-0.01em` | Regular 400 / Medium 500 | Section introductions, hero subheads |
+| **Body Base**         | `15px`–`16px` | `1.65` | `normal` | Regular 400 | Article text, narrative paragraphs |
+| **Metadata & Subtext**| `12px`–`14px` | `1.5` | `normal` | Medium 500 | Dates, cohort size, duration, authors |
+| **Architectural Pill**| `10px`–`11px` | `1.2` | `+0.12em` | Semibold 600 | Uppercase kickers, category chips, tags |
 
 ---
 
-## 2. Futuristic Color Palette & Glowing Tokens
+## 3. Color Architecture: Warm Gallery Stone
 
-The color architecture evokes an African sovereign tech vanguard: deep obsidian tech space, luminous emerald pulses, and warm solar gold highlights.
+Inspired by `palladio.framer.website`, the palette pairs warm architectural stone backgrounds with crisp white gallery cards, deep charcoal ink text, botanical green accents for sustainability and vitality, and terracotta for warm calls-to-action.
 
-| Token | Variable | Hex / Value | Purpose |
+| Token | Variable | Hex Value | Role & Usage |
 | :--- | :--- | :--- | :--- |
-| **Obsidian Deep** | `--ink-950` | `#040D0E` | Base cosmic background canvas |
-| **Obsidian Void** | `--ink-900` | `#061517` | Section alternations, dropdown cards |
-| **Tech Slate** | `--ink-850` | `#081E21` | Inner glass panel backgrounds |
-| **Teal Deep** | `--ink-800` | `#0B2B2E` | Card surfaces |
-| **Brand Green** | `--primary-700` | `#0F5C4D` | Primary brand heritage |
-| **Neon Emerald** | `--primary-500` | `#10B981` | Interactive elements, status pulses, primary buttons |
-| **Emerald Highlight**| `--primary-400`| `#34D399` | Hover states, glowing borders |
-| **Warm Gold** | `--accent-500` | `#F2A900` | Key metrics, primary CTAs, high-priority highlights |
-| **Electric Cyan** | `--sky-400` | `#38BDF8` | Auxiliary data indicators |
-| **Glass Border** | `--line` | `rgba(255, 255, 255, 0.09)` | Micro glass borders |
-| **Surface Glass**| `--surface-glass` | `rgba(8, 30, 33, 0.65)` | Frosted backdrop container |
+| **Stone 100 (Canvas)** | `--bg-stone` | `#F5F2EB` | Primary page background, warm bone/stone tint |
+| **Stone 150 (Subtle)** | `--bg-stone-subtle` | `#EFECE4` | Alternating section background, subtle tint surfaces |
+| **Stone 200 (Surface)**| `--stone-200` | `#E5E0D5` | Neutral badges, disabled states, subtle container fills |
+| **Stone 300 (Hairline)**| `--border-hairline`| `#DCD7CC` | 1px clean architectural divider lines and card borders |
+| **Charcoal Ink (Text)**| `--text-ink` | `#151619` | Primary headings, body copy, dark contrast blocks |
+| **Charcoal Muted**    | `--text-muted` | `#5A5852` | Secondary body text, descriptions, footnotes |
+| **Charcoal Light**    | `--text-light` | `#8C877D` | Uppercase category kickers, label headers |
+| **Botanical Green**   | `--accent-botanical`| `#2F6B4F` | Live status indicators, success states, verified metrics |
+| **Botanical Hover**   | `--botanical-600` | `#24543E` | Link hover states, primary interaction highlights |
+| **Terracotta Accent** | `--accent-terracotta`| `#9C4930` | Warm editorial accents, grant values, secondary links |
+| **Card White**        | `#FFFFFF` | `#FFFFFF` | Clean architectural gallery cards, form inputs |
 
 ---
 
-## 3. Futuristic Visual Effects
+## 4. Layout, Spacing & Container System
 
-- **Glassmorphic Panels (`.glass-panel`)**:
+- **Max Container Width**: `1200px` (`max-w-container`), centered with fluid horizontal gutters (`px-6 sm:px-8 lg:px-12`).
+- **Vertical Rhythm**: Generous whitespace inspired by Palladio (`py-24 sm:py-36` on major sections; `py-12 pb-20` on inner headers).
+- **Hairlines**: Clean 1px bottom/top dividers (`.hairline-b`, `.hairline-t` using `#DCD7CC`) demarcating sections without heavy shadow breaks.
+- **Card Radius**: `16px` (`rounded-card`) or `9999px` (`rounded-pill`) for pill badges and buttons.
+- **Minimal Card Elevation**:
   ```css
-  background: rgba(8, 30, 33, 0.55);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  .minimal-card {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(220, 215, 204, 0.8);
+    box-shadow: 0 1px 3px 0 rgba(21, 22, 25, 0.04);
+  }
   ```
-- **Cyber Grid (`.cyber-grid` & `.cyber-grid-dense`)**:
-  - `48px` and `24px` subtle luminous grid overlays simulating a digital coordinate plane.
-- **Glow Shadows**:
-  - Emerald Glow: `0 0 35px -5px rgba(16, 185, 129, 0.3)`
-  - Gold Glow: `0 0 35px -5px rgba(242, 169, 0, 0.3)`
-  - Text Glow: `text-shadow: 0 0 25px rgba(242, 169, 0, 0.5)`
-- **Pulsing Radar Status**:
-  - Animated pulsing ping ring on live opportunities (`Accepting Applications // LIVE_CALL`).
-- **Interactive Card Lift (`.glass-card-interactive`)**:
-  - Smooth `-4px` vertical lift on hover with glowing border transitions.
+
+---
+
+## 5. Component Design Language
+
+1. **Audience Selector**:
+   - 3 equal-width architectural cards ("I am a young person", "I am an organization", "I am a partner").
+   - Crisp step progression (1. Browse → 2. Apply) leading directly to conversion.
+2. **Integrated Nexus Visual**:
+   - Interactive editorial selector detailing the 5 engines of AfriYouth: Applied Research, Policy Shaping, Human-Centered Design, Venture Acceleration, and Strategic Foresight.
+3. **Impact Telemetry**:
+   - 4 large Clash Display counters with delicate vertical dividers and subtle baseline units.
+4. **Opportunities Portal**:
+   - Filterable pill bar with real-time text query and category selectors. Cards dynamically badge `Accepting Applications` in botanical green or `Cohort In Session` in neutral stone.
+5. **Contact & Application Desk**:
+   - Accessible form with input validation, hidden honeypot spam protection, and swappable Formspree / API route backend.

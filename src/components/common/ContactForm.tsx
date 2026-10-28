@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { CheckCircle2, AlertCircle, Loader2, Send, Terminal } from "lucide-react";
+import { CheckCircle2, AlertCircle, Loader2, ArrowUpRight } from "lucide-react";
 
 interface ContactFormProps {
   initialSubject?: string;
@@ -37,7 +37,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       setStatus("error");
-      setErrorMessage("Please complete all required fields (Name, Email, Message).");
+      setErrorMessage("Please complete Name, Email, and Message.");
       return;
     }
 
@@ -66,11 +66,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         setStatus("success");
       } else {
         setStatus("error");
-        setErrorMessage(data.error || "An error occurred while transmitting your message. Please try again.");
+        setErrorMessage(data.error || "An error occurred. Please try again.");
       }
     } catch {
       setStatus("error");
-      setErrorMessage("Network transmission error. Please verify your connection or email collaborate@afriyouth.org directly.");
+      setErrorMessage("Network error. Please email collaborate@afriyouth.org directly.");
     }
   };
 
@@ -78,19 +78,18 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     return (
       <div
         role="status"
-        className="bg-emerald-950/70 border border-emerald-500/40 rounded-card p-8 text-center space-y-4 animate-in fade-in-50 duration-200 shadow-glowEmerald"
+        className="bg-white border border-stone-300 rounded-card p-10 text-center space-y-4"
       >
-        <div className="w-14 h-14 bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 rounded-2xl flex items-center justify-center mx-auto">
-          <CheckCircle2 className="w-8 h-8" />
+        <div className="w-12 h-12 bg-botanical-100 text-botanical-700 rounded-full flex items-center justify-center mx-auto">
+          <CheckCircle2 className="w-6 h-6" />
         </div>
-        <span className="text-[11px] font-mono text-emerald-400 block tracking-widest">// DISPATCH CONFIRMED</span>
-        <h3 className="text-xl sm:text-2xl font-bold text-white font-heading">
-          Transmission Received by AfriYouth Innovation Labs
+        <h3 className="text-2xl font-bold text-stone-900 font-heading">
+          Inquiry Transmitted
         </h3>
-        <p className="text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
-          Thank you, <strong>{formData.name}</strong>. Your inquiry has been routed to our regional coordination desk. You will receive an official response within 2 business days.
+        <p className="text-sm text-stone-600 max-w-sm mx-auto leading-relaxed">
+          Thank you, <strong>{formData.name}</strong>. Our directorate will respond within 2 business days.
         </p>
-        <div className="pt-2">
+        <div className="pt-4">
           <button
             onClick={() => {
               setStatus("idle");
@@ -104,7 +103,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 botCheckWebsite: "",
               });
             }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold font-heading bg-emerald-500 text-ink-950 hover:bg-emerald-400 transition-colors shadow-glowEmerald"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-pill text-xs font-semibold bg-stone-900 text-white"
           >
             Submit Another Inquiry
           </button>
@@ -115,9 +114,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-      {/* Honeypot field for bot protection */}
+      {/* Honeypot field */}
       <div className="hidden" aria-hidden="true" style={{ display: "none" }}>
-        <label htmlFor="botCheckWebsite">Do not fill this field if you are human</label>
+        <label htmlFor="botCheckWebsite">Do not fill this field if human</label>
         <input
           type="text"
           id="botCheckWebsite"
@@ -132,21 +131,18 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       {status === "error" && (
         <div
           role="alert"
-          className="bg-red-950/60 border border-red-500/40 text-red-200 p-4 rounded-lg flex items-start gap-3 text-sm"
+          className="p-4 rounded-xl bg-terracotta-50 border border-terracotta-200 text-terracotta-600 text-xs flex items-center gap-2"
         >
-          <AlertCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
-          <div>
-            <strong className="block font-semibold font-heading text-white">Transmission Failed</strong>
-            <span className="text-xs text-red-300">{errorMessage}</span>
-          </div>
+          <AlertCircle className="w-4 h-4 shrink-0" />
+          <span>{errorMessage}</span>
         </div>
       )}
 
       {/* Row 1: Name and Email */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="contact-name" className="block text-[10px] font-mono font-bold uppercase tracking-widest text-slate-400 mb-1.5">
-            // FULL_NAME <span className="text-accent-500">*</span>
+          <label htmlFor="contact-name" className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-2">
+            Your Name <span className="text-terracotta-500">*</span>
           </label>
           <input
             id="contact-name"
@@ -155,14 +151,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             required
             value={formData.name}
             onChange={handleChange}
-            placeholder="e.g. Amina Umutoni"
-            className="w-full px-4 py-3 rounded-lg border border-white/10 text-sm text-white bg-ink-950/80 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 font-mono"
+            placeholder="Amina Umutoni"
+            className="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm text-stone-900 bg-white placeholder-stone-400 focus:outline-none focus:border-stone-900"
           />
         </div>
 
         <div>
-          <label htmlFor="contact-email" className="block text-[10px] font-mono font-bold uppercase tracking-widest text-slate-400 mb-1.5">
-            // EMAIL_COORDINATES <span className="text-accent-500">*</span>
+          <label htmlFor="contact-email" className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-2">
+            Email Address <span className="text-terracotta-500">*</span>
           </label>
           <input
             id="contact-email"
@@ -171,17 +167,17 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             required
             value={formData.email}
             onChange={handleChange}
-            placeholder="e.g. amina@example.org"
-            className="w-full px-4 py-3 rounded-lg border border-white/10 text-sm text-white bg-ink-950/80 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 font-mono"
+            placeholder="amina@example.org"
+            className="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm text-stone-900 bg-white placeholder-stone-400 focus:outline-none focus:border-stone-900"
           />
         </div>
       </div>
 
       {/* Row 2: Organization & Audience Persona */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="contact-org" className="block text-[10px] font-mono font-bold uppercase tracking-widest text-slate-400 mb-1.5">
-            // ORGANIZATION_AFFILIATION
+          <label htmlFor="contact-org" className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-2">
+            Organization / University
           </label>
           <input
             id="contact-org"
@@ -189,34 +185,34 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             type="text"
             value={formData.organization}
             onChange={handleChange}
-            placeholder="e.g. Kigali Tech Hub / Independent"
-            className="w-full px-4 py-3 rounded-lg border border-white/10 text-sm text-white bg-ink-950/80 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 font-mono"
+            placeholder="Kigali Innovation Hub"
+            className="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm text-stone-900 bg-white placeholder-stone-400 focus:outline-none focus:border-stone-900"
           />
         </div>
 
         <div>
-          <label htmlFor="contact-audience" className="block text-[10px] font-mono font-bold uppercase tracking-widest text-slate-400 mb-1.5">
-            // ENGAGEMENT_VECTOR <span className="text-accent-500">*</span>
+          <label htmlFor="contact-audience" className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-2">
+            You Are Engaging As <span className="text-terracotta-500">*</span>
           </label>
           <select
             id="contact-audience"
             name="audience"
             value={formData.audience}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-white/10 text-sm text-white bg-ink-950/80 focus:outline-none focus:ring-2 focus:ring-emerald-400 font-mono"
+            className="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm text-stone-900 bg-white focus:outline-none focus:border-stone-900"
           >
-            <option value="youth">Youth Innovator / Researcher / Applicant</option>
-            <option value="organization">Government / NGO / Service Client</option>
-            <option value="partner">Funder / Philanthropic Partner / Funder</option>
-            <option value="media">Media / Academic Researcher / General Inquiry</option>
+            <option value="youth">Youth Innovator / Researcher</option>
+            <option value="organization">Government / NGO Client</option>
+            <option value="partner">Funder / Strategic Partner</option>
+            <option value="media">Media / General Inquiry</option>
           </select>
         </div>
       </div>
 
       {/* Row 3: Subject */}
       <div>
-        <label htmlFor="contact-subject" className="block text-[10px] font-mono font-bold uppercase tracking-widest text-slate-400 mb-1.5">
-          // SUBJECT_LINE
+        <label htmlFor="contact-subject" className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-2">
+          Subject / Inquiry Topic
         </label>
         <input
           id="contact-subject"
@@ -224,15 +220,15 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           type="text"
           value={formData.subject}
           onChange={handleChange}
-          placeholder="e.g. Inquiry regarding Applied Research Service or Fellowship"
-          className="w-full px-4 py-3 rounded-lg border border-white/10 text-sm text-white bg-ink-950/80 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 font-mono"
+          placeholder="e.g. Applied Research Service or Fellowship"
+          className="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm text-stone-900 bg-white placeholder-stone-400 focus:outline-none focus:border-stone-900"
         />
       </div>
 
       {/* Row 4: Message */}
       <div>
-        <label htmlFor="contact-message" className="block text-[10px] font-mono font-bold uppercase tracking-widest text-slate-400 mb-1.5">
-          // TRANSMISSION_PAYLOAD <span className="text-accent-500">*</span>
+        <label htmlFor="contact-message" className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-2">
+          Message <span className="text-terracotta-500">*</span>
         </label>
         <textarea
           id="contact-message"
@@ -241,33 +237,30 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           required
           value={formData.message}
           onChange={handleChange}
-          placeholder="Please describe your background, proposed collaboration, or specific inquiry parameters..."
-          className="w-full px-4 py-3 rounded-lg border border-white/10 text-sm text-white bg-ink-950/80 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 font-mono leading-relaxed"
+          placeholder="Provide background, proposed collaboration, or specific question..."
+          className="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm text-stone-900 bg-white placeholder-stone-400 focus:outline-none focus:border-stone-900 leading-relaxed"
         />
       </div>
 
       {/* Submit Button */}
-      <div>
+      <div className="pt-2">
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg text-base font-bold font-heading bg-accent-500 text-ink-950 hover:bg-accent-400 disabled:opacity-60 transition-colors shadow-glowGold focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-500"
+          className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-pill text-xs font-semibold bg-stone-900 text-white hover:bg-stone-800 disabled:opacity-60 transition-colors"
         >
           {status === "submitting" ? (
             <>
-              <Loader2 className="w-5 h-5 animate-spin" />
-              <span>Transmitting Packet...</span>
+              <Loader2 className="w-4 h-4 animate-spin" />
+              <span>Transmitting...</span>
             </>
           ) : (
             <>
-              <span>Send Official Dispatch</span>
-              <Send className="w-4 h-4" />
+              <span>Send Inquiry</span>
+              <ArrowUpRight className="w-4 h-4" />
             </>
           )}
         </button>
-        <p className="text-xs font-mono text-slate-500 mt-2">
-          Protected by honeypot anti-spam. End-to-end encrypted telemetry.
-        </p>
       </div>
     </form>
   );

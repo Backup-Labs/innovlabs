@@ -5,7 +5,7 @@ import Link from "next/link";
 import { site, about } from "@/lib/content";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { IntegratedNexusVisual } from "@/components/common/IntegratedNexusVisual";
-import { Target, Compass, Shield, ArrowUpRight, Terminal } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us & Integrated Nexus Architecture",
@@ -15,59 +15,55 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="relative overflow-hidden">
-      {/* Top Banner & Breadcrumb */}
-      <div className="border-b border-white/[0.08] relative overflow-hidden pt-8 pb-14">
-        <div className="absolute inset-0 cyber-grid-dense pointer-events-none opacity-30" />
-        <div className="relative max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-stone-100 text-stone-900">
+      {/* Editorial Header */}
+      <section className="hairline-b pt-12 pb-20 sm:pb-28">
+        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
           <Breadcrumbs items={[{ label: "About AfriYouth" }]} />
-          <div className="max-w-3xl mt-4 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono text-emerald-400">
-              <Terminal className="w-3.5 h-3.5" />
-              <span>// INSTITUTIONAL ARCHITECTURE</span>
-            </div>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-heading font-heading">
-              Building the Pan-African Nexus for Youth Evidence & Scale
+          <div className="max-w-3xl mt-8 space-y-6">
+            <span className="text-[11px] font-semibold uppercase tracking-widePill text-stone-500">
+              Institutional Charter
+            </span>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-stone-900 tracking-display leading-tight">
+              A continental nexus for youth evidence.
             </h1>
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-              AfriYouth connects research, policy, human-centered design, entrepreneurship, and foresight. We are not just a youth organization, incubator, think tank, or training provider—we operate the integrated nexus that turns youth agency into systemic prosperity.
+            <p className="text-lg sm:text-xl text-stone-600 leading-relaxed font-normal">
+              AfriYouth connects research, policy, design, entrepreneurship, and foresight. We operate the integrated bridge that converts youth agency into lasting systemic prosperity.
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Mission & Vision Section */}
-      <section className="py-16 sm:py-24 border-b border-white/[0.08]" aria-labelledby="mission-heading">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="glass-panel rounded-card p-8 sm:p-10 border border-white/10 shadow-cyberCard">
-              <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-6 border border-emerald-500/25">
-                <Target className="w-6 h-6" />
+      {/* Mission & Vision: Architectural Cards */}
+      <section className="py-24 sm:py-36 hairline-b" aria-labelledby="mission-heading">
+        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            <div className="minimal-card rounded-card p-8 sm:p-12 flex flex-col justify-between">
+              <div>
+                <span className="text-[11px] font-semibold uppercase tracking-widePill text-botanical-600 block mb-6">
+                  01 / Purpose & Mandate
+                </span>
+                <h2 id="mission-heading" className="text-2xl sm:text-4xl font-extrabold text-stone-900 mb-6 tracking-tight">
+                  The Mission
+                </h2>
+                <p className="text-stone-600 leading-relaxed text-base sm:text-lg">
+                  {about.mission}
+                </p>
               </div>
-              <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-emerald-400 block mb-2">
-                // OUR PURPOSE & CHARTER
-              </span>
-              <h2 id="mission-heading" className="text-2xl sm:text-3xl font-bold text-white mb-4 font-heading tracking-tight">
-                The Mission
-              </h2>
-              <p className="text-slate-300 leading-relaxed text-sm sm:text-base font-normal">
-                {about.mission}
-              </p>
             </div>
 
-            <div className="glass-panel rounded-card p-8 sm:p-10 border border-accent-500/20 shadow-cyberCard">
-              <div className="w-12 h-12 rounded-xl bg-accent-500/10 text-accent-400 flex items-center justify-center mb-6 border border-accent-500/25">
-                <Compass className="w-6 h-6" />
+            <div className="minimal-card rounded-card p-8 sm:p-12 flex flex-col justify-between">
+              <div>
+                <span className="text-[11px] font-semibold uppercase tracking-widePill text-terracotta-600 block mb-6">
+                  02 / Continental Horizon
+                </span>
+                <h2 className="text-2xl sm:text-4xl font-extrabold text-stone-900 mb-6 tracking-tight">
+                  The Vision
+                </h2>
+                <p className="text-stone-600 leading-relaxed text-base sm:text-lg">
+                  {about.vision}
+                </p>
               </div>
-              <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-accent-400 block mb-2">
-                // CONTINENTAL HORIZON 2035
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 font-heading tracking-tight">
-                The Vision
-              </h2>
-              <p className="text-slate-300 leading-relaxed text-sm sm:text-base font-normal">
-                {about.vision}
-              </p>
             </div>
           </div>
         </div>
@@ -79,91 +75,105 @@ export default function AboutPage() {
       </div>
 
       {/* 6 Brand Pillars */}
-      <section className="py-16 sm:py-24 border-t border-white/[0.08]" aria-labelledby="pillars-heading">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
-              // FOUNDATIONAL VALUES
+      <section className="py-24 sm:py-36 hairline-b bg-stone-150/40" aria-labelledby="pillars-heading">
+        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="max-w-2xl mb-16 sm:mb-20 space-y-3">
+            <span className="text-[11px] font-semibold uppercase tracking-widePill text-stone-500">
+              Foundational Principles
             </span>
-            <h2 id="pillars-heading" className="text-3xl sm:text-4xl font-extrabold text-white tracking-heading mt-3">
-              The 6 Brand Pillars Guiding Our Work
+            <h2 id="pillars-heading" className="text-3xl sm:text-5xl font-extrabold text-stone-900 tracking-display">
+              The six pillars guiding our ecosystem.
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {site.brandPillars.map((pillar, i) => (
-              <div key={i} className="glass-panel p-6 sm:p-7 rounded-card border border-white/10 shadow-cyberCard glass-card-interactive">
-                <div className="w-8 h-8 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono font-bold flex items-center justify-center mb-4 text-xs">
-                  0{i + 1}
+              <div
+                key={i}
+                className="minimal-card rounded-card p-8 sm:p-10 flex flex-col justify-between group hover:border-stone-400 transition-colors"
+              >
+                <div>
+                  <span className="text-xs font-semibold text-stone-400 block mb-6 font-mono">
+                    0{i + 1}
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-bold text-stone-900 mb-3 tracking-tight group-hover:text-botanical-600 transition-colors">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-sm text-stone-600 leading-relaxed">
+                    {pillar.description}
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2 font-heading tracking-tight">
-                  {pillar.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-                  {pillar.description}
-                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Leadership & Governance */}
-      <section id="team" className="py-20 sm:py-28 border-t border-white/[0.08]" aria-labelledby="team-heading">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="text-xs font-mono uppercase tracking-widest text-accent-500 bg-accent-500/10 border border-accent-500/20 px-3 py-1 rounded-full">
-              // STEWARDSHIP & FACULTY
+      {/* Leadership & Advisory */}
+      <section id="team" className="py-24 sm:py-36 hairline-b" aria-labelledby="team-heading">
+        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="max-w-2xl mb-16 sm:mb-20 space-y-3">
+            <span className="text-[11px] font-semibold uppercase tracking-widePill text-stone-500">
+              Leadership & Stewardship
             </span>
-            <h2 id="team-heading" className="text-3xl sm:text-5xl font-extrabold text-white tracking-heading mt-3">
-              Steered by Pan-African Experts
+            <h2 id="team-heading" className="text-3xl sm:text-5xl font-extrabold text-stone-900 tracking-display">
+              Steered by pan-African practitioners.
             </h2>
-            <p className="text-slate-400 text-sm sm:text-base mt-3 font-normal">
+            <p className="text-base text-stone-600 pt-2">
               {about.team.intro}
             </p>
           </div>
 
           {/* Leadership Team Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {about.team.leadership.map((member, idx) => (
-              <div key={idx} className="glass-panel rounded-card border border-white/10 p-6 flex flex-col items-center text-center glass-card-interactive">
-                <div className="relative w-28 h-28 rounded-full overflow-hidden mb-4 border-2 border-emerald-400/40 p-1 bg-ink-950">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover rounded-full"
-                  />
+              <div
+                key={idx}
+                className="minimal-card rounded-card p-6 flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-5 bg-stone-200">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-102"
+                    />
+                  </div>
+                  <h3 className="text-lg font-bold text-stone-900 tracking-tight">
+                    {member.name}
+                  </h3>
+                  <span className="text-xs font-semibold text-botanical-600 block mb-3">
+                    {member.role}
+                  </span>
+                  <p className="text-xs text-stone-600 leading-relaxed">
+                    {member.bio}
+                  </p>
                 </div>
-                <h3 className="text-base font-bold text-white font-heading tracking-tight">
-                  {member.name}
-                </h3>
-                <span className="text-xs font-mono text-emerald-400 mb-3 block">
-                  {member.role}
-                </span>
-                <p className="text-xs text-slate-400 leading-relaxed font-normal">
-                  {member.bio}
-                </p>
               </div>
             ))}
           </div>
 
           {/* Research Advisory Council */}
-          <div className="glass-panel rounded-card border border-white/10 p-8 max-w-4xl mx-auto shadow-cyberCard">
-            <h3 className="text-lg font-bold text-white mb-4 font-heading flex items-center gap-2">
-              <Shield className="w-5 h-5 text-emerald-400" />
-              <span>Research Advisory & Governance Council</span>
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="minimal-card rounded-card p-8 sm:p-12">
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-stone-200 pb-6 mb-8 gap-2">
+              <h3 className="text-xl sm:text-2xl font-bold text-stone-900 tracking-tight">
+                Research Advisory & Governance Council
+              </h3>
+              <span className="text-xs font-semibold uppercase tracking-wider text-stone-500">
+                Independent Oversight
+              </span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {about.team.advisoryCouncil.map((advisor, aIdx) => (
-                <div key={aIdx} className="bg-ink-950/70 p-4 rounded-xl border border-white/5">
-                  <strong className="text-sm font-bold text-white block font-heading tracking-tight">
+                <div key={aIdx} className="space-y-1">
+                  <strong className="text-base font-bold text-stone-900 block tracking-tight">
                     {advisor.name}
                   </strong>
-                  <span className="text-xs font-mono text-emerald-400 block">
+                  <span className="text-xs font-semibold text-botanical-600 block">
                     {advisor.role}
                   </span>
-                  <span className="text-xs text-slate-400 mt-1 block">
+                  <span className="text-xs text-stone-500 block">
                     {advisor.affiliation}
                   </span>
                 </div>
@@ -174,25 +184,30 @@ export default function AboutPage() {
       </section>
 
       {/* Handover Bridge */}
-      <section className="py-14 bg-gradient-to-r from-primary-800 to-ink-950 border-t border-white/10 text-center">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl sm:text-2xl font-bold font-heading text-white mb-4 tracking-tight">
-            Want to learn more about our methodologies and operational governance?
-          </h2>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/resources"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold font-heading bg-accent-500 text-ink-950 hover:bg-accent-400 transition-colors shadow-glowGold"
-            >
-              <span>Download Open Toolkits & Reports</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold font-heading border border-white/20 text-white hover:bg-white/[0.06] transition-colors"
-            >
-              <span>Contact Executive Directorate</span>
-            </Link>
+      <section className="py-24 sm:py-32 bg-stone-900 text-stone-100">
+        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 text-center">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-display">
+              Explore our methodology and governance.
+            </h2>
+            <p className="text-stone-300 text-base leading-relaxed">
+              Access peer-reviewed frameworks, open data toolkits, or consult directly with the executive directorate.
+            </p>
+            <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
+              <Link
+                href="/resources"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-pill text-xs font-semibold uppercase tracking-wider bg-white text-stone-900 hover:bg-stone-200 transition-colors"
+              >
+                <span>Open Toolkits & Briefs</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-pill text-xs font-semibold uppercase tracking-wider border border-white/30 text-white hover:bg-white/10 transition-colors"
+              >
+                <span>Contact Directorate</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

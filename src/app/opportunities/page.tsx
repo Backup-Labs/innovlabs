@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { opportunities } from "@/lib/content";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { OpportunitiesFilter } from "@/components/common/OpportunitiesFilter";
-import { Terminal } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Opportunities & Open Calls",
@@ -13,30 +12,28 @@ export const metadata: Metadata = {
 
 export default function OpportunitiesPage() {
   return (
-    <div className="relative overflow-hidden">
-      {/* Top Header & Breadcrumb */}
-      <div className="border-b border-white/[0.08] relative overflow-hidden pt-8 pb-14">
-        <div className="absolute inset-0 cyber-grid-dense pointer-events-none opacity-30" />
-        <div className="relative max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-stone-100 text-stone-900">
+      {/* Editorial Header */}
+      <section className="hairline-b pt-12 pb-20 sm:pb-28">
+        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
           <Breadcrumbs items={[{ label: "Opportunities" }]} />
-          <div className="max-w-3xl mt-4 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono text-emerald-400">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-              <span>// REAL-TIME OPPORTUNITIES PORTAL</span>
-            </div>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-heading font-heading">
-              Fellowships, Grants & Challenges
+          <div className="max-w-3xl mt-8 space-y-6">
+            <span className="text-[11px] font-semibold uppercase tracking-widePill text-stone-500">
+              Open Calls & Cohorts
+            </span>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-stone-900 tracking-display leading-tight">
+              Fellowships, grants & challenges.
             </h1>
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-              Filter by status, initiative type, or target audience. All open calls feature verified deadlines, living stipends or equity-free catalytic capital, and direct mentorship.
+            <p className="text-lg sm:text-xl text-stone-600 leading-relaxed font-normal">
+              Filter by status, initiative focus, or target audience. All open calls feature living stipends or equity-free catalytic capital, expert mentorship, and direct pan-African placement.
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Main Content Area */}
-      <section className="py-14 sm:py-20" aria-labelledby="opportunities-portal-heading">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 sm:py-36" aria-labelledby="opportunities-portal-heading">
+        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
           <h2 id="opportunities-portal-heading" className="sr-only">
             Filter and Search Open Calls
           </h2>

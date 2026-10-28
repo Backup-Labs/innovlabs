@@ -3,161 +3,90 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { about } from "@/lib/content";
-import { Microscope, Landmark, Compass, Rocket, Eye, ArrowUpRight, Activity, Cpu } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export const IntegratedNexusVisual: React.FC = () => {
-  const [selectedPillar, setSelectedPillar] = useState(0);
-
-  const icons = [Microscope, Landmark, Compass, Rocket, Eye];
-  const sysCodes = ["SYS.01 // DATA", "SYS.02 // POLICY", "SYS.03 // DESIGN", "SYS.04 // VENTURE", "SYS.05 // FORESIGHT"];
+  const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="py-20 sm:py-28 relative overflow-hidden" aria-labelledby="nexus-heading">
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-primary-700/15 blur-[120px] pointer-events-none" />
-
-      <div className="relative max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 sm:py-36" aria-labelledby="nexus-heading">
+      <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono text-emerald-400 mb-3">
-            <Activity className="w-3.5 h-3.5 animate-pulse" />
-            <span>THE AFRIYOUTH CLOSED-LOOP ARCHITECTURE</span>
-          </div>
-          <h2 id="nexus-heading" className="text-3xl sm:text-5xl font-extrabold text-white tracking-heading">
-            How Our Work Connects
+        <div className="max-w-2xl mb-16 sm:mb-24 space-y-4">
+          <span className="text-[11px] font-semibold uppercase tracking-widePill text-stone-500">
+            The Integrated Model
+          </span>
+          <h2 id="nexus-heading" className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-stone-900 tracking-display">
+            Five engines. One closed loop.
           </h2>
-          <p className="text-slate-300 text-base sm:text-lg mt-4 leading-relaxed font-normal">
-            Single-track interventions stall: think tanks generate unread reports, incubators launch startups without policy backing, and youth forums converse without empirical data. AfriYouth binds all five engines into a self-reinforcing cybernetic nexus.
+          <p className="text-stone-600 text-base sm:text-lg leading-relaxed">
+            Most youth initiatives operate in isolation. AfriYouth bridges grassroots evidence, policy drafting, design sprints, and venture capital into a continuous transformation cycle.
           </p>
         </div>
 
-        {/* 5-Node Circuit Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4 mb-8">
+        {/* Minimalist Editorial Accordion / List */}
+        <div className="border-t border-stone-300">
           {about.integratedApproach.pillars.map((pillar, idx) => {
-            const Icon = icons[idx];
-            const isSelected = selectedPillar === idx;
+            const isSelected = activeStep === idx;
             return (
-              <button
+              <div
                 key={pillar.id}
-                onClick={() => setSelectedPillar(idx)}
-                className={`relative p-5 rounded-card border text-left transition-all duration-200 flex flex-col justify-between overflow-hidden group ${
-                  isSelected
-                    ? "bg-gradient-to-b from-ink-800 to-ink-900 border-emerald-400/60 shadow-glowEmerald ring-1 ring-emerald-400"
-                    : "glass-panel hover:border-white/20 text-slate-400 hover:text-white"
-                }`}
-                aria-pressed={isSelected}
+                className="border-b border-stone-300 transition-colors"
               >
-                {/* Top micro-line indicator */}
-                <div
-                  className={`absolute top-0 left-0 right-0 h-1 transition-all duration-200 ${
-                    isSelected ? "bg-gradient-to-r from-accent-500 to-emerald-400" : "bg-transparent group-hover:bg-white/10"
-                  }`}
-                />
-
-                <div>
-                  <div className="flex items-center justify-between w-full mb-4">
-                    <div
-                      className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
-                        isSelected
-                          ? "bg-emerald-500/20 text-emerald-300 border border-emerald-400/40"
-                          : "bg-white/[0.04] text-slate-400 border border-white/10 group-hover:text-emerald-400"
-                      }`}
-                    >
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <span
-                      className={`text-[10px] font-mono px-2 py-0.5 rounded-full font-bold ${
-                        isSelected
-                          ? "bg-accent-500 text-ink-950 font-bold"
-                          : "bg-white/[0.05] text-slate-400"
-                      }`}
-                    >
+                <button
+                  onClick={() => setActiveStep(idx)}
+                  className="w-full py-8 sm:py-10 flex flex-col md:flex-row md:items-center justify-between text-left group"
+                  aria-expanded={isSelected}
+                >
+                  <div className="flex items-baseline gap-6 sm:gap-10">
+                    <span className="text-sm font-semibold text-stone-400">
                       0{idx + 1}
                     </span>
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-stone-900 tracking-tight group-hover:text-botanical-600 transition-colors">
+                      {pillar.title.replace(/^[0-9]+\.\s*/, "")}
+                    </h3>
                   </div>
 
-                  <span className="text-[10px] font-mono block text-slate-400 mb-1 tracking-wider">
-                    {sysCodes[idx]}
+                  <span className="text-xs font-semibold uppercase tracking-wider text-stone-500 mt-2 md:mt-0">
+                    {isSelected ? "Active View" : "Explore Phase"}
                   </span>
-                  <h3 className={`font-bold text-sm sm:text-base font-heading ${isSelected ? "text-white" : "text-slate-200"}`}>
-                    {pillar.title.replace(/^[0-9]+\.\s*/, "")}
-                  </h3>
-                </div>
+                </button>
 
-                <div className="mt-4 pt-3 border-t border-white/[0.06] flex items-center justify-between text-[11px] font-mono">
-                  <span className={isSelected ? "text-emerald-400" : "text-slate-400"}>
-                    {isSelected ? "// ACTIVE_NODE" : "STANDBY"}
-                  </span>
-                  <span className="text-slate-400">&gt;&gt;</span>
-                </div>
-              </button>
+                {isSelected && (
+                  <div className="pb-10 pt-2 grid grid-cols-1 md:grid-cols-12 gap-8 animate-in fade-in duration-200">
+                    <div className="md:col-start-2 md:col-span-6 text-stone-700 text-base leading-relaxed">
+                      <p>{pillar.description}</p>
+                    </div>
+
+                    <div className="md:col-span-5 grid grid-cols-2 gap-4 text-xs">
+                      <div className="p-5 rounded-xl bg-stone-150 border border-stone-200">
+                        <span className="text-[10px] font-semibold uppercase tracking-widePill text-stone-500 block mb-1.5">
+                          Input
+                        </span>
+                        <p className="font-semibold text-stone-900">{pillar.input}</p>
+                      </div>
+                      <div className="p-5 rounded-xl bg-stone-150 border border-stone-200">
+                        <span className="text-[10px] font-semibold uppercase tracking-widePill text-botanical-600 block mb-1.5">
+                          Output
+                        </span>
+                        <p className="font-semibold text-stone-900">{pillar.output}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
             );
           })}
         </div>
 
-        {/* Dynamic Telemetry Display Pod */}
-        <div className="glass-panel rounded-card border border-white/10 p-6 sm:p-10 shadow-cyberCard relative overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-7 space-y-5">
-              <div className="flex items-center gap-3">
-                <span className="text-xs font-mono font-bold text-accent-500 px-2.5 py-0.5 rounded bg-accent-500/10 border border-accent-500/30">
-                  ENGINE STAGE 0{selectedPillar + 1} OF 05
-                </span>
-                <span className="text-xs font-mono text-slate-400">// INTEGRATED IMPACT CYCLE</span>
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-heading">
-                {about.integratedApproach.pillars[selectedPillar].title}
-              </h3>
-
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                {about.integratedApproach.pillars[selectedPillar].description}
-              </p>
-
-              {/* Input / Output Pods */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="bg-ink-950/70 p-4 rounded-xl border border-white/10">
-                  <div className="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-1.5 uppercase">
-                    <span>FEED INGESTION (INPUT)</span>
-                    <span className="text-emerald-400">&larr;</span>
-                  </div>
-                  <p className="text-sm font-semibold text-slate-200 font-heading">
-                    {about.integratedApproach.pillars[selectedPillar].input}
-                  </p>
-                </div>
-
-                <div className="bg-ink-950/70 p-4 rounded-xl border border-accent-500/20">
-                  <div className="flex items-center justify-between text-[11px] font-mono text-accent-500 mb-1.5 uppercase">
-                    <span>SYNTHESIS ARTIFACT (OUTPUT)</span>
-                    <span className="text-accent-400">&rarr;</span>
-                  </div>
-                  <p className="text-sm font-semibold text-white font-heading">
-                    {about.integratedApproach.pillars[selectedPillar].output}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Closed Loop Insight */}
-            <div className="lg:col-span-5 bg-gradient-to-br from-ink-900 to-ink-950 text-white rounded-xl p-6 sm:p-8 border border-white/10 space-y-4 shadow-subtle">
-              <div className="flex items-center gap-2 text-xs font-mono text-accent-500">
-                <Cpu className="w-4 h-4" />
-                <span>// CLOSED-LOOP SYSTEM ADVANTAGE</span>
-              </div>
-              <p className="text-slate-300 text-sm leading-relaxed">
-                Because every output automatically powers the next stage, solutions prototyped in AfriYouth labs don&apos;t evaporate into pilot limbo. They scale protected by legitimate legislative policy aircover and backed by sovereign venture capital.
-              </p>
-              <div className="pt-2">
-                <Link
-                  href="/about#integrated-model"
-                  className="inline-flex items-center gap-2 text-sm font-bold font-heading text-accent-400 hover:text-white transition-colors"
-                >
-                  <span>Explore full methodological architecture</span>
-                  <ArrowUpRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
+        <div className="mt-12 text-right">
+          <Link
+            href="/about#integrated-model"
+            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-stone-900 hover:text-terracotta-500 transition-colors"
+          >
+            <span>Read full methodology brief</span>
+            <ArrowUpRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>

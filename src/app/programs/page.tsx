@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { programs } from "@/lib/content";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { Clock, Users, CheckCircle2, ArrowUpRight, Compass, BookOpen, Terminal } from "lucide-react";
+import { CheckCircle2, ArrowUpRight, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Programs, Eligibility & Participation Roadmap",
@@ -13,30 +13,28 @@ export const metadata: Metadata = {
 
 export default function ProgramsPage() {
   return (
-    <div className="relative overflow-hidden">
-      {/* Top Header & Breadcrumb */}
-      <div className="border-b border-white/[0.08] relative overflow-hidden pt-8 pb-14">
-        <div className="absolute inset-0 cyber-grid-dense pointer-events-none opacity-30" />
-        <div className="relative max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-stone-100 text-stone-900">
+      {/* Editorial Header */}
+      <section className="hairline-b pt-12 pb-20 sm:pb-28">
+        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
           <Breadcrumbs items={[{ label: "Programs" }]} />
-          <div className="max-w-3xl mt-4 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono text-emerald-400">
-              <Terminal className="w-3.5 h-3.5" />
-              <span>// FLAGSHIP COHORTS</span>
-            </div>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-heading font-heading">
-              Fellowships, Incubators & Action Studios
+          <div className="max-w-3xl mt-8 space-y-6">
+            <span className="text-[11px] font-semibold uppercase tracking-widePill text-stone-500">
+              Flagship Cohorts
+            </span>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-stone-900 tracking-display leading-tight">
+              Fellowships, incubators & action studios.
             </h1>
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-              Every AfriYouth program provides rigorous technical training, hands-on community fieldwork, financial stipends or equity-free grants, and direct institutional placement.
+            <p className="text-lg sm:text-xl text-stone-600 leading-relaxed font-normal">
+              Every AfriYouth program provides rigorous technical training, hands-on community fieldwork, living stipends or equity-free catalytic capital, and direct institutional placement.
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Programs List */}
-      <section className="py-20 sm:py-28" aria-labelledby="programs-list-heading">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <section className="py-24 sm:py-36" aria-labelledby="programs-list-heading">
+        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 space-y-16">
           <div className="sr-only">
             <h2 id="programs-list-heading">Detailed Program Breakdown</h2>
           </div>
@@ -45,106 +43,111 @@ export default function ProgramsPage() {
             <article
               key={program.id}
               id={program.slug}
-              className="glass-panel rounded-card border border-white/10 overflow-hidden shadow-cyberCard p-6 sm:p-10 scroll-mt-28 relative group"
+              className="minimal-card rounded-card p-8 sm:p-12 scroll-mt-28"
             >
-              {/* Subtle accent border */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-teal-400 to-accent-500" />
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+                {/* Left Column: Brief & Highlights */}
+                <div className="lg:col-span-7 space-y-8">
+                  <div>
+                    <div className="flex flex-wrap items-center gap-3 mb-4">
+                      <span className="text-xs font-semibold uppercase tracking-wider text-stone-500">
+                        {program.area}
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 text-xs text-botanical-600 font-medium">
+                        <span className="w-1.5 h-1.5 rounded-full bg-botanical-500" />
+                        <span>{program.status}</span>
+                      </span>
+                    </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                {/* Left Column */}
-                <div className="lg:col-span-7 space-y-5">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/25 px-2.5 py-0.5 rounded">
-                      {program.area}
-                    </span>
-                    <span className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-300 bg-white/[0.04] px-2.5 py-0.5 rounded-full border border-white/10">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                      <span>{program.status}</span>
-                    </span>
+                    <h3 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight leading-tight">
+                      {program.title}
+                    </h3>
+                    <p className="text-base font-semibold text-botanical-600 mt-2">
+                      {program.tagline}
+                    </p>
+                    <p className="text-stone-600 leading-relaxed text-sm sm:text-base mt-4">
+                      {program.description}
+                    </p>
                   </div>
 
-                  <h3 className="text-2xl sm:text-4xl font-extrabold text-white font-heading tracking-tight">
-                    {program.title}
-                  </h3>
-                  <p className="text-sm sm:text-base font-medium text-emerald-400">
-                    {program.tagline}
-                  </p>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-                    {program.description}
-                  </p>
-
-                  {/* Highlights Grid */}
-                  <div className="pt-2">
-                    <h4 className="text-[10px] font-mono font-bold uppercase tracking-widest text-slate-400 mb-2">
-                      // CURRICULUM HIGHLIGHTS
-                    </h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {/* Highlights */}
+                  <div className="pt-6 border-t border-stone-200">
+                    <span className="text-[11px] font-semibold uppercase tracking-widePill text-stone-400 block mb-4">
+                      Curriculum Highlights
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {program.curriculumHighlights.map((hl, i) => (
-                        <div key={i} className="flex items-start gap-2 text-xs sm:text-sm text-slate-300">
-                          <BookOpen className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                        <div key={i} className="flex items-start gap-2 text-xs sm:text-sm text-stone-700">
+                          <BookOpen className="w-4 h-4 text-botanical-500 shrink-0 mt-0.5" />
                           <span>{hl}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  {/* Outcomes Statement */}
-                  <div className="p-4 bg-ink-950/80 rounded-xl border border-white/10">
-                    <strong className="text-[10px] font-mono font-bold uppercase tracking-widest text-accent-500 block mb-1">
-                      // VERIFIED IMPACT OUTCOME
-                    </strong>
-                    <p className="text-xs sm:text-sm text-slate-200 font-medium">
+                  {/* Verified Impact */}
+                  <div className="p-6 rounded-card bg-stone-150/60 border border-stone-300">
+                    <span className="text-[10px] font-semibold uppercase tracking-widePill text-terracotta-600 block mb-2">
+                      Verified Impact Metric
+                    </span>
+                    <p className="text-sm font-medium text-stone-900">
                       {program.outcomes}
                     </p>
                   </div>
                 </div>
 
-                {/* Right Column: Eligibility & Roadmap */}
-                <div className="lg:col-span-5 bg-ink-950/80 rounded-xl p-6 sm:p-8 border border-white/10 space-y-6 flex flex-col justify-between">
-                  <div className="space-y-6">
-                    {/* Stats */}
-                    <div className="grid grid-cols-2 gap-4 pb-4 border-b border-white/[0.08] text-xs font-mono">
+                {/* Right Column: Parameters, Eligibility & Apply */}
+                <div className="lg:col-span-5 bg-stone-150/40 rounded-card p-8 border border-stone-300 space-y-8 flex flex-col justify-between">
+                  <div className="space-y-8">
+                    {/* Program Duration & Capacity */}
+                    <div className="grid grid-cols-2 gap-4 pb-6 border-b border-stone-300">
                       <div>
-                        <span className="text-slate-500 block">DURATION</span>
-                        <strong className="text-white text-sm font-semibold">{program.duration}</strong>
+                        <span className="text-[10px] font-semibold uppercase tracking-wider text-stone-400 block">
+                          Duration
+                        </span>
+                        <strong className="text-stone-900 text-sm font-semibold">
+                          {program.duration}
+                        </strong>
                       </div>
                       <div>
-                        <span className="text-slate-500 block">COHORT CAPACITY</span>
-                        <strong className="text-white text-sm font-semibold">{program.cohortSize}</strong>
+                        <span className="text-[10px] font-semibold uppercase tracking-wider text-stone-400 block">
+                          Capacity
+                        </span>
+                        <strong className="text-stone-900 text-sm font-semibold">
+                          {program.cohortSize}
+                        </strong>
                       </div>
                     </div>
 
-                    {/* Eligibility List */}
+                    {/* Eligibility */}
                     <div>
-                      <h4 className="text-[11px] font-mono font-bold uppercase tracking-widest text-emerald-400 mb-3 flex items-center gap-1.5">
-                        <CheckCircle2 className="w-4 h-4" />
-                        <span>ELIGIBILITY CRITERIA</span>
-                      </h4>
-                      <ul className="space-y-2">
+                      <span className="text-[11px] font-semibold uppercase tracking-widePill text-stone-900 block mb-4">
+                        Eligibility Criteria
+                      </span>
+                      <ul className="space-y-2.5">
                         {program.eligibility.map((el, eIdx) => (
-                          <li key={eIdx} className="flex items-start gap-2 text-xs text-slate-300">
-                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0 mt-1.5" />
+                          <li key={eIdx} className="flex items-start gap-2.5 text-xs text-stone-600">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-botanical-500 shrink-0 mt-0.5" />
                             <span>{el}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    {/* How to Participate */}
+                    {/* Roadmap */}
                     <div>
-                      <h4 className="text-[11px] font-mono font-bold uppercase tracking-widest text-accent-500 mb-3 flex items-center gap-1.5">
-                        <Compass className="w-4 h-4" />
-                        <span>PARTICIPATION ROADMAP</span>
-                      </h4>
-                      <ol className="space-y-2.5 text-xs text-slate-300">
+                      <span className="text-[11px] font-semibold uppercase tracking-widePill text-stone-900 block mb-4">
+                        Selection Roadmap
+                      </span>
+                      <ol className="space-y-3">
                         {program.howToParticipate.map((step) => (
-                          <li key={step.step} className="flex items-start gap-2.5">
-                            <span className="w-5 h-5 rounded bg-emerald-500/20 text-emerald-400 font-mono font-bold flex items-center justify-center shrink-0 text-[10px] border border-emerald-500/30">
-                              {step.step}
+                          <li key={step.step} className="flex items-start gap-3 text-xs">
+                            <span className="font-mono font-bold text-stone-400 shrink-0 mt-0.5">
+                              {step.step}.
                             </span>
                             <div>
-                              <strong className="text-white block font-heading">{step.title}</strong>
-                              <span className="text-slate-400 text-[11px] leading-tight block">{step.description}</span>
+                              <strong className="text-stone-900 block">{step.title}</strong>
+                              <span className="text-stone-500 text-[11px] leading-relaxed block">{step.description}</span>
                             </div>
                           </li>
                         ))}
@@ -152,14 +155,14 @@ export default function ProgramsPage() {
                     </div>
                   </div>
 
-                  {/* Apply action */}
-                  <div className="pt-4 border-t border-white/[0.08]">
+                  {/* CTA */}
+                  <div className="pt-6 border-t border-stone-300">
                     <Link
                       href="/opportunities"
-                      className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-bold font-heading bg-accent-500 text-ink-950 hover:bg-accent-400 transition-colors shadow-glowGold"
+                      className="inline-flex items-center justify-between w-full px-6 py-3.5 rounded-pill text-xs font-semibold uppercase tracking-wider bg-stone-900 text-white hover:bg-stone-800 transition-colors"
                     >
-                      <span>Apply in Opportunities Portal</span>
-                      <ArrowUpRight className="w-4 h-4" />
+                      <span>Check Open Cohorts</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
                 </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import type { Opportunity } from "@/lib/types";
-import { ArrowUpRight, Calendar, MapPin, Award } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 interface OpportunityCardProps {
   opportunity: Opportunity;
@@ -12,99 +12,54 @@ export const OpportunityCard: React.FC<OpportunityCardProps> = ({ opportunity })
 
   return (
     <div
-      className={`glass-panel rounded-card border transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden group ${
-        isOpen
-          ? "border-white/10 hover:border-emerald-500/50 hover:shadow-glowEmerald glass-card-interactive"
-          : "border-white/5 opacity-70"
+      className={`minimal-card rounded-card p-8 sm:p-10 flex flex-col justify-between group ${
+        isOpen ? "bg-white" : "bg-stone-150/40 opacity-80"
       }`}
     >
-      {/* Top subtle glow banner */}
-      <div
-        className={`absolute top-0 left-0 right-0 h-1 ${
-          isOpen ? "bg-gradient-to-r from-accent-500 to-emerald-400" : "bg-white/10"
-        }`}
-      />
-
       <div>
-        {/* Top Badges */}
-        <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-          <div className="flex items-center gap-2">
-            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/25 px-2.5 py-0.5 rounded">
-              {opportunity.type}
-            </span>
-            <span className="text-[11px] font-mono text-slate-400 bg-white/[0.04] border border-white/10 px-2 py-0.5 rounded">
-              {opportunity.audience}
-            </span>
-          </div>
-
+        <div className="flex items-center justify-between gap-2 mb-6 text-xs">
+          <span className="font-semibold uppercase tracking-wider text-stone-500">
+            {opportunity.type}
+          </span>
           <span
-            className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-bold ${
-              isOpen
-                ? "bg-emerald-500/15 text-emerald-400 border border-emerald-500/30"
-                : "bg-white/[0.05] text-slate-400 border border-white/10"
+            className={`inline-flex items-center gap-1.5 font-medium ${
+              isOpen ? "text-botanical-600" : "text-stone-500"
             }`}
           >
             <span
               className={`w-1.5 h-1.5 rounded-full ${
-                isOpen ? "bg-emerald-400 animate-pulse" : "bg-slate-500"
+                isOpen ? "bg-botanical-500" : "bg-stone-400"
               }`}
             />
-            {isOpen ? "LIVE CALL" : "IN SESSION"}
+            {isOpen ? "Accepting Applications" : "Cohort In Session"}
           </span>
         </div>
 
-        {/* Title */}
-        <h3 className="text-lg sm:text-xl font-bold text-white mb-2 font-heading tracking-tight group-hover:text-emerald-300 transition-colors">
+        <h3 className="text-xl sm:text-2xl font-bold text-stone-900 mb-2 tracking-tight group-hover:text-botanical-600 transition-colors">
           {opportunity.title}
         </h3>
 
-        {/* Benefit Callout */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-accent-500/10 border border-accent-500/25 text-accent-400 text-xs sm:text-sm font-semibold mb-4">
-          <Award className="w-4 h-4 text-accent-500 shrink-0" />
-          <span>{opportunity.benefit}</span>
-        </div>
+        <p className="text-xs font-semibold text-terracotta-600 mb-4">
+          {opportunity.benefit}
+        </p>
 
-        <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+        <p className="text-sm text-stone-600 leading-relaxed mb-6">
           {opportunity.summary}
         </p>
 
-        {/* Meta Info in Monospace */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-slate-400 pt-3 border-t border-white/[0.08]">
-          <div className="flex items-center gap-1.5">
-            <Calendar className="w-3.5 h-3.5 text-slate-500 shrink-0" />
-            <span>Deadline: <strong className="text-white font-normal">{opportunity.deadline}</strong></span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <MapPin className="w-3.5 h-3.5 text-slate-500 shrink-0" />
-            <span>{opportunity.location}</span>
-          </div>
-        </div>
-
-        {/* Eligibility Snippet */}
-        <div className="mt-3 p-3 bg-ink-950/60 rounded-lg text-xs text-slate-300 border border-white/5">
-          <strong className="text-emerald-400 font-mono text-[11px] block mb-0.5">// ELIGIBILITY:</strong>
-          <span>{opportunity.eligibility}</span>
+        <div className="text-xs text-stone-500 pt-4 border-t border-stone-200">
+          <span>Deadline: <strong className="text-stone-900">{opportunity.deadline}</strong></span>
         </div>
       </div>
 
-      {/* CTA Button */}
-      <div className="mt-6 pt-4 border-t border-white/[0.08]">
-        {isOpen ? (
-          <Link
-            href={`/opportunities/${opportunity.slug}`}
-            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold font-heading bg-emerald-500 text-ink-950 hover:bg-emerald-400 transition-colors shadow-glowEmerald"
-          >
-            <span>Review Guidelines & Apply</span>
-            <ArrowUpRight className="w-4 h-4" />
-          </Link>
-        ) : (
-          <Link
-            href={`/opportunities/${opportunity.slug}`}
-            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-xs font-mono text-slate-400 border border-white/10 hover:bg-white/[0.05] transition-colors"
-          >
-            <span>VIEW COHORT DOSSIER &gt;&gt;</span>
-          </Link>
-        )}
+      <div className="mt-8 pt-6 border-t border-stone-200">
+        <Link
+          href={`/opportunities/${opportunity.slug}`}
+          className="inline-flex items-center justify-between w-full text-xs font-bold uppercase tracking-wider text-stone-900 group-hover:text-botanical-600 transition-colors"
+        >
+          <span>{isOpen ? "Review Guidelines & Apply" : "View Cohort Profile"}</span>
+          <ArrowUpRight className="w-3.5 h-3.5" />
+        </Link>
       </div>
     </div>
   );
