@@ -55,9 +55,9 @@ export const PartnerShowcase: React.FC = () => {
 
         {/* Sliding Logos Tracks with Real Logos and Soft Edge Masks */}
         <div className="relative w-full space-y-8 overflow-hidden py-4">
-          {/* Gradient Edge Masks */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-20 sm:w-36 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-20 sm:w-36 bg-gradient-to-l from-white via-white/80 to-transparent z-10" />
+          {/* Gradient Edge Masks: responsive width for mobile vs desktop */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-8 sm:w-20 lg:w-36 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-8 sm:w-20 lg:w-36 bg-gradient-to-l from-white via-white/80 to-transparent z-10" />
 
           {/* Row 1 - Sliding Left Slowly */}
           <div className="flex overflow-hidden select-none">

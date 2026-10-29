@@ -141,7 +141,7 @@ export const CustomDatePicker: React.FC<CustomDatePickerProps> = ({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 6, scale: 0.98 }}
             transition={{ duration: 0.15, ease: "easeOut" }}
-            className="absolute z-50 left-0 sm:left-auto right-0 mt-2 p-4 w-72 bg-white/95 backdrop-blur-xl border border-black/15 rounded-2xl shadow-[0_12px_36px_rgba(0,0,0,0.14)] select-none font-sans"
+            className="absolute z-50 left-0 sm:left-auto right-0 mt-2 p-4 w-72 max-w-[calc(100vw-2rem)] bg-white/95 backdrop-blur-xl border border-black/15 rounded-2xl shadow-[0_12px_36px_rgba(0,0,0,0.14)] select-none font-sans"
           >
             {/* Header: Month / Year with arrows */}
             <div className="flex items-center justify-between mb-3 px-1">

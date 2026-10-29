@@ -196,9 +196,9 @@ export const TestimonialsSection: React.FC = () => {
             </div>
 
             {/* Bottom-Right Rating Widget matching Screenshot 1: 4.9 /5 + Green Dots */}
-            <div className="relative z-10 flex justify-end mt-6">
-              <div className="text-right">
-                <div className="flex items-baseline justify-end gap-1.5 text-white">
+            <div className="relative z-10 flex justify-start sm:justify-end mt-6 sm:mt-8">
+              <div className="text-left sm:text-right">
+                <div className="flex items-baseline justify-start sm:justify-end gap-1.5 text-white">
                   <span className="text-5xl sm:text-7xl font-sans font-bold tracking-tight leading-none">
                     4.9
                   </span>
@@ -207,7 +207,7 @@ export const TestimonialsSection: React.FC = () => {
                   </span>
                 </div>
                 {/* 5 Green indicator dots */}
-                <div className="flex items-center justify-end gap-1 mt-2">
+                <div className="flex items-center justify-start sm:justify-end gap-1 mt-2">
                   {[...Array(5)].map((_, i) => (
                     <span
                       key={i}

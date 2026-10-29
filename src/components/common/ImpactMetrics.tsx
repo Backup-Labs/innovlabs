@@ -32,7 +32,7 @@ export const ImpactMetrics: React.FC<ImpactMetricsProps> = ({ showTitle = true, 
           </motion.div>
         )}
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-y-16 gap-x-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 sm:gap-y-16 gap-x-8 sm:gap-x-12">
           {impact.metrics.map((item, index) => (
             <motion.div
               key={index}

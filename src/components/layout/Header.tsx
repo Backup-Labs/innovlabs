@@ -68,11 +68,11 @@ export const Header: React.FC = () => {
           </Link>
 
           {/* Right Actions matching photo: [Book a call] pill + [ = ] circular menu icon */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             {/* Book a call pill button matching photo */}
             <Link
               href="/contact?intent=service"
-              className="inline-flex items-center justify-center h-9 px-4.5 sm:px-5 rounded-full text-[13px] font-semibold bg-[#1A252C] text-white hover:bg-black transition-all duration-200 active:scale-95 shadow-sm font-sans"
+              className="inline-flex items-center justify-center h-8.5 sm:h-9 px-3.5 sm:px-5 rounded-full text-[12px] sm:text-[13px] font-semibold bg-[#1A252C] text-white hover:bg-black transition-all duration-200 active:scale-95 shadow-sm font-sans shrink-0"
             >
               <span>Book a call</span>
             </Link>
@@ -80,7 +80,7 @@ export const Header: React.FC = () => {
             {/* Circular button with two horizontal white bars matching photo */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="w-9 h-9 rounded-full bg-[#1A252C] text-white flex items-center justify-center hover:bg-black transition-all duration-200 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-black relative z-50 shadow-sm"
+              className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full bg-[#1A252C] text-white flex items-center justify-center hover:bg-black transition-all duration-200 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-black relative z-50 shadow-sm shrink-0"
               aria-expanded={menuOpen}
               aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
@@ -113,7 +113,7 @@ export const Header: React.FC = () => {
             />
 
             {/* Anchored Two-Card Container: positioned right below the header buttons */}
-            <div className="fixed top-14 sm:top-15 right-3 sm:right-5 lg:right-6 z-50 w-[240px] sm:w-[260px] flex flex-col gap-2 pointer-events-auto">
+            <div className="fixed top-14 sm:top-15 right-3 sm:right-5 lg:right-6 z-50 w-[calc(100vw-24px)] max-w-[260px] flex flex-col gap-2 pointer-events-auto">
               {/* Card 1: Navigation Links in upright Instrument Serif */}
               <motion.div
                 initial={{ opacity: 0, y: -8, scale: 0.97 }}

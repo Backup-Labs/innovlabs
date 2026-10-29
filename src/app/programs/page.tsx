@@ -38,7 +38,7 @@ export default function ProgramsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="minimal-card rounded-card p-8 sm:p-12 scroll-mt-28 bg-[#F4F4F6] border border-gray-300"
+              className="minimal-card rounded-card p-6 sm:p-10 lg:p-12 scroll-mt-28 bg-[#F4F4F6] border border-gray-300"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
                 {/* Left Column: Brief & Highlights */}

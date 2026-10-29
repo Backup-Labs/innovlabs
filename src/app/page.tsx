@@ -27,7 +27,7 @@ export default function HomePage() {
     <div className="flex flex-col bg-[#F4F4F6] text-black">
       {/* 1. Hero Section: Tight edge margin, fit completely in viewport without scrolling */}
       <div className="w-full px-2 sm:px-3 lg:px-4 pb-1 sm:pb-2 pt-0.5">
-        <section className="relative w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] overflow-hidden bg-[#161D20] h-[calc(100vh-4.25rem)] sm:h-[calc(100dvh-4.25rem)] max-h-[calc(100dvh-4.25rem)] flex flex-col justify-between border border-black/10 shadow-2xl">
+        <section className="relative w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] overflow-hidden bg-[#161D20] min-h-[560px] sm:min-h-[620px] lg:h-[calc(100dvh-4.25rem)] lg:max-h-[calc(100dvh-4.25rem)] flex flex-col justify-between border border-black/10 shadow-2xl">
           {/* Atmospheric Fresco Mural Background Artwork */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -43,7 +43,7 @@ export default function HomePage() {
           <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/85 via-black/45 to-black/75 pointer-events-none" />
 
           {/* Hero Content Container: Mathematically proportioned to fit any screen height without scrolling */}
-          <div className="relative z-10 max-w-container mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-between py-3.5 sm:py-4 lg:py-5">
+          <div className="relative z-10 max-w-container mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-between py-4 sm:py-5 lg:py-6">
             {/* Top Kicker matching photo: ⊕ PAN-AFRICAN YOUTH INNOVATION NEXUS */}
             <motion.div
               initial={{ opacity: 0, y: -6 }}
@@ -64,22 +64,22 @@ export default function HomePage() {
               transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="max-w-4xl my-auto py-1 sm:py-2"
             >
-              <h1 className="font-serif font-normal text-4xl sm:text-6xl md:text-7xl lg:text-[clamp(3.1rem,5.6vw,5.2rem)] text-white tracking-tight leading-[1.01]">
+              <h1 className="font-serif font-normal text-[clamp(2.3rem,6vw,5.2rem)] text-white tracking-tight leading-[1.02]">
                 The quiet work <br className="hidden sm:inline" />
                 behind bold decisions.
               </h1>
             </motion.div>
 
             {/* Bottom Area: Left Minimal Description & Buttons + Right High-Frost Glass Case Study Card */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-6 items-end pb-0.5">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 items-end pb-0.5">
               {/* Left: Concise minimalist statement and 2 skeuomorphic/frost pill buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-                className="lg:col-span-7 space-y-2.5"
+                className="lg:col-span-7 space-y-3"
               >
-                <p className="text-[18px] text-white/95 leading-relaxed font-normal max-w-lg font-sans">
+                <p className="text-base sm:text-[18px] text-white/95 leading-relaxed font-normal max-w-lg font-sans">
                   AfriYouth is an integrated innovation practice for leaders, researchers, and founders—rigorous evidence and solutions that hold.
                 </p>
 
@@ -109,14 +109,14 @@ export default function HomePage() {
                 initial={{ opacity: 0, scale: 0.95, y: 12 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="lg:col-span-5 flex justify-start lg:justify-end"
+                className="lg:col-span-5 flex justify-start lg:justify-end mt-2 lg:mt-0"
               >
                 <div className="frost-glass w-full max-w-[240px] sm:max-w-[260px] lg:max-w-[270px] rounded-xl sm:rounded-2xl p-2.5 sm:p-3 text-black transition-transform duration-300 hover:-translate-y-1">
-                  {/* Classical architectural case study engraving thumbnail matching reference screenshot */}
+                  {/* Professional architectural case study photography thumbnail */}
                   <div className="relative w-full h-16 sm:h-18 lg:h-20 rounded-lg overflow-hidden bg-gray-200 mb-2 shadow-inner">
                     <Image
-                      src="/images/case-study-hero.svg"
-                      alt="Classical architectural watermill case study"
+                      src="/images/case-study-hero.jpg"
+                      alt="Pan-African youth case study enterprise"
                       fill
                       className="object-cover"
                     />
@@ -358,7 +358,52 @@ export default function HomePage() {
         </section>
       </div>
 
-      {/* 8. Impact Numbers */}
+      {/* 8. Field Case Studies - Matching Reference Screenshot */}
+      <div className="w-full px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2">
+        <section
+          className="w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] bg-white border border-black/10 py-16 sm:py-24 overflow-hidden shadow-sm"
+          aria-labelledby="home-stories-heading"
+        >
+          <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 sm:mb-20"
+            >
+              <div className="max-w-xl space-y-3">
+                <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
+                  Field Case Studies
+                </span>
+                <h2
+                  id="home-stories-heading"
+                  className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight"
+                >
+                  Stories of systemic change.
+                </h2>
+              </div>
+              <Link
+                href="/impact#stories"
+                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-black hover:underline transition-all shrink-0 font-sans"
+              >
+                <span>View All Case Studies</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+              {featuredStories.map((story) => (
+                <div key={story.id} className="h-full w-full flex flex-col">
+                  <StoryCard story={story} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* 9. Impact Numbers */}
       <ImpactMetrics />
 
       {/* 9. Professional Real-World Testimonials Section matching Screenshot 1 */}

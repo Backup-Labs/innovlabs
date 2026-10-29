@@ -77,7 +77,7 @@ export default function OpportunityDetailPage({ params }: PageProps) {
               </div>
 
               {/* Metadata Card */}
-              <div className="minimal-card rounded-card p-8 grid grid-cols-1 sm:grid-cols-3 gap-6 bg-[#F4F4F6] border border-gray-300 font-mono">
+              <div className="minimal-card rounded-card p-6 sm:p-8 grid grid-cols-1 sm:grid-cols-3 gap-6 bg-[#F4F4F6] border border-gray-300 font-mono">
                 <div>
                   <span className="text-[10px] font-semibold uppercase tracking-wider text-gray-400 block mb-1">
                     Deadline
@@ -109,12 +109,12 @@ export default function OpportunityDetailPage({ params }: PageProps) {
               {/* Eligibility Requirements */}
               <div className="space-y-6 pt-6 border-t border-gray-200">
                 <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 block font-mono">
-                  // Selection Criteria
+                  Selection Criteria
                 </span>
                 <h2 className="text-2xl font-bold text-black tracking-tight">
                   Eligibility & Candidate Profile
                 </h2>
-                <div className="minimal-card rounded-card p-8 space-y-4 bg-[#F4F4F6] border border-gray-300">
+                <div className="minimal-card rounded-card p-6 sm:p-8 space-y-4 bg-[#F4F4F6] border border-gray-300">
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-black shrink-0 mt-0.5" />
                     <p className="text-sm text-gray-700 leading-relaxed">
@@ -150,10 +150,10 @@ export default function OpportunityDetailPage({ params }: PageProps) {
 
             {/* Right Column: Application Desk */}
             <div className="lg:col-span-5">
-              <div className="minimal-card rounded-card p-8 sm:p-10 sticky top-28 space-y-6 bg-white border border-gray-300">
+              <div className="minimal-card rounded-card p-6 sm:p-8 lg:p-10 sticky top-28 space-y-6 bg-white border border-gray-300">
                 <div>
                   <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 block mb-2 font-mono">
-                    // Application Desk
+                    Application Desk
                   </span>
                   <h3 className="text-2xl font-bold text-black tracking-tight">
                     {isOpen ? "Submit Candidacy Dossier" : "Register for Future Cycle"}

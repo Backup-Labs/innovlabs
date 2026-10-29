@@ -65,6 +65,8 @@ html {
   font-family: 'Satoshi', sans-serif;
   background-color: var(--bg-canvas);
   color: var(--text-primary);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -91,6 +93,9 @@ body {
   background-repeat: repeat;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 /* Ensure normal text elements render with 18px font size (never below) and clean Medium weight (500) */

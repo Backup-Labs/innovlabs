@@ -27,9 +27,9 @@ export const Footer: React.FC = () => {
       </h2>
 
       {/* Curved architectural footer container matching Screenshot 2 curvature and edge margin */}
-      <div className="w-full rounded-[28px] sm:rounded-[36px] lg:rounded-[44px] overflow-hidden bg-[#1A252C] text-gray-300 p-8 sm:p-12 lg:p-16 border border-white/10 shadow-2xl">
+      <div className="w-full rounded-[28px] sm:rounded-[36px] lg:rounded-[44px] overflow-hidden bg-[#1A252C] text-gray-300 p-6 sm:p-10 lg:p-16 border border-white/10 shadow-2xl">
         {/* Top Minimalist Newsletter Strip */}
-        <div className="pb-12 sm:pb-16 mb-12 sm:mb-16 border-b border-white/10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-end">
+        <div className="pb-10 sm:pb-16 mb-10 sm:mb-16 border-b border-white/10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-end">
           <div className="lg:col-span-7 space-y-3">
             <span className="text-[11px] font-semibold uppercase tracking-widest text-white/60 font-mono">
               The Evidence Dispatch
@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
             <h3 className="text-2xl sm:text-4xl font-serif font-normal text-white tracking-tight">
               Grassroots data. Policy insight. Straight to your inbox.
             </h3>
-            <p className="text-white/80 text-[18px] max-w-lg leading-relaxed font-sans font-medium">
+            <p className="text-white/80 text-base sm:text-[18px] max-w-lg leading-relaxed font-sans font-medium">
               Monthly synthesis of field research, open opportunity calls, and youth venture milestones across 26 countries.
             </p>
           </div>
@@ -86,25 +86,25 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Navigation Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 sm:gap-12 pb-12 sm:pb-16 border-b border-white/10 text-sm">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 pb-12 sm:pb-16 border-b border-white/10 text-sm">
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-2.5" aria-label="AfriYouth Innovation Labs Home">
-              <div className="w-7 h-7 rounded-[7px] bg-white text-[#1A252C] flex items-center justify-center shrink-0 shadow-sm">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
-                  <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" fill="currentColor" />
-                  <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" fill="currentColor" />
-                  <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" fill="currentColor" />
-                  <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" fill="currentColor" />
+            <Link href="/" className="flex items-center gap-3 group" aria-label="AfriYouth Innovation Labs Home">
+              <div className="w-8 h-8 rounded-[8px] bg-white text-[#1A252C] flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:scale-105 duration-200">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="6.5" height="6.5" x="3.5" y="3.5" rx="1.5" />
+                  <rect width="6.5" height="6.5" x="14" y="3.5" rx="1.5" />
+                  <rect width="6.5" height="6.5" x="14" y="14" rx="1.5" />
+                  <rect width="6.5" height="6.5" x="3.5" y="14" rx="1.5" />
                 </svg>
               </div>
-              <span className="text-2xl font-serif font-normal tracking-tight text-white leading-none pt-0.5">
+              <span className="text-2xl font-sans font-bold tracking-tight text-white leading-none">
                 AfriYouth
               </span>
             </Link>
-            <p className="text-xs text-white/70 leading-relaxed max-w-sm font-medium">
+            <p className="text-[18px] text-gray-300 leading-relaxed max-w-sm font-sans font-normal">
               Empowering Africa&apos;s youth to generate evidence, shape public policy, and build high-survival enterprises across the continent.
             </p>
-            <div className="text-xs font-mono text-white/50">
+            <div className="text-[18px] font-sans text-gray-400 font-medium pt-1">
               HQ: {site.contact.headquarters}
             </div>
           </div>

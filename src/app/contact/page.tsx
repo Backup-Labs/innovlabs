@@ -33,7 +33,7 @@ export default function ContactPage() {
             {/* Left Column: Direct Contacts & Hub Locations */}
             <div className="lg:col-span-5 space-y-12">
               {/* Primary Contacts Card */}
-              <div className="minimal-card rounded-card p-8 sm:p-10 space-y-8 bg-[#F4F4F6] border border-gray-300">
+              <div className="minimal-card rounded-card p-6 sm:p-8 lg:p-10 space-y-8 bg-[#F4F4F6] border border-gray-300">
                 <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 block font-mono">
                   Headquarters & Secretariat
                 </span>
@@ -84,7 +84,7 @@ export default function ContactPage() {
               </div>
 
               {/* Regional Hubs Card */}
-              <div className="minimal-card rounded-card p-8 sm:p-10 space-y-6 bg-[#F4F4F6] border border-gray-300">
+              <div className="minimal-card rounded-card p-6 sm:p-8 lg:p-10 space-y-6 bg-[#F4F4F6] border border-gray-300">
                 <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 block font-mono">
                   Regional Operations
                 </span>
@@ -110,7 +110,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right Column: Contact Form */}
-            <div className="lg:col-span-7 minimal-card rounded-card p-8 sm:p-12 bg-white border border-gray-300">
+            <div className="lg:col-span-7 minimal-card rounded-card p-6 sm:p-8 lg:p-12 bg-white border border-gray-300">
               <div className="mb-8">
                 <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 block mb-2 font-mono">
                   Direct Dispatch
