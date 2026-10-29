@@ -25,7 +25,7 @@ export default function AboutPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Institutional Charter
             </span>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-black tracking-display leading-tight">
+            <h1 className="font-serif font-normal text-4xl sm:text-6xl lg:text-7xl text-black tracking-tight leading-tight">
               A continental nexus for youth evidence.
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-normal">
@@ -50,7 +50,7 @@ export default function AboutPage() {
                 <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 block mb-6 font-mono">
                   01 / Purpose & Mandate
                 </span>
-                <h2 id="mission-heading" className="text-2xl sm:text-4xl font-extrabold text-black mb-6 tracking-tight">
+                <h2 id="mission-heading" className="font-serif font-normal text-2xl sm:text-4xl text-black mb-6 tracking-tight">
                   The Mission
                 </h2>
                 <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
@@ -70,7 +70,7 @@ export default function AboutPage() {
                 <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 block mb-6 font-mono">
                   02 / Continental Horizon
                 </span>
-                <h2 className="text-2xl sm:text-4xl font-extrabold text-black mb-6 tracking-tight">
+                <h2 className="font-serif font-normal text-2xl sm:text-4xl text-black mb-6 tracking-tight">
                   The Vision
                 </h2>
                 <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
@@ -100,7 +100,7 @@ export default function AboutPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Foundational Principles
             </span>
-            <h2 id="pillars-heading" className="text-3xl sm:text-5xl font-extrabold text-black tracking-display">
+            <h2 id="pillars-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
               The six pillars guiding our ecosystem.
             </h2>
           </motion.div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Leadership & Stewardship
             </span>
-            <h2 id="team-heading" className="text-3xl sm:text-5xl font-extrabold text-black tracking-display">
+            <h2 id="team-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
               Steered by pan-African practitioners.
             </h2>
             <p className="text-base text-gray-600 pt-2 leading-relaxed">
@@ -226,7 +226,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl mx-auto space-y-6"
           >
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-display">
+            <h2 className="font-serif font-normal text-2xl sm:text-4xl lg:text-5xl text-white tracking-tight">
               Explore our methodology and governance.
             </h2>
             <p className="text-gray-400 text-base leading-relaxed">

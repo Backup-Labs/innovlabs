@@ -23,7 +23,7 @@ export default function PartnerWithUsPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Institutional Alliances
             </span>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-black tracking-display leading-tight">
+            <h1 className="font-serif font-normal text-4xl sm:text-6xl lg:text-7xl text-black tracking-tight leading-tight">
               Co-investing in Africa&apos;s youth ecosystem.
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-normal">
@@ -46,7 +46,7 @@ export default function PartnerWithUsPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Collaboration Frameworks
             </span>
-            <h2 id="collab-models-heading" className="text-3xl sm:text-5xl font-extrabold text-black tracking-display">
+            <h2 id="collab-models-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
               Four models of engagement.
             </h2>
             <p className="text-base text-gray-600 pt-2 leading-relaxed">
@@ -142,7 +142,7 @@ export default function PartnerWithUsPage() {
               <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
                 // Institutional Inquiries
               </span>
-              <h2 id="partner-dialogue-heading" className="text-3xl sm:text-5xl font-extrabold text-black tracking-display leading-tight">
+              <h2 id="partner-dialogue-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight leading-tight">
                 Initiate a strategic partnership.
               </h2>
               <p className="text-gray-600 text-base sm:text-lg leading-relaxed font-normal">

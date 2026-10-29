@@ -24,7 +24,7 @@ export const ImpactMetrics: React.FC<ImpactMetricsProps> = ({ showTitle = true, 
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Verified Telemetry
             </span>
-            <h2 id="impact-metrics-heading" className="text-3xl sm:text-5xl font-extrabold text-black tracking-display">
+            <h2 id="impact-metrics-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
               Results across the continent.
             </h2>
           </motion.div>
@@ -40,7 +40,7 @@ export const ImpactMetrics: React.FC<ImpactMetricsProps> = ({ showTitle = true, 
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="space-y-3 border-l border-gray-300 pl-6 sm:pl-8 group"
             >
-              <span className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-black tracking-display block font-heading group-hover:translate-x-1 transition-transform">
+              <span className="text-4xl sm:text-6xl lg:text-7xl font-serif font-normal text-black tracking-tight block group-hover:translate-x-1 transition-transform">
                 {item.value}
               </span>
               <h3 className="text-base sm:text-lg font-bold text-black tracking-tight">

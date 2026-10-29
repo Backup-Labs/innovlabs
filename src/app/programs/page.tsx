@@ -23,7 +23,7 @@ export default function ProgramsPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Flagship Cohorts
             </span>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-black tracking-display leading-tight">
+            <h1 className="font-serif font-normal text-4xl sm:text-6xl lg:text-7xl text-black tracking-tight leading-tight">
               Fellowships, incubators & action studios.
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-normal">
@@ -64,7 +64,7 @@ export default function ProgramsPage() {
                       </span>
                     </div>
 
-                    <h3 className="text-3xl sm:text-4xl font-extrabold text-black tracking-tight leading-tight">
+                    <h3 className="font-serif font-normal text-3xl sm:text-4xl text-black tracking-tight leading-tight">
                       {program.title}
                     </h3>
                     <p className="text-base font-semibold text-black mt-2 font-mono">

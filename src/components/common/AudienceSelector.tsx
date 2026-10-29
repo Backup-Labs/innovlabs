@@ -47,7 +47,7 @@ export const AudienceSelector: React.FC = () => {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Pathways to Engage
             </span>
-            <h2 id="pathways-heading" className="text-3xl sm:text-5xl font-extrabold text-black tracking-display">
+            <h2 id="pathways-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
               Tailored access for every partner.
             </h2>
           </div>

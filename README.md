@@ -4,7 +4,7 @@ The official digital home for **AfriYouth Innovation Labs**, built for the **Afr
 
 AfriYouth connects research, policy, human-centered design, entrepreneurship, and strategic foresight to transform youth evidence into systemic socio-economic policy and sustainable African enterprises.
 
-This site uses a **minimalist architectural aesthetic** (referencing `https://palladio.framer.website/`), featuring a warm gallery stone palette, 1px hairlines, generous breathing room, concise editorial statements, and **universal Clash Display typography**.
+This site uses a **minimalist architectural aesthetic** (referencing `https://palladio.framer.website/`), featuring a monochromatic palette of pure white, pure black, and light gray (`#F4F4F6`), 1px hairlines, generous breathing room, a zero-scroll desktop hero section, and **Satoshi paired with Instrument Serif (non-italic)**.
 
 ---
 
@@ -29,10 +29,11 @@ This site uses a **minimalist architectural aesthetic** (referencing `https://pa
   1. *Youth seeking opportunities* (Understand $\rightarrow$ Explore programs $\rightarrow$ Check eligibility $\rightarrow$ Filter open calls $\rightarrow$ Apply).
   2. *Organizations seeking services* (See expertise $\rightarrow$ Explore services $\rightarrow$ View evidence $\rightarrow$ Request advisory).
   3. *Partners exploring collaboration* (Explore areas of work $\rightarrow$ Review existing programs $\rightarrow$ Collaboration models $\rightarrow$ Direct dialogue).
+- **Hero Section (Zero-Scroll & Photo-Matched)**: Fits 100% within the viewport height on desktop without any need for scrolling (`h-[calc(100vh-4rem)]`), matching the user-provided reference.
 - **Interactive "How Our Work Connects" Nexus Visual**: Interactive five-gear engine clarifying how research, policy shaping, HCD, venture incubation, and foresight feed into each other.
 - **Interactive Opportunities Portal**: Real-time client-side filtering by Status (Open / Closed), Initiative Type (Fellowship, Grant, Challenge, Call for Papers), and Target Audience.
 - **Production-Grade Contact System**: Built-in honeypot spam protection, client & server input validation, swappable backend provider (internal Next.js API or Formspree).
-- **Universal Clash Display Typography**: All text elements (headlines, body, buttons, badges, and form inputs) render in Clash Display via local `.woff2` files for 0ms blocking and 100% offline reliability.
+- **Typography Pairing (Instrument Serif + Satoshi)**: Upright Instrument Serif (non-italic) for editorial display statements & metrics, paired with Satoshi for body, UI, buttons, and navigation via local `.woff2` files for 0ms blocking and 100% offline reliability.
 - **Zero Dead Links & Clean Assets**: High-contrast architectural cards, authentic SVG brand marks and illustrations; no broken images or missing pages.
 
 ---
@@ -40,7 +41,7 @@ This site uses a **minimalist architectural aesthetic** (referencing `https://pa
 ## Design Language & Aesthetic
 
 Referencing `https://palladio.framer.website/`:
-- **Palette**: Warm gallery stone canvas (`#F5F2EB`), subtle bone panels (`#EFECE4`), deep charcoal ink typography (`#151619`), botanical green (`#2F6B4F`), terracotta accent (`#9C4930`), and delicate hairlines (`#DCD7CC`).
+- **Palette**: Monochromatic palette consisting of pure white (`#FFFFFF`), pure black (`#0A0A0A` / `#000000`), and light gray canvas (`#F4F4F6`), with subtle hairlines (`#E2E2E6`).
 - **Whitespace**: Generous vertical section rhythm (`py-24 sm:py-36`) allowing content and photography to breathe.
 - **Minimalism & Restraint**: Strict elimination of loud gradients, neon glows, and heavy shadows in favor of 1px borders, subtle card elevations, and punchy editorial statements.
 
@@ -230,4 +231,4 @@ The contact form operates in two modes:
 
 - **Lighthouse Performance**: 95+ across all scores.
 - **Accessibility (WCAG 2.1 AA)**: Compliant color contrast, ARIA landmarks, visible focus rings, keyboard tab navigation, skip-to-content anchor.
-- **Zero Cumulative Layout Shift (CLS)**: Dimensioned images and local preloaded Clash Display font files prevent layout shift.
+- **Zero Cumulative Layout Shift (CLS)**: Dimensioned images and local preloaded Satoshi & Instrument Serif font files prevent layout shift.

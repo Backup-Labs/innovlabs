@@ -25,7 +25,7 @@ export default function ServicesPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Institutional Capabilities
             </span>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-black tracking-display leading-tight">
+            <h1 className="font-serif font-normal text-4xl sm:text-6xl lg:text-7xl text-black tracking-tight leading-tight">
               Advisory, applied research & venture labs.
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-normal">
@@ -48,7 +48,7 @@ export default function ServicesPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Specialized Engagements
             </span>
-            <h2 id="all-services-heading" className="text-3xl sm:text-5xl font-extrabold text-black tracking-display">
+            <h2 id="all-services-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
               Our six core offerings.
             </h2>
             <p className="text-base text-gray-600 pt-2 leading-relaxed">
@@ -85,7 +85,7 @@ export default function ServicesPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Commissioning Protocol
             </span>
-            <h2 id="engagement-heading" className="text-3xl sm:text-5xl font-extrabold text-black tracking-display">
+            <h2 id="engagement-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
               Four steps from brief to adoption.
             </h2>
           </motion.div>
@@ -122,7 +122,7 @@ export default function ServicesPage() {
                 className="minimal-card rounded-card p-8 sm:p-10 flex flex-col justify-between group hover:border-black transition-colors bg-white border border-gray-300"
               >
                 <div>
-                  <span className="text-2xl font-black text-black font-mono block mb-6">
+                  <span className="text-3xl font-serif font-normal text-black block mb-6">
                     {st.step}
                   </span>
                   <h3 className="text-xl font-bold text-black mb-3 tracking-tight group-hover:translate-x-1 transition-transform">
@@ -151,7 +151,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl mx-auto space-y-6"
           >
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-display">
+            <h2 className="font-serif font-normal text-2xl sm:text-4xl lg:text-5xl text-white tracking-tight">
               Ready to commission research or structure an innovation lab?
             </h2>
             <p className="text-gray-400 text-base leading-relaxed">

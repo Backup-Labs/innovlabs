@@ -71,7 +71,7 @@ export default function OpportunityDetailPage({ params }: PageProps) {
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-black tracking-display leading-tight">
+            <h1 className="font-serif font-normal text-4xl sm:text-6xl lg:text-7xl text-black tracking-tight leading-tight">
               {opportunity.title}
             </h1>
 

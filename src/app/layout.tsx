@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { site } from "@/lib/content";
 
 export const viewport: Viewport = {
-  themeColor: "#F5F2EB",
+  themeColor: "#F4F4F6",
   width: "device-width",
   initialScale: 1,
 };
@@ -93,28 +93,28 @@ export default function RootLayout({
       <head>
         <link
           rel="preload"
-          href="/fonts/ClashDisplay-Regular.woff2"
+          href="/fonts/InstrumentSerif-Regular.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="/fonts/ClashDisplay-Medium.woff2"
+          href="/fonts/Satoshi-Regular.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="/fonts/ClashDisplay-Semibold.woff2"
+          href="/fonts/Satoshi-Medium.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="/fonts/ClashDisplay-Bold.woff2"
+          href="/fonts/Satoshi-Bold.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
@@ -124,7 +124,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col font-body bg-stone-100 text-stone-900 antialiased selection:bg-stone-900 selection:text-stone-100">
+      <body className="min-h-screen flex flex-col font-sans bg-[#F4F4F6] text-black antialiased selection:bg-black selection:text-white">
         <Header />
         <main id="main-content" className="flex-1 focus:outline-none">
           {children}

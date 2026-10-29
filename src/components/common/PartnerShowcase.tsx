@@ -11,7 +11,7 @@ export const PartnerShowcase: React.FC = () => {
           <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
             // Institutional Alliances
           </span>
-          <h2 id="partners-heading" className="text-3xl sm:text-5xl font-extrabold text-black tracking-display">
+          <h2 id="partners-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
             Trusted by continental leadership.
           </h2>
         </div>

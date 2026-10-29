@@ -16,7 +16,7 @@ export default function TermsPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Institutional Governance
             </span>
-            <h1 className="text-4xl sm:text-6xl font-extrabold text-black tracking-display">
+            <h1 className="font-serif font-normal text-4xl sm:text-6xl text-black tracking-tight leading-tight">
               Terms of engagement.
             </h1>
             <p className="text-xs text-gray-500 font-mono">

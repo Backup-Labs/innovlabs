@@ -22,7 +22,7 @@ export default function OpportunitiesPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Open Calls & Cohorts
             </span>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-black tracking-display leading-tight">
+            <h1 className="font-serif font-normal text-4xl sm:text-6xl lg:text-7xl text-black tracking-tight leading-tight">
               Fellowships, grants & challenges.
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-normal">

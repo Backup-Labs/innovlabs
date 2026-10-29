@@ -29,14 +29,16 @@ const config: Config = {
         },
       },
       fontFamily: {
-        heading: ["'Clash Display'", "sans-serif"],
-        body: ["'Clash Display'", "sans-serif"],
-        sans: ["'Clash Display'", "sans-serif"],
-        mono: ["'Clash Display'", "ui-monospace", "monospace"],
+        sans: ["'Satoshi'", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        body: ["'Satoshi'", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        heading: ["'Satoshi'", "sans-serif"],
+        serif: ["'Instrument Serif'", "Georgia", "serif"],
+        display: ["'Instrument Serif'", "Georgia", "serif"],
+        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
       letterSpacing: {
-        display: "-0.04em",
-        heading: "-0.025em",
+        display: "-0.03em",
+        heading: "-0.02em",
         widePill: "0.08em",
       },
       maxWidth: {

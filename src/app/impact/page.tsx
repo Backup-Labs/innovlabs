@@ -24,7 +24,7 @@ export default function ImpactPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Verified Longitudinal Telemetry
             </span>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-black tracking-display leading-tight">
+            <h1 className="font-serif font-normal text-4xl sm:text-6xl lg:text-7xl text-black tracking-tight leading-tight">
               Evidence-based transformation.
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-normal">
@@ -50,7 +50,7 @@ export default function ImpactPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Transformation Domains
             </span>
-            <h2 id="pillars-heading" className="text-3xl sm:text-5xl font-extrabold text-black tracking-display">
+            <h2 id="pillars-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
               Three systemic horizons.
             </h2>
           </motion.div>
@@ -98,7 +98,7 @@ export default function ImpactPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Continental Presence
             </span>
-            <h2 id="geo-heading" className="text-3xl sm:text-5xl font-extrabold text-black tracking-display">
+            <h2 id="geo-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
               Active footprint across 26 nations.
             </h2>
             <p className="text-base text-gray-600 pt-2 leading-relaxed">
@@ -149,7 +149,7 @@ export default function ImpactPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
               // Field Case Studies
             </span>
-            <h2 id="case-studies-heading" className="text-3xl sm:text-5xl font-extrabold text-black tracking-display">
+            <h2 id="case-studies-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
               Stories of systemic change.
             </h2>
           </motion.div>
@@ -175,7 +175,7 @@ export default function ImpactPage() {
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 block font-mono">
               // Methodology & Rigor
             </span>
-            <h3 id="methodology-heading" className="text-2xl sm:text-3xl font-extrabold text-black tracking-tight">
+            <h3 id="methodology-heading" className="font-serif font-normal text-2xl sm:text-3xl lg:text-4xl text-black tracking-tight">
               {impact.methodology.title}
             </h3>
             <p className="text-gray-600 text-base leading-relaxed">
