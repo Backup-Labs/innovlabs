@@ -22,9 +22,10 @@ export default function PartnerWithUsPage() {
         <Breadcrumbs items={[{ label: "Partner With Us" }]} />
       </div>
 
-      {/* 4 Strategic Partnership Models */}
-      <section className="py-24 sm:py-36 hairline-b bg-white" aria-labelledby="collab-models-heading">
-        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
+      {/* 4 Strategic Partnership Models - Framed card with rounded corners */}
+      <div className="w-full px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2">
+        <section className="w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] bg-white border border-black/10 py-16 sm:py-24 overflow-hidden shadow-sm" aria-labelledby="collab-models-heading">
+          <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -119,13 +120,15 @@ export default function PartnerWithUsPage() {
           </div>
         </div>
       </section>
+    </div>
 
       {/* Existing Partners */}
       <PartnerShowcase />
 
-      {/* Start a Conversation Box */}
-      <section className="py-24 sm:py-36 bg-[#F4F4F6]" aria-labelledby="partner-dialogue-heading">
-        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
+      {/* Start a Conversation Box - Framed card with rounded corners */}
+      <div className="w-full px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2">
+        <section className="w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] bg-[#EBECEF] border border-black/10 py-16 sm:py-24 overflow-hidden" aria-labelledby="partner-dialogue-heading">
+          <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-5 space-y-8">
               <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
@@ -175,5 +178,6 @@ export default function PartnerWithUsPage() {
         </div>
       </section>
     </div>
+  </div>
   );
 }

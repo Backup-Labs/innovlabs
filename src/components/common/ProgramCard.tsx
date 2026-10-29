@@ -9,7 +9,7 @@ interface ProgramCardProps {
 
 export const ProgramCard: React.FC<ProgramCardProps> = ({ program }) => {
   return (
-    <div className="minimal-card rounded-card p-8 sm:p-10 flex flex-col justify-between group bg-white border border-gray-300">
+    <div className="skeuo-card rounded-2xl p-7 sm:p-9 flex flex-col justify-between group">
       <div>
         <div className="flex items-center justify-between gap-2 mb-6">
           <span className="text-xs font-semibold uppercase tracking-wider text-gray-500 font-mono">

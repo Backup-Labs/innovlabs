@@ -21,15 +21,17 @@ export default function OpportunitiesPage() {
         <Breadcrumbs items={[{ label: "Opportunities" }]} />
       </div>
 
-      {/* Main Content Area */}
-      <section className="py-24 sm:py-36 bg-white" aria-labelledby="opportunities-portal-heading">
-        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
-          <h2 id="opportunities-portal-heading" className="sr-only">
-            Filter and Search Open Calls
-          </h2>
-          <OpportunitiesFilter opportunities={opportunities} />
-        </div>
-      </section>
+      {/* Main Content Area - Framed card with rounded corners */}
+      <div className="w-full px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2">
+        <section className="w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] bg-white border border-black/10 py-16 sm:py-24 overflow-hidden shadow-sm" aria-labelledby="opportunities-portal-heading">
+          <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
+            <h2 id="opportunities-portal-heading" className="sr-only">
+              Filter and Search Open Calls
+            </h2>
+            <OpportunitiesFilter opportunities={opportunities} />
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

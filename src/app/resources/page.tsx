@@ -43,9 +43,10 @@ export default function ResourcesPage() {
         <Breadcrumbs items={[{ label: "Resources & Insights" }]} />
       </div>
 
-      {/* Filter and Content Grid */}
-      <section className="py-24 sm:py-36 bg-white">
-        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 space-y-12">
+      {/* Filter and Content Grid - Framed card with rounded corners */}
+      <div className="w-full px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2">
+        <section className="w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] bg-white border border-black/10 py-16 sm:py-24 overflow-hidden shadow-sm">
+          <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 space-y-12">
           {/* Controls Bar */}
           <div className="p-6 sm:p-8 rounded-card bg-[#F4F4F6] border border-gray-300 flex flex-col md:flex-row gap-6 items-center justify-between">
             {/* Search */}
@@ -154,5 +155,6 @@ export default function ResourcesPage() {
         </div>
       </section>
     </div>
+  </div>
   );
 }

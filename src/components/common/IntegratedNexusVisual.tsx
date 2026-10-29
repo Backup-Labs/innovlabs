@@ -10,8 +10,9 @@ export const IntegratedNexusVisual: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="py-24 sm:py-36 bg-white" aria-labelledby="nexus-heading">
-      <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
+    <div className="w-full px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2">
+      <section className="w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] bg-white border border-black/10 py-16 sm:py-24 overflow-hidden shadow-sm" aria-labelledby="nexus-heading">
+        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -107,5 +108,6 @@ export const IntegratedNexusVisual: React.FC = () => {
         </div>
       </div>
     </section>
+  </div>
   );
 };

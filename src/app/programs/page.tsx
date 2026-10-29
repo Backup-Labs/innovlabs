@@ -22,9 +22,10 @@ export default function ProgramsPage() {
         <Breadcrumbs items={[{ label: "Programs" }]} />
       </div>
 
-      {/* Programs List */}
-      <section className="py-24 sm:py-36 bg-white" aria-labelledby="programs-list-heading">
-        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 space-y-16">
+      {/* Programs List - Framed card with rounded corners */}
+      <div className="w-full px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2">
+        <section className="w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] bg-white border border-black/10 py-16 sm:py-24 overflow-hidden shadow-sm" aria-labelledby="programs-list-heading">
+          <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 space-y-16">
           <div className="sr-only">
             <h2 id="programs-list-heading">Detailed Program Breakdown</h2>
           </div>
@@ -166,5 +167,6 @@ export default function ProgramsPage() {
         </div>
       </section>
     </div>
+  </div>
   );
 }

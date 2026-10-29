@@ -8,7 +8,7 @@ interface StoryCardProps {
 
 export const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
   return (
-    <div className="minimal-card rounded-card overflow-hidden flex flex-col justify-between group bg-white border border-gray-300">
+    <div className="skeuo-card rounded-2xl overflow-hidden flex flex-col justify-between group">
       <div>
         <div className="relative w-full aspect-[16/10] bg-gray-200">
           <Image

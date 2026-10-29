@@ -19,9 +19,9 @@ export const PageHeroBanner: React.FC<PageHeroBannerProps> = ({
   badge,
 }) => {
   return (
-    <div className="w-full px-3 sm:px-6 lg:px-8 pb-4 sm:pb-6 pt-1 sm:pt-2">
-      {/* Curved landscape banner matching Screenshot 3 */}
-      <section className="relative w-full rounded-[28px] sm:rounded-[36px] lg:rounded-[44px] overflow-hidden bg-[#161D20] min-h-[260px] sm:min-h-[290px] lg:h-[330px] flex flex-col justify-between p-6 sm:p-10 lg:p-12 border border-black/5 shadow-xl text-white">
+    <div className="w-full px-2 sm:px-3 lg:px-4 pb-3 sm:pb-4 pt-1">
+      {/* Curved landscape banner with tight edge margin & increased height matching Screenshot 3 */}
+      <section className="relative w-full rounded-[28px] sm:rounded-[36px] lg:rounded-[44px] overflow-hidden bg-[#161D20] min-h-[300px] sm:min-h-[340px] lg:h-[380px] flex flex-col justify-between p-7 sm:p-10 lg:p-14 border border-black/15 shadow-2xl text-white">
         {/* Atmospheric Fresco Mural Artwork */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -34,7 +34,7 @@ export const PageHeroBanner: React.FC<PageHeroBannerProps> = ({
         </div>
 
         {/* Ambient Dark Gradient for Contrast */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/90 via-black/55 to-black/75 pointer-events-none" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/90 via-black/50 to-black/75 pointer-events-none" />
 
         {/* Top Kicker matching Screenshot 3 */}
         <motion.div
@@ -49,7 +49,7 @@ export const PageHeroBanner: React.FC<PageHeroBannerProps> = ({
           </div>
 
           {badge && (
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-mono font-semibold bg-white/15 text-white border border-white/20">
+            <span className="frost-glass-dark inline-flex items-center px-3.5 py-1 rounded-full text-[10px] font-mono font-semibold text-white">
               {badge}
             </span>
           )}
@@ -85,3 +85,4 @@ export const PageHeroBanner: React.FC<PageHeroBannerProps> = ({
     </div>
   );
 };
+

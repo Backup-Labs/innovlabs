@@ -12,7 +12,7 @@ export const OpportunityCard: React.FC<OpportunityCardProps> = ({ opportunity })
 
   return (
     <div
-      className={`minimal-card rounded-card p-8 sm:p-10 flex flex-col justify-between group border border-gray-300 ${
+      className={`skeuo-card rounded-2xl p-7 sm:p-9 flex flex-col justify-between group ${
         isOpen ? "bg-white" : "bg-[#F4F4F6] opacity-80"
       }`}
     >

@@ -25,9 +25,10 @@ export default function ContactPage() {
         <Breadcrumbs items={[{ label: "Contact Us" }]} />
       </div>
 
-      {/* Main Content */}
-      <section className="py-24 sm:py-36 bg-white">
-        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
+      {/* Main Content - Framed card with rounded corners */}
+      <div className="w-full px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2">
+        <section className="w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] bg-white border border-black/10 py-16 sm:py-24 overflow-hidden shadow-sm">
+          <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left Column: Direct Contacts & Hub Locations */}
             <div className="lg:col-span-5 space-y-12">
@@ -136,5 +137,6 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
+  </div>
   );
 }
