@@ -83,8 +83,8 @@ html {
 body {
   font-family: 'Satoshi', sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.65;
   color: var(--text-primary);
   background-color: var(--bg-canvas);
   background-image: url('/images/grain.svg');
@@ -93,7 +93,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Ensure normal text elements render with clean Medium weight (500) for Satoshi */
+/* Ensure normal text elements render with 18px font size (never below) and clean Medium weight (500) */
+p,
+li,
+.text-body,
+.text-normal {
+  font-size: 18px;
+  line-height: 1.65;
+}
+
 p,
 span,
 li,

@@ -41,7 +41,7 @@ export default function ServicesPage() {
               <h2 id="all-services-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
                 Our six core offerings.
               </h2>
-              <p className="text-base text-gray-600 pt-2 leading-relaxed">
+              <p className="text-[18px] text-gray-600 pt-2 leading-relaxed">
                 Every mandate includes dedicated project stewardship, verifiable milestones, and decolonized participatory ethics.
               </p>
             </motion.div>
@@ -148,7 +148,7 @@ export default function ServicesPage() {
               <h2 className="font-serif font-normal text-2xl sm:text-4xl lg:text-5xl text-black tracking-tight">
                 Ready to commission research or structure an innovation lab?
               </h2>
-              <p className="text-gray-600 text-base leading-relaxed">
+              <p className="text-gray-600 text-[18px] leading-relaxed">
                 Speak with our Directorate of Applied Research or Venture Incubation teams to define your engagement parameters.
               </p>
               <div className="pt-4">

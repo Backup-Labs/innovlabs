@@ -36,6 +36,9 @@ const config: Config = {
         display: ["'Instrument Serif'", "serif"],
         mono: ["'Satoshi'", "sans-serif"],
       },
+      fontSize: {
+        base: ["18px", { lineHeight: "1.65" }],
+      },
       letterSpacing: {
         display: "-0.03em",
         heading: "-0.02em",

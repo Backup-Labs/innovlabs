@@ -60,7 +60,7 @@ export default function ProgramsPage() {
                     <p className="text-base font-semibold text-black mt-2 font-mono">
                       {program.tagline}
                     </p>
-                    <p className="text-gray-600 leading-relaxed text-sm sm:text-base mt-4">
+                    <p className="text-gray-600 leading-relaxed text-[18px] mt-4">
                       {program.description}
                     </p>
                   </div>

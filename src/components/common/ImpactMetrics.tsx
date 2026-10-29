@@ -47,7 +47,7 @@ export const ImpactMetrics: React.FC<ImpactMetricsProps> = ({ showTitle = true, 
               <h3 className="text-base sm:text-lg font-bold text-black tracking-tight">
                 {item.label}
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed max-w-xs">
+              <p className="text-[18px] text-gray-600 leading-relaxed max-w-xs">
                 {item.detail}
               </p>
             </motion.div>

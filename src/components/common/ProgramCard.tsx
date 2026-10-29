@@ -28,7 +28,7 @@ export const ProgramCard: React.FC<ProgramCardProps> = ({ program }) => {
           {program.duration} • {program.cohortSize}
         </p>
 
-        <p className="text-sm text-gray-600 leading-relaxed mb-8">
+        <p className="text-[18px] text-gray-600 leading-relaxed mb-8">
           {program.description}
         </p>
       </div>

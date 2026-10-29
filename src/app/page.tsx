@@ -77,8 +77,8 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
                 className="lg:col-span-7 space-y-2.5"
               >
-                <p className="text-[11px] sm:text-xs text-white/90 leading-relaxed font-normal max-w-md font-sans">
-                  An integrated innovation practice for leaders, researchers, and founders—rigorous evidence and solutions that hold.
+                <p className="text-[18px] text-white/95 leading-relaxed font-normal max-w-lg font-sans">
+                  AfriYouth is an integrated innovation practice for leaders, researchers, and founders—rigorous evidence and solutions that hold.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-2 pt-0.5">
@@ -423,7 +423,7 @@ export default function HomePage() {
               <h2 className="font-serif font-normal text-4xl sm:text-6xl lg:text-7xl text-black tracking-tight">
                 Turn youth agency into continental scale.
               </h2>
-              <p className="text-gray-600 text-base sm:text-lg max-w-xl mx-auto font-normal leading-relaxed font-sans">
+              <p className="text-gray-600 text-[18px] max-w-xl mx-auto font-normal leading-relaxed font-sans">
                 Whether you are applying for a fellowship or co-funding a national lab, AfriYouth is your execution partner.
               </p>
 

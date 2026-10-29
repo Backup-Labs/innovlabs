@@ -52,7 +52,7 @@ export const AudienceSelector: React.FC = () => {
                 Tailored access for every partner.
               </h2>
             </div>
-            <p className="text-gray-600 text-sm max-w-sm leading-relaxed">
+            <p className="text-gray-600 text-[18px] max-w-sm leading-relaxed">
               Whether applying for a grant, commissioning research, or co-funding a national lab.
             </p>
           </motion.div>
@@ -77,7 +77,7 @@ export const AudienceSelector: React.FC = () => {
                   <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4 font-mono">
                     {c.tagline}
                   </p>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-8">
+                  <p className="text-[18px] text-gray-600 leading-relaxed mb-8">
                     {c.description}
                   </p>
                 </div>

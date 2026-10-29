@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
             <h3 className="text-2xl sm:text-4xl font-serif font-normal text-white tracking-tight">
               Grassroots data. Policy insight. Straight to your inbox.
             </h3>
-            <p className="text-white/70 text-sm max-w-lg leading-relaxed font-sans font-medium">
+            <p className="text-white/80 text-[18px] max-w-lg leading-relaxed font-sans font-medium">
               Monthly synthesis of field research, open opportunity calls, and youth venture milestones across 26 countries.
             </p>
           </div>

@@ -30,7 +30,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
             {story.title}
           </h3>
 
-          <blockquote className="my-4 text-sm text-gray-700 italic border-l-2 border-black pl-4 leading-relaxed">
+          <blockquote className="my-4 text-[18px] text-gray-700 italic border-l-2 border-black pl-4 leading-relaxed">
             &ldquo;{story.quote}&rdquo;
           </blockquote>
         </div>

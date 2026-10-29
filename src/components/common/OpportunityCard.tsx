@@ -43,7 +43,7 @@ export const OpportunityCard: React.FC<OpportunityCardProps> = ({ opportunity })
           {opportunity.benefit}
         </p>
 
-        <p className="text-sm text-gray-600 leading-relaxed mb-6">
+        <p className="text-[18px] text-gray-600 leading-relaxed mb-6">
           {opportunity.summary}
         </p>
 

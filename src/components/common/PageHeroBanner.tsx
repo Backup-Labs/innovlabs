@@ -76,7 +76,7 @@ export const PageHeroBanner: React.FC<PageHeroBannerProps> = ({
             transition={{ duration: 0.6, delay: 0.15 }}
             className="lg:col-span-5 flex justify-start lg:justify-end"
           >
-            <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-sans font-medium max-w-md">
+            <p className="text-[18px] text-white/90 leading-relaxed font-sans font-medium max-w-lg">
               {description}
             </p>
           </motion.div>

@@ -93,7 +93,7 @@ export default function ImpactPage() {
               <h2 id="geo-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
                 Active footprint across 26 nations.
               </h2>
-              <p className="text-base text-gray-600 pt-2 leading-relaxed">
+              <p className="text-[18px] text-gray-600 pt-2 leading-relaxed">
                 Regional hubs in Nairobi, Kigali, Accra, and Johannesburg, complemented by embedded university research nodes.
               </p>
             </motion.div>
@@ -174,7 +174,7 @@ export default function ImpactPage() {
               <h3 id="methodology-heading" className="font-serif font-normal text-2xl sm:text-3xl lg:text-4xl text-black tracking-tight">
                 {impact.methodology.title}
               </h3>
-              <p className="text-gray-600 text-base leading-relaxed">
+              <p className="text-gray-600 text-[18px] leading-relaxed">
                 {impact.methodology.description}
               </p>
 

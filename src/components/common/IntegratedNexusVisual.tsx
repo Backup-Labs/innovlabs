@@ -27,7 +27,7 @@ export const IntegratedNexusVisual: React.FC = () => {
           <h2 id="nexus-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
             Five engines. One closed loop.
           </h2>
-          <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+          <p className="text-gray-600 text-[18px] leading-relaxed">
             Most youth initiatives operate in isolation. AfriYouth bridges grassroots evidence, policy drafting, design sprints, and venture capital into a continuous transformation cycle.
           </p>
         </motion.div>
@@ -70,7 +70,7 @@ export const IntegratedNexusVisual: React.FC = () => {
                       className="overflow-hidden"
                     >
                       <div className="pb-10 pt-2 grid grid-cols-1 md:grid-cols-12 gap-8">
-                        <div className="md:col-start-2 md:col-span-6 text-gray-700 text-base leading-relaxed">
+                        <div className="md:col-start-2 md:col-span-6 text-gray-700 text-[18px] leading-relaxed">
                           <p>{pillar.description}</p>
                         </div>
 

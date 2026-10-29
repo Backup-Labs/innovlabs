@@ -43,7 +43,7 @@ export default function AboutPage() {
                   <h2 id="mission-heading" className="font-serif font-normal text-2xl sm:text-4xl text-black mb-6 tracking-tight">
                     The Mission
                   </h2>
-                  <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
+                  <p className="text-gray-600 leading-relaxed text-[18px]">
                     {about.mission}
                   </p>
                 </div>
@@ -63,7 +63,7 @@ export default function AboutPage() {
                   <h2 className="font-serif font-normal text-2xl sm:text-4xl text-black mb-6 tracking-tight">
                     The Vision
                   </h2>
-                  <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
+                  <p className="text-gray-600 leading-relaxed text-[18px]">
                     {about.vision}
                   </p>
                 </div>
@@ -114,7 +114,7 @@ export default function AboutPage() {
                     <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 tracking-tight group-hover:translate-x-1 transition-transform">
                       {pillar.title}
                     </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">
+                    <p className="text-[18px] text-gray-600 leading-relaxed">
                       {pillar.description}
                     </p>
                   </div>
@@ -142,7 +142,7 @@ export default function AboutPage() {
               <h2 id="team-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
                 Steered by pan-African practitioners.
               </h2>
-              <p className="text-base text-gray-600 pt-2 leading-relaxed">
+              <p className="text-[18px] text-gray-600 pt-2 leading-relaxed">
                 {about.team.intro}
               </p>
             </motion.div>
@@ -225,7 +225,7 @@ export default function AboutPage() {
               <h2 className="font-serif font-normal text-2xl sm:text-4xl lg:text-5xl text-black tracking-tight">
                 Explore our methodology and governance.
               </h2>
-              <p className="text-gray-600 text-base leading-relaxed">
+              <p className="text-gray-600 text-[18px] leading-relaxed">
                 Access peer-reviewed frameworks, open data toolkits, or consult directly with the executive directorate.
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
