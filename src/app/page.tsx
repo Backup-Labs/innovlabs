@@ -294,7 +294,7 @@ export default function HomePage() {
               </Link>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
               {featuredPrograms.map((program, idx) => (
                 <motion.div
                   key={program.id}
@@ -302,7 +302,7 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-30px" }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="h-full flex flex-col justify-between"
+                  className="h-full w-full flex flex-col"
                 >
                   <ProgramCard program={program} featured={idx === 1} />
                 </motion.div>
@@ -340,7 +340,7 @@ export default function HomePage() {
               </Link>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
               {openOpportunities.map((opportunity, idx) => (
                 <motion.div
                   key={opportunity.id}
@@ -348,7 +348,7 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-30px" }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="h-full flex flex-col justify-between"
+                  className="h-full w-full flex flex-col"
                 >
                   <OpportunityCard opportunity={opportunity} featured={idx === 1} />
                 </motion.div>

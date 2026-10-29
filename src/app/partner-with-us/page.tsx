@@ -86,37 +86,73 @@ export default function PartnerWithUsPage() {
                   "Curated investor demo days with top pan-African venture funds",
                 ],
               },
-            ].map((model, idx) => (
-              <motion.div
-                key={model.number}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.15 }}
-                className="minimal-card rounded-card p-8 sm:p-12 flex flex-col justify-between group hover:border-black transition-colors bg-[#F4F4F6] border border-gray-300"
-              >
-                <div>
-                  <span className="text-xs font-semibold text-gray-400 block mb-6 font-mono">
-                    {model.number}
-                  </span>
-                  <h3 className="text-2xl font-bold text-black mb-4 tracking-tight group-hover:translate-x-1 transition-transform">
-                    {model.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-8 font-normal">
-                    {model.summary}
-                  </p>
+            ].map((model, idx) => {
+              const isGradient = idx === 1;
+              return (
+                <motion.div
+                  key={model.number}
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.15 }}
+                  className="h-full w-full flex flex-col"
+                >
+                  <div
+                    className={`rounded-2xl p-8 sm:p-12 flex flex-col justify-between w-full h-full group border transition-all duration-200 ${
+                      isGradient
+                        ? "bg-gradient-to-br from-[#0F2328] via-[#142B32] to-[#0A181C] text-white border-white/15 shadow-xl"
+                        : "minimal-card bg-[#F4F4F6] border-gray-300 text-black hover:border-black"
+                    }`}
+                  >
+                    <div className="flex-1 flex flex-col">
+                      <span
+                        className={`text-xs font-semibold block mb-6 font-mono ${
+                          isGradient ? "text-white/60" : "text-gray-400"
+                        }`}
+                      >
+                        {model.number}
+                      </span>
+                      <h3
+                        className={`text-2xl font-bold mb-4 tracking-tight group-hover:translate-x-1 transition-transform font-sans ${
+                          isGradient ? "text-white" : "text-black"
+                        }`}
+                      >
+                        {model.title}
+                      </h3>
+                      <p
+                        className={`text-sm sm:text-base leading-relaxed mb-8 font-normal font-sans ${
+                          isGradient ? "text-white/90" : "text-gray-600"
+                        }`}
+                      >
+                        {model.summary}
+                      </p>
 
-                  <div className="space-y-3 pt-6 border-t border-gray-300">
-                    {model.features.map((feat, fIdx) => (
-                      <div key={fIdx} className="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
-                        <CheckCircle2 className="w-4 h-4 text-black shrink-0 mt-0.5" />
-                        <span>{feat}</span>
+                      <div
+                        className={`space-y-3 pt-6 border-t mt-auto ${
+                          isGradient ? "border-white/15" : "border-gray-300"
+                        }`}
+                      >
+                        {model.features.map((feat, fIdx) => (
+                          <div
+                            key={fIdx}
+                            className={`flex items-start gap-3 text-xs sm:text-sm font-sans ${
+                              isGradient ? "text-white/85" : "text-gray-700"
+                            }`}
+                          >
+                            <CheckCircle2
+                              className={`w-4 h-4 shrink-0 mt-0.5 ${
+                                isGradient ? "text-emerald-400" : "text-black"
+                              }`}
+                            />
+                            <span>{feat}</span>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -132,7 +168,7 @@ export default function PartnerWithUsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-5 space-y-8">
               <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                // Institutional Inquiries
+                Institutional Inquiries
               </span>
               <h2 id="partner-dialogue-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight leading-tight">
                 Initiate a strategic partnership.

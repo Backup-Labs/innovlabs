@@ -14,13 +14,13 @@ export const ProgramCard: React.FC<ProgramCardProps> = ({
 }) => {
   return (
     <div
-      className={`rounded-2xl p-7 sm:p-9 flex flex-col justify-between h-full group transition-all duration-200 border ${
+      className={`rounded-2xl p-7 sm:p-9 flex flex-col justify-between w-full h-full group transition-all duration-200 border ${
         featured
           ? "bg-gradient-to-br from-[#0F2328] via-[#142B32] to-[#0A181C] text-white border-white/15 shadow-xl"
           : "skeuo-card text-black bg-white"
       }`}
     >
-      <div>
+      <div className="flex-1 flex flex-col">
         <div className="flex items-center justify-between gap-2 mb-6">
           <span
             className={`text-xs font-semibold uppercase tracking-wider font-mono ${
@@ -68,7 +68,7 @@ export const ProgramCard: React.FC<ProgramCardProps> = ({
       </div>
 
       <div
-        className={`pt-6 border-t flex items-center justify-between ${
+        className={`mt-auto pt-6 border-t flex items-center justify-between ${
           featured ? "border-white/15" : "border-gray-200"
         }`}
       >

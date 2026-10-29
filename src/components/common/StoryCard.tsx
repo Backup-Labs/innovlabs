@@ -30,8 +30,8 @@ export const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
     : "5 Multilateral Programs • $14M Youth Fund";
 
   return (
-    <div className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden border border-black/10 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-      <div>
+    <div className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden border border-black/10 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-xl transition-all duration-300 flex flex-col justify-between w-full h-full group">
+      <div className="flex-1 flex flex-col">
         {/* Top Dark Teal Telemetry Banner matching Screenshot */}
         <div className="relative w-full bg-[#062426] p-4 sm:p-6 overflow-hidden">
           {/* Subtle Ambient Teal Circles in Background */}
@@ -200,13 +200,15 @@ export const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
         </div>
 
         {/* Lower Story Description & Quote */}
-        <div className="p-6 sm:p-8 space-y-3">
-          <span className="text-[10px] font-bold uppercase tracking-wider text-gray-500 block font-mono">
-            {story.tag}
-          </span>
-          <h3 className="text-xl sm:text-2xl font-bold text-black tracking-tight leading-snug font-sans">
-            {story.title}
-          </h3>
+        <div className="p-6 sm:p-8 space-y-3 flex-1 flex flex-col justify-between">
+          <div>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-gray-500 block font-mono">
+              {story.tag}
+            </span>
+            <h3 className="text-xl sm:text-2xl font-bold text-black tracking-tight leading-snug font-sans mt-2">
+              {story.title}
+            </h3>
+          </div>
 
           <blockquote className="my-4 text-[18px] text-gray-700 italic border-l-2 border-black/30 pl-4 leading-relaxed font-sans">
             &ldquo;{story.quote}&rdquo;
@@ -215,7 +217,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
       </div>
 
       {/* Card Footer: Author & Impact Metric */}
-      <div className="px-6 sm:p-8 pt-4 pb-6 border-t border-black/10 flex items-center justify-between text-xs font-sans bg-[#FBFBFC]">
+      <div className="mt-auto px-6 sm:p-8 pt-4 pb-6 border-t border-black/10 flex items-center justify-between text-xs font-sans bg-[#FBFBFC]">
         <div>
           <strong className="text-black block font-semibold text-sm">
             {story.author}

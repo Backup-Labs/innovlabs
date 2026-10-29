@@ -46,7 +46,7 @@ export default function ServicesPage() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
               {services.map((service, idx) => (
                 <motion.div
                   key={service.id}
@@ -54,7 +54,7 @@ export default function ServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="h-full flex flex-col justify-between"
+                  className="h-full w-full flex flex-col"
                 >
                   <ServiceCard service={service} featured={idx === 1} />
                 </motion.div>
@@ -112,16 +112,16 @@ export default function ServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="h-full flex flex-col justify-between"
+                  className="h-full w-full flex flex-col"
                 >
                   <div
-                    className={`rounded-2xl p-8 sm:p-10 flex flex-col justify-between h-full group border transition-all duration-200 ${
+                    className={`rounded-2xl p-8 sm:p-10 flex flex-col justify-between w-full h-full group border transition-all duration-200 ${
                       idx === 1
                         ? "bg-gradient-to-br from-[#162228] via-[#101D22] to-[#0A1418] text-white border-white/15 shadow-xl"
                         : "skeuo-card bg-white text-black"
                     }`}
                   >
-                    <div>
+                    <div className="flex-1 flex flex-col">
                       <span
                         className={`text-3xl font-serif font-normal block mb-6 ${
                           idx === 1 ? "text-white/80" : "text-black"
@@ -137,7 +137,7 @@ export default function ServicesPage() {
                         {st.title}
                       </h3>
                       <p
-                        className={`text-sm leading-relaxed font-sans ${
+                        className={`text-sm leading-relaxed font-sans mt-auto ${
                           idx === 1 ? "text-white/90" : "text-gray-600"
                         }`}
                       >

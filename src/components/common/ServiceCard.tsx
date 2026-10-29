@@ -14,13 +14,13 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <div
-      className={`rounded-2xl p-7 sm:p-9 flex flex-col justify-between h-full group transition-all duration-200 border ${
+      className={`rounded-2xl p-7 sm:p-9 flex flex-col justify-between w-full h-full group transition-all duration-200 border ${
         featured
           ? "bg-gradient-to-br from-[#0F2228] via-[#142B33] to-[#0A171C] text-white border-white/15 shadow-xl"
           : "skeuo-card bg-white text-black"
       }`}
     >
-      <div>
+      <div className="flex-1 flex flex-col">
         <div
           className={`flex items-center justify-between gap-2 mb-6 text-xs font-semibold font-mono ${
             featured ? "text-white/70" : "text-gray-500"
@@ -46,7 +46,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
         </p>
 
         <div
-          className={`space-y-2 mb-8 pt-6 border-t ${
+          className={`space-y-2 mb-8 pt-6 border-t mt-auto ${
             featured ? "border-white/15" : "border-gray-200"
           }`}
         >

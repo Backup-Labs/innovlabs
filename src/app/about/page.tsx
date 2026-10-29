@@ -97,29 +97,52 @@ export default function AboutPage() {
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {site.brandPillars.map((pillar, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="skeuo-card rounded-2xl p-8 sm:p-10 flex flex-col justify-between group"
-                >
-                  <div>
-                    <span className="text-xs font-semibold text-gray-400 block mb-6 font-mono">
-                      0{i + 1}
-                    </span>
-                    <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 tracking-tight group-hover:translate-x-1 transition-transform">
-                      {pillar.title}
-                    </h3>
-                    <p className="text-[18px] text-gray-600 leading-relaxed">
-                      {pillar.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+              {site.brandPillars.map((pillar, i) => {
+                const isGradient = i === 1;
+                return (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    className="h-full w-full flex flex-col"
+                  >
+                    <div
+                      className={`rounded-2xl p-8 sm:p-10 flex flex-col justify-between w-full h-full group border transition-all duration-200 ${
+                        isGradient
+                          ? "bg-gradient-to-br from-[#0F2328] via-[#142B32] to-[#0A181C] text-white border-white/15 shadow-xl"
+                          : "skeuo-card bg-white text-black"
+                      }`}
+                    >
+                      <div className="flex-1 flex flex-col">
+                        <span
+                          className={`text-xs font-semibold block mb-6 font-mono ${
+                            isGradient ? "text-white/60" : "text-gray-400"
+                          }`}
+                        >
+                          0{i + 1}
+                        </span>
+                        <h3
+                          className={`text-xl sm:text-2xl font-bold mb-3 tracking-tight group-hover:translate-x-1 transition-transform font-sans ${
+                            isGradient ? "text-white" : "text-black"
+                          }`}
+                        >
+                          {pillar.title}
+                        </h3>
+                        <p
+                          className={`text-[18px] leading-relaxed font-sans ${
+                            isGradient ? "text-white/90" : "text-gray-600"
+                          }`}
+                        >
+                          {pillar.description}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -148,7 +171,7 @@ export default function AboutPage() {
             </motion.div>
 
             {/* Leadership Team Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20 items-stretch">
               {about.team.leadership.map((member, idx) => (
                 <motion.div
                   key={idx}
@@ -156,26 +179,28 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="skeuo-card rounded-2xl p-6 flex flex-col justify-between group"
+                  className="h-full w-full flex flex-col"
                 >
-                  <div>
-                    <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-5 bg-gray-200">
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-102"
-                      />
+                  <div className="skeuo-card rounded-2xl p-6 flex flex-col justify-between w-full h-full group bg-white">
+                    <div className="flex-1 flex flex-col">
+                      <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-5 bg-gray-200 shrink-0">
+                        <Image
+                          src={member.image}
+                          alt={member.name}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-102"
+                        />
+                      </div>
+                      <h3 className="text-lg font-bold text-black tracking-tight font-sans">
+                        {member.name}
+                      </h3>
+                      <span className="text-xs font-semibold text-gray-500 block mb-3 font-mono">
+                        {member.role}
+                      </span>
+                      <p className="text-xs text-gray-600 leading-relaxed font-sans mt-auto">
+                        {member.bio}
+                      </p>
                     </div>
-                    <h3 className="text-lg font-bold text-black tracking-tight">
-                      {member.name}
-                    </h3>
-                    <span className="text-xs font-semibold text-gray-500 block mb-3 font-mono">
-                      {member.role}
-                    </span>
-                    <p className="text-xs text-gray-600 leading-relaxed">
-                      {member.bio}
-                    </p>
                   </div>
                 </motion.div>
               ))}

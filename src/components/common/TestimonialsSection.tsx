@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Plus, Minus, Star } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 
 interface TestimonialItem {
   id: string;
@@ -11,8 +11,7 @@ interface TestimonialItem {
   author: string;
   role: string;
   avatar: string;
-  orgLogo: string;
-  orgName: string;
+  partnerId: string;
 }
 
 const testimonialsData: TestimonialItem[] = [
@@ -23,8 +22,7 @@ const testimonialsData: TestimonialItem[] = [
     author: "Marcus Thompson",
     role: "Director of Urban Policy, Kigali",
     avatar: "/images/avatars/avatar-2.jpg",
-    orgLogo: "UNDP Africa",
-    orgName: "UNDP",
+    partnerId: "undp",
   },
   {
     id: "2",
@@ -33,8 +31,7 @@ const testimonialsData: TestimonialItem[] = [
     author: "David Kimani",
     role: "VP Strategy, CircuTex Hub",
     avatar: "/images/avatars/avatar-3.jpg",
-    orgLogo: "CircuTex",
-    orgName: "CircuTex",
+    partnerId: "rockefeller",
   },
   {
     id: "3",
@@ -43,8 +40,7 @@ const testimonialsData: TestimonialItem[] = [
     author: "Jennifer Holland",
     role: "Head of Venture Capital, EALA",
     avatar: "/images/avatars/avatar-1.jpg",
-    orgLogo: "Mastercard Fdn",
-    orgName: "Mastercard Fdn",
+    partnerId: "mastercard",
   },
 ];
 
@@ -55,6 +51,74 @@ export const TestimonialsSection: React.FC = () => {
     setActiveCard((prev) => (prev === id ? "" : id));
   };
 
+  // Render authentic real-world SVG logos on testimonial cards
+  const renderRealWorldLogo = (partnerId: string, isLightBg: boolean) => {
+    switch (partnerId) {
+      case "undp":
+        return (
+          <div className="flex items-center gap-2 select-none shrink-0" title="UNDP Africa">
+            {/* Real World UNDP Mark */}
+            <svg width="24" height="28" viewBox="0 0 60 70" fill="none" className="shrink-0">
+              <rect x="0" y="0" width="26" height="70" fill="#006EB5" rx="3" />
+              <rect x="34" y="16" width="26" height="54" fill="#E62238" rx="3" />
+              <text x="5" y="44" fill="white" fontFamily="sans-serif" fontSize="18" fontWeight="bold">UN</text>
+              <text x="38" y="52" fill="white" fontFamily="sans-serif" fontSize="18" fontWeight="bold">DP</text>
+            </svg>
+            <div className="flex flex-col">
+              <span className={`font-extrabold text-[12px] tracking-tight leading-none ${isLightBg ? "text-[#006EB5]" : "text-white"}`}>
+                UNDP
+              </span>
+              <span className={`text-[9px] font-mono tracking-tight mt-0.5 ${isLightBg ? "text-gray-500" : "text-white/70"}`}>
+                Africa
+              </span>
+            </div>
+          </div>
+        );
+
+      case "rockefeller":
+        return (
+          <div className="flex items-center gap-2 select-none shrink-0" title="Rockefeller Foundation">
+            {/* Real World Rockefeller Foundation Geometric Emblem */}
+            <svg width="24" height="24" viewBox="0 0 100 100" fill="none" className="shrink-0">
+              <rect width="100" height="100" rx="16" fill="#002F6C" />
+              <path d="M28 25 H55 C66 25 74 33 74 42 C74 52 66 58 55 58 H42 V75 H28 Z" fill="#00A3E0" />
+              <path d="M52 58 L72 75 H56 L40 60 Z" fill="#FFFFFF" />
+            </svg>
+            <div className="flex flex-col">
+              <span className={`font-bold text-[11px] leading-tight ${isLightBg ? "text-black" : "text-white"}`}>
+                Rockefeller
+              </span>
+              <span className={`text-[9px] font-mono tracking-tight ${isLightBg ? "text-gray-500" : "text-white/70"}`}>
+                Foundation
+              </span>
+            </div>
+          </div>
+        );
+
+      case "mastercard":
+        return (
+          <div className="flex items-center gap-2 select-none shrink-0" title="Mastercard Foundation">
+            {/* Real World Mastercard Overlapping Circles */}
+            <svg width="34" height="22" viewBox="0 0 68 44" fill="none" className="shrink-0">
+              <circle cx="22" cy="22" r="20" fill="#EB001B" />
+              <circle cx="46" cy="22" r="20" fill="#F79E1B" fillOpacity="0.9" />
+            </svg>
+            <div className="flex flex-col">
+              <span className={`font-bold text-[11px] leading-tight ${isLightBg ? "text-black" : "text-white"}`}>
+                Mastercard
+              </span>
+              <span className={`text-[9px] font-mono tracking-tight ${isLightBg ? "text-gray-500" : "text-white/70"}`}>
+                Foundation
+              </span>
+            </div>
+          </div>
+        );
+
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="w-full px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2">
       <section
@@ -63,7 +127,7 @@ export const TestimonialsSection: React.FC = () => {
       >
         <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
           {/* 1. Large Photographic Hero Banner matching Screenshot 1 */}
-          <div className="relative w-full rounded-[24px] sm:rounded-[32px] overflow-hidden min-h-[440px] sm:min-h-[500px] lg:min-h-[560px] flex flex-col justify-between p-6 sm:p-10 lg:p-14 border border-black/10 shadow-xl mb-6 sm:mb-8">
+          <div className="relative w-full rounded-[24px] sm:rounded-[32px] overflow-hidden min-h-[460px] sm:min-h-[520px] lg:min-h-[580px] flex flex-col justify-between p-6 sm:p-10 lg:p-14 border border-black/10 shadow-xl mb-6 sm:mb-8">
             {/* Real Professional Image Background */}
             <div className="absolute inset-0 z-0">
               <Image
@@ -73,12 +137,12 @@ export const TestimonialsSection: React.FC = () => {
                 priority
                 className="object-cover object-center pointer-events-none"
               />
-              {/* Subtle ambient darkening gradient */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-black/30 pointer-events-none" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+              {/* Cinematic ambient darkening */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-black/35 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none" />
             </div>
 
-            {/* Top Area: Big Clean Title "Testimonials" */}
+            {/* Top Area: Clean Title "Testimonials" */}
             <div className="relative z-10">
               <h2
                 id="testimonials-heading"
@@ -87,23 +151,31 @@ export const TestimonialsSection: React.FC = () => {
                 Testimonials
               </h2>
 
-              {/* Floating High-Frost Card on Left matching Screenshot 1 */}
+              {/* Floating High-Frost Glassmorphism Card matching Screenshot 1 */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="frost-glass-dark rounded-2xl sm:rounded-3xl p-5 sm:p-7 max-w-md text-white border border-white/25 shadow-2xl backdrop-blur-xl"
+                style={{
+                  background: "rgba(255, 255, 255, 0.22)",
+                  backdropFilter: "blur(36px) saturate(190%)",
+                  WebkitBackdropFilter: "blur(36px) saturate(190%)",
+                  border: "1px solid rgba(255, 255, 255, 0.45)",
+                  borderTop: "1px solid rgba(255, 255, 255, 0.75)",
+                  boxShadow: "0 24px 48px -12px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.8)",
+                }}
+                className="rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-lg text-white"
               >
-                <blockquote className="font-sans font-bold text-base sm:text-lg leading-snug mb-3 text-white">
+                <blockquote className="font-sans font-bold text-base sm:text-lg leading-snug mb-3 text-white drop-shadow-sm">
                   &ldquo;AfriYouth didn&apos;t just give us research—they helped us become a more strategic pan-African institution.&rdquo;
                 </blockquote>
-                <p className="text-white/80 text-xs sm:text-sm leading-relaxed mb-4 font-normal">
+                <p className="text-white/90 text-xs sm:text-sm leading-relaxed mb-5 font-normal">
                   They identified three fundamental policy bottlenecks that we&apos;d been blind to for years. Two years later, our municipal youth directive is enacted across 14 districts.
                 </p>
 
-                <div className="flex items-center gap-3 pt-3 border-t border-white/15">
-                  <div className="relative w-9 h-9 rounded-full overflow-hidden border border-white/40 shrink-0">
+                <div className="flex items-center gap-3 pt-3.5 border-t border-white/25">
+                  <div className="relative w-10 h-10 rounded-full overflow-hidden border border-white/60 shrink-0 shadow-sm">
                     <Image
                       src="/images/team/chidinma.jpg"
                       alt="Sarah Bouchard"
@@ -115,7 +187,7 @@ export const TestimonialsSection: React.FC = () => {
                     <strong className="block text-xs font-bold text-white font-sans">
                       Sarah Bouchard
                     </strong>
-                    <span className="text-[11px] text-white/70 font-mono">
+                    <span className="text-[11px] text-white/80 font-mono">
                       Director, Policy Innovations
                     </span>
                   </div>
@@ -150,11 +222,11 @@ export const TestimonialsSection: React.FC = () => {
             </div>
           </div>
 
-          {/* 2. Bottom Row: 3 Equal-Sized Cards matching Screenshot 1 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* 2. Bottom Row: 3 Equal-Sized Cards with Real-World Logos & High Frost */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {testimonialsData.map((t, idx) => {
-              // Middle card (idx === 1) receives professional brand gradient
-              const isGradientCard = idx === 1;
+              // Middle card (idx === 1) is highlighted with high frost glassmorphism & brand gradient
+              const isHighlighted = idx === 1;
 
               return (
                 <motion.div
@@ -163,16 +235,28 @@ export const TestimonialsSection: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="h-full flex flex-col justify-between"
+                  className="h-full w-full flex flex-col"
                 >
                   <div
-                    className={`w-full h-full rounded-2xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 border ${
-                      isGradientCard
-                        ? "bg-gradient-to-br from-[#0B2527] via-[#0E363A] to-[#082023] text-white border-[#1E4E52] shadow-lg"
+                    style={
+                      isHighlighted
+                        ? {
+                            background: "linear-gradient(135deg, rgba(14, 45, 49, 0.92) 0%, rgba(10, 32, 35, 0.94) 100%)",
+                            backdropFilter: "blur(32px) saturate(180%)",
+                            WebkitBackdropFilter: "blur(32px) saturate(180%)",
+                            border: "1px solid rgba(140, 227, 232, 0.35)",
+                            boxShadow: "0 18px 40px -8px rgba(7, 27, 30, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.25)",
+                          }
+                        : {}
+                    }
+                    className={`w-full flex-1 rounded-2xl p-7 flex flex-col justify-between transition-all duration-200 border ${
+                      isHighlighted
+                        ? "text-white"
                         : "bg-[#FAF9F5] border-black/10 text-black shadow-sm hover:border-black"
                     }`}
                   >
-                    <div>
+                    {/* Top Content Area */}
+                    <div className="flex-1 flex flex-col justify-between">
                       {/* Top Row: 5 Green Dots on Left & Plus/Minus on Right */}
                       <div className="flex items-center justify-between mb-5">
                         <div className="flex items-center gap-1.5">
@@ -188,7 +272,7 @@ export const TestimonialsSection: React.FC = () => {
                           type="button"
                           onClick={() => toggleCard(t.id)}
                           className={`w-6 h-6 rounded-full flex items-center justify-center transition-colors ${
-                            isGradientCard
+                            isHighlighted
                               ? "text-white/80 hover:text-white"
                               : "text-gray-500 hover:text-black"
                           }`}
@@ -205,21 +289,21 @@ export const TestimonialsSection: React.FC = () => {
                       {/* Quote Text in 18px font */}
                       <p
                         className={`text-[18px] leading-relaxed mb-6 font-sans ${
-                          isGradientCard ? "text-white/95" : "text-gray-800"
+                          isHighlighted ? "text-white/95" : "text-gray-800"
                         }`}
                       >
                         &ldquo;{t.quote}&rdquo;
                       </p>
                     </div>
 
-                    {/* Bottom Row: Avatar, Author, Title, and Org Logo */}
+                    {/* Bottom Row: Avatar, Author, Title, and REAL-WORLD LOGO */}
                     <div
-                      className={`pt-5 border-t flex items-center justify-between gap-3 ${
-                        isGradientCard ? "border-white/15" : "border-black/10"
+                      className={`pt-5 border-t flex items-center justify-between gap-3 mt-auto ${
+                        isHighlighted ? "border-white/15" : "border-black/10"
                       }`}
                     >
                       <div className="flex items-center gap-3">
-                        <div className="relative w-9 h-9 rounded-full overflow-hidden border border-black/10 shrink-0">
+                        <div className="relative w-9 h-9 rounded-full overflow-hidden border border-black/10 shrink-0 shadow-xs">
                           <Image
                             src={t.avatar}
                             alt={t.author}
@@ -230,14 +314,14 @@ export const TestimonialsSection: React.FC = () => {
                         <div>
                           <strong
                             className={`block text-xs font-bold font-sans ${
-                              isGradientCard ? "text-white" : "text-black"
+                              isHighlighted ? "text-white" : "text-black"
                             }`}
                           >
                             {t.author}
                           </strong>
                           <span
                             className={`text-[11px] block font-sans ${
-                              isGradientCard ? "text-white/70" : "text-gray-500"
+                              isHighlighted ? "text-white/70" : "text-gray-500"
                             }`}
                           >
                             {t.role}
@@ -245,15 +329,9 @@ export const TestimonialsSection: React.FC = () => {
                         </div>
                       </div>
 
-                      {/* Brand Logo on Right */}
-                      <div
-                        className={`text-xs font-mono font-bold tracking-wider px-2 py-1 rounded ${
-                          isGradientCard
-                            ? "bg-white/10 text-white"
-                            : "bg-black/5 text-gray-700"
-                        }`}
-                      >
-                        {t.orgName}
+                      {/* Real-World SVG Institutional Logo */}
+                      <div className="shrink-0">
+                        {renderRealWorldLogo(t.partnerId, !isHighlighted)}
                       </div>
                     </div>
                   </div>
@@ -266,4 +344,3 @@ export const TestimonialsSection: React.FC = () => {
     </div>
   );
 };
-

@@ -63,7 +63,7 @@ export const AudienceSelector: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             {cards.map((c, idx) => {
               // Middle card receives a professional brand gradient
               const isGradient = idx === 1;
@@ -116,7 +116,7 @@ export const AudienceSelector: React.FC = () => {
                     </div>
 
                     <div
-                      className={`pt-6 border-t ${
+                      className={`pt-6 border-t mt-auto ${
                         isGradient ? "border-white/15" : "border-gray-200"
                       }`}
                     >

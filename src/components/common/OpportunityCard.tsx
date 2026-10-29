@@ -16,7 +16,7 @@ export const OpportunityCard: React.FC<OpportunityCardProps> = ({
 
   return (
     <div
-      className={`rounded-2xl p-7 sm:p-9 flex flex-col justify-between h-full group transition-all duration-200 border ${
+      className={`rounded-2xl p-7 sm:p-9 flex flex-col justify-between w-full h-full group transition-all duration-200 border ${
         featured
           ? "bg-gradient-to-br from-[#0D2427] via-[#123136] to-[#091B1D] text-white border-white/15 shadow-xl"
           : isOpen
@@ -24,7 +24,7 @@ export const OpportunityCard: React.FC<OpportunityCardProps> = ({
           : "skeuo-card bg-[#F4F4F6] opacity-85 text-black"
       }`}
     >
-      <div>
+      <div className="flex-1 flex flex-col">
         <div className="flex items-center justify-between gap-2 mb-6 text-xs font-mono">
           <span
             className={`font-semibold uppercase tracking-wider ${
@@ -72,7 +72,7 @@ export const OpportunityCard: React.FC<OpportunityCardProps> = ({
         </p>
 
         <div
-          className={`text-xs pt-4 border-t font-mono ${
+          className={`text-xs pt-4 border-t font-mono mt-auto ${
             featured
               ? "text-white/70 border-white/15"
               : "text-gray-500 border-gray-200"
@@ -88,7 +88,7 @@ export const OpportunityCard: React.FC<OpportunityCardProps> = ({
       </div>
 
       <div
-        className={`mt-8 pt-6 border-t ${
+        className={`mt-6 pt-6 border-t ${
           featured ? "border-white/15" : "border-gray-200"
         }`}
       >

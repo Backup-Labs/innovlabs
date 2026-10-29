@@ -108,9 +108,11 @@ export const OpportunitiesFilter: React.FC<OpportunitiesFilterProps> = ({ opport
 
       {/* Grid */}
       {filteredOpportunities.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredOpportunities.map((opportunity) => (
-            <OpportunityCard key={opportunity.id} opportunity={opportunity} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+          {filteredOpportunities.map((opportunity, idx) => (
+            <div key={opportunity.id} className="h-full w-full flex flex-col">
+              <OpportunityCard opportunity={opportunity} featured={idx === 1} />
+            </div>
           ))}
         </div>
       ) : (

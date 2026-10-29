@@ -94,7 +94,7 @@ export default function ResourcesPage() {
           </div>
 
           {/* Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             {filteredResources.map((resource, idx) => (
               <motion.div
                 key={resource.id}
@@ -102,52 +102,54 @@ export default function ResourcesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="minimal-card rounded-card p-8 sm:p-10 flex flex-col justify-between group bg-[#F4F4F6] border border-gray-300"
+                className="h-full w-full flex flex-col"
               >
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-6 font-mono">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-gray-500">
-                      {resource.category}
-                    </span>
-                    <span className="text-xs text-gray-400 flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5" />
-                      <span>{resource.readTime}</span>
-                    </span>
-                  </div>
-
-                  <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 tracking-tight group-hover:translate-x-1 transition-transform">
-                    {resource.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-6 font-normal">
-                    {resource.summary}
-                  </p>
-
-                  <div className="flex flex-wrap gap-1.5 mb-6">
-                    {resource.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-[11px] text-gray-600 bg-white border border-gray-200 px-2.5 py-1 rounded-full font-mono"
-                      >
-                        #{tag}
+                <div className="minimal-card rounded-card p-8 sm:p-10 flex flex-col justify-between w-full h-full group bg-[#F4F4F6] border border-gray-300">
+                  <div className="flex-1 flex flex-col">
+                    <div className="flex items-center justify-between gap-2 mb-6 font-mono">
+                      <span className="text-xs font-semibold uppercase tracking-wider text-gray-500">
+                        {resource.category}
                       </span>
-                    ))}
-                  </div>
-                </div>
+                      <span className="text-xs text-gray-400 flex items-center gap-1">
+                        <Clock className="w-3.5 h-3.5" />
+                        <span>{resource.readTime}</span>
+                      </span>
+                    </div>
 
-                <div className="pt-6 border-t border-gray-300 flex items-center justify-between text-xs font-mono">
-                  <div>
-                    <span className="text-black font-semibold block">{resource.format}</span>
-                    <span className="text-gray-400">{resource.date}</span>
+                    <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 tracking-tight group-hover:translate-x-1 transition-transform font-sans">
+                      {resource.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-6 font-normal font-sans">
+                      {resource.summary}
+                    </p>
+
+                    <div className="flex flex-wrap gap-1.5 mb-6">
+                      {resource.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-[11px] text-gray-600 bg-white border border-gray-200 px-2.5 py-1 rounded-full font-mono"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <button
-                    onClick={() => {
-                      alert(`Initiating download for: "${resource.title}". This document will be delivered by the AfriYouth Open Data repository.`);
-                    }}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-black text-white hover:bg-neutral-800 transition-colors"
-                  >
-                    <Download className="w-3.5 h-3.5" />
-                    <span>Download PDF</span>
-                  </button>
+
+                  <div className="pt-6 border-t border-gray-300 flex items-center justify-between text-xs font-mono mt-auto">
+                    <div>
+                      <span className="text-black font-semibold block">{resource.format}</span>
+                      <span className="text-gray-400">{resource.date}</span>
+                    </div>
+                    <button
+                      onClick={() => {
+                        alert(`Initiating download for: "${resource.title}". This document will be delivered by the AfriYouth Open Data repository.`);
+                      }}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-black text-white hover:bg-neutral-800 transition-colors"
+                    >
+                      <Download className="w-3.5 h-3.5" />
+                      <span>Download PDF</span>
+                    </button>
+                  </div>
                 </div>
               </motion.div>
             ))}
