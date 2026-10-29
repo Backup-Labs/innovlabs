@@ -4,8 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { navigation, site } from "@/lib/content";
-import { ArrowUpRight, X } from "lucide-react";
+import { site } from "@/lib/content";
 
 export const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,15 +24,27 @@ export const Header: React.FC = () => {
   }, [pathname]);
 
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMenuOpen(false);
+      }
     };
+    if (menuOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [menuOpen]);
+
+  const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Programs", href: "/programs" },
+    { label: "Opportunities", href: "/opportunities" },
+    { label: "Cases", href: "/impact#stories" },
+    { label: "Resources", href: "/resources" },
+    { label: "Contact", href: "/contact" },
+  ];
 
   return (
     <>
@@ -82,18 +93,18 @@ export const Header: React.FC = () => {
             {/* Circular Hamburger Menu button with 2 horizontal white bars matching photo */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="w-9 h-9 rounded-full bg-black text-white flex flex-col items-center justify-center gap-1.5 hover:bg-neutral-800 transition-all duration-200 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-black"
+              className="w-9 h-9 rounded-full bg-black text-white flex flex-col items-center justify-center gap-1.5 hover:bg-neutral-800 transition-all duration-200 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-black relative z-50"
               aria-expanded={menuOpen}
               aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               <span
                 className={`w-3.5 h-0.5 bg-white rounded-full transition-transform duration-200 ${
-                  menuOpen ? "rotate-45 translate-y-2" : ""
+                  menuOpen ? "rotate-45 translate-y-1" : ""
                 }`}
               />
               <span
                 className={`w-3.5 h-0.5 bg-white rounded-full transition-transform duration-200 ${
-                  menuOpen ? "-rotate-45 -translate-y-0" : ""
+                  menuOpen ? "-rotate-45 -translate-y-1" : ""
                 }`}
               />
             </button>
@@ -101,129 +112,134 @@ export const Header: React.FC = () => {
         </div>
       </header>
 
-      {/* Full-Screen Minimalist Architectural Menu Overlay */}
+      {/* Floating Two-Card Dropdown Navigation matching reference photo */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-50 bg-black/60 backdrop-blur-md flex justify-end"
-          >
+          <>
+            {/* Subtle Click-outside Backdrop */}
             <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 28, stiffness: 260 }}
-              className="w-full max-w-xl h-full bg-[#F4F4F6] text-black shadow-2xl flex flex-col justify-between p-8 sm:p-12 overflow-y-auto"
-            >
-              {/* Top Drawer Controls */}
-              <div className="flex items-center justify-between pb-8 border-b border-gray-300">
-                <div className="flex items-center gap-3">
-                  <div className="w-7 h-7 rounded-md bg-black text-white flex items-center justify-center">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
-                      <rect x="3" y="3" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="2" />
-                      <rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="2" />
-                      <rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="2" />
-                      <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="2" />
-                    </svg>
-                  </div>
-                  <span className="font-bold text-lg text-black font-heading">AfriYouth Navigation</span>
-                </div>
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={() => setMenuOpen(false)}
+              className="fixed inset-0 z-40 bg-black/20 backdrop-blur-[2px]"
+              aria-hidden="true"
+            />
 
-                <button
-                  onClick={() => setMenuOpen(false)}
-                  className="w-9 h-9 rounded-full bg-black text-white flex items-center justify-center hover:bg-neutral-800 transition-colors"
-                  aria-label="Close menu"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-
-              {/* Main Navigation Links */}
-              <nav className="py-8 space-y-4">
-                <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 block mb-2 font-mono">
-                  Directory
-                </span>
-                {navigation.mainNav.map((item, idx) => {
-                  const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
-                  return (
-                    <motion.div
-                      key={item.href}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.05 * idx, duration: 0.3 }}
-                    >
+            {/* Anchored Two-Card Container */}
+            <div className="fixed top-18 right-4 sm:right-6 lg:right-12 z-50 w-[calc(100vw-2rem)] sm:w-[320px] md:w-[340px] flex flex-col gap-3 pointer-events-auto">
+              {/* Card 1: Main Navigation Links in Instrument Serif (upright) */}
+              <motion.div
+                initial={{ opacity: 0, y: -12, scale: 0.96 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -12, scale: 0.96 }}
+                transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                className="rounded-[28px] bg-[#1A252C] p-7 sm:p-8 shadow-2xl border border-white/10 text-white"
+              >
+                <nav className="flex flex-col space-y-3 sm:space-y-3.5" aria-label="Main Navigation Menu">
+                  {navLinks.map((item) => {
+                    const isActive = pathname === item.href;
+                    return (
                       <Link
+                        key={item.href}
                         href={item.href}
                         onClick={() => setMenuOpen(false)}
-                        className={`group flex items-center justify-between text-2xl sm:text-3xl font-extrabold tracking-tight transition-all duration-150 py-1 ${
-                          isActive ? "text-black pl-3 border-l-2 border-black" : "text-gray-700 hover:text-black hover:translate-x-2"
+                        className={`font-serif font-normal text-2xl sm:text-[27px] tracking-tight leading-tight transition-colors duration-150 block text-left ${
+                          isActive
+                            ? "text-white underline decoration-white/40 underline-offset-4"
+                            : "text-white/85 hover:text-white hover:translate-x-1"
                         }`}
                       >
-                        <span>{item.label}</span>
-                        {item.badge ? (
-                          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-black text-white">
-                            {item.badge}
-                          </span>
-                        ) : (
-                          <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        )}
+                        {item.label}
                       </Link>
-                    </motion.div>
-                  );
-                })}
-              </nav>
+                    );
+                  })}
+                </nav>
+              </motion.div>
 
-              {/* Audience Shortcuts & Contact Info */}
-              <div className="pt-8 border-t border-gray-300 space-y-6">
-                <div>
-                  <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 block mb-3 font-mono">
-                    Audience Pathways
-                  </span>
-                  <div className="grid grid-cols-3 gap-2">
-                    <Link
-                      href="/opportunities"
-                      onClick={() => setMenuOpen(false)}
-                      className="p-3 rounded-xl bg-white border border-gray-300/80 hover:border-black text-xs font-semibold text-center text-black transition-colors"
-                    >
-                      For Youth
-                    </Link>
-                    <Link
-                      href="/services"
-                      onClick={() => setMenuOpen(false)}
-                      className="p-3 rounded-xl bg-white border border-gray-300/80 hover:border-black text-xs font-semibold text-center text-black transition-colors"
-                    >
-                      Organizations
-                    </Link>
-                    <Link
-                      href="/partner-with-us"
-                      onClick={() => setMenuOpen(false)}
-                      className="p-3 rounded-xl bg-white border border-gray-300/80 hover:border-black text-xs font-semibold text-center text-black transition-colors"
-                    >
-                      Partners
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-gray-200 text-xs text-gray-600">
-                  <div>
-                    <span className="block font-semibold text-black">{site.contact.email}</span>
-                    <span>{site.contact.phone}</span>
-                  </div>
-                  <Link
-                    href="/contact"
-                    onClick={() => setMenuOpen(false)}
-                    className="inline-flex items-center gap-2 font-bold text-black hover:underline"
+              {/* Card 2: Contact Info & 4 Social Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: -8, scale: 0.96 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -8, scale: 0.96 }}
+                transition={{ duration: 0.28, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
+                className="rounded-[28px] bg-[#1A252C] p-6 sm:p-7 shadow-2xl border border-white/10 text-white"
+              >
+                <div className="space-y-1">
+                  <a
+                    href={`mailto:${site.contact.email}`}
+                    className="font-serif font-normal text-xl sm:text-[22px] text-white/90 hover:text-white transition-colors block tracking-tight leading-snug"
                   >
-                    <span>Regional Nodes Directory</span>
-                    <ArrowUpRight className="w-3.5 h-3.5" />
-                  </Link>
+                    {site.contact.email}
+                  </a>
+                  <a
+                    href={`tel:${site.contact.phone.replace(/[^0-9+]/g, "")}`}
+                    className="font-serif font-normal text-xl sm:text-[22px] text-white/90 hover:text-white transition-colors block tracking-tight leading-snug"
+                  >
+                    {site.contact.phone}
+                  </a>
                 </div>
-              </div>
-            </motion.div>
-          </motion.div>
+
+                {/* 4 Square rounded social buttons matching photo */}
+                <div className="mt-5 sm:mt-6 flex items-center gap-2.5">
+                  {/* X / Twitter */}
+                  <a
+                    href="https://x.com/AfriYouthLabs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="X (formerly Twitter)"
+                    className="w-10 h-10 rounded-xl bg-white/[0.08] hover:bg-white/[0.18] border border-white/5 flex items-center justify-center text-white/80 hover:text-white transition-all duration-200 active:scale-95"
+                  >
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  </a>
+
+                  {/* LinkedIn */}
+                  <a
+                    href="https://linkedin.com/company/afriyouth-innovation-labs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    className="w-10 h-10 rounded-xl bg-white/[0.08] hover:bg-white/[0.18] border border-white/5 flex items-center justify-center text-white/80 hover:text-white transition-all duration-200 active:scale-95"
+                  >
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                    </svg>
+                  </a>
+
+                  {/* YouTube */}
+                  <a
+                    href="https://youtube.com/@AfriYouthLabs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                    className="w-10 h-10 rounded-xl bg-white/[0.08] hover:bg-white/[0.18] border border-white/5 flex items-center justify-center text-white/80 hover:text-white transition-all duration-200 active:scale-95"
+                  >
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M21.582 7.177a2.534 2.534 0 0 0-1.782-1.792C18.226 5 12 5 12 5s-6.226 0-7.8.385a2.534 2.534 0 0 0-1.782 1.792C2 8.761 2 12 2 12s0 3.239.418 4.823a2.534 2.534 0 0 0 1.782 1.792C5.774 19 12 19 12 19s6.226 0 7.8-.385a2.534 2.534 0 0 0 1.782-1.792C22 15.239 22 12 22 12s0-3.239-.418-4.823zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
+                    </svg>
+                  </a>
+
+                  {/* Instagram */}
+                  <a
+                    href="https://instagram.com/afriyouthlabs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    className="w-10 h-10 rounded-xl bg-white/[0.08] hover:bg-white/[0.18] border border-white/5 flex items-center justify-center text-white/80 hover:text-white transition-all duration-200 active:scale-95"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </svg>
+                  </a>
+                </div>
+              </motion.div>
+            </div>
+          </>
         )}
       </AnimatePresence>
     </>

@@ -82,13 +82,27 @@ html {
 
 body {
   font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
   color: var(--text-primary);
   background-color: var(--bg-canvas);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Ensure normal text elements render with clean Medium weight (500) for Satoshi */
+p,
+span,
+li,
+a,
+label,
+input,
+textarea,
+select,
+button,
+.font-normal {
+  font-weight: 500;
 }
 
 /* Headings with Satoshi by default */
@@ -105,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 .editorial-serif {
   font-family: 'Instrument Serif', Georgia, serif !important;
   font-style: normal !important;
-  font-weight: 400;
+  font-weight: 400 !important;
   letter-spacing: -0.015em;
 }
 
