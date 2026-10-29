@@ -23,24 +23,25 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col bg-[#F4F4F6] text-black">
-      {/* 1. Hero Section: Strictly fits viewport height with ZERO scrolling needed */}
-      <section className="relative w-full overflow-hidden bg-[#161D20] h-[calc(100vh-4rem)] sm:h-[calc(100vh-4.5rem)] lg:h-[calc(100dvh-4.5rem)] max-h-[calc(100dvh-4.5rem)] flex flex-col justify-between">
-        {/* Atmospheric Fresco Mural Background Artwork */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero-mural.svg"
-            alt="Mural of hands reaching in solidarity"
-            fill
-            priority
-            className="object-cover object-center pointer-events-none"
-          />
-        </div>
+      {/* 1. Hero Section: Curved floating canvas matching Screenshot 2, fits viewport height with zero scrolling */}
+      <div className="w-full px-3 sm:px-6 lg:px-8 pb-3 sm:pb-5">
+        <section className="relative w-full rounded-[28px] sm:rounded-[36px] lg:rounded-[44px] overflow-hidden bg-[#161D20] h-[calc(100vh-4.5rem)] sm:h-[calc(100vh-4.75rem)] lg:h-[calc(100dvh-5rem)] max-h-[calc(100dvh-5rem)] flex flex-col justify-between border border-black/5 shadow-xl">
+          {/* Atmospheric Fresco Mural Background Artwork */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/hero-mural.svg"
+              alt="Mural of hands reaching in solidarity"
+              fill
+              priority
+              className="object-cover object-center pointer-events-none"
+            />
+          </div>
 
-        {/* Ambient Dark Gradient Overlay for Maximum Text Legibility */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/85 via-black/45 to-black/75 pointer-events-none" />
+          {/* Ambient Dark Gradient Overlay for Maximum Text Legibility */}
+          <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/85 via-black/45 to-black/75 pointer-events-none" />
 
-        {/* Hero Content Container: Mathematically proportioned to fit any screen height */}
-        <div className="relative z-10 max-w-container mx-auto px-6 sm:px-8 lg:px-12 w-full h-full flex flex-col justify-between py-4 sm:py-5 lg:py-6">
+          {/* Hero Content Container: Mathematically proportioned to fit any screen height */}
+          <div className="relative z-10 max-w-container mx-auto px-6 sm:px-8 lg:px-12 w-full h-full flex flex-col justify-between py-4 sm:py-5 lg:py-6">
           {/* Top Kicker matching photo: ⊕ PAN-AFRICAN YOUTH INNOVATION NEXUS */}
           <motion.div
             initial={{ opacity: 0, y: -6 }}
@@ -150,6 +151,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+    </div>
 
       {/* 2. Minimalist 4-Column Metric Ticker with Hairlines */}
       <section className="bg-white py-12 sm:py-16 hairline-b">

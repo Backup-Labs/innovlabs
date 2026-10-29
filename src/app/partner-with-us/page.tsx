@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { PageHeroBanner } from "@/components/common/PageHeroBanner";
 import { PartnerShowcase } from "@/components/common/PartnerShowcase";
 import { ContactForm } from "@/components/common/ContactForm";
 import { CheckCircle2 } from "lucide-react";
@@ -10,28 +11,16 @@ import { CheckCircle2 } from "lucide-react";
 export default function PartnerWithUsPage() {
   return (
     <div className="bg-[#F4F4F6] text-black">
-      {/* Editorial Header */}
-      <section className="hairline-b pt-12 pb-20 sm:pb-28">
-        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
-          <Breadcrumbs items={[{ label: "Partner With Us" }]} />
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mt-8 space-y-6"
-          >
-            <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-              // Institutional Alliances
-            </span>
-            <h1 className="font-serif font-normal text-4xl sm:text-6xl lg:text-7xl text-black tracking-tight leading-tight">
-              Co-investing in Africa&apos;s youth ecosystem.
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-normal">
-              We collaborate with multilateral bodies, philanthropic foundations, African sovereign ministries, and academic consortia to scale high-impact, evidence-based programs with a 91% survival rate.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      {/* Curved Hero Banner matching Screenshot 3 */}
+      <PageHeroBanner
+        kicker="Institutional Alliances"
+        title="Co-investing in Africa's youth ecosystem."
+        description="Collaborating with multilateral bodies, philanthropic foundations, African sovereign ministries, and academic consortia to scale high-impact programs with a 91% survival rate."
+      />
+
+      <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 py-2">
+        <Breadcrumbs items={[{ label: "Partner With Us" }]} />
+      </div>
 
       {/* 4 Strategic Partnership Models */}
       <section className="py-24 sm:py-36 hairline-b bg-white" aria-labelledby="collab-models-heading">

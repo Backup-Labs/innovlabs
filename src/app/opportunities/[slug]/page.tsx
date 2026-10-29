@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { opportunities, getOpportunityBySlug } from "@/lib/content";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { PageHeroBanner } from "@/components/common/PageHeroBanner";
 import { ContactForm } from "@/components/common/ContactForm";
 import { Calendar, MapPin, CheckCircle2, ArrowLeft } from "lucide-react";
 
@@ -39,48 +40,22 @@ export default function OpportunityDetailPage({ params }: PageProps) {
 
   return (
     <div className="bg-[#F4F4F6] text-black">
-      {/* Editorial Header */}
-      <section className="hairline-b pt-12 pb-20 sm:pb-28">
-        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
-          <Breadcrumbs
-            items={[
-              { label: "Opportunities", href: "/opportunities" },
-              { label: opportunity.title },
-            ]}
-          />
+      {/* Curved Hero Banner matching Screenshot 3 */}
+      <PageHeroBanner
+        kicker={`${opportunity.type} • ${opportunity.audience}`}
+        title={opportunity.title}
+        description={opportunity.summary}
+        badge={isOpen ? "Accepting Applications" : "Cohort In Session"}
+      />
 
-          <div className="max-w-3xl mt-8 space-y-6">
-            <div className="flex flex-wrap items-center gap-3 font-mono">
-              <span className="text-xs font-semibold uppercase tracking-wider text-gray-500">
-                {opportunity.type}
-              </span>
-              <span className="text-xs text-gray-500">
-                • {opportunity.audience}
-              </span>
-              <span
-                className={`inline-flex items-center gap-1.5 text-xs font-semibold ${
-                  isOpen ? "text-black" : "text-gray-400"
-                }`}
-              >
-                <span
-                  className={`w-1.5 h-1.5 rounded-full ${
-                    isOpen ? "bg-black animate-pulse" : "bg-gray-400"
-                  }`}
-                />
-                {isOpen ? "Accepting Applications" : "Cohort In Session"}
-              </span>
-            </div>
-
-            <h1 className="font-serif font-normal text-4xl sm:text-6xl lg:text-7xl text-black tracking-tight leading-tight">
-              {opportunity.title}
-            </h1>
-
-            <div className="text-base font-bold text-black font-mono">
-              {opportunity.benefit}
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 py-2">
+        <Breadcrumbs
+          items={[
+            { label: "Opportunities", href: "/opportunities" },
+            { label: opportunity.title },
+          ]}
+        />
+      </div>
 
       {/* Main Content & Application Desk */}
       <section className="py-24 sm:py-36 bg-white">

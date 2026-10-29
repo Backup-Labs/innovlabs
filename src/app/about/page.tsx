@@ -6,34 +6,23 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { site, about } from "@/lib/content";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { PageHeroBanner } from "@/components/common/PageHeroBanner";
 import { IntegratedNexusVisual } from "@/components/common/IntegratedNexusVisual";
 import { ArrowUpRight } from "lucide-react";
 
 export default function AboutPage() {
   return (
     <div className="bg-[#F4F4F6] text-black">
-      {/* Editorial Header */}
-      <section className="hairline-b pt-12 pb-20 sm:pb-28">
-        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
-          <Breadcrumbs items={[{ label: "About AfriYouth" }]} />
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mt-8 space-y-6"
-          >
-            <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-              // Institutional Charter
-            </span>
-            <h1 className="font-serif font-normal text-4xl sm:text-6xl lg:text-7xl text-black tracking-tight leading-tight">
-              A continental nexus for youth evidence.
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-normal">
-              AfriYouth connects research, policy, design, entrepreneurship, and foresight. We operate the integrated bridge that converts youth agency into lasting systemic prosperity.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      {/* Curved Hero Banner matching Screenshot 3 */}
+      <PageHeroBanner
+        kicker="Institutional Charter"
+        title="A continental nexus for youth evidence."
+        description="AfriYouth connects research, policy, design, entrepreneurship, and foresight to convert youth agency into lasting systemic prosperity."
+      />
+
+      <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 py-2">
+        <Breadcrumbs items={[{ label: "About AfriYouth" }]} />
+      </div>
 
       {/* Mission & Vision: Architectural Cards */}
       <section className="py-24 sm:py-36 hairline-b bg-white" aria-labelledby="mission-heading">

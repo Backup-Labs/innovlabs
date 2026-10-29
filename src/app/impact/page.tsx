@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { impact, stories } from "@/lib/content";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { PageHeroBanner } from "@/components/common/PageHeroBanner";
 import { ImpactMetrics } from "@/components/common/ImpactMetrics";
 import { StoryCard } from "@/components/common/StoryCard";
 import { Globe } from "lucide-react";
@@ -11,28 +12,16 @@ import { Globe } from "lucide-react";
 export default function ImpactPage() {
   return (
     <div className="bg-[#F4F4F6] text-black">
-      {/* Editorial Header */}
-      <section className="hairline-b pt-12 pb-20 sm:pb-28">
-        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
-          <Breadcrumbs items={[{ label: "Impact & Evidence" }]} />
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mt-8 space-y-6"
-          >
-            <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-              // Verified Longitudinal Telemetry
-            </span>
-            <h1 className="font-serif font-normal text-4xl sm:text-6xl lg:text-7xl text-black tracking-tight leading-tight">
-              Evidence-based transformation.
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-normal">
-              {impact.summary}
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      {/* Curved Hero Banner matching Screenshot 3 */}
+      <PageHeroBanner
+        kicker="Verified Longitudinal Telemetry"
+        title="Evidence-based transformation."
+        description={impact.summary}
+      />
+
+      <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 py-2">
+        <Breadcrumbs items={[{ label: "Impact & Evidence" }]} />
+      </div>
 
       {/* Macro Metrics Block */}
       <ImpactMetrics showTitle={false} />

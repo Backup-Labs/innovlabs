@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { PageHeroBanner } from "@/components/common/PageHeroBanner";
 
 export const metadata: Metadata = {
   title: "Data Sovereignty & Privacy Policy",
@@ -9,22 +10,15 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <div className="bg-[#F4F4F6] text-black">
-      <section className="hairline-b pt-12 pb-20 sm:pb-28">
-        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
-          <Breadcrumbs items={[{ label: "Privacy Policy" }]} />
-          <div className="max-w-3xl mt-8 space-y-4">
-            <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-              // Institutional Governance
-            </span>
-            <h1 className="font-serif font-normal text-4xl sm:text-6xl text-black tracking-tight leading-tight">
-              Data sovereignty & privacy policy.
-            </h1>
-            <p className="text-xs text-gray-500 font-mono">
-              Last revised: October 2026
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeroBanner
+        kicker="Institutional Governance"
+        title="Data sovereignty & privacy policy."
+        description="AfriYouth Innovation Labs adheres to strict principles of data sovereignty, community co-ownership, and ethical data governance across all initiatives."
+      />
+
+      <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 py-2">
+        <Breadcrumbs items={[{ label: "Privacy Policy" }]} />
+      </div>
 
       <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 py-24 sm:py-36 bg-white">
         <div className="max-w-3xl space-y-8 text-sm text-gray-600 leading-relaxed">

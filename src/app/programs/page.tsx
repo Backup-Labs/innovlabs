@@ -5,33 +5,22 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { programs } from "@/lib/content";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { PageHeroBanner } from "@/components/common/PageHeroBanner";
 import { CheckCircle2, ArrowUpRight, BookOpen } from "lucide-react";
 
 export default function ProgramsPage() {
   return (
     <div className="bg-[#F4F4F6] text-black">
-      {/* Editorial Header */}
-      <section className="hairline-b pt-12 pb-20 sm:pb-28">
-        <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
-          <Breadcrumbs items={[{ label: "Programs" }]} />
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mt-8 space-y-6"
-          >
-            <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-              // Flagship Cohorts
-            </span>
-            <h1 className="font-serif font-normal text-4xl sm:text-6xl lg:text-7xl text-black tracking-tight leading-tight">
-              Fellowships, incubators & action studios.
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-normal">
-              Every AfriYouth program provides rigorous technical training, hands-on community fieldwork, living stipends or equity-free catalytic capital, and direct institutional placement.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      {/* Curved Hero Banner matching Screenshot 3 */}
+      <PageHeroBanner
+        kicker="Flagship Cohorts"
+        title="Fellowships, incubators & action studios."
+        description="Every AfriYouth program provides rigorous technical training, hands-on community fieldwork, living stipends or equity-free catalytic capital, and direct institutional placement."
+      />
+
+      <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 py-2">
+        <Breadcrumbs items={[{ label: "Programs" }]} />
+      </div>
 
       {/* Programs List */}
       <section className="py-24 sm:py-36 bg-white" aria-labelledby="programs-list-heading">

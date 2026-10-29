@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { site, navigation } from "@/lib/content";
+import { site } from "@/lib/content";
 import { ArrowUpRight, CheckCircle } from "lucide-react";
 
 export const Footer: React.FC = () => {
@@ -21,22 +21,23 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-black text-gray-400 pt-24 pb-16 border-t border-gray-800" aria-labelledby="footer-heading">
+    <footer className="bg-[#F4F4F6] px-3 sm:px-6 lg:px-8 pb-4 sm:pb-8 pt-4 sm:pt-6" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         AfriYouth Footer
       </h2>
 
-      <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
+      {/* Curved architectural footer container matching Screenshot 2 curvature */}
+      <div className="max-w-container mx-auto rounded-[28px] sm:rounded-[36px] lg:rounded-[44px] overflow-hidden bg-[#1A252C] text-gray-300 p-8 sm:p-12 lg:p-16 border border-white/10 shadow-2xl">
         {/* Top Minimalist Newsletter Strip */}
-        <div className="pb-16 mb-16 border-b border-gray-800 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
+        <div className="pb-12 sm:pb-16 mb-12 sm:mb-16 border-b border-white/10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-end">
           <div className="lg:col-span-7 space-y-3">
-            <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
+            <span className="text-[11px] font-semibold uppercase tracking-widest text-white/60 font-mono">
               // The Evidence Dispatch
             </span>
-            <h3 className="text-3xl sm:text-4xl font-extrabold text-white tracking-heading font-heading">
+            <h3 className="text-2xl sm:text-4xl font-serif font-normal text-white tracking-tight">
               Grassroots data. Policy insight. Straight to your inbox.
             </h3>
-            <p className="text-gray-400 text-sm max-w-lg leading-relaxed">
+            <p className="text-white/70 text-sm max-w-lg leading-relaxed font-sans font-medium">
               Monthly synthesis of field research, open opportunity calls, and youth venture milestones across 26 countries.
             </p>
           </div>
@@ -45,10 +46,10 @@ export const Footer: React.FC = () => {
             {subscribed ? (
               <div
                 role="status"
-                className="bg-neutral-900 border border-gray-700 p-4 rounded-xl flex items-center gap-3 text-white text-sm"
+                className="bg-white/10 border border-white/20 p-4 rounded-xl flex items-center gap-3 text-white text-sm"
               >
                 <CheckCircle className="w-5 h-5 text-white shrink-0" />
-                <p>Subscription confirmed. Welcome to the network.</p>
+                <p className="font-medium">Subscription confirmed. Welcome to the network.</p>
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="space-y-2">
@@ -64,7 +65,7 @@ export const Footer: React.FC = () => {
                     placeholder="Enter your email"
                     required
                     aria-describedby={error ? "newsletter-error" : undefined}
-                    className="flex-1 px-4 py-3 rounded-full bg-neutral-900 border border-gray-700 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-white"
+                    className="flex-1 px-4 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm focus:outline-none focus:border-white font-medium"
                   />
                   <button
                     type="submit"
@@ -85,7 +86,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Navigation Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-gray-800 text-sm">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 sm:gap-12 pb-12 sm:pb-16 border-b border-white/10 text-sm">
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-3" aria-label="AfriYouth Innovation Labs Home">
               <div className="w-7 h-7 rounded-md bg-white text-black flex items-center justify-center">
@@ -100,10 +101,10 @@ export const Footer: React.FC = () => {
                 AfriYouth
               </span>
             </Link>
-            <p className="text-xs text-gray-400 leading-relaxed max-w-sm">
+            <p className="text-xs text-white/70 leading-relaxed max-w-sm font-medium">
               Empowering Africa&apos;s youth to generate evidence, shape public policy, and build high-survival enterprises across the continent.
             </p>
-            <div className="text-xs font-mono text-gray-500">
+            <div className="text-xs font-mono text-white/50">
               HQ: {site.contact.headquarters}
             </div>
           </div>
@@ -112,7 +113,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4 font-mono">
               Initiatives
             </h4>
-            <ul className="space-y-2.5 text-xs">
+            <ul className="space-y-2.5 text-xs text-white/75 font-medium">
               <li><Link href="/programs" className="hover:text-white transition-colors">Flagship Cohorts</Link></li>
               <li><Link href="/opportunities" className="hover:text-white transition-colors">Open Applications</Link></li>
               <li><Link href="/services" className="hover:text-white transition-colors">Client Services</Link></li>
@@ -124,7 +125,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4 font-mono">
               Knowledge
             </h4>
-            <ul className="space-y-2.5 text-xs">
+            <ul className="space-y-2.5 text-xs text-white/75 font-medium">
               <li><Link href="/resources" className="hover:text-white transition-colors">Policy Briefs</Link></li>
               <li><Link href="/resources" className="hover:text-white transition-colors">Design Toolkits</Link></li>
               <li><Link href="/impact#stories" className="hover:text-white transition-colors">Field Case Studies</Link></li>
@@ -136,7 +137,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4 font-mono">
               Governance
             </h4>
-            <ul className="space-y-2.5 text-xs">
+            <ul className="space-y-2.5 text-xs text-white/75 font-medium">
               <li><Link href="/partner-with-us" className="hover:text-white transition-colors">Institutional Alliances</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Regional Nodes</Link></li>
               <li><Link href="/privacy" className="hover:text-white transition-colors">Data Sovereignty</Link></li>
@@ -146,7 +147,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4 font-mono">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/50 gap-4 font-mono">
           <p>&copy; {new Date().getFullYear()} AfriYouth Innovation Labs. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
