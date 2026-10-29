@@ -29,8 +29,8 @@ export default function HomePage() {
           {/* Atmospheric Fresco Mural Background Artwork */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/hero-mural.svg"
-              alt="Mural of hands reaching in solidarity"
+              src="/images/hero-main.jpg"
+              alt="Pan-African architectural landmark structure"
               fill
               priority
               className="object-cover object-center pointer-events-none"
@@ -110,11 +110,11 @@ export default function HomePage() {
                 className="lg:col-span-5 flex justify-start lg:justify-end"
               >
                 <div className="frost-glass w-full max-w-[240px] sm:max-w-[260px] lg:max-w-[270px] rounded-xl sm:rounded-2xl p-2.5 sm:p-3 text-black transition-transform duration-300 hover:-translate-y-1">
-                  {/* Architectural engraving thumbnail */}
+                  {/* Architectural case study photograph thumbnail */}
                   <div className="relative w-full h-16 sm:h-18 lg:h-20 rounded-lg overflow-hidden bg-gray-200 mb-2 shadow-inner">
                     <Image
-                      src="/images/case-study-hero.svg"
-                      alt="Classical architectural watermill case study"
+                      src="/images/case-study-hero.jpg"
+                      alt="Pan-African clean energy and innovation telemetry case study"
                       fill
                       className="object-cover"
                     />

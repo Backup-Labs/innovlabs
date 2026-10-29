@@ -2,11 +2,20 @@
 
 import React, { useState, useEffect } from "react";
 import { CheckCircle2, AlertCircle, Loader2, ArrowUpRight } from "lucide-react";
+import { CustomDropdown, DropdownOption } from "./CustomDropdown";
+import { CustomDatePicker } from "./CustomDatePicker";
 
 interface ContactFormProps {
   initialSubject?: string;
   initialAudience?: string;
 }
+
+const AUDIENCE_OPTIONS: DropdownOption[] = [
+  { value: "youth", label: "Youth Innovator / Researcher", badge: "Grassroots" },
+  { value: "organization", label: "Government / NGO Client", badge: "Institutional" },
+  { value: "partner", label: "Funder / Strategic Partner", badge: "Capital" },
+  { value: "media", label: "Media / General Inquiry", badge: "Press" },
+];
 
 export const ContactForm: React.FC<ContactFormProps> = ({
   initialSubject = "",
@@ -17,6 +26,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     email: "",
     organization: "",
     audience: initialAudience,
+    preferredDate: "",
     subject: initialSubject,
     message: "",
     botCheckWebsite: "",
@@ -119,6 +129,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 email: "",
                 organization: "",
                 audience: "youth",
+                preferredDate: "",
                 subject: "",
                 message: "",
                 botCheckWebsite: "",
@@ -212,38 +223,42 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         </div>
 
         <div>
-          <label htmlFor="contact-audience" className="block text-xs font-semibold uppercase tracking-wider text-black mb-2 font-mono">
-            You Are Engaging As *
-          </label>
-          <select
+          <CustomDropdown
             id="contact-audience"
-            name="audience"
+            label="You Are Engaging As *"
+            options={AUDIENCE_OPTIONS}
             value={formData.audience}
-            onChange={handleChange}
-            className="w-full px-4 py-3 rounded-xl border border-gray-300 text-sm text-black bg-white focus:outline-none focus:border-black font-mono"
-          >
-            <option value="youth">Youth Innovator / Researcher</option>
-            <option value="organization">Government / NGO Client</option>
-            <option value="partner">Funder / Strategic Partner</option>
-            <option value="media">Media / General Inquiry</option>
-          </select>
+            onChange={(val) => setFormData((prev) => ({ ...prev, audience: val }))}
+          />
         </div>
       </div>
 
-      {/* Row 3: Subject */}
-      <div>
-        <label htmlFor="contact-subject" className="block text-xs font-semibold uppercase tracking-wider text-black mb-2 font-mono">
-          Subject / Inquiry Topic
-        </label>
-        <input
-          id="contact-subject"
-          name="subject"
-          type="text"
-          value={formData.subject}
-          onChange={handleChange}
-          placeholder="e.g. Applied Research Service or Fellowship"
-          className="w-full px-4 py-3 rounded-xl border border-gray-300 text-sm text-black bg-white placeholder-gray-400 focus:outline-none focus:border-black font-mono"
-        />
+      {/* Row 3: Subject & Preferred Consultation Date */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <label htmlFor="contact-subject" className="block text-xs font-semibold uppercase tracking-wider text-black mb-2 font-mono">
+            Subject / Inquiry Topic
+          </label>
+          <input
+            id="contact-subject"
+            name="subject"
+            type="text"
+            value={formData.subject}
+            onChange={handleChange}
+            placeholder="e.g. Applied Research Service or Fellowship"
+            className="w-full px-4 py-3 rounded-xl border border-gray-300 text-sm text-black bg-white placeholder-gray-400 focus:outline-none focus:border-black font-mono shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+          />
+        </div>
+
+        <div>
+          <CustomDatePicker
+            id="contact-date"
+            label="Preferred Consultation Date"
+            value={formData.preferredDate}
+            onChange={(dateStr) => setFormData((prev) => ({ ...prev, preferredDate: dateStr }))}
+            placeholder="Select target consultation date"
+          />
+        </div>
       </div>
 
       {/* Row 4: Message */}

@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from "react";
 import type { Opportunity } from "@/lib/types";
 import { OpportunityCard } from "./OpportunityCard";
+import { CustomDropdown, DropdownOption } from "./CustomDropdown";
 import { Search, RotateCcw } from "lucide-react";
 
 interface OpportunitiesFilterProps {
@@ -61,27 +62,30 @@ export const OpportunitiesFilter: React.FC<OpportunitiesFilterProps> = ({ opport
         </div>
 
         <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
-          <select
-            value={statusFilter}
-            onChange={(e) => setStatusFilter(e.target.value)}
-            className="px-4 py-2 rounded-full bg-white border border-gray-300 text-xs font-semibold text-black focus:outline-none font-mono"
-          >
-            <option value="all">All Calls</option>
-            <option value="open">Open (Accepting Applications)</option>
-            <option value="closed">Closed / Cohort Active</option>
-          </select>
+          <div className="w-full sm:w-48">
+            <CustomDropdown
+              id="filter-status"
+              options={[
+                { value: "all", label: "All Calls" },
+                { value: "open", label: "Open Calls", badge: "Active" },
+                { value: "closed", label: "Closed Calls", badge: "Cohort" },
+              ]}
+              value={statusFilter}
+              onChange={(val) => setStatusFilter(val)}
+            />
+          </div>
 
-          <select
-            value={typeFilter}
-            onChange={(e) => setTypeFilter(e.target.value)}
-            className="px-4 py-2 rounded-full bg-white border border-gray-300 text-xs font-semibold text-black focus:outline-none font-mono capitalize"
-          >
-            {types.map((t) => (
-              <option key={t} value={t}>
-                {t === "all" ? "All Initiative Types" : t}
-              </option>
-            ))}
-          </select>
+          <div className="w-full sm:w-52">
+            <CustomDropdown
+              id="filter-type"
+              options={types.map((t) => ({
+                value: t,
+                label: t === "all" ? "All Initiative Types" : t.charAt(0).toUpperCase() + t.slice(1),
+              }))}
+              value={typeFilter}
+              onChange={(val) => setTypeFilter(val)}
+            />
+          </div>
 
           {isFiltered && (
             <button

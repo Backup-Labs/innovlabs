@@ -97,7 +97,7 @@ export const Footer: React.FC = () => {
                   <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="2" />
                 </svg>
               </div>
-              <span className="text-xl font-bold tracking-tight text-white font-heading">
+              <span className="text-xl font-bold tracking-tight text-slate-200 font-heading">
                 AfriYouth
               </span>
             </Link>

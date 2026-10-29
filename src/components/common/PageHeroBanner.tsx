@@ -22,11 +22,11 @@ export const PageHeroBanner: React.FC<PageHeroBannerProps> = ({
     <div className="w-full px-2 sm:px-3 lg:px-4 pb-3 sm:pb-4 pt-1">
       {/* Curved landscape banner with tight edge margin & increased height matching Screenshot 3 */}
       <section className="relative w-full rounded-[28px] sm:rounded-[36px] lg:rounded-[44px] overflow-hidden bg-[#161D20] min-h-[300px] sm:min-h-[340px] lg:h-[380px] flex flex-col justify-between p-7 sm:p-10 lg:p-14 border border-black/15 shadow-2xl text-white">
-        {/* Atmospheric Fresco Mural Artwork */}
+        {/* Atmospheric Professional Real-World Photography Banner */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-mural.svg"
-            alt=""
+            src="/images/hero-banner.jpg"
+            alt="AfriYouth architectural innovation summit"
             fill
             priority
             className="object-cover object-center pointer-events-none"
