@@ -54,8 +54,9 @@ export default function ServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className="h-full flex flex-col justify-between"
                 >
-                  <ServiceCard service={service} />
+                  <ServiceCard service={service} featured={idx === 1} />
                 </motion.div>
               ))}
             </div>
@@ -75,7 +76,7 @@ export default function ServicesPage() {
               className="max-w-2xl mb-16 sm:mb-20 space-y-3"
             >
               <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                // Commissioning Protocol
+                Commissioning Protocol
               </span>
               <h2 id="engagement-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
                 Four steps from brief to adoption.
@@ -111,18 +112,38 @@ export default function ServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="skeuo-card rounded-2xl p-8 sm:p-10 flex flex-col justify-between group"
+                  className="h-full flex flex-col justify-between"
                 >
-                  <div>
-                    <span className="text-3xl font-serif font-normal text-black block mb-6">
-                      {st.step}
-                    </span>
-                    <h3 className="text-xl font-bold text-black mb-3 tracking-tight group-hover:translate-x-1 transition-transform">
-                      {st.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {st.desc}
-                    </p>
+                  <div
+                    className={`rounded-2xl p-8 sm:p-10 flex flex-col justify-between h-full group border transition-all duration-200 ${
+                      idx === 1
+                        ? "bg-gradient-to-br from-[#162228] via-[#101D22] to-[#0A1418] text-white border-white/15 shadow-xl"
+                        : "skeuo-card bg-white text-black"
+                    }`}
+                  >
+                    <div>
+                      <span
+                        className={`text-3xl font-serif font-normal block mb-6 ${
+                          idx === 1 ? "text-white/80" : "text-black"
+                        }`}
+                      >
+                        {st.step}
+                      </span>
+                      <h3
+                        className={`text-xl font-bold mb-3 tracking-tight group-hover:translate-x-1 transition-transform font-sans ${
+                          idx === 1 ? "text-white" : "text-black"
+                        }`}
+                      >
+                        {st.title}
+                      </h3>
+                      <p
+                        className={`text-sm leading-relaxed font-sans ${
+                          idx === 1 ? "text-white/90" : "text-gray-600"
+                        }`}
+                      >
+                        {st.desc}
+                      </p>
+                    </div>
                   </div>
                 </motion.div>
               ))}

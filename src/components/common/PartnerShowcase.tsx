@@ -3,10 +3,10 @@
 import React from "react";
 import Link from "next/link";
 import { partners } from "@/lib/content";
-import { ArrowUpRight, Building2, Sparkles } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
+import { PartnerLogo } from "./PartnerLogos";
 
 export const PartnerShowcase: React.FC = () => {
-  // Flatten all partners into two distinct balanced tracks for visual rhythm
   const allPartners = partners.flatMap((g) =>
     g.partners.map((p) => ({ ...p, category: g.category }))
   );
@@ -14,7 +14,7 @@ export const PartnerShowcase: React.FC = () => {
   const row1 = allPartners.slice(0, 6);
   const row2 = allPartners.slice(6);
 
-  // Duplicate arrays to ensure seamless infinite looping with CSS translateX(-50%)
+  // Repeat for smooth infinite marquee looping
   const marqueeRow1 = [...row1, ...row1, ...row1, ...row1];
   const marqueeRow2 = [...row2, ...row2, ...row2, ...row2];
 
@@ -53,55 +53,37 @@ export const PartnerShowcase: React.FC = () => {
           </div>
         </div>
 
-        {/* Sliding Logos Tracks Container with Left & Right Gradient Masks */}
-        <div className="relative w-full space-y-4 overflow-hidden py-2">
-          {/* Gradient Edge Masks for soft fade */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-white via-white/80 to-transparent z-10" />
+        {/* Sliding Logos Tracks with Real Logos and Soft Edge Masks */}
+        <div className="relative w-full space-y-8 overflow-hidden py-4">
+          {/* Gradient Edge Masks */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-20 sm:w-36 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-20 sm:w-36 bg-gradient-to-l from-white via-white/80 to-transparent z-10" />
 
-          {/* Row 1 - Sliding Left */}
+          {/* Row 1 - Sliding Left Slowly */}
           <div className="flex overflow-hidden select-none">
-            <div className="animate-marquee flex items-center gap-4 sm:gap-6">
+            <div className="animate-marquee flex items-center gap-12 sm:gap-16">
               {marqueeRow1.map((partner, idx) => (
                 <div
                   key={`row1-${idx}`}
-                  className="flex items-center gap-4 px-5 py-4 rounded-2xl bg-[#FAFAFA] border border-black/10 hover:border-black transition-all duration-200 min-w-[270px] sm:min-w-[310px] group shadow-[0_2px_8px_rgba(0,0,0,0.03)] cursor-pointer"
+                  className="flex items-center justify-center opacity-70 hover:opacity-100 hover:scale-105 transition-all duration-300 cursor-pointer"
+                  title={`${partner.name} - ${partner.type}`}
                 >
-                  <div className="w-11 h-11 rounded-xl bg-black text-white flex items-center justify-center font-mono font-bold text-xs tracking-wider shrink-0 shadow-inner group-hover:scale-105 transition-transform">
-                    {partner.logoText.slice(0, 3).toUpperCase()}
-                  </div>
-                  <div className="overflow-hidden">
-                    <strong className="text-sm font-bold text-black block truncate font-sans group-hover:text-blue-900 transition-colors">
-                      {partner.name}
-                    </strong>
-                    <span className="text-xs text-gray-500 font-mono block truncate mt-0.5">
-                      {partner.type}
-                    </span>
-                  </div>
+                  <PartnerLogo id={partner.name} name={partner.name} />
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Row 2 - Sliding Right (Reverse) */}
+          {/* Row 2 - Sliding Right Slowly */}
           <div className="flex overflow-hidden select-none">
-            <div className="animate-marquee-reverse flex items-center gap-4 sm:gap-6">
+            <div className="animate-marquee-reverse flex items-center gap-12 sm:gap-16">
               {marqueeRow2.map((partner, idx) => (
                 <div
                   key={`row2-${idx}`}
-                  className="flex items-center gap-4 px-5 py-4 rounded-2xl bg-[#FAFAFA] border border-black/10 hover:border-black transition-all duration-200 min-w-[270px] sm:min-w-[310px] group shadow-[0_2px_8px_rgba(0,0,0,0.03)] cursor-pointer"
+                  className="flex items-center justify-center opacity-70 hover:opacity-100 hover:scale-105 transition-all duration-300 cursor-pointer"
+                  title={`${partner.name} - ${partner.type}`}
                 >
-                  <div className="w-11 h-11 rounded-xl bg-gray-900 text-white flex items-center justify-center font-mono font-bold text-xs tracking-wider shrink-0 shadow-inner group-hover:scale-105 transition-transform">
-                    {partner.logoText.slice(0, 3).toUpperCase()}
-                  </div>
-                  <div className="overflow-hidden">
-                    <strong className="text-sm font-bold text-black block truncate font-sans group-hover:text-blue-900 transition-colors">
-                      {partner.name}
-                    </strong>
-                    <span className="text-xs text-gray-500 font-mono block truncate mt-0.5">
-                      {partner.type}
-                    </span>
-                  </div>
+                  <PartnerLogo id={partner.name} name={partner.name} />
                 </div>
               ))}
             </div>

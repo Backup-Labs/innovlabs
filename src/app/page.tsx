@@ -13,6 +13,8 @@ import { OpportunityCard } from "@/components/common/OpportunityCard";
 import { ServiceCard } from "@/components/common/ServiceCard";
 import { StoryCard } from "@/components/common/StoryCard";
 import { PartnerShowcase } from "@/components/common/PartnerShowcase";
+import { AnimatedCounter } from "@/components/common/AnimatedCounter";
+import { TestimonialsSection } from "@/components/common/TestimonialsSection";
 import { ArrowUpRight, ArrowRight, PlusCircle } from "lucide-react";
 
 export default function HomePage() {
@@ -110,11 +112,11 @@ export default function HomePage() {
                 className="lg:col-span-5 flex justify-start lg:justify-end"
               >
                 <div className="frost-glass w-full max-w-[240px] sm:max-w-[260px] lg:max-w-[270px] rounded-xl sm:rounded-2xl p-2.5 sm:p-3 text-black transition-transform duration-300 hover:-translate-y-1">
-                  {/* Architectural case study photograph thumbnail */}
+                  {/* Classical architectural case study engraving thumbnail matching reference screenshot */}
                   <div className="relative w-full h-16 sm:h-18 lg:h-20 rounded-lg overflow-hidden bg-gray-200 mb-2 shadow-inner">
                     <Image
-                      src="/images/case-study-hero.jpg"
-                      alt="Pan-African clean energy and innovation telemetry case study"
+                      src="/images/case-study-hero.svg"
+                      alt="Classical architectural watermill case study"
                       fill
                       className="object-cover"
                     />
@@ -164,7 +166,7 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
             >
               <span className="text-3xl sm:text-4xl font-extrabold text-black font-sans block tracking-tight">
-                48,500+
+                <AnimatedCounter value="48,500+" />
               </span>
               <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider block mt-1 font-mono">
                 Leaders Engaged
@@ -177,7 +179,7 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <span className="text-3xl sm:text-4xl font-serif font-normal text-black block tracking-tight">
-                26 Nations
+                <AnimatedCounter value="26 Nations" />
               </span>
               <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider block mt-1 font-mono">
                 Active Operations
@@ -190,7 +192,7 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <span className="text-3xl sm:text-4xl font-serif font-normal text-black block tracking-tight">
-                38 Policies
+                <AnimatedCounter value="38 Policies" />
               </span>
               <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider block mt-1 font-mono">
                 Frameworks Influenced
@@ -203,7 +205,7 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <span className="text-3xl sm:text-4xl font-serif font-normal text-black block tracking-tight">
-                $6.4M+
+                <AnimatedCounter value="$6.4M+" />
               </span>
               <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider block mt-1 font-mono">
                 Capital Mobilized
@@ -300,8 +302,9 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-30px" }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className="h-full flex flex-col justify-between"
                 >
-                  <ProgramCard program={program} />
+                  <ProgramCard program={program} featured={idx === 1} />
                 </motion.div>
               ))}
             </div>
@@ -345,8 +348,9 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-30px" }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className="h-full flex flex-col justify-between"
                 >
-                  <OpportunityCard opportunity={opportunity} />
+                  <OpportunityCard opportunity={opportunity} featured={idx === 1} />
                 </motion.div>
               ))}
             </div>
@@ -357,51 +361,8 @@ export default function HomePage() {
       {/* 8. Impact Numbers */}
       <ImpactMetrics />
 
-      {/* 9. Field Stories - Framed card with rounded corners */}
-      <div className="w-full px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2">
-        <section className="w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] bg-white border border-black/10 py-16 sm:py-24 overflow-hidden shadow-sm" aria-labelledby="stories-heading">
-          <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.6 }}
-              className="max-w-2xl mb-16 sm:mb-20 space-y-3"
-            >
-              <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                Proof Points
-              </span>
-              <h2 id="stories-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
-                Stories of systemic change.
-              </h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {featuredStories.map((story, idx) => (
-                <motion.div
-                  key={story.id}
-                  initial={{ opacity: 0, y: 25 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.6, delay: idx * 0.15 }}
-                >
-                  <StoryCard story={story} />
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="mt-16 text-right">
-              <Link
-                href="/impact#stories"
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-black hover:underline transition-all font-sans"
-              >
-                <span>Read All Case Studies</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
+      {/* 9. Professional Real-World Testimonials Section matching Screenshot 1 */}
+      <TestimonialsSection />
 
       {/* 10. Partner Logos Showcase */}
       <PartnerShowcase />

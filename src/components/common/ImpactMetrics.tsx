@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { impact } from "@/lib/content";
+import { AnimatedCounter } from "./AnimatedCounter";
 
 interface ImpactMetricsProps {
   showTitle?: boolean;
@@ -42,7 +43,7 @@ export const ImpactMetrics: React.FC<ImpactMetricsProps> = ({ showTitle = true, 
               className="space-y-3 border-l border-gray-300 pl-6 sm:pl-8 group"
             >
               <span className="text-4xl sm:text-6xl lg:text-7xl font-serif font-normal text-black tracking-tight block group-hover:translate-x-1 transition-transform">
-                {item.value}
+                <AnimatedCounter value={item.value} />
               </span>
               <h3 className="text-base sm:text-lg font-bold text-black tracking-tight">
                 {item.label}

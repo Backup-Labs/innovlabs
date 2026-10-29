@@ -88,16 +88,16 @@ export const Footer: React.FC = () => {
         {/* Navigation Columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 sm:gap-12 pb-12 sm:pb-16 border-b border-white/10 text-sm">
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-3" aria-label="AfriYouth Innovation Labs Home">
-              <div className="w-7 h-7 rounded-md bg-white text-black flex items-center justify-center">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
-                  <rect x="3" y="3" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="2" />
-                  <rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="2" />
-                  <rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="2" />
-                  <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5" stroke="currentColor" strokeWidth="2" />
+            <Link href="/" className="flex items-center gap-2.5" aria-label="AfriYouth Innovation Labs Home">
+              <div className="w-7 h-7 rounded-[7px] bg-white text-[#1A252C] flex items-center justify-center shrink-0 shadow-sm">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+                  <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" fill="currentColor" />
+                  <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" fill="currentColor" />
+                  <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" fill="currentColor" />
+                  <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" fill="currentColor" />
                 </svg>
               </div>
-              <span className="text-xl font-bold tracking-tight text-slate-200 font-heading">
+              <span className="text-2xl font-serif font-normal tracking-tight text-white leading-none pt-0.5">
                 AfriYouth
               </span>
             </Link>
