@@ -57,12 +57,12 @@
 *,
 *::before,
 *::after {
-  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Satoshi', sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Satoshi', sans-serif;
   background-color: var(--bg-canvas);
   color: var(--text-primary);
 }
@@ -81,7 +81,7 @@ html {
 }
 
 body {
-  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Satoshi', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
@@ -108,21 +108,31 @@ button,
 }
 
 /* Headings with Satoshi by default */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Satoshi', sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text-primary);
 }
 
-/* Instrument Serif Editorial Display Classes (Strictly Not Italic) */
+/* Instrument Serif Editorial Display Classes (Strictly Upright / Non-Italic) */
 .font-serif,
 .font-display,
 .editorial-serif {
-  font-family: 'Instrument Serif', Georgia, serif !important;
+  font-family: 'Instrument Serif', serif !important;
   font-style: normal !important;
   font-weight: 400 !important;
   letter-spacing: -0.015em;
+}
+
+/* Guarantee font-mono and code elements strictly use Satoshi - NO other font */
+.font-mono,
+code,
+kbd,
+samp,
+pre {
+  font-family: 'Satoshi', sans-serif !important;
+  letter-spacing: 0.04em;
 }
 
 /* High Frost Glassmorphism & Skeuomorphism System */

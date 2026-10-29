@@ -29,12 +29,12 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["'Satoshi'", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
-        body: ["'Satoshi'", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        sans: ["'Satoshi'", "sans-serif"],
+        body: ["'Satoshi'", "sans-serif"],
         heading: ["'Satoshi'", "sans-serif"],
-        serif: ["'Instrument Serif'", "Georgia", "serif"],
-        display: ["'Instrument Serif'", "Georgia", "serif"],
-        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+        serif: ["'Instrument Serif'", "serif"],
+        display: ["'Instrument Serif'", "serif"],
+        mono: ["'Satoshi'", "sans-serif"],
       },
       letterSpacing: {
         display: "-0.03em",
