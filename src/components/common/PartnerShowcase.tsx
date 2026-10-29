@@ -10,7 +10,7 @@ export const PartnerShowcase: React.FC = () => {
         <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="max-w-2xl mb-16 sm:mb-20 space-y-3">
           <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-            // Institutional Alliances
+            Institutional Alliances
           </span>
           <h2 id="partners-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
             Trusted by continental leadership.

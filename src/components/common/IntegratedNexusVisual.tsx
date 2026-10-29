@@ -22,7 +22,7 @@ export const IntegratedNexusVisual: React.FC = () => {
           className="max-w-2xl mb-16 sm:mb-24 space-y-4"
         >
           <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-            // The Integrated Model
+            The Integrated Model
           </span>
           <h2 id="nexus-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
             Five engines. One closed loop.

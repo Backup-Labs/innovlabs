@@ -90,7 +90,7 @@ export default function AboutPage() {
               className="max-w-2xl mb-16 sm:mb-20 space-y-3"
             >
               <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                // Foundational Principles
+                Foundational Principles
               </span>
               <h2 id="pillars-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
                 The six pillars guiding our ecosystem.
@@ -137,7 +137,7 @@ export default function AboutPage() {
               className="max-w-2xl mb-16 sm:mb-20 space-y-3"
             >
               <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                // Leadership & Stewardship
+                Leadership & Stewardship
               </span>
               <h2 id="team-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
                 Steered by pan-African practitioners.

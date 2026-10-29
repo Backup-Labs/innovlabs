@@ -232,7 +232,7 @@ export default function HomePage() {
             >
               <div className="max-w-xl space-y-3">
                 <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                  // Institutional Capabilities
+                  Institutional Capabilities
                 </span>
                 <h2 id="services-overview-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
                   Advisory for modern institutions.
@@ -277,7 +277,7 @@ export default function HomePage() {
             >
               <div className="max-w-xl space-y-3">
                 <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                  // Flagship Cohorts
+                  Flagship Cohorts
                 </span>
                 <h2 id="programs-overview-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
                   Fellowships and venture labs.
@@ -322,7 +322,7 @@ export default function HomePage() {
             >
               <div className="max-w-xl space-y-3">
                 <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                  // Live Calls & Grants
+                  Live Calls & Grants
                 </span>
                 <h2 id="opportunities-overview-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
                   Open for applications.
@@ -369,7 +369,7 @@ export default function HomePage() {
               className="max-w-2xl mb-16 sm:mb-20 space-y-3"
             >
               <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                // Proof Points
+                Proof Points
               </span>
               <h2 id="stories-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
                 Stories of systemic change.
@@ -418,7 +418,7 @@ export default function HomePage() {
               className="max-w-3xl mx-auto space-y-6"
             >
               <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                // Get Started
+                Get Started
               </span>
               <h2 className="font-serif font-normal text-4xl sm:text-6xl lg:text-7xl text-black tracking-tight">
                 Turn youth agency into continental scale.

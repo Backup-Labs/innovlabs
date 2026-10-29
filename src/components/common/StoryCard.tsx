@@ -24,7 +24,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
 
         <div className="p-8 sm:p-10">
           <span className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 block mb-3 font-mono">
-            // {story.tag}
+            {story.tag}
           </span>
           <h3 className="text-xl sm:text-2xl font-bold text-black mb-4 tracking-tight leading-snug">
             {story.title}

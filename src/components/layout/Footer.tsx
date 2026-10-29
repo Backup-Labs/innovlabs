@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
         <div className="pb-12 sm:pb-16 mb-12 sm:mb-16 border-b border-white/10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-end">
           <div className="lg:col-span-7 space-y-3">
             <span className="text-[11px] font-semibold uppercase tracking-widest text-white/60 font-mono">
-              // The Evidence Dispatch
+              The Evidence Dispatch
             </span>
             <h3 className="text-2xl sm:text-4xl font-serif font-normal text-white tracking-tight">
               Grassroots data. Policy insight. Straight to your inbox.

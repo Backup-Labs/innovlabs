@@ -23,7 +23,7 @@ export const ImpactMetrics: React.FC<ImpactMetricsProps> = ({ showTitle = true, 
             className="max-w-xl mb-16 sm:mb-24 space-y-3"
           >
             <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-              // Verified Telemetry
+              Verified Telemetry
             </span>
             <h2 id="impact-metrics-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
               Results across the continent.
