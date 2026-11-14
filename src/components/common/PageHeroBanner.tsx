@@ -20,8 +20,8 @@ export const PageHeroBanner: React.FC<PageHeroBannerProps> = ({
 }) => {
   return (
     <div className="w-full px-2 sm:px-3 lg:px-4 pb-3 sm:pb-4 pt-1">
-      {/* Curved landscape banner with tight edge margin & increased height matching Screenshot 3 */}
-      <section className="relative w-full rounded-[28px] sm:rounded-[36px] lg:rounded-[44px] overflow-hidden bg-[#161D20] min-h-[300px] sm:min-h-[340px] lg:h-[380px] flex flex-col justify-between p-7 sm:p-10 lg:p-14 border border-black/15 shadow-2xl text-white">
+      {/* Curved landscape banner with tight edge margin in official Dark Purple #0D0624 */}
+      <section className="relative w-full rounded-[28px] sm:rounded-[36px] lg:rounded-[44px] overflow-hidden bg-[#0D0624] min-h-[300px] sm:min-h-[340px] lg:h-[380px] flex flex-col justify-between p-7 sm:p-10 lg:p-14 border border-black/15 shadow-2xl text-white">
         {/* Atmospheric Professional Real-World Photography Banner */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -43,8 +43,8 @@ export const PageHeroBanner: React.FC<PageHeroBannerProps> = ({
           transition={{ duration: 0.5 }}
           className="relative z-10 flex items-center justify-between gap-4"
         >
-          <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-white/80 font-mono">
-            <PlusCircle className="w-3.5 h-3.5 text-white" />
+          <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-white/90 font-mono">
+            <PlusCircle className="w-3.5 h-3.5 text-[#C723DF]" />
             <span>{kicker}</span>
           </div>
 

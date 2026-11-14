@@ -1,46 +1,74 @@
 {
-  "mission": "To empower Africa's youth to generate evidence, shape policy, and develop innovative solutions to pressing socio-economic challenges through research, human-centered design, and entrepreneurship.",
-  "vision": "An Africa where empowered young people use evidence, innovation, and entrepreneurship to drive inclusive and sustainable socio-economic transformation.",
+  "mission": "To empower Africa's youth to generate evidence, shape policy, and develop innovative solutions to Africa's most pressing socio-economic challenges through research, human-centered design, and entrepreneurship.",
+  "vision": "To build an Africa where empowered young people use evidence, innovation, and entrepreneurship to solve complex challenges, shape policies and drive inclusive and sustainable socio-economic transformation by 2050.",
+  "premise": "By 2030, Africa will have the largest workforce in the world. We need to give youth the ability and capacity to solve African problems, thus empowering their future independence and self-reliance.",
+  "philosophy": {
+    "title": "The AfriYouth Core Philosophy",
+    "formula": "Think → Research → Design → Build → Influence → Scale",
+    "convergence": {
+      "training": "Most youth organizations focus on training.",
+      "startups": "Most incubators focus on startups.",
+      "policy": "Most think tanks focus on research and policy.",
+      "clients": "Most consulting firms focus on clients.",
+      "solution": "AfriYouth connects all four into a unified African innovation and policy lab."
+    }
+  },
   "integratedApproach": {
-    "title": "The AfriYouth Integrated Nexus",
-    "subtitle": "Why single-track youth interventions fail and how our five-gear engine delivers systemic change.",
-    "description": "Traditional programs operate in isolation: think tanks publish papers that sit unread; incubators fund startups lacking regulatory pathways; youth forums talk without empirical backing. AfriYouth binds all five critical engines together in one closed-loop cycle.",
+    "title": "The 5 Strategic Divisions",
+    "subtitle": "How our five specialized labs deliver cohesive, systemic transformation.",
+    "description": "Rather than running disconnected projects, AfriYouth operates five strategic divisions backed by a cross-cutting commercial service in Resource Mobilization & Partnerships.",
     "pillars": [
       {
-        "id": "research",
-        "title": "1. Applied Youth Research",
-        "description": "Grassroots young researchers collect rigorous quantitative and qualitative evidence from urban informal settlements, rural farms, and digital creative hubs.",
-        "input": "Community lived experience & grassroots data",
-        "output": "Peer-reviewed findings & open datasets"
+        "id": "research-evidence",
+        "title": "1. Research & Evidence Lab",
+        "description": "Generates empirical data on Africa's emerging socio-economic challenges through applied policy research, youth surveys, baseline/endline studies, and political-economy analysis.",
+        "input": "Grassroots data, youth lived experience & stakeholder diagnostics",
+        "output": "AfriYouth Evidence Reports, policy briefs & open data syntheses"
       },
       {
-        "id": "policy",
-        "title": "2. Policy Shaping & Youth-Proofing",
-        "description": "We translate research evidence into parliamentary bills, regulatory sandbox proposals, and regional development frameworks.",
-        "input": "Field evidence & comparative legal analysis",
-        "output": "Legislative reforms & national strategy adoption"
+        "id": "policy-governance",
+        "title": "2. Policy & Governance Lab",
+        "description": "Translates empirical research into actionable policies, regulatory sandboxes, governance diagnostics, and statutory instruments that drive public-sector innovation.",
+        "input": "Field evidence, legal comparative analysis & policy dialogues",
+        "output": "AfriYouth Policy Solutions Series & Policy Innovation Challenges"
       },
       {
-        "id": "hcd",
-        "title": "3. Human-Centered Co-Design",
-        "description": "Multidisciplinary design sprints bring youth, local civil servants, and citizens together to prototype public service and civic solutions.",
-        "input": "User friction points & empathy studies",
-        "output": "Tested physical & digital prototypes"
+        "id": "innovation-entrepreneurship",
+        "title": "3. Innovation & Entrepreneurship Lab",
+        "description": "Transforms community-driven ideas through human-centered design, prototyping, and market validation into high-survival, scalable ventures.",
+        "input": "Grassroots innovators, validated prototypes & investor readiness",
+        "output": "AfriYouth Innovation Accelerator (Incubation → Acceleration → Demo Day)"
       },
       {
-        "id": "entrepreneurship",
-        "title": "4. Venture Acceleration & Enterprise",
-        "description": "Proven prototypes enter our incubator to receive catalytic grants, business modeling support, and investor syndication.",
-        "input": "Validated prototypes & committed young founders",
-        "output": "Sustainable enterprises creating dignified jobs"
+        "id": "foresight-futures",
+        "title": "4. Strategic Foresight & Futures Lab",
+        "description": "Strongly differentiates AfriYouth through horizon scanning, PESTLE/STEEPV trend analysis, and 2030/2040/2050 scenarios to anticipate future-of-work dynamics.",
+        "input": "Weak signals, emerging tech indicators & demographic forecasts",
+        "output": "Africa 2050 Futures Series & anticipatory institutional strategies"
       },
       {
-        "id": "foresight",
-        "title": "5. Strategic Foresight & Evaluation",
-        "description": "We monitor longitudinal impact and scan demographic, climate, and tech horizons to anticipate the next decade of African youth needs.",
-        "input": "2-year longitudinal data & horizon signals",
-        "output": "Futures roadmaps & adaptive institutional strategy"
+        "id": "leadership-capacity",
+        "title": "5. Leadership & Capacity Building Academy",
+        "description": "Delivers mandatory experiential learning ('Learn → Practice → Apply → Receive feedback → Improve → Demonstrate') through real employability simulations and professional portfolios.",
+        "input": "Graduates, university students & mid-career professionals",
+        "output": "Employability Bootcamps, Professional Skills Academy & Impact Dashboard"
       }
+    ]
+  },
+  "flagshipAccelerator": {
+    "title": "Flagship: Evidence-to-Impact Accelerator",
+    "tagline": "Combining research, incubation, policy translation, and scale into one 10-stage pipeline.",
+    "stages": [
+      { "step": 1, "name": "Discover", "detail": "Identify the problem through deep community research." },
+      { "step": 2, "name": "Diagnose", "detail": "Understand root causes using systems and political-economy analysis." },
+      { "step": 3, "name": "Research", "detail": "Generate and rigorously analyse empirical evidence." },
+      { "step": 4, "name": "Design", "detail": "Develop a human-centered solution with community co-creators." },
+      { "step": 5, "name": "Prototype", "detail": "Build and iterate the physical or digital solution in the field." },
+      { "step": 6, "name": "Policy", "detail": "Formulate policy recommendations and sustainable business cases." },
+      { "step": 7, "name": "Finance", "detail": "Connect the solution to funders, DFIs, and investment syndicates." },
+      { "step": 8, "name": "Implement", "detail": "Pilot the solution with institutional and municipal partners." },
+      { "step": 9, "name": "Measure", "detail": "Evaluate outcomes, longitudinal indicators, and real impact." },
+      { "step": 10, "name": "Scale", "detail": "Scale what works across national and continental borders." }
     ]
   },
   "team": {
@@ -54,19 +82,19 @@
       },
       {
         "name": "Tariq El-Haddad",
-        "role": "Director of Applied Research & Open Data",
+        "role": "Director of Applied Research & Evidence Lab",
         "bio": "Econometrician and data ethicist who previously headed statistical diagnostics across 12 African national statistics offices.",
         "image": "/images/team/tariq.jpg"
       },
       {
         "name": "Mireille Kayitesi",
-        "role": "Head of Human-Centered Design & Citizen Labs",
+        "role": "Head of Human-Centered Design & Policy Labs",
         "bio": "Pioneer in participatory urban design in East Africa, leading community design sprints across Kigali, Nairobi, and Dar es Salaam.",
         "image": "/images/team/mireille.jpg"
       },
       {
         "name": "Kwame Boateng",
-        "role": "Director of Venture Incubation & Capital",
+        "role": "Director of Venture Incubation & Capital Readiness",
         "bio": "Serial civic technologist and angel investor who has backed over 30 seed-stage African impact startups across West and Southern Africa.",
         "image": "/images/team/kwame.jpg"
       }
@@ -84,10 +112,9 @@
       },
       {
         "name": "Jean-Paul Habimana",
-        "role": "Advisor, Venture Governance",
+        "role": "Advisor, Venture Governance & Investment",
         "affiliation": "Pan-African Impact Investor Network"
       }
     ]
   }
 }
-

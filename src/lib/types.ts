@@ -107,6 +107,8 @@ export interface Service {
   clientTypes: string[];
   typicalDuration: string;
   icon: string;
+  product?: string;
+  model?: string;
 }
 
 export interface Metric {
@@ -173,6 +175,18 @@ export interface Resource {
 export interface AboutData {
   mission: string;
   vision: string;
+  premise?: string;
+  philosophy?: {
+    title: string;
+    formula: string;
+    convergence: {
+      training: string;
+      startups: string;
+      policy: string;
+      clients: string;
+      solution: string;
+    };
+  };
   integratedApproach: {
     title: string;
     subtitle: string;
@@ -183,6 +197,15 @@ export interface AboutData {
       description: string;
       input: string;
       output: string;
+    }>;
+  };
+  flagshipAccelerator?: {
+    title: string;
+    tagline: string;
+    stages: Array<{
+      step: number;
+      name: string;
+      detail: string;
     }>;
   };
   team: {

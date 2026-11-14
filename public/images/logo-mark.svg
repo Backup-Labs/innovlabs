@@ -1,0 +1,27 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="afriGrad" x1="15" y1="10" x2="105" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C723DF" />
+      <stop offset="60%" stop-color="#0301FF" />
+      <stop offset="100%" stop-color="#0200A7" />
+    </linearGradient>
+  </defs>
+
+  <!-- 3 Radiant Sun-Rays Above Head -->
+  <!-- Left Ray (tilted ~-32deg) -->
+  <rect x="26" y="22" width="7" height="15" rx="3.5" transform="rotate(-32 29.5 29.5)" fill="url(#afriGrad)" />
+  <!-- Center Ray (vertical) -->
+  <rect x="56.5" y="14" width="7" height="16" rx="3.5" fill="url(#afriGrad)" />
+  <!-- Right Ray (tilted ~+32deg) -->
+  <rect x="87" y="22" width="7" height="15" rx="3.5" transform="rotate(32 90.5 29.5)" fill="url(#afriGrad)" />
+
+  <!-- Circular Head -->
+  <circle cx="60" cy="46" r="12.5" fill="url(#afriGrad)" />
+
+  <!-- Celebrating Dancing Adolescent Figure Torso -->
+  <path
+    d="M 52 64 C 57 65 63 65 68 64 C 77 68 85 75 87 85 C 89 97 84 112 75 125 C 70 132 63 138 58 142 C 55 144 53 143 54 139 C 58 126 59 116 57 104 C 55 94 48 88 38 84 C 28 80 20 73 22 66 C 24 59 34 60 41 68 C 44 72 48 71 52 64 Z"
+    fill="url(#afriGrad)"
+    transform="matrix(0.82 0 0 0.82 9 8)"
+  />
+</svg>

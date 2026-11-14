@@ -24,10 +24,31 @@ export default function AboutPage() {
         <Breadcrumbs items={[{ label: "About AfriYouth" }]} />
       </div>
 
-      {/* Mission & Vision: Architectural Cards */}
+      {/* Mission & Vision: Architectural Cards with 2030 Demographic Premise */}
       <div className="w-full px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2">
         <section className="w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] bg-white border border-black/10 py-16 sm:py-24 overflow-hidden shadow-sm" aria-labelledby="mission-heading">
-          <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 space-y-12">
+            {/* Top 2030 Demographic Premise Callout */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="rounded-3xl p-8 sm:p-12 bg-gradient-to-br from-[#0D0624] via-[#101438] to-[#0301FF] text-white shadow-xl relative overflow-hidden"
+            >
+              <div className="max-w-3xl relative z-10 space-y-3">
+                <span className="text-[11px] font-mono font-semibold uppercase tracking-widest text-[#C723DF] block">
+                  The 2030 Demographic Imperative
+                </span>
+                <h3 className="font-serif font-normal text-2xl sm:text-4xl text-white tracking-tight leading-snug">
+                  By 2030, Africa will have the largest workforce in the world.
+                </h3>
+                <p className="text-gray-200 text-[18px] leading-relaxed font-sans">
+                  We need to give youth the ability and capacity to solve African problems—empowering their future independence, self-reliance, and continental leadership.
+                </p>
+              </div>
+            </motion.div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
@@ -112,7 +133,7 @@ export default function AboutPage() {
                     <div
                       className={`rounded-2xl p-8 sm:p-10 flex flex-col justify-between w-full h-full group border transition-all duration-200 ${
                         isGradient
-                          ? "bg-gradient-to-br from-[#0F2328] via-[#142B32] to-[#0A181C] text-white border-white/15 shadow-xl"
+                          ? "bg-gradient-to-br from-[#0D0624] via-[#120B3B] to-[#0200A7] text-white border-white/20 shadow-xl"
                           : "skeuo-card bg-white text-black"
                       }`}
                     >
@@ -256,14 +277,14 @@ export default function AboutPage() {
               <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
                 <Link
                   href="/resources"
-                  className="skeuo-btn-dark inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider text-white active:scale-95 transition-all"
+                  className="skeuo-btn-dark inline-flex items-center justify-center gap-2 h-11 px-8 rounded-full text-xs font-semibold uppercase tracking-wider text-white active:scale-95 transition-all"
                 >
                   <span>Open Toolkits & Briefs</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="skeuo-btn-light inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider text-black active:scale-95 transition-all"
+                  className="skeuo-btn-light inline-flex items-center justify-center gap-2 h-11 px-8 rounded-full text-xs font-semibold uppercase tracking-wider text-black active:scale-95 transition-all"
                 >
                   <span>Contact Directorate</span>
                 </Link>

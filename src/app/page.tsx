@@ -27,7 +27,7 @@ export default function HomePage() {
     <div className="flex flex-col bg-[#F4F4F6] text-black">
       {/* 1. Hero Section: Tight edge margin, fit completely in viewport without scrolling */}
       <div className="w-full px-2 sm:px-3 lg:px-4 pb-1 sm:pb-2 pt-0.5">
-        <section className="relative w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] overflow-hidden bg-[#161D20] min-h-[560px] sm:min-h-[620px] lg:h-[calc(100dvh-4.25rem)] lg:max-h-[calc(100dvh-4.25rem)] flex flex-col justify-between border border-black/10 shadow-2xl">
+        <section className="relative w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] overflow-hidden bg-[#0D0624] min-h-[560px] sm:min-h-[620px] lg:h-[calc(100dvh-4.25rem)] lg:max-h-[calc(100dvh-4.25rem)] flex flex-col justify-between border border-black/10 shadow-2xl">
           {/* Atmospheric Fresco Mural Background Artwork */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -44,16 +44,16 @@ export default function HomePage() {
 
           {/* Hero Content Container: Mathematically proportioned to fit any screen height without scrolling */}
           <div className="relative z-10 max-w-container mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-between py-4 sm:py-5 lg:py-6">
-            {/* Top Kicker matching photo: ⊕ PAN-AFRICAN YOUTH INNOVATION NEXUS */}
+            {/* Top Kicker with Official Brand Tagline */}
             <motion.div
               initial={{ opacity: 0, y: -6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
               className="pt-0.5"
             >
-              <div className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-semibold tracking-widest uppercase text-white/80 font-mono">
-                <PlusCircle className="w-3 h-3 text-white" />
-                <span>Pan-African Youth Innovation Nexus</span>
+              <div className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-semibold tracking-widest uppercase text-white/90 font-mono">
+                <PlusCircle className="w-3 h-3 text-[#C723DF]" />
+                <span>Fueling Innovators for Sustainable Development</span>
               </div>
             </motion.div>
 
@@ -80,23 +80,23 @@ export default function HomePage() {
                 className="lg:col-span-7 space-y-3"
               >
                 <p className="text-base sm:text-[18px] text-white/95 leading-relaxed font-normal max-w-lg font-sans">
-                  AfriYouth is an integrated innovation practice for leaders, researchers, and founders—rigorous evidence and solutions that hold.
+                  By 2030, Africa will have the largest workforce in the world. AfriYouth transforms community-driven ideas from Africa&apos;s young innovators into scalable solutions, policy reforms, and high-survival enterprises.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-2 pt-0.5">
-                  {/* Skeuomorphic tactile white pill button matching photo: Book a call → */}
+                  {/* Skeuomorphic tactile white pill button: Book a call → locked to height of Subscribe button */}
                   <Link
                     href="/contact?intent=service"
-                    className="skeuo-btn-light inline-flex items-center justify-center gap-1.5 px-4.5 sm:px-5 py-2 rounded-full text-xs font-semibold text-black transition-all duration-200 active:scale-95 group font-sans"
+                    className="skeuo-btn-light inline-flex items-center justify-center gap-1.5 h-11 px-6 rounded-full text-xs font-semibold text-black transition-all duration-200 active:scale-95 group font-sans"
                   >
                     <span>Book a call</span>
                     <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
                   </Link>
 
-                  {/* High-frost glassmorphic pill button: Explore opportunities → */}
+                  {/* High-frost glassmorphic pill button: Explore opportunities → locked to height of Subscribe button */}
                   <Link
                     href="/opportunities"
-                    className="frost-glass-dark inline-flex items-center justify-center gap-1.5 px-4.5 sm:px-5 py-2 rounded-full text-xs font-semibold text-white transition-all duration-200 active:scale-95 group font-sans border border-white/20 hover:border-white/40"
+                    className="frost-glass-dark inline-flex items-center justify-center gap-1.5 h-11 px-6 rounded-full text-xs font-semibold text-white transition-all duration-200 active:scale-95 group font-sans border border-white/20 hover:border-white/40"
                   >
                     <span>Explore opportunities</span>
                     <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
@@ -124,7 +124,7 @@ export default function HomePage() {
 
                   {/* Dark pill badge: Case study */}
                   <div className="mb-1">
-                    <span className="inline-block px-2 py-0.5 rounded-full text-[9px] font-semibold bg-[#1A252C] text-white font-mono shadow-sm">
+                    <span className="inline-block px-2 py-0.5 rounded-full text-[9px] font-semibold bg-[#0D0624] text-white font-mono shadow-sm">
                       Case study
                     </span>
                   </div>
@@ -436,14 +436,14 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
                 <Link
                   href="/opportunities"
-                  className="skeuo-btn-dark w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-xs font-semibold text-white active:scale-95 transition-all font-sans"
+                  className="skeuo-btn-dark w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-8 rounded-full text-xs font-semibold text-white active:scale-95 transition-all font-sans"
                 >
                   <span>Find an Open Opportunity</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="skeuo-btn-light w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-xs font-semibold text-black active:scale-95 transition-all font-sans"
+                  className="skeuo-btn-light w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-8 rounded-full text-xs font-semibold text-black active:scale-95 transition-all font-sans"
                 >
                   <span>Start a Dialogue</span>
                 </Link>

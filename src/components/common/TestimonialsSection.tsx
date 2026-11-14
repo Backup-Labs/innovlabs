@@ -45,10 +45,10 @@ const testimonialsData: TestimonialItem[] = [
 ];
 
 export const TestimonialsSection: React.FC = () => {
-  const [activeCard, setActiveCard] = useState<string>("2");
+  const [activeCard, setActiveCard] = useState<string>("3");
 
   const toggleCard = (id: string) => {
-    setActiveCard((prev) => (prev === id ? "" : id));
+    setActiveCard(id);
   };
 
   // Render authentic real-world SVG logos on testimonial cards
@@ -206,12 +206,12 @@ export const TestimonialsSection: React.FC = () => {
                     /5
                   </span>
                 </div>
-                {/* 5 Green indicator dots */}
-                <div className="flex items-center justify-start sm:justify-end gap-1 mt-2">
+                {/* 5 Brand Blue indicator dots */}
+                <div className="flex items-center justify-start sm:justify-end gap-1.5 mt-2">
                   {[...Array(5)].map((_, i) => (
                     <span
                       key={i}
-                      className="w-2.5 h-2.5 rounded-sm bg-[#10B981] inline-block shadow-sm"
+                      className="w-2.5 h-2.5 rounded-sm bg-[#0301FF] inline-block shadow-sm"
                     />
                   ))}
                 </div>
@@ -225,8 +225,8 @@ export const TestimonialsSection: React.FC = () => {
           {/* 2. Bottom Row: 3 Equal-Sized Cards with Real-World Logos & High Frost */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {testimonialsData.map((t, idx) => {
-              // Middle card (idx === 1) is highlighted with high frost glassmorphism & brand gradient
-              const isHighlighted = idx === 1;
+              // Active card is dynamically highlighted with high-frost brand gradient; defaults to card 3 matching screenshot
+              const isHighlighted = activeCard === t.id;
 
               return (
                 <motion.div
@@ -241,29 +241,31 @@ export const TestimonialsSection: React.FC = () => {
                     style={
                       isHighlighted
                         ? {
-                            background: "linear-gradient(135deg, rgba(14, 45, 49, 0.92) 0%, rgba(10, 32, 35, 0.94) 100%)",
+                            background: "linear-gradient(135deg, #0D0624 0%, #0200A7 100%)",
                             backdropFilter: "blur(32px) saturate(180%)",
                             WebkitBackdropFilter: "blur(32px) saturate(180%)",
-                            border: "1px solid rgba(140, 227, 232, 0.35)",
-                            boxShadow: "0 18px 40px -8px rgba(7, 27, 30, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.25)",
+                            border: "1px solid rgba(199, 35, 223, 0.4)",
+                            boxShadow: "0 18px 40px -8px rgba(13, 6, 36, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.25)",
                           }
                         : {}
                     }
-                    className={`w-full flex-1 rounded-2xl p-7 flex flex-col justify-between transition-all duration-200 border ${
+                    className={`w-full flex-1 rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 border ${
                       isHighlighted
                         ? "text-white"
-                        : "bg-[#FAF9F5] border-black/10 text-black shadow-sm hover:border-black"
+                        : "bg-[#FAF9F5] border-black/10 text-[#0D0624] shadow-sm hover:border-[#0200A7]"
                     }`}
                   >
                     {/* Top Content Area */}
                     <div className="flex-1 flex flex-col justify-between">
-                      {/* Top Row: 5 Green Dots on Left & Plus/Minus on Right */}
+                      {/* Top Row: 5 Dots on Left & Plus/Minus on Right */}
                       <div className="flex items-center justify-between mb-5">
                         <div className="flex items-center gap-1.5">
                           {[...Array(5)].map((_, i) => (
                             <span
                               key={i}
-                              className="w-2 h-2 rounded-full bg-[#10B981] inline-block"
+                              className={`w-2 h-2 rounded-full inline-block ${
+                                isHighlighted ? "bg-[#C723DF]" : "bg-[#0301FF]"
+                              }`}
                             />
                           ))}
                         </div>

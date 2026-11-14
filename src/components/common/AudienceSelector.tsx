@@ -80,7 +80,7 @@ export const AudienceSelector: React.FC = () => {
                   <div
                     className={`rounded-2xl p-7 sm:p-9 flex flex-col justify-between h-full group transition-all duration-200 border ${
                       isGradient
-                        ? "bg-gradient-to-br from-[#162228] via-[#101D22] to-[#0A1418] text-white border-white/15 shadow-xl"
+                        ? "bg-gradient-to-br from-[#0D0624] via-[#120B3B] to-[#0200A7] text-white border-white/20 shadow-xl"
                         : "skeuo-card bg-white text-black"
                     }`}
                   >

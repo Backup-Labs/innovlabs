@@ -33,8 +33,8 @@ export default function PartnerWithUsPage() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl mb-16 sm:mb-20 space-y-3"
           >
-            <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-              // Collaboration Frameworks
+            <span className="text-[11px] font-semibold uppercase tracking-widest text-[#0301FF] font-mono">
+              Collaboration Frameworks
             </span>
             <h2 id="collab-models-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
               Four models of engagement.
@@ -100,8 +100,8 @@ export default function PartnerWithUsPage() {
                   <div
                     className={`rounded-2xl p-8 sm:p-12 flex flex-col justify-between w-full h-full group border transition-all duration-200 ${
                       isGradient
-                        ? "bg-gradient-to-br from-[#0F2328] via-[#142B32] to-[#0A181C] text-white border-white/15 shadow-xl"
-                        : "minimal-card bg-[#F4F4F6] border-gray-300 text-black hover:border-black"
+                        ? "bg-gradient-to-br from-[#0D0624] via-[#120B3B] to-[#0200A7] text-white border-white/20 shadow-xl"
+                        : "minimal-card bg-[#F4F4F6] border-gray-300 text-black hover:border-[#0200A7]"
                     }`}
                   >
                     <div className="flex-1 flex flex-col">

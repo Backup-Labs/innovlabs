@@ -18,7 +18,7 @@ export const OpportunityCard: React.FC<OpportunityCardProps> = ({
     <div
       className={`rounded-2xl p-7 sm:p-9 flex flex-col justify-between w-full h-full group transition-all duration-200 border ${
         featured
-          ? "bg-gradient-to-br from-[#0D2427] via-[#123136] to-[#091B1D] text-white border-white/15 shadow-xl"
+          ? "bg-gradient-to-br from-[#0D0624] via-[#120B3B] to-[#0200A7] text-white border-white/20 shadow-xl"
           : isOpen
           ? "skeuo-card bg-white text-black"
           : "skeuo-card bg-[#F4F4F6] opacity-85 text-black"

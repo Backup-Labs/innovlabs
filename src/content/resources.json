@@ -1,63 +1,62 @@
 [
   {
     "id": "res-01",
-    "title": "African Youth Employment in the Green Transition: 2026–2035 Horizon Forecast",
+    "title": "Africa's Youth Workforce in 2050: Four Possible Futures",
     "category": "Strategic Foresight",
-    "format": "PDF Report • 48 Pages",
-    "date": "October 2026",
-    "readTime": "15 min read",
-    "summary": "An empirical analysis projecting 12 million potential green jobs across renewable mini-grids, climate-smart agriculture, and circular urban waste in Africa.",
-    "author": "AfriYouth Foresight Directorate in collaboration with UNECA",
+    "format": "Africa 2050 Futures Series • 56 Pages",
+    "date": "November 2026",
+    "readTime": "18 min read",
+    "summary": "PESTLE and STEEPV horizon analysis modeling four distinct workforce scenarios for the continent, accounting for AI automation, climate migration, and demographic expansion.",
+    "author": "AfriYouth Strategic Foresight & Futures Lab",
     "downloadUrl": "#",
-    "tags": ["Green Economy", "Future of Work", "Policy"]
+    "tags": ["Futures", "Future of Work", "Demographics", "AI"]
   },
   {
     "id": "res-02",
-    "title": "The Community HCD Sprint Playbook: A Facilitator's Guide for African Cities",
-    "category": "Toolkits & Frameworks",
-    "format": "Toolkit & Worksheets • 34 Pages",
-    "date": "August 2026",
-    "readTime": "Practical Guide",
-    "summary": "Step-by-step participatory design methodology specifically adapted for low-connectivity, multi-lingual informal urban environments.",
-    "author": "AfriYouth Human-Centered Design Studio",
+    "title": "AfriYouth Policy Solutions Series: Youth-Proofing Public Procurement",
+    "category": "Policy Briefs",
+    "format": "Policy Solutions Paper • 24 Pages",
+    "date": "October 2026",
+    "readTime": "10 min read",
+    "summary": "Statutory recommendations and model regulations enabling African municipal and national agencies to direct 30% of public procurement toward youth-led enterprises.",
+    "author": "AfriYouth Policy & Governance Lab",
     "downloadUrl": "#",
-    "tags": ["Design Thinking", "Urban Planning", "Civic Tech"]
+    "tags": ["Policy", "Governance", "Procurement", "Youth-Proofing"]
   },
   {
     "id": "res-03",
-    "title": "Youth-Proofing National Legislation: A Model Audit Framework for African Parliaments",
-    "category": "Policy Briefs",
-    "format": "Policy Brief • 16 Pages",
-    "date": "July 2026",
-    "readTime": "8 min read",
-    "summary": "Diagnostic criteria for legislators to evaluate statutory bills against young demographic economic rights, digital inclusion, and fiscal sustainability.",
-    "author": "Pan-African Youth Policy Fellowship Council",
+    "title": "AfriYouth Evidence Report: Informal Youth Economy Telemetry Across 15 Nations",
+    "category": "Research Reports",
+    "format": "Continental Evidence Report • 72 Pages",
+    "date": "September 2026",
+    "readTime": "22 min read",
+    "summary": "Comprehensive quantitative survey synthesizing baseline data from 25,000+ informal youth workers on financial inclusion, digital micro-tool adoption, and regulatory barriers.",
+    "author": "AfriYouth Research & Evidence Lab",
     "downloadUrl": "#",
-    "tags": ["Governance", "Youth-Proofing", "Legislative"]
+    "tags": ["Research", "Informal Economy", "Open Data", "Telemetry"]
   },
   {
     "id": "res-04",
-    "title": "Grassroots Surveying in Frontier Contexts: Data Ethics & Open Standards",
-    "category": "Research Papers",
-    "format": "Technical Paper • 28 Pages",
-    "date": "May 2026",
-    "readTime": "12 min read",
-    "summary": "Standard operating protocols for community data collectors to protect citizen anonymity, prevent surveillance, and preserve data sovereignty.",
-    "author": "Tariq El-Haddad & AfriYouth Research Fellows",
+    "title": "The Community HCD Sprint Playbook: A Facilitator's Guide for African Cities",
+    "category": "Toolkits & Frameworks",
+    "format": "Toolkit & Worksheets • 38 Pages",
+    "date": "August 2026",
+    "readTime": "Practical Guide",
+    "summary": "Step-by-step participatory human-centered design methodology specifically adapted for low-connectivity, multi-lingual informal urban environments.",
+    "author": "AfriYouth Human-Centered Design Studio",
     "downloadUrl": "#",
-    "tags": ["Data Sovereignty", "Methodology", "Ethics"]
+    "tags": ["Human-Centered Design", "Co-Design", "Prototyping"]
   },
   {
     "id": "res-05",
-    "title": "Early-Stage CivicTech Survival in Africa: Lessons from 50 Seed Cohorts",
-    "category": "Research Papers",
-    "format": "Venture Review • 22 Pages",
-    "date": "March 2026",
-    "readTime": "10 min read",
-    "summary": "Longitudinal evaluation of survival factors, revenue models, and regulatory frictions among African tech founders solving public sector bottlenecks.",
-    "author": "AfriYouth Venture Lab & Investor Syndicate",
+    "title": "AfriYouth Impact Dashboard & MEL Standard Guide",
+    "category": "Impact Frameworks",
+    "format": "Methodology Review • 32 Pages",
+    "date": "July 2026",
+    "readTime": "12 min read",
+    "summary": "How to structure Theory of Change, verifiable KPIs, and longitudinal outcome measurement for African youth programs to prove tangible return on investment.",
+    "author": "AfriYouth Impact & Learning Directorate",
     "downloadUrl": "#",
-    "tags": ["Venture Incubation", "Startups", "Civic Tech"]
+    "tags": ["Impact Measurement", "M&E", "Theory of Change"]
   }
 ]
-

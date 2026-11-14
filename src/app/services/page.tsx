@@ -35,14 +35,14 @@ export default function ServicesPage() {
               transition={{ duration: 0.6 }}
               className="max-w-2xl mb-16 sm:mb-20 space-y-3"
             >
-              <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                // Specialized Engagements
+              <span className="text-[11px] font-semibold uppercase tracking-widest text-[#0301FF] font-mono">
+                Products & Services Suite
               </span>
               <h2 id="all-services-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
-                Our six core offerings.
+                Our complete labs and service offerings.
               </h2>
               <p className="text-[18px] text-gray-600 pt-2 leading-relaxed">
-                Every mandate includes dedicated project stewardship, verifiable milestones, and decolonized participatory ethics.
+                Operating across 5 strategic divisions with dedicated project stewardship, verifiable impact dashboards, and investor-ready deliverables.
               </p>
             </motion.div>
 
@@ -117,7 +117,7 @@ export default function ServicesPage() {
                   <div
                     className={`rounded-2xl p-8 sm:p-10 flex flex-col justify-between w-full h-full group border transition-all duration-200 ${
                       idx === 1
-                        ? "bg-gradient-to-br from-[#162228] via-[#101D22] to-[#0A1418] text-white border-white/15 shadow-xl"
+                        ? "bg-gradient-to-br from-[#0D0624] via-[#120B3B] to-[#0200A7] text-white border-white/20 shadow-xl"
                         : "skeuo-card bg-white text-black"
                     }`}
                   >
@@ -175,7 +175,7 @@ export default function ServicesPage() {
               <div className="pt-4">
                 <Link
                   href="/contact?intent=service"
-                  className="skeuo-btn-dark inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider text-white active:scale-95 transition-all shadow-md"
+                  className="skeuo-btn-dark inline-flex items-center justify-center gap-2 h-11 px-8 rounded-full text-xs font-semibold uppercase tracking-wider text-white active:scale-95 transition-all shadow-md"
                 >
                   <span>Request Client Consultation</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />

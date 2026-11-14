@@ -1,93 +1,138 @@
 [
   {
-    "id": "applied-research",
-    "slug": "applied-youth-research",
-    "title": "Applied Youth-Led Research & Field Diagnostics",
-    "summary": "Commission rigorous, participatory field data across African demographics to inform strategic investments, public programs, and market entries.",
+    "id": "venture-lab",
+    "slug": "youth-innovation-venture-lab",
+    "title": "Youth Innovation & Venture Lab",
+    "product": "AfriYouth Innovation Accelerator",
+    "model": "Incubation → Acceleration → Demo Day",
+    "summary": "Building on our incubation heritage to transform grassroots youth ideas into scalable, investable African enterprises.",
     "deliverables": [
-      "Representative grassroots surveys with 10,000+ youth respondents across 15+ African countries",
-      "Qualitative ethnographic field immersions and focus group synthesis",
-      "Actionable market feasibility and behavioral diagnostics",
-      "Interactive data dashboards and open-access datasets"
+      "Idea discovery & Human-Centered Design (HCD) sprints",
+      "Business-model development & prototype field validation",
+      "End-to-end incubation & acceleration curriculums",
+      "Pitch deck preparation, investor readiness & impact measurement"
     ],
-    "clientTypes": ["Multilateral Development Banks", "UN Agencies", "Global Foundations", "National Ministries"],
-    "typicalDuration": "6 to 16 Weeks",
-    "icon": "Microscope"
-  },
-  {
-    "id": "policy-design",
-    "slug": "policy-design-advisory",
-    "title": "Policy Design, Youth-Proofing & Legislative Sprints",
-    "summary": "Translate complex community evidence into implementable parliamentary bills, national youth strategies, and regional regulatory frameworks.",
-    "deliverables": [
-      "Youth-Proofing Audits on existing and pending national legislation",
-      "Model legal frameworks and statutory instruments for innovation & startup acts",
-      "Multi-stakeholder consensus workshops with ministries and youth councils",
-      "Parliamentary testimony briefs and cross-party white papers"
-    ],
-    "clientTypes": ["Parliamentary Committees", "Regional Economic Communities (AU, ECOWAS, EAC)", "Policy Think Tanks"],
-    "typicalDuration": "4 to 12 Weeks",
-    "icon": "Landmark"
-  },
-  {
-    "id": "hcd-sprints",
-    "slug": "hcd-co-design-sprints",
-    "title": "Human-Centered Design (HCD) Sprints & Citizen Labs",
-    "summary": "Co-design public services, digital products, and community infrastructure directly with end-users using rapid field prototyping.",
-    "deliverables": [
-      "Facilitated multi-day design sprints bringing citizens and decision-makers together",
-      "User journey mapping, empathy archetypes, and friction point diagnostics",
-      "Low-fidelity and digital clickable prototypes tested in informal and urban markets",
-      "Implementation roadmaps and change management playbooks"
-    ],
-    "clientTypes": ["Municipal City Governments", "Civic Tech Startups", "Healthcare & Education Providers"],
-    "typicalDuration": "2 to 8 Weeks",
-    "icon": "Compass"
-  },
-  {
-    "id": "venture-acceleration",
-    "slug": "venture-incubation-management",
-    "title": "Venture Incubation & Accelerator Ecosystem Management",
-    "summary": "Turn donor and corporate CSR capital into high-survival youth ventures through end-to-end program design, mentorship networks, and seed funding distribution.",
-    "deliverables": [
-      "Custom challenge design, pan-African applicant recruitment, and rigorous evaluation rubrics",
-      "Localized acceleration curriculum tailored to African market infrastructure",
-      "Pre-seed capital disbursement governance and compliance oversight",
-      "Investor demo day curation with top African VC and angel networks"
-    ],
-    "clientTypes": ["Corporate Foundations", "Impact Investment Funds", "Bilateral Development Agencies"],
+    "clientTypes": ["Impact Funds", "Corporate Foundations", "Venture Philanthropists", "Youth Entrepreneurs"],
     "typicalDuration": "6 to 12 Months",
     "icon": "Rocket"
   },
   {
-    "id": "strategic-foresight",
-    "slug": "strategic-foresight-trend-forecasting",
-    "title": "Strategic Foresight & Horizon Trend Forecasting",
-    "summary": "Equip leadership teams with anticipatory intelligence on African demographic expansion, future of work, green transition, and technology adoption.",
+    "id": "research-evidence",
+    "slug": "research-evidence-lab",
+    "title": "Research & Evidence Lab",
+    "product": "AfriYouth Evidence Reports",
+    "model": "Grassroots Telemetry → Rigorous Synthesis",
+    "summary": "Generating actionable, empirical evidence on Africa's emerging socio-economic challenges through participatory field diagnostics.",
     "deliverables": [
-      "2030–2050 Scenario Planning reports addressing emergent African youth dynamics",
-      "Horizon scanning digests monitoring weak signals across urban hubs",
-      "Stress-testing organizational strategies against climate and macroeconomic shocks",
-      "Custom executive foresight masterclasses and simulation games"
+      "Applied policy research & socio-economic youth surveys",
+      "Rigorous baseline and endline evaluations",
+      "Institutional and stakeholder political-economy analysis",
+      "Evidence synthesis, peer-reviewed reports & policy briefs"
     ],
-    "clientTypes": ["Executive Leadership Teams", "Development Boards", "Strategic Planning Directorates"],
-    "typicalDuration": "3 to 8 Weeks",
+    "clientTypes": ["UN Agencies", "Multilateral Development Banks", "Governments", "Global Foundations"],
+    "typicalDuration": "6 to 16 Weeks",
+    "icon": "Microscope"
+  },
+  {
+    "id": "policy-governance",
+    "slug": "policy-governance-lab",
+    "title": "Policy & Governance Lab",
+    "product": "AfriYouth Policy Solutions Series",
+    "model": "Evidence → Statutory & Regulatory Adoption",
+    "summary": "Translating empirical research into actionable policies, regulatory sandboxes, and institutional public-sector reforms.",
+    "deliverables": [
+      "Policy analysis, statutory review & regulatory design",
+      "Governance diagnostics & public-sector innovation audits",
+      "Stakeholder mapping & high-level policy dialogue facilitation",
+      "Model legislation drafting & policy implementation support"
+    ],
+    "clientTypes": ["Parliamentary Committees", "AU & Regional Commissions", "National Ministries", "Think Tanks"],
+    "typicalDuration": "4 to 12 Weeks",
+    "icon": "Landmark"
+  },
+  {
+    "id": "policy-innovation-challenge",
+    "slug": "policy-innovation-challenge",
+    "title": "Policy Innovation Challenge",
+    "product": "Policy Innovation Demo Day",
+    "model": "Research → Diagnosis → Proposal → Prototype → Policy Pitch",
+    "summary": "Our unique product asking youth: 'What is one of Africa's most pressing problems, and what evidence-based solution can you design?'",
+    "deliverables": [
+      "Challenge problem formulation across AI, Climate, Jobs, and Health",
+      "Youth-led systems research and root-cause diagnosis",
+      "Policy proposal drafting and prototype development",
+      "Policy pitch preparation and continental Policy Innovation Demo Day"
+    ],
+    "clientTypes": ["Bilateral Donors", "Philanthropic Programs", "Youth Coalitions", "City Governments"],
+    "typicalDuration": "8 to 16 Weeks",
+    "icon": "Compass"
+  },
+  {
+    "id": "strategic-foresight",
+    "slug": "strategic-foresight-futures-lab",
+    "title": "Strategic Foresight & Futures Lab",
+    "product": "Africa 2050 Futures Series",
+    "model": "Weak Signals → PESTLE/STEEPV → 2030/2050 Scenarios",
+    "summary": "Strongly differentiating AfriYouth from conventional hubs by anticipating demographic, technological, and future-of-work horizons.",
+    "deliverables": [
+      "Scenario planning (2030, 2040, 2050 possible futures)",
+      "Continuous horizon scanning & weak signal detection",
+      "PESTLE & STEEPV macro-environmental trend analysis",
+      "Emerging technology foresight (AI, green transition, automation)"
+    ],
+    "clientTypes": ["Executive Leadership Teams", "Development Boards", "Continental Planning Bodies"],
+    "typicalDuration": "4 to 10 Weeks",
     "icon": "Eye"
   },
   {
-    "id": "impact-evaluation",
-    "slug": "impact-measurement-evaluation",
-    "title": "Impact Measurement, M&E & Evidence Synthesis",
-    "summary": "Deploy gold-standard monitoring, evaluation, and learning (MEL) systems that measure both quantitative outcomes and grassroots transformational change.",
+    "id": "career-academy",
+    "slug": "career-professional-development-academy",
+    "title": "Career & Professional Development Academy",
+    "product": "Employability Bootcamp & University Programme",
+    "model": "Learn → Practice → Apply → Receive Feedback → Improve → Demonstrate",
+    "summary": "Practical workforce transition platform moving youth from Education → Employability → Employment → Career Progression.",
     "deliverables": [
-      "Theory of Change formulation with verifiable key performance indicators",
-      "Mixed-method baseline, mid-term, and endline evaluations",
-      "Third-party verification for donor reporting and ESG compliance",
-      "Data storytelling artifacts, executive summaries, and interactive impact microsites"
+      "Employability simulations with fictional job vacancy challenges",
+      "CV & cover letter customization, ATS optimization & LinkedIn branding",
+      "Professional Competency Assessment & real-world challenge portfolios",
+      "Leadership, AI skills, critical thinking & project M&E masterclasses"
     ],
-    "clientTypes": ["Philanthropic Donors", "Development Programs", "Social Enterprises"],
+    "clientTypes": ["Universities", "Graduate Employers", "Youth Councils", "Development Agencies"],
+    "typicalDuration": "4 to 12 Weeks",
+    "icon": "GraduationCap"
+  },
+  {
+    "id": "impact-learning",
+    "slug": "impact-learning-services",
+    "title": "Impact & Learning Services",
+    "product": "AfriYouth Impact Dashboard",
+    "model": "Theory of Change → Longitudinal KPI Tracking",
+    "summary": "Solving the universal struggle of demonstrating whether socio-economic interventions actually achieve enduring results.",
+    "deliverables": [
+      "Theory of Change formulation & logical frameworks",
+      "Custom M&E systems, KPIs & baseline outcome studies",
+      "Impact measurement & third-party verification",
+      "Learning reports, longitudinal dashboards & impact storytelling"
+    ],
+    "clientTypes": ["Philanthropic Donors", "Development Programs", "NGOs", "Social Enterprises"],
     "typicalDuration": "Ongoing / Multi-Year",
     "icon": "BarChart3"
+  },
+  {
+    "id": "resource-mobilization",
+    "slug": "funding-investment-readiness",
+    "title": "Funding & Investment Readiness",
+    "product": "Resource Mobilization Engine",
+    "model": "Grant Intelligence → Financial Model → Due Diligence",
+    "summary": "Cross-cutting fundraising service equipping youth organizations and ventures to mobilize sustainable catalytic capital.",
+    "deliverables": [
+      "Grant opportunity intelligence & donor mapping strategies",
+      "High-conversion proposal & business case development",
+      "Investor readiness audits, financial modelling & pitch decks",
+      "Institutional partnership development & due-diligence preparation"
+    ],
+    "clientTypes": ["Youth-Led NGOs", "Social Enterprises", "Incubator Alumni", "Ecosystem Enablers"],
+    "typicalDuration": "3 to 8 Weeks",
+    "icon": "ShieldCheck"
   }
 ]
-

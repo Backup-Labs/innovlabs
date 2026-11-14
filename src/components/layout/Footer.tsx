@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { site } from "@/lib/content";
+import { AfriYouthLogo } from "@/components/common/AfriYouthLogo";
 import { ArrowUpRight, CheckCircle } from "lucide-react";
 
 export const Footer: React.FC = () => {
@@ -26,8 +27,8 @@ export const Footer: React.FC = () => {
         AfriYouth Footer
       </h2>
 
-      {/* Curved architectural footer container matching Screenshot 2 curvature and edge margin */}
-      <div className="w-full rounded-[28px] sm:rounded-[36px] lg:rounded-[44px] overflow-hidden bg-[#1A252C] text-gray-300 p-6 sm:p-10 lg:p-16 border border-white/10 shadow-2xl">
+      {/* Curved architectural footer container with official Dark Purple #0D0624 */}
+      <div className="w-full rounded-[28px] sm:rounded-[36px] lg:rounded-[44px] overflow-hidden bg-[#0D0624] text-gray-300 p-6 sm:p-10 lg:p-16 border border-white/10 shadow-2xl">
         {/* Top Minimalist Newsletter Strip */}
         <div className="pb-10 sm:pb-16 mb-10 sm:mb-16 border-b border-white/10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-end">
           <div className="lg:col-span-7 space-y-3">
@@ -65,11 +66,11 @@ export const Footer: React.FC = () => {
                     placeholder="Enter your email"
                     required
                     aria-describedby={error ? "newsletter-error" : undefined}
-                    className="flex-1 px-4 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm focus:outline-none focus:border-white font-medium backdrop-blur-md shadow-inner"
+                    className="flex-1 h-11 px-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm focus:outline-none focus:border-white font-medium backdrop-blur-md shadow-inner"
                   />
                   <button
                     type="submit"
-                    className="skeuo-btn-light inline-flex items-center justify-center gap-1.5 px-6 py-3 rounded-full text-xs font-semibold text-black transition-all shrink-0 active:scale-95"
+                    className="skeuo-btn-light inline-flex items-center justify-center gap-1.5 h-11 px-6 rounded-full text-xs font-semibold text-black transition-all shrink-0 active:scale-95"
                   >
                     <span>Subscribe</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
@@ -88,60 +89,53 @@ export const Footer: React.FC = () => {
         {/* Navigation Columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 pb-12 sm:pb-16 border-b border-white/10 text-sm">
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-3 group" aria-label="AfriYouth Innovation Labs Home">
-              <div className="w-8 h-8 rounded-[8px] bg-white text-[#1A252C] flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:scale-105 duration-200">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <rect width="6.5" height="6.5" x="3.5" y="3.5" rx="1.5" />
-                  <rect width="6.5" height="6.5" x="14" y="3.5" rx="1.5" />
-                  <rect width="6.5" height="6.5" x="14" y="14" rx="1.5" />
-                  <rect width="6.5" height="6.5" x="3.5" y="14" rx="1.5" />
-                </svg>
-              </div>
-              <span className="text-2xl font-sans font-bold tracking-tight text-white leading-none">
-                AfriYouth
-              </span>
+            <Link href="/" className="inline-block group" aria-label="AfriYouth Innovation Labs Home">
+              <AfriYouthLogo variant="white" size="md" showText={true} showTagline={true} />
             </Link>
-            <p className="text-[18px] text-gray-300 leading-relaxed max-w-sm font-sans font-normal">
+            <p className="text-[18px] text-gray-300 leading-relaxed max-w-sm font-sans font-normal pt-2">
               Empowering Africa&apos;s youth to generate evidence, shape public policy, and build high-survival enterprises across the continent.
             </p>
-            <div className="text-[18px] font-sans text-gray-400 font-medium pt-1">
+            <div className="text-[16px] font-sans text-gray-400 font-medium">
               HQ: {site.contact.headquarters}
             </div>
           </div>
 
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4 font-mono">
-              Initiatives
+              5 Strategic Divisions
             </h4>
             <ul className="space-y-2.5 text-xs text-white/75 font-medium">
-              <li><Link href="/programs" className="hover:text-white transition-colors">Flagship Cohorts</Link></li>
-              <li><Link href="/opportunities" className="hover:text-white transition-colors">Open Applications</Link></li>
-              <li><Link href="/services" className="hover:text-white transition-colors">Client Services</Link></li>
-              <li><Link href="/impact" className="hover:text-white transition-colors">Verified Impact</Link></li>
+              <li><Link href="/services#research-evidence" className="hover:text-white transition-colors">Research & Evidence</Link></li>
+              <li><Link href="/services#policy-governance" className="hover:text-white transition-colors">Policy & Governance</Link></li>
+              <li><Link href="/services#innovation-entrepreneurship" className="hover:text-white transition-colors">Innovation & Entrepreneurship</Link></li>
+              <li><Link href="/services#strategic-foresight" className="hover:text-white transition-colors">Strategic Foresight & Futures</Link></li>
+              <li><Link href="/services#career-academy" className="hover:text-white transition-colors">Leadership & Capacity</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4 font-mono">
-              Knowledge
+              Flagship Products
             </h4>
             <ul className="space-y-2.5 text-xs text-white/75 font-medium">
-              <li><Link href="/resources" className="hover:text-white transition-colors">Policy Briefs</Link></li>
-              <li><Link href="/resources" className="hover:text-white transition-colors">Design Toolkits</Link></li>
-              <li><Link href="/impact#stories" className="hover:text-white transition-colors">Field Case Studies</Link></li>
-              <li><Link href="/about" className="hover:text-white transition-colors">Integrated Nexus</Link></li>
+              <li><Link href="/programs#evidence-to-impact-accelerator" className="hover:text-white transition-colors">Evidence-to-Impact Accelerator</Link></li>
+              <li><Link href="/programs#policy-innovation-challenge" className="hover:text-white transition-colors">Policy Innovation Challenge</Link></li>
+              <li><Link href="/resources" className="hover:text-white transition-colors">Africa 2050 Futures Series</Link></li>
+              <li><Link href="/resources" className="hover:text-white transition-colors">AfriYouth Policy Solutions</Link></li>
+              <li><Link href="/programs#employability-bootcamp" className="hover:text-white transition-colors">Employability Simulations</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4 font-mono">
-              Governance
+              Governance & Capital
             </h4>
             <ul className="space-y-2.5 text-xs text-white/75 font-medium">
               <li><Link href="/partner-with-us" className="hover:text-white transition-colors">Institutional Alliances</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Regional Nodes</Link></li>
+              <li><Link href="/services#funding-investment-readiness" className="hover:text-white transition-colors">Resource Mobilization</Link></li>
               <li><Link href="/privacy" className="hover:text-white transition-colors">Data Sovereignty</Link></li>
               <li><Link href="/safeguarding" className="hover:text-white transition-colors">Safeguarding</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Regional Nodes</Link></li>
             </ul>
           </div>
         </div>

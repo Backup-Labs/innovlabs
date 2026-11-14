@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { site } from "@/lib/content";
+import { AfriYouthLogo } from "@/components/common/AfriYouthLogo";
 import { X } from "lucide-react";
 
 export const Header: React.FC = () => {
@@ -45,52 +46,48 @@ export const Header: React.FC = () => {
 
       {/* Navigation bar matching the photo: borderless, warm textured background, identical layout */}
       <header className="sticky top-0 z-50 w-full bg-transparent">
-        <div className="w-full px-3 sm:px-5 lg:px-6 h-13 sm:h-14 flex items-center justify-between">
-          {/* Logo on Left: 4-pane quadrant icon + AfriYouth Wordmark in Instrument Serif matching photo */}
+        <div className="w-full px-3 sm:px-5 lg:px-6 h-14 sm:h-16 flex items-center justify-between">
+          {/* Logo on Left: Official AfriYouth Dancing Adolescent Emblem + Wordmark */}
           <Link
             href="/"
             className="flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-black rounded-lg py-1"
             aria-label="AfriYouth Innovation Labs Home"
           >
-            {/* 4-pane quadrant icon matching photo */}
-            <div className="w-7 h-7 rounded-[7px] bg-[#1A252C] flex items-center justify-center shrink-0 transition-transform group-hover:scale-105 duration-200 shadow-sm">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
-                <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" fill="white" />
-                <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" fill="white" />
-                <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" fill="white" />
-                <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" fill="white" />
-              </svg>
-            </div>
-            {/* Wordmark in Instrument Serif matching photo */}
-            <span className="text-[22px] sm:text-[24px] font-serif font-normal tracking-tight text-[#1A252C] leading-none pt-0.5">
-              AfriYouth
-            </span>
+            <AfriYouthLogo variant="gradient" size="sm" showText={true} />
           </Link>
 
-          {/* Right Actions matching photo: [Book a call] pill + [ = ] circular menu icon */}
-          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
-            {/* Book a call pill button matching photo */}
+          {/* Right Actions matching brand document: [Book a call] pill + [ = ] circular menu icon */}
+          <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
+            {/* Book a call pill button matching exact height of Subscribe button */}
             <Link
               href="/contact?intent=service"
-              className="inline-flex items-center justify-center h-8.5 sm:h-9 px-3.5 sm:px-5 rounded-full text-[12px] sm:text-[13px] font-semibold bg-[#1A252C] text-white hover:bg-black transition-all duration-200 active:scale-95 shadow-sm font-sans shrink-0"
+              className="skeuo-btn-dark inline-flex items-center justify-center h-11 px-5 sm:px-6 rounded-full text-xs font-semibold text-white hover:bg-[#0200A7] transition-all duration-200 active:scale-95 shadow-sm font-sans shrink-0 border border-white/10"
             >
               <span>Book a call</span>
             </Link>
 
-            {/* Circular button with two horizontal white bars matching photo */}
+            {/* Circular button with two horizontal white bars - locked to exact height of buttons (w-11 h-11 / 44px) */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full bg-[#1A252C] text-white flex items-center justify-center hover:bg-black transition-all duration-200 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-black relative z-50 shadow-sm shrink-0"
+              className="w-11 h-11 rounded-full bg-[#0D0624] text-white flex items-center justify-center hover:bg-[#0200A7] transition-all duration-200 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0301FF] relative z-50 shadow-sm shrink-0 border border-white/10"
               aria-expanded={menuOpen}
               aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {menuOpen ? (
-                <X className="w-4 h-4 text-white" />
+                <X className="w-5 h-5 text-white" />
               ) : (
-                <div className="flex flex-col items-center justify-center gap-[4.5px]">
-                  <span className="w-4 h-[1.5px] bg-white rounded-full block" />
-                  <span className="w-4 h-[1.5px] bg-white rounded-full block" />
-                </div>
+                <svg
+                  width="18"
+                  height="11"
+                  viewBox="0 0 18 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="pointer-events-none"
+                  aria-hidden="true"
+                >
+                  <rect width="18" height="2.2" rx="1.1" fill="#FFFFFF" />
+                  <rect y="8.8" width="18" height="2.2" rx="1.1" fill="#FFFFFF" />
+                </svg>
               )}
             </button>
           </div>
@@ -113,7 +110,7 @@ export const Header: React.FC = () => {
             />
 
             {/* Anchored Two-Card Container: positioned right below the header buttons */}
-            <div className="fixed top-14 sm:top-15 right-3 sm:right-5 lg:right-6 z-50 w-[calc(100vw-24px)] max-w-[260px] flex flex-col gap-2 pointer-events-auto">
+            <div className="fixed top-15 sm:top-17 right-3 sm:right-5 lg:right-6 z-50 w-[calc(100vw-24px)] max-w-[260px] flex flex-col gap-2 pointer-events-auto">
               {/* Card 1: Navigation Links in upright Instrument Serif */}
               <motion.div
                 initial={{ opacity: 0, y: -8, scale: 0.97 }}

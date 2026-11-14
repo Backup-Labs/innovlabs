@@ -16,7 +16,7 @@ export const ProgramCard: React.FC<ProgramCardProps> = ({
     <div
       className={`rounded-2xl p-7 sm:p-9 flex flex-col justify-between w-full h-full group transition-all duration-200 border ${
         featured
-          ? "bg-gradient-to-br from-[#0F2328] via-[#142B32] to-[#0A181C] text-white border-white/15 shadow-xl"
+          ? "bg-gradient-to-br from-[#0D0624] via-[#120B3B] to-[#0200A7] text-white border-white/20 shadow-xl"
           : "skeuo-card text-black bg-white"
       }`}
     >
@@ -36,7 +36,7 @@ export const ProgramCard: React.FC<ProgramCardProps> = ({
           >
             <span
               className={`w-1.5 h-1.5 rounded-full animate-pulse ${
-                featured ? "bg-white" : "bg-black"
+                featured ? "bg-[#C723DF]" : "bg-[#0301FF]"
               }`}
             />
             <span>{program.status}</span>

@@ -135,7 +135,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 botCheckWebsite: "",
               });
             }}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-semibold bg-black text-white hover:bg-neutral-800 transition-colors"
+            className="skeuo-btn-dark inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full text-xs font-semibold text-white transition-all active:scale-95"
           >
             Submit Another Inquiry
           </button>
@@ -283,7 +283,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="skeuo-btn-dark inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-xs font-semibold text-white disabled:opacity-60 transition-all active:scale-95 shadow-md"
+          className="skeuo-btn-dark inline-flex items-center justify-center gap-2 h-11 px-8 rounded-full text-xs font-semibold text-white disabled:opacity-60 transition-all active:scale-95 shadow-md"
         >
           {status === "submitting" ? (
             <>

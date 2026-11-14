@@ -199,7 +199,7 @@ export const CustomDatePicker: React.FC<CustomDatePickerProps> = ({
                     onClick={() => handleSelectDay(dayNumber)}
                     className={`h-8 w-8 mx-auto flex items-center justify-center rounded-lg text-xs transition-all duration-150 font-medium ${
                       isSelected
-                        ? "bg-black text-white font-bold shadow-sm"
+                        ? "bg-[#0301FF] text-white font-bold shadow-sm"
                         : "text-black hover:bg-gray-100"
                     }`}
                   >

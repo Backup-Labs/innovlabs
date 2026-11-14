@@ -52,6 +52,13 @@
   --text-muted: #636366;
   --text-light: #8E8E93;
   --line-hairline: #E2E2E6;
+
+  /* Official AfriYouth Brand Colors */
+  --brand-blue: #0301FF;
+  --brand-duke-blue: #0200A7;
+  --brand-steel-pink: #C723DF;
+  --brand-dark-purple: #0D0624;
+  --brand-gradient: linear-gradient(135deg, #C723DF 0%, #0301FF 55%, #0200A7 100%);
 }
 
 *,
@@ -172,13 +179,13 @@ pre {
 }
 
 .frost-glass-dark {
-  background: rgba(26, 37, 44, 0.78);
+  background: rgba(13, 6, 36, 0.85);
   backdrop-filter: blur(32px) saturate(180%);
   -webkit-backdrop-filter: blur(32px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-top: 1px solid rgba(255, 255, 255, 0.28);
   box-shadow: 
-    0 24px 48px -12px rgba(0, 0, 0, 0.4),
+    0 24px 48px -12px rgba(13, 6, 36, 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 
@@ -198,15 +205,20 @@ pre {
 
 .skeuo-card:hover {
   transform: translateY(-2px);
-  border-color: #C8C8D0;
+  border-color: #0200A7;
   box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.06),
-    0 16px 36px -6px rgba(0, 0, 0, 0.08),
+    0 4px 12px rgba(2, 0, 167, 0.08),
+    0 16px 36px -6px rgba(13, 6, 36, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
-/* Skeuomorphic tactile buttons */
+/* Skeuomorphic tactile buttons - locked to exact height of the Subscribe button (44px) */
 .skeuo-btn-light {
+  height: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(180deg, #FFFFFF 0%, #F4F4F6 100%);
   border: 1px solid #D1D1D6;
   border-top: 1px solid #FFFFFF;
@@ -219,8 +231,9 @@ pre {
 
 .skeuo-btn-light:hover {
   background: #FFFFFF;
+  border-color: #0301FF;
   box-shadow: 
-    0 4px 10px rgba(0, 0, 0, 0.09),
+    0 4px 10px rgba(3, 1, 255, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
@@ -231,26 +244,61 @@ pre {
 }
 
 .skeuo-btn-dark {
-  background: linear-gradient(180deg, #243038 0%, #172127 100%);
-  border: 1px solid #11181D;
-  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  height: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #1C0F4A 0%, #0D0624 100%);
+  border: 1px solid #0D0624;
+  border-top: 1px solid rgba(199, 35, 223, 0.4);
   box-shadow: 
-    0 2px 6px rgba(0, 0, 0, 0.24),
+    0 2px 8px rgba(13, 6, 36, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.18);
   transition: all 180ms ease;
 }
 
 .skeuo-btn-dark:hover {
-  background: linear-gradient(180deg, #2A3842 0%, #1B262D 100%);
+  background: linear-gradient(180deg, #0200A7 0%, #0D0624 100%);
+  border-color: #0301FF;
   box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.3),
+    0 4px 16px rgba(3, 1, 255, 0.35),
     inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .skeuo-btn-dark:active {
-  background: #11171B;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35);
+  background: #080317;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
   transform: translateY(1px);
+}
+
+/* Brand Button with Gradient - locked to exact height of the Subscribe button (44px) */
+.brand-btn-gradient {
+  height: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #C723DF 0%, #0301FF 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 14px rgba(3, 1, 255, 0.35);
+  transition: all 180ms ease;
+}
+
+.brand-btn-gradient:hover {
+  background: linear-gradient(135deg, #DF37F5 0%, #1A18FF 100%);
+  box-shadow: 0 6px 20px rgba(199, 35, 223, 0.45);
+  transform: translateY(-1px);
+}
+
+/* Universal Subscribe Button Height Utility */
+.btn-subscribe-height {
+  height: 44px !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 /* Clean Editorial Hairline Utilities */

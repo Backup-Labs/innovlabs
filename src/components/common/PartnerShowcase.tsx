@@ -28,8 +28,8 @@ export const PartnerShowcase: React.FC = () => {
         <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 mb-10 sm:mb-14">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div className="max-w-2xl space-y-2">
-              <div className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                <Sparkles className="w-3.5 h-3.5 text-black" />
+              <div className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-widest text-[#0301FF] font-mono">
+                <Sparkles className="w-3.5 h-3.5 text-[#C723DF]" />
                 <span>Institutional Alliances & Ecosystem</span>
               </div>
               <h2

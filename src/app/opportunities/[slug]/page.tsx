@@ -65,8 +65,8 @@ export default function OpportunityDetailPage({ params }: PageProps) {
             {/* Left Column: Guidelines & Details */}
             <div className="lg:col-span-7 space-y-12">
               <div className="space-y-4">
-                <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 block font-mono">
-                  // Initiative Brief
+                <span className="text-[11px] font-semibold uppercase tracking-widest text-[#0301FF] block font-mono">
+                  Initiative Brief
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-black tracking-tight">
                   Overview & Expectations

@@ -13,9 +13,9 @@ export default function ProgramsPage() {
     <div className="bg-[#F4F4F6] text-black">
       {/* Curved Hero Banner matching Screenshot 3 */}
       <PageHeroBanner
-        kicker="Flagship Cohorts"
-        title="Fellowships, incubators & action studios."
-        description="Every AfriYouth program provides rigorous technical training, hands-on community fieldwork, living stipends or equity-free catalytic capital, and direct institutional placement."
+        kicker="Flagship Labs & Cohorts"
+        title="From evidence to systemic scale."
+        description="Operating across 5 strategic divisions: from the 10-stage Evidence-to-Impact Accelerator and Policy Innovation Challenge to the Career & Employability Academy."
       />
 
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 py-2">
@@ -150,11 +150,11 @@ export default function ProgramsPage() {
                     </div>
                   </div>
 
-                  {/* CTA */}
+                  {/* CTA matching height of Subscribe button */}
                   <div className="pt-6 border-t border-gray-200">
                     <Link
                       href="/opportunities"
-                      className="inline-flex items-center justify-between w-full px-6 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-black text-white hover:bg-neutral-800 transition-colors shadow-sm"
+                      className="skeuo-btn-dark inline-flex items-center justify-between w-full h-11 px-6 rounded-full text-xs font-semibold uppercase tracking-wider text-white transition-all shadow-sm"
                     >
                       <span>Check Open Cohorts</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />

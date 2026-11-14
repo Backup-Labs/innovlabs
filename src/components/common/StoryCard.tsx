@@ -32,23 +32,28 @@ export const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
   return (
     <div className="bg-white rounded-[24px] sm:rounded-[28px] overflow-hidden border border-black/10 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-xl transition-all duration-300 flex flex-col justify-between w-full h-full group">
       <div className="flex-1 flex flex-col">
-        {/* Top Dark Teal Telemetry Banner matching Screenshot */}
-        <div className="relative w-full bg-[#062426] p-4 sm:p-6 overflow-hidden">
-          {/* Subtle Ambient Teal Circles in Background */}
-          <div className="absolute -left-10 -bottom-10 w-44 h-44 rounded-full bg-[#0C3236] blur-xl opacity-70 pointer-events-none" />
-          <div className="absolute -right-8 -top-8 w-40 h-40 rounded-full bg-[#092B2E] blur-xl opacity-60 pointer-events-none" />
+        {/* Top Dark Purple Telemetry Banner using official brand palette */}
+        <div className="relative w-full bg-[#0D0624] p-4 sm:p-6 overflow-hidden">
+          {/* Subtle Ambient Duke Blue & Steel Pink Glows in Background */}
+          <div className="absolute -left-10 -bottom-10 w-44 h-44 rounded-full bg-[#0200A7] blur-2xl opacity-40 pointer-events-none" />
+          <div className="absolute -right-8 -top-8 w-40 h-40 rounded-full bg-[#C723DF] blur-2xl opacity-30 pointer-events-none" />
+          {/* Concentric Geometric Circles matching Screenshot 1 */}
+          <div className="absolute -left-16 -bottom-16 w-56 h-56 rounded-full border border-white/[0.08] pointer-events-none" />
+          <div className="absolute -left-8 -bottom-8 w-40 h-40 rounded-full border border-white/[0.06] pointer-events-none" />
+          <div className="absolute -right-16 -top-16 w-56 h-56 rounded-full border border-white/[0.08] pointer-events-none" />
+          <div className="absolute -right-8 -top-8 w-40 h-40 rounded-full border border-white/[0.06] pointer-events-none" />
 
           {/* Top-Left Location Pill */}
           <div className="relative z-10 mb-3">
-            <span className="inline-block px-3.5 py-1 bg-white text-black text-xs font-semibold rounded-full shadow-sm font-sans">
+            <span className="inline-block px-3.5 py-1 bg-white text-[#0D0624] text-xs font-semibold rounded-full shadow-sm font-sans">
               {story.location}
             </span>
           </div>
 
           {/* Inner Telemetry Card with Dark Border */}
-          <div className="relative z-10 w-full rounded-2xl bg-[#0D2D30] border border-[#1A484C] p-4 sm:p-5 flex flex-col items-center justify-between shadow-inner min-h-[168px]">
+          <div className="relative z-10 w-full rounded-2xl bg-[#140C33] border border-[#0200A7]/50 p-4 sm:p-5 flex flex-col items-center justify-between shadow-inner min-h-[168px]">
             {/* Header Pill inside inner container */}
-            <div className="px-3.5 py-1 rounded-full bg-[#082225] border border-[#184246] text-white text-[11px] sm:text-xs font-semibold tracking-wide shadow-sm font-sans mb-1">
+            <div className="px-3.5 py-1 rounded-full bg-[#0D0624] border border-[#0200A7] text-white text-[11px] sm:text-xs font-semibold tracking-wide shadow-sm font-sans mb-1">
               {telemetryTitle}
             </div>
 
@@ -61,13 +66,13 @@ export const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
                   className="w-full max-w-[280px] h-20 overflow-visible"
                   aria-label="Kigali air telemetry graph"
                 >
-                  {/* Dashed orange connection lines */}
+                  {/* Dashed Steel Pink connection lines */}
                   <line
                     x1="40"
                     y1="68"
                     x2="105"
                     y2="32"
-                    stroke="#F59E0B"
+                    stroke="#C723DF"
                     strokeWidth="2.5"
                     strokeDasharray="5 5"
                   />
@@ -76,7 +81,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
                     y1="32"
                     x2="165"
                     y2="54"
-                    stroke="#F59E0B"
+                    stroke="#C723DF"
                     strokeWidth="2.5"
                     strokeDasharray="5 5"
                   />
@@ -85,7 +90,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
                     y1="54"
                     x2="230"
                     y2="20"
-                    stroke="#F59E0B"
+                    stroke="#C723DF"
                     strokeWidth="2.5"
                     strokeDasharray="5 5"
                   />
@@ -94,72 +99,66 @@ export const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
                     y1="20"
                     x2="270"
                     y2="46"
-                    stroke="#F59E0B"
+                    stroke="#C723DF"
                     strokeWidth="2.5"
                     strokeDasharray="5 5"
                   />
 
-                  {/* Colored circular nodes */}
-                  <circle cx="40" cy="68" r="8" fill="#F59E0B" />
-                  <circle cx="105" cy="32" r="9" fill="#38BDF8" />
-                  <circle cx="165" cy="54" r="6.5" fill="#10B981" />
-                  <circle cx="230" cy="20" r="13" fill="#F59E0B" />
-                  <circle cx="270" cy="46" r="8" fill="#38BDF8" />
+                  {/* Colored circular nodes using official brand colors */}
+                  <circle cx="40" cy="68" r="8" fill="#C723DF" />
+                  <circle cx="105" cy="32" r="9" fill="#0301FF" />
+                  <circle cx="165" cy="54" r="6.5" fill="#FFFFFF" />
+                  <circle cx="230" cy="20" r="13" fill="#C723DF" />
+                  <circle cx="270" cy="46" r="8" fill="#0301FF" />
                 </svg>
               ) : isAccra ? (
-                /* Golden Loop Knot Graphic for Kantamanto CircuTex */
+                /* Steel Pink / Electric Blue Loop Knot Graphic for Kantamanto CircuTex matching Screenshot 1 */
                 <svg
                   viewBox="0 0 320 90"
                   className="w-full max-w-[280px] h-20 overflow-visible"
                   aria-label="CircuTex circular economy knot"
                 >
-                  {/* Branch tail left */}
+                  <defs>
+                    <linearGradient id="circuGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#C723DF" />
+                      <stop offset="100%" stopColor="#0301FF" />
+                    </linearGradient>
+                  </defs>
+                  {/* Left branch tail pointing down-left */}
                   <line
-                    x1="70"
-                    y1="62"
-                    x2="88"
-                    y2="46"
-                    stroke="#F59E0B"
-                    strokeWidth="5.5"
+                    x1="108"
+                    y1="66"
+                    x2="124"
+                    y2="50"
+                    stroke="#C723DF"
+                    strokeWidth="5"
                     strokeLinecap="round"
                   />
-                  <line
-                    x1="88"
-                    y1="46"
-                    x2="98"
-                    y2="64"
-                    stroke="#F59E0B"
-                    strokeWidth="5.5"
-                    strokeLinecap="round"
-                  />
-
-                  {/* Left Circle / Loop */}
+                  {/* Left circle loop arch */}
                   <path
-                    d="M 88 46 C 88 20, 138 20, 138 50 C 138 80, 88 80, 110 50"
+                    d="M 120 56 C 114 30, 150 26, 154 50 C 158 74, 126 74, 128 50 C 130 32, 160 30, 168 52"
                     fill="none"
-                    stroke="#F59E0B"
-                    strokeWidth="5.5"
+                    stroke="url(#circuGrad)"
+                    strokeWidth="5"
                     strokeLinecap="round"
                   />
-
-                  {/* Right Circle Loop */}
+                  {/* Right circle loop */}
                   <circle
-                    cx="180"
-                    cy="48"
-                    r="23"
+                    cx="192"
+                    cy="49"
+                    r="22"
                     fill="none"
-                    stroke="#F59E0B"
-                    strokeWidth="5.5"
+                    stroke="#0301FF"
+                    strokeWidth="5"
                   />
-
-                  {/* Branch tick right */}
+                  {/* Right branch tick pointing up-right */}
                   <line
-                    x1="200"
-                    y1="48"
-                    x2="218"
-                    y2="36"
-                    stroke="#F59E0B"
-                    strokeWidth="5.5"
+                    x1="208"
+                    y1="49"
+                    x2="224"
+                    y2="37"
+                    stroke="#0301FF"
+                    strokeWidth="5"
                     strokeLinecap="round"
                   />
                 </svg>
@@ -173,27 +172,27 @@ export const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
                   <path
                     d="M 40 45 Q 100 15, 160 45 T 280 45"
                     fill="none"
-                    stroke="#F59E0B"
+                    stroke="#C723DF"
                     strokeWidth="2.5"
                     strokeDasharray="4 4"
                   />
                   <path
                     d="M 40 55 Q 100 75, 160 45 T 280 45"
                     fill="none"
-                    stroke="#38BDF8"
+                    stroke="#0301FF"
                     strokeWidth="2"
                     strokeDasharray="3 3"
                   />
-                  <circle cx="50" cy="45" r="7" fill="#F59E0B" />
-                  <circle cx="130" cy="30" r="8" fill="#38BDF8" />
-                  <circle cx="190" cy="55" r="9" fill="#10B981" />
-                  <circle cx="270" cy="45" r="11" fill="#F59E0B" />
+                  <circle cx="50" cy="45" r="7" fill="#C723DF" />
+                  <circle cx="130" cy="30" r="8" fill="#0301FF" />
+                  <circle cx="190" cy="55" r="9" fill="#FFFFFF" />
+                  <circle cx="270" cy="45" r="11" fill="#C723DF" />
                 </svg>
               )}
             </div>
 
             {/* Sub-caption Telemetry Metric */}
-            <p className="text-[11px] sm:text-xs text-[#9EECEF] font-mono tracking-tight text-center">
+            <p className="text-[11px] sm:text-xs text-[#FFFFFF] font-mono tracking-tight text-center">
               {telemetrySubtitle}
             </p>
           </div>

@@ -1,0 +1,27 @@
+<svg width="340" height="90" viewBox="0 0 340 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fullLogoGrad" x1="10" y1="5" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C723DF" />
+      <stop offset="55%" stop-color="#0301FF" />
+      <stop offset="100%" stop-color="#0200A7" />
+    </linearGradient>
+  </defs>
+
+  <!-- Emblem -->
+  <g transform="translate(4, 5) scale(0.8)">
+    <rect x="20" y="14" width="6" height="13" rx="3" transform="rotate(-35 23 20.5)" fill="url(#fullLogoGrad)" />
+    <rect x="47" y="7" width="6" height="14" rx="3" fill="url(#fullLogoGrad)" />
+    <rect x="74" y="14" width="6" height="13" rx="3" transform="rotate(35 77 20.5)" fill="url(#fullLogoGrad)" />
+    <circle cx="50" cy="36" r="11" fill="url(#fullLogoGrad)" />
+    <path
+      d="M 43 51 C 47 52 53 52 57 51 C 65 54 73 60 76 69 C 78 79 73 92 65 103 C 60 110 54 116 49 119 C 47 120 45 119 46 116 C 50 104 51 94 49 84 C 47 75 41 70 32 67 C 23 64 16 57 18 51 C 20 45 28 47 34 54 C 37 57 40 56 43 51 Z"
+      fill="url(#fullLogoGrad)"
+      transform="matrix(0.8 0 0 0.8 10 9)"
+    />
+  </g>
+
+  <!-- Wordmark -->
+  <text x="88" y="38" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="24" fill="#0D0624" letter-spacing="-0.5">AfriYouth</text>
+  <text x="88" y="58" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="16" fill="#0301FF" letter-spacing="-0.2">Innovation Labs</text>
+  <text x="88" y="74" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="9" fill="#666666" letter-spacing="0.2">Fueling Innovators for Sustainable Development</text>
+</svg>

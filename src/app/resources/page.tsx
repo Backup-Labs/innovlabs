@@ -144,7 +144,7 @@ export default function ResourcesPage() {
                       onClick={() => {
                         alert(`Initiating download for: "${resource.title}". This document will be delivered by the AfriYouth Open Data repository.`);
                       }}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-black text-white hover:bg-neutral-800 transition-colors"
+                      className="skeuo-btn-dark inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full text-xs font-semibold text-white transition-all active:scale-95"
                     >
                       <Download className="w-3.5 h-3.5" />
                       <span>Download PDF</span>

@@ -1,30 +1,124 @@
 [
   {
+    "id": "evidence-to-impact-accelerator",
+    "slug": "evidence-to-impact-accelerator",
+    "title": "Evidence-to-Impact Accelerator",
+    "area": "Flagship Integrated Nexus",
+    "tagline": "Combining research, incubation, policy translation, and scale into one closed-loop 10-stage engine.",
+    "description": "Our premier flagship initiative. Rather than operating disconnected research, incubation, and training schemes, the Evidence-to-Impact Accelerator takes high-potential youth innovators through our 10-stage journey: Discover → Diagnose → Research → Design → Prototype → Policy → Finance → Implement → Measure → Scale.",
+    "duration": "12 Months (Comprehensive Continental Track)",
+    "cohortSize": "25 Multi-disciplinary Teams / Year",
+    "status": "Accepting Applications",
+    "eligibility": [
+      "African young innovators, researchers, and changemakers aged 18–35",
+      "Demonstrated community problem statement backed by initial grassroots observation",
+      "Commitment to participatory research, prototyping, and policy dialogue",
+      "Cross-disciplinary teams combining technical, research, and civic leadership"
+    ],
+    "howToParticipate": [
+      {
+        "step": 1,
+        "title": "Community Discovery Submission",
+        "description": "Submit a problem dossier based on grassroots observation and community lived experience."
+      },
+      {
+        "step": 2,
+        "title": "Systems Diagnosis & Bootcamp",
+        "description": "Selected teams conduct root-cause political-economy analysis and evidence generation."
+      },
+      {
+        "step": 3,
+        "title": "Human-Centered Co-Design & Prototyping",
+        "description": "Build and field-test physical or digital prototypes directly with citizen end-users."
+      },
+      {
+        "step": 4,
+        "title": "Policy, Finance & Continental Scale",
+        "description": "Formulate statutory policy recommendations and pitch to capital syndicates at Demo Day."
+      }
+    ],
+    "curriculumHighlights": [
+      "10-Stage Evidence-to-Impact Execution Methodology",
+      "Empirical Field Research & Grassroots Telemetry",
+      "Human-Centered Design (HCD) & Rapid Prototyping",
+      "Policy Drafting, Regulatory Sandboxes & Investor Due Diligence"
+    ],
+    "outcomes": "91% 2-year survival rate for incubated solutions with $6.4M+ in follow-on capital mobilized.",
+    "featured": true
+  },
+  {
+    "id": "policy-innovation-challenge",
+    "slug": "policy-innovation-challenge",
+    "title": "Policy Innovation Challenge",
+    "area": "Policy & Governance",
+    "tagline": "Our most unique product: designing evidence-based policy solutions to Africa's most pressing challenges.",
+    "description": "Instead of asking 'What business would you like to start?', we ask: 'What is one of Africa's most pressing problems, and what evidence-based solution can you design?' Young teams work on real policy bottlenecks across youth employment, digital transformation, AI, agriculture, climate, and regional integration, concluding at Policy Innovation Demo Day.",
+    "duration": "4 Months (Intensive Sprint + Mentorship)",
+    "cohortSize": "30 Policy Teams / Cycle",
+    "status": "Accepting Applications",
+    "eligibility": [
+      "Youth researchers, advocates, technologists, and public policy graduates aged 20–32",
+      "Focus on real-world policy friction in key thematic sectors (AI, Climate, Jobs, Health)",
+      "Willingness to engage directly with parliamentary committees and ministries",
+      "Ability to formulate both policy memos and functional prototypes"
+    ],
+    "howToParticipate": [
+      {
+        "step": 1,
+        "title": "Challenge Brief",
+        "description": "Choose a core thematic problem and submit a 750-word evidence-backed diagnosis."
+      },
+      {
+        "step": 2,
+        "title": "Diagnosis & Policy Proposal",
+        "description": "Work with AfriYouth econometricians and legal mentors to draft statutory reforms."
+      },
+      {
+        "step": 3,
+        "title": "Prototype Development",
+        "description": "Build an implementation mechanism, regulatory sandbox model, or civic tool."
+      },
+      {
+        "step": 4,
+        "title": "Policy Innovation Demo Day",
+        "description": "Present policy pitches before ministerial panels, regional economic communities, and funders."
+      }
+    ],
+    "curriculumHighlights": [
+      "Policy Analysis, Statutory Design & Regulatory Review",
+      "Public-Sector Innovation & Governance Diagnostics",
+      "High-Level Policy Dialogue & Parliamentary Briefing",
+      "Evidence-to-Legislation Translation Frameworks"
+    ],
+    "outcomes": "38 legislative interventions influenced across municipal, national, and AU levels.",
+    "featured": true
+  },
+  {
     "id": "policy-futures-fellowship",
     "slug": "policy-futures-fellowship",
     "title": "African Youth Policy & Futures Fellowship",
-    "area": "Policy & Foresight",
+    "area": "Foresight & Governance",
     "tagline": "Training the next generation of African technocrats, policy architects, and strategic futurists.",
-    "description": "A 9-month immersive fellowship connecting emerging researchers with African Union, regional economic community, and municipal policy advisors. Fellows translate field data into actionable legislative frameworks and horizon roadmaps.",
-    "duration": "9 Months (Hybrid: Kigali & Remote)",
+    "description": "A 9-month immersive fellowship connecting emerging researchers with African Union, regional economic community, and municipal policy advisors. Fellows translate field data into actionable legislative frameworks and author contributions to the Africa 2050 Futures Series.",
+    "duration": "9 Months (Hybrid: Kigali Hub & Remote)",
     "cohortSize": "40 Fellows / Cohort",
     "status": "Accepting Applications",
     "eligibility": [
-      "Aged 21–32 residing in or of the African diaspora committed to return",
-      "Demonstrated background in public policy, economics, law, sociology, or STEM",
-      "Evidence of prior community research, publication, or civic grassroots engagement",
+      "Aged 21–32 residing in Africa or of the African diaspora committed to return",
+      "Background in public policy, economics, law, sociology, data science, or STEM",
+      "Evidence of prior community research, publication, or civic engagement",
       "Commitment of 15 hours/week for synchronous sessions and fieldwork"
     ],
     "howToParticipate": [
       {
         "step": 1,
         "title": "Online Application",
-        "description": "Submit CV, academic credentials, and a 500-word policy statement addressing an African socio-economic challenge."
+        "description": "Submit CV, academic credentials, and policy statement addressing an African socio-economic challenge."
       },
       {
         "step": 2,
         "title": "Futures Challenge Brief",
-        "description": "Shortlisted candidates complete a 48-hour diagnostic policy brief analyzing horizon trends."
+        "description": "Complete a diagnostic policy brief analyzing 2030/2050 horizon trends."
       },
       {
         "step": 3,
@@ -34,33 +128,33 @@
       {
         "step": 4,
         "title": "Onboarding & Placement",
-        "description": "Commence induction in Kigali and receive assignment to an AU/national policy desk."
+        "description": "Commence induction in Kigali and receive assignment to an institutional policy desk."
       }
     ],
     "curriculumHighlights": [
       "Applied Econometrics & Grassroots Polling",
-      "Strategic Foresight & Horizon Scanning Methodologies",
+      "Strategic Foresight & Horizon Scanning (PESTLE/STEEPV)",
       "Parliamentary Drafting & Policy Advocacy",
-      "Human-Centered Public Sector Service Design"
+      "Africa 2050 Futures Scenario Modeling"
     ],
     "outcomes": "86% of alumni now advising ministries, international NGOs, or multilateral agencies across 22 African nations.",
     "featured": true
   },
   {
-    "id": "civic-tech-venture-lab",
-    "slug": "civic-tech-venture-lab",
-    "title": "CivicTech & Social Enterprise Incubator",
-    "area": "Entrepreneurship & Innovation",
-    "tagline": "De-risking and scaling tech-enabled solutions that solve public delivery bottlenecks.",
-    "description": "An intensive 6-month incubator providing early-stage African founders with seed funding, technical mentorship, HCD validation, and regulatory sandbox access across Eastern and Western Africa.",
+    "id": "afriyouth-innovation-accelerator",
+    "slug": "afriyouth-innovation-accelerator",
+    "title": "AfriYouth Innovation Accelerator",
+    "area": "Youth Innovation & Venture Lab",
+    "tagline": "De-risking and scaling youth-led social and technological enterprises across African markets.",
+    "description": "Our signature venture accelerator operating on our proven model: Incubation → Acceleration → Demo Day. We provide early-stage African founders with seed capital, technical mentorship, HCD validation, and investor readiness.",
     "duration": "6 Months (Intensive Cohort)",
-    "cohortSize": "15 Startups / Cycle",
+    "cohortSize": "20 Startups / Cycle",
     "status": "Active Cohort (Next cycle opens June)",
     "eligibility": [
       "Founding team majority aged 18–35 with African nationality",
-      "Functional MVP with verified initial user traction or pilot deployment",
+      "Functional prototype or MVP addressing one of the Sustainable Development Goals",
       "Focus areas: AgriTech, HealthTech, Climate Resilience, EdTech, or GovTech",
-      "At least one full-time technical or research co-founder"
+      "Commitment to job creation, dignified employment, and community impact"
     ],
     "howToParticipate": [
       {
@@ -70,7 +164,7 @@
       },
       {
         "step": 2,
-        "title": "Technical & Field Review",
+        "title": "Technical Review",
         "description": "AfriYouth venture team conducts product audit, community impact review, and code inspection."
       },
       {
@@ -80,100 +174,109 @@
       },
       {
         "step": 4,
-        "title": "Lab Deployment",
-        "description": "$25,000 catalytic grant disbursed with access to AfriYouth prototyping labs and legal advisors."
+        "title": "Accelerator Deployment",
+        "description": "Catalytic funding disbursed with access to prototyping labs, mentors, and Demo Day."
       }
     ],
     "curriculumHighlights": [
-      "Human-Centered Product Sprints for Low-Bandwidth Environments",
-      "Regulatory Navigation & Cross-Border Pan-African Expansion",
-      "Unit Economics & Sustainable Monetization in Frontier Markets",
-      "Impact Measurement & ESG Reporting Standards"
+      "Human-Centered Design Sprints for Low-Bandwidth Environments",
+      "Business-Model Development & Unit Economics",
+      "Market Validation & Cross-Border Pan-African Expansion",
+      "Investor Readiness, Financial Modeling & Demo Day Pitching"
     ],
     "outcomes": "$4.2M follow-on funding raised by cohort companies; 180,000+ citizens served.",
-    "featured": true
+    "featured": false
   },
   {
-    "id": "hcd-action-studios",
-    "slug": "hcd-action-studios",
-    "title": "Community HCD Action Studios",
-    "area": "Human-Centered Design",
-    "tagline": "Grassroots co-design studios that bridge community lived experience directly into institutional design.",
-    "description": "A 12-week design sprint pairing grassroots youth organizers with municipal planners to solve localized infrastructure, health access, and waste management challenges using empathetic design methodologies.",
-    "duration": "12 Weeks (Localized Studio)",
-    "cohortSize": "60 Community Researchers",
-    "status": "Accepting Applications",
-    "eligibility": [
-      "Community youth advocates, informal settlement leaders, or local innovators aged 18–30",
-      "Active residency in pilot municipalities (Nairobi County, Accra Metropolitan, Kigali City)",
-      "Strong desire to master participatory research, user journey mapping, and physical rapid prototyping"
-    ],
-    "howToParticipate": [
-      {
-        "step": 1,
-        "title": "Community Nomination or Application",
-        "description": "Apply individually or receive nomination through local youth council or community CBO."
-      },
-      {
-        "step": 2,
-        "title": "Studio Workshop Audition",
-        "description": "Participate in a collaborative 1-day sprint addressing an active municipal challenge."
-      },
-      {
-        "step": 3,
-        "title": "Field Deployment",
-        "description": "Embedded in local ward research teams with direct stipend and prototype budget."
-      }
-    ],
-    "curriculumHighlights": [
-      "Ethnographic Research in African Urban Contexts",
-      "Rapid Prototyping with Recycled & Low-Cost Materials",
-      "Stakeholder Power Mapping & Civic Advocacy",
-      "Transitioning Community Solutions into Sustainable Enterprise"
-    ],
-    "outcomes": "34 municipal service improvements co-designed and officially adopted across 4 capital cities.",
-    "featured": true
-  },
-  {
-    "id": "evidence-to-policy-labs",
-    "slug": "evidence-to-policy-labs",
-    "title": "Grassroots Evidence-to-Policy Labs",
-    "area": "Research & Evidence",
-    "tagline": "Empowering youth researchers to gather hyper-local data and author credible policy briefs.",
-    "description": "Collaborative research cohorts running real-time field surveys, crowdsourced citizen science, and policy impact assessments across agricultural, climate, and informal labor sectors.",
-    "duration": "4 Months (Project Based)",
-    "cohortSize": "30 Researchers",
+    "id": "employability-bootcamp",
+    "slug": "employability-bootcamp-academy",
+    "title": "Employability Bootcamp & University Programme",
+    "area": "Career & Professional Development",
+    "tagline": "Moving African youth from Education → Employability → Employment → Career Progression.",
+    "description": "A practical workforce transition platform featuring our mandatory experiential learning model: 'Learn → Practice → Apply → Receive feedback → Improve → Demonstrate'. Participants engage in complete real-world employability simulations.",
+    "duration": "8 Weeks (Modular Hands-on Track)",
+    "cohortSize": "100 Graduates & Students / Track",
     "status": "Rolling Enrollment",
     "eligibility": [
-      "Young researchers, data analysts, or postgraduate scholars with statistical or qualitative proficiency",
-      "Working knowledge of R, Python, SPSS, or mobile survey tools (ODK, KoboToolbox)",
-      "Passion for public sector transparency and evidence-based governance"
+      "African university students in final year or recent graduates (0–3 years post-graduation)",
+      "Commitment to complete mandatory experiential simulations and portfolio development",
+      "Access to basic internet and device for simulation software and assessments"
     ],
     "howToParticipate": [
       {
         "step": 1,
-        "title": "Research Profile Submission",
-        "description": "Provide sample research writing, quantitative analysis sample, and areas of thematic interest."
+        "title": "Registration & Baseline",
+        "description": "Complete diagnostic professional competency assessment."
       },
       {
         "step": 2,
-        "title": "Methodology Briefing",
-        "description": "Align with AfriYouth Research Council standards and data ethics protocols."
+        "title": "Practical Training",
+        "description": "Master CV customization, cover letters, ATS optimization, and LinkedIn branding."
       },
       {
         "step": 3,
-        "title": "Commission Assignment",
-        "description": "Join an active research consortium backed by bilateral development partners."
+        "title": "Employability Simulation",
+        "description": "Execute fictional vacancy analysis, psychometric tests, and mock case interviews."
+      },
+      {
+        "step": 4,
+        "title": "Portfolio & Placement",
+        "description": "Finalize verified portfolio and connect to regional employer partner network."
       }
     ],
     "curriculumHighlights": [
-      "Decolonized Research Methodologies",
-      "Digital Data Collection & Mobile Field Management",
-      "Data Storytelling for Policymakers & Parliamentarians",
-      "Open Data Standards and Peer Review Practices"
+      "ATS (Applicant Tracking Systems) Optimization",
+      "Job Searching Strategies & Customized Application Portfolios",
+      "Interview Readiness, Case Studies & Salary Negotiation",
+      "Professional Etiquette & Cross-Cultural Workplace Dynamics"
     ],
-    "outcomes": "Over 50 policy papers cited by UNECA, African Development Bank, and national ministries.",
+    "outcomes": "78% transition into verified formal employment or funded ventures within 6 months.",
+    "featured": false
+  },
+  {
+    "id": "professional-development-academy",
+    "slug": "professional-development-academy",
+    "title": "Professional Development Academy",
+    "area": "Leadership & Capacity Building",
+    "tagline": "Practical, evidence-based, outcome-oriented leadership and executive capability building.",
+    "description": "Moving beyond traditional certificate-based seminars, our academy deploys: Professional Competency Assessment → Practical Training → Real-World Challenge → Feedback → Professional Portfolio.",
+    "duration": "10 Weeks (Executive Evening / Weekend)",
+    "cohortSize": "50 Emerging Professionals",
+    "status": "Open for Nominations",
+    "eligibility": [
+      "Early to mid-career professionals working in public service, social enterprise, or civil society",
+      "Desire to build verified competencies in AI skills, systems thinking, and impact M&E",
+      "Organizational sponsorship or independent commitment"
+    ],
+    "howToParticipate": [
+      {
+        "step": 1,
+        "title": "Competency Assessment",
+        "description": "Evaluate current capabilities across 6 core institutional leadership pillars."
+      },
+      {
+        "step": 2,
+        "title": "Skill Labs",
+        "description": "Engage in masterclasses on AI literacy, systems problem solving, and M&E."
+      },
+      {
+        "step": 3,
+        "title": "Real-World Challenge",
+        "description": "Tackle an authentic organizational bottleneck with peer team and expert faculty."
+      },
+      {
+        "step": 4,
+        "title": "Portfolio Defense",
+        "description": "Present verified strategic deliverable to earn executive credentials."
+      }
+    ],
+    "curriculumHighlights": [
+      "Strategic Leadership, Teamwork & Change Management",
+      "Critical Thinking, Decision-Making & Systems Thinking",
+      "Digital Productivity, AI Literacy & Responsible AI Use",
+      "Results-Based Management, M&E & Impact Measurement"
+    ],
+    "outcomes": "Over 1,200 professionals certified across 14 African nations.",
     "featured": false
   }
 ]
-

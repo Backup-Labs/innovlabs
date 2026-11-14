@@ -126,7 +126,7 @@ export const CustomDropdown: React.FC<CustomDropdownProps> = ({
                   }}
                   className={`w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm text-left transition-all duration-150 font-sans ${
                     isSelected
-                      ? "bg-black text-white font-semibold"
+                      ? "bg-[#0D0624] text-white font-semibold"
                       : "text-gray-800 hover:bg-gray-100"
                   }`}
                 >

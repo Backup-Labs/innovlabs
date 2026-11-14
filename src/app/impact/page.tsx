@@ -37,8 +37,8 @@ export default function ImpactPage() {
               transition={{ duration: 0.6 }}
               className="max-w-2xl mb-16 sm:mb-20 space-y-3"
             >
-              <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                // Transformation Domains
+              <span className="text-[11px] font-semibold uppercase tracking-widest text-[#0301FF] font-mono">
+                Transformation Domains
               </span>
               <h2 id="pillars-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
                 Three systemic horizons.
@@ -60,7 +60,7 @@ export default function ImpactPage() {
                     <div
                       className={`rounded-2xl p-8 sm:p-10 flex flex-col justify-between w-full h-full group border transition-all duration-200 ${
                         isGradient
-                          ? "bg-gradient-to-br from-[#0F2328] via-[#142B32] to-[#0A181C] text-white border-white/15 shadow-xl"
+                          ? "bg-gradient-to-br from-[#0D0624] via-[#120B3B] to-[#0200A7] text-white border-white/20 shadow-xl"
                           : "skeuo-card bg-white text-black"
                       }`}
                     >
@@ -140,7 +140,7 @@ export default function ImpactPage() {
                     <div
                       className={`rounded-2xl p-6 flex flex-col justify-between w-full h-full border transition-all duration-200 ${
                         isGradient
-                          ? "bg-gradient-to-br from-[#162228] via-[#101D22] to-[#0A1418] text-white border-white/15 shadow-xl"
+                          ? "bg-gradient-to-br from-[#0D0624] via-[#120B3B] to-[#0200A7] text-white border-white/20 shadow-xl"
                           : "skeuo-card bg-white text-black"
                       }`}
                     >
