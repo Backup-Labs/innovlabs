@@ -39,6 +39,38 @@
       "description": "Fostering outcome-oriented, visionary African changemakers prepared to steward public institutions and build high-survival enterprises."
     }
   ],
+  "areasOfWork": [
+    {
+      "id": "research-evidence",
+      "name": "Research & Evidence",
+      "summary": "Generating empirical evidence on Africa's emerging socio-economic challenges.",
+      "icon": "Microscope"
+    },
+    {
+      "id": "policy-governance",
+      "name": "Policy & Governance",
+      "summary": "Translating research into actionable policies, regulatory sandboxes, and institutional reforms.",
+      "icon": "Landmark"
+    },
+    {
+      "id": "innovation-entrepreneurship",
+      "name": "Innovation & Entrepreneurship",
+      "summary": "Nurturing promising ideas through human-centered design into viable, scalable enterprises.",
+      "icon": "Rocket"
+    },
+    {
+      "id": "foresight-futures",
+      "name": "Strategic Foresight & Futures",
+      "summary": "Forecasting demographic, technological, and work horizons to guide 2030/2050 decisions.",
+      "icon": "Eye"
+    },
+    {
+      "id": "leadership-capacity",
+      "name": "Leadership & Capacity Building",
+      "summary": "Transforming graduates and professionals through experiential, outcome-driven learning.",
+      "icon": "GraduationCap"
+    }
+  ],
   "divisions": [
     {
       "id": "research-evidence",

@@ -22,16 +22,16 @@ import type {
   Resource,
 } from "./types";
 
-export const site: SiteConfig = siteData as SiteConfig;
-export const navigation: NavigationConfig = navigationData as NavigationConfig;
-export const programs: Program[] = programsData as Program[];
-export const opportunities: Opportunity[] = opportunitiesData as Opportunity[];
-export const services: Service[] = servicesData as Service[];
-export const impact: ImpactData = impactData as ImpactData;
-export const stories: Story[] = storiesData as Story[];
-export const partners: PartnerGroup[] = partnersData as PartnerGroup[];
-export const about: AboutData = aboutData as AboutData;
-export const resources: Resource[] = resourcesData as Resource[];
+export const site: SiteConfig = siteData as unknown as SiteConfig;
+export const navigation: NavigationConfig = navigationData as unknown as NavigationConfig;
+export const programs: Program[] = programsData as unknown as Program[];
+export const opportunities: Opportunity[] = opportunitiesData as unknown as Opportunity[];
+export const services: Service[] = servicesData as unknown as Service[];
+export const impact: ImpactData = impactData as unknown as ImpactData;
+export const stories: Story[] = storiesData as unknown as Story[];
+export const partners: PartnerGroup[] = partnersData as unknown as PartnerGroup[];
+export const about: AboutData = aboutData as unknown as AboutData;
+export const resources: Resource[] = resourcesData as unknown as Resource[];
 
 export function getProgramBySlug(slug: string): Program | undefined {
   return programs.find((p) => p.slug === slug);

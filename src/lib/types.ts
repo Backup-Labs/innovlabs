@@ -5,16 +5,28 @@ export interface SiteConfig {
   mission: string;
   vision: string;
   positioning: string;
+  brandKeywords?: string[];
   brandPillars: Array<{
     title: string;
     description: string;
   }>;
-  areasOfWork: Array<{
+  areasOfWork?: Array<{
     id: string;
     name: string;
     summary: string;
     icon: string;
   }>;
+  divisions?: Array<{
+    id: string;
+    name: string;
+    summary: string;
+    flagshipProducts?: string[];
+    icon: string;
+  }>;
+  commercialService?: {
+    name: string;
+    summary: string;
+  };
   contact: {
     email: string;
     phone: string;
