@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     siteName: "AfriYouth Innovation Labs",
     images: [
       {
-        url: "/images/brand/logo.svg",
-        width: 1200,
-        height: 630,
+        url: "/images/newlogo-transparent.png",
+        width: 512,
+        height: 512,
         alt: "AfriYouth Innovation Labs",
       },
     ],
@@ -53,7 +53,16 @@ export const metadata: Metadata = {
     description:
       "Connecting research, policy, human-centered design, entrepreneurship, and foresight across Africa.",
     creator: "@AfriYouthLabs",
-    images: ["/images/brand/logo.svg"],
+    images: ["/images/newlogo-transparent.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/images/newlogo-transparent.png", type: "image/png" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
+    shortcut: "/favicon.ico",
   },
   robots: {
     index: true,
@@ -72,7 +81,7 @@ export default function RootLayout({
     name: site.name,
     alternateName: site.shortName,
     url: "https://afriyouth.org",
-    logo: "https://afriyouth.org/images/brand/logo.svg",
+    logo: "https://afriyouth.org/images/newlogo-transparent.png",
     description: site.mission,
     address: {
       "@type": "PostalAddress",

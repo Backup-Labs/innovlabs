@@ -70,21 +70,20 @@ export default function HomePage() {
               </h1>
             </motion.div>
 
-            {/* Bottom Area: Left Minimal Description & Buttons + Right High-Frost Glass Case Study Card */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 items-end pb-0.5">
-              {/* Left: Concise minimalist statement and 2 skeuomorphic/frost pill buttons */}
+            {/* Bottom Area: Minimal Description & Action Buttons */}
+            <div className="pb-0.5">
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-                className="lg:col-span-7 space-y-3"
+                className="max-w-2xl space-y-4"
               >
-                <p className="text-base sm:text-[18px] text-white/95 leading-relaxed font-normal max-w-lg font-sans">
+                <p className="text-base sm:text-[18px] text-white/95 leading-relaxed font-normal max-w-xl font-sans">
                   By 2030, Africa will have the largest workforce in the world. AfriYouth transforms community-driven ideas from Africa&apos;s young innovators into scalable solutions, policy reforms, and high-survival enterprises.
                 </p>
 
-                <div className="flex flex-wrap items-center gap-2 pt-0.5">
-                  {/* Skeuomorphic tactile white pill button: Book a call → locked to height of Subscribe button */}
+                <div className="flex flex-wrap items-center gap-3 pt-1">
+                  {/* Skeuomorphic tactile white pill button: Book a call */}
                   <Link
                     href="/contact?intent=service"
                     className="skeuo-btn-light inline-flex items-center justify-center gap-1.5 h-11 px-6 rounded-full text-xs font-semibold text-black transition-all duration-200 active:scale-95 group font-sans"
@@ -93,7 +92,7 @@ export default function HomePage() {
                     <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
                   </Link>
 
-                  {/* High-frost glassmorphic pill button: Explore opportunities → locked to height of Subscribe button */}
+                  {/* High-frost glassmorphic pill button: Explore opportunities */}
                   <Link
                     href="/opportunities"
                     className="frost-glass-dark inline-flex items-center justify-center gap-1.5 h-11 px-6 rounded-full text-xs font-semibold text-white transition-all duration-200 active:scale-95 group font-sans border border-white/20 hover:border-white/40"
@@ -101,53 +100,6 @@ export default function HomePage() {
                     <span>Explore opportunities</span>
                     <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
                   </Link>
-                </div>
-              </motion.div>
-
-              {/* Right: Floating High-Frost Glass Case Study Card */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95, y: 12 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="lg:col-span-5 flex justify-start lg:justify-end mt-2 lg:mt-0"
-              >
-                <div className="frost-glass w-full max-w-[240px] sm:max-w-[260px] lg:max-w-[270px] rounded-xl sm:rounded-2xl p-2.5 sm:p-3 text-black transition-transform duration-300 hover:-translate-y-1">
-                  {/* Professional architectural case study photography thumbnail */}
-                  <div className="relative w-full h-16 sm:h-18 lg:h-20 rounded-lg overflow-hidden bg-gray-200 mb-2 shadow-inner">
-                    <Image
-                      src="/images/case-study-hero.jpg"
-                      alt="Pan-African youth case study enterprise"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-
-                  {/* Dark pill badge: Case study */}
-                  <div className="mb-1">
-                    <span className="inline-block px-2 py-0.5 rounded-full text-[9px] font-semibold bg-[#0D0624] text-white font-mono shadow-sm">
-                      Case study
-                    </span>
-                  </div>
-
-                  {/* Concise description matching photo */}
-                  <p className="text-[10.5px] sm:text-[11px] text-gray-900 leading-snug font-medium mb-1.5 font-sans">
-                    Twelve years of venture telemetry. Sequenced by risk.
-                  </p>
-
-                  {/* Metric stat at bottom */}
-                  <div className="pt-1 border-t border-black/10 flex items-baseline justify-between font-sans">
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-lg sm:text-xl font-serif font-normal text-black tracking-tight leading-none">
-                        48.5k
-                      </span>
-                      <span className="text-[9px] text-gray-600 font-medium">
-                        Youth mobilized
-                      </span>
-                    </div>
-                    <span className="text-[9px] font-mono font-bold text-black uppercase">
-                      91% Survival
-                    </span>
-                  </div>
                 </div>
               </motion.div>
             </div>
