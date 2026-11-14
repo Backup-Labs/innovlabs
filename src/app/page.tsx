@@ -43,13 +43,13 @@ export default function HomePage() {
           <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/85 via-black/45 to-black/75 pointer-events-none" />
 
           {/* Hero Content Container: Mathematically proportioned to fit any screen height without scrolling */}
-          <div className="relative z-10 max-w-container mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-between py-4 sm:py-5 lg:py-6">
+          <div className="relative z-10 max-w-container mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-between py-6 sm:py-8 lg:py-10">
             {/* Top Kicker with Official Brand Tagline */}
             <motion.div
               initial={{ opacity: 0, y: -6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="pt-0.5"
+              className="pt-1"
             >
               <div className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-semibold tracking-widest uppercase text-white/90 font-mono">
                 <PlusCircle className="w-3 h-3 text-[#C723DF]" />
@@ -57,28 +57,29 @@ export default function HomePage() {
               </div>
             </motion.div>
 
-            {/* Huge Editorial Headline in Instrument Serif (Upright, not italic) */}
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="max-w-4xl my-auto py-1 sm:py-2"
-            >
-              <h1 className="font-serif font-normal text-[clamp(2.3rem,6vw,5.2rem)] text-white tracking-tight leading-[1.02]">
-                The quiet work <br className="hidden sm:inline" />
-                behind bold decisions.
-              </h1>
-            </motion.div>
-
-            {/* Bottom Area: Minimal Description & Action Buttons */}
-            <div className="pb-0.5">
+            {/* Bottom Row: Title on Left Bottom & Descriptive Text + Buttons on Right Bottom */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end pb-1 sm:pb-2 pt-10 sm:pt-16 mt-auto">
+              {/* Left Bottom: Huge Editorial Headline */}
               <motion.div
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-                className="max-w-2xl space-y-4"
+                transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                className="lg:col-span-7"
               >
-                <p className="text-base sm:text-[18px] text-white/95 leading-relaxed font-normal max-w-xl font-sans">
+                <h1 className="font-serif font-normal text-[clamp(2.4rem,5.5vw,5rem)] text-white tracking-tight leading-[1.03]">
+                  The quiet work <br className="hidden sm:inline" />
+                  behind bold decisions.
+                </h1>
+              </motion.div>
+
+              {/* Right Bottom: Descriptive Text & Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
+                className="lg:col-span-5 space-y-4"
+              >
+                <p className="text-base sm:text-[18px] text-white/95 leading-relaxed font-normal font-sans">
                   By 2030, Africa will have the largest workforce in the world. AfriYouth transforms community-driven ideas from Africa&apos;s young innovators into scalable solutions, policy reforms, and high-survival enterprises.
                 </p>
 
