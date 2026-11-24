@@ -115,9 +115,9 @@ export interface Service {
   slug: string;
   title: string;
   summary: string;
-  deliverables: string[];
-  clientTypes: string[];
-  typicalDuration: string;
+  deliverables?: string[];
+  clientTypes?: string[];
+  typicalDuration?: string;
   icon: string;
   product?: string;
   model?: string;
@@ -139,7 +139,7 @@ export interface ImpactData {
   }>;
   geographicReach: Array<{
     region: string;
-    countries: string[];
+    focusAreas: string[];
   }>;
   methodology: {
     title: string;

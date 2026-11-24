@@ -115,10 +115,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           <CheckCircle2 className="w-6 h-6" />
         </div>
         <h3 className="text-2xl font-bold text-black font-heading">
-          Inquiry Transmitted
+          Message Sent
         </h3>
         <p className="text-sm text-gray-600 max-w-sm mx-auto leading-relaxed">
-          Thank you, <strong>{formData.name}</strong>. Our directorate will respond within 2 business days.
+          Thank you, <strong>{formData.name}</strong>. Your message has been sent successfully. We will follow up using the contact details you provided.
         </p>
         <div className="pt-4">
           <button

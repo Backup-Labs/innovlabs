@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { site, about } from "@/lib/content";
@@ -184,74 +183,15 @@ export default function AboutPage() {
                 Leadership & Stewardship
               </span>
               <h2 id="team-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
-                Steered by pan-African practitioners.
+                Leadership and stewardship.
               </h2>
               <p className="text-[18px] text-gray-600 pt-2 leading-relaxed">
                 {about.team.intro}
               </p>
             </motion.div>
 
-            {/* Leadership Team Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20 items-stretch">
-              {about.team.leadership.map((member, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="h-full w-full flex flex-col"
-                >
-                  <div className="skeuo-card rounded-2xl p-6 flex flex-col justify-between w-full h-full group bg-white">
-                    <div className="flex-1 flex flex-col">
-                      <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-5 bg-gray-200 shrink-0">
-                        <Image
-                          src={member.image}
-                          alt={member.name}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-102"
-                        />
-                      </div>
-                      <h3 className="text-lg font-bold text-black tracking-tight font-sans">
-                        {member.name}
-                      </h3>
-                      <span className="text-xs font-semibold text-gray-500 block mb-3 font-mono">
-                        {member.role}
-                      </span>
-                      <p className="text-xs text-gray-600 leading-relaxed font-sans mt-auto">
-                        {member.bio}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Research Advisory Council */}
-            <div className="skeuo-card rounded-2xl p-8 sm:p-12">
-              <div className="flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-gray-300 pb-6 mb-8 gap-2">
-                <h3 className="text-xl sm:text-2xl font-bold text-black tracking-tight">
-                  Research Advisory & Governance Council
-                </h3>
-                <span className="text-xs font-semibold uppercase tracking-wider text-gray-500 font-mono">
-                  Independent Oversight
-                </span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-                {about.team.advisoryCouncil.map((advisor, aIdx) => (
-                  <div key={aIdx} className="space-y-1">
-                    <strong className="text-base font-bold text-black block tracking-tight">
-                      {advisor.name}
-                    </strong>
-                    <span className="text-xs font-semibold text-gray-500 block font-mono">
-                      {advisor.role}
-                    </span>
-                    <span className="text-xs text-gray-500 block">
-                      {advisor.affiliation}
-                    </span>
-                  </div>
-                ))}
-              </div>
+            <div className="max-w-3xl rounded-2xl bg-[#F4F4F6] border border-gray-300 p-6 sm:p-8">
+              <p className="text-base text-gray-700 leading-relaxed">{about.team.intro}</p>
             </div>
           </div>
         </section>
@@ -269,10 +209,10 @@ export default function AboutPage() {
               className="max-w-2xl mx-auto space-y-6"
             >
               <h2 className="font-serif font-normal text-2xl sm:text-4xl lg:text-5xl text-black tracking-tight">
-                Explore our methodology and governance.
+                Learn more about AfriYouth.
               </h2>
               <p className="text-gray-600 text-[18px] leading-relaxed">
-                Access peer-reviewed frameworks, open data toolkits, or consult directly with the executive directorate.
+                Contact AfriYouth to ask about its work, services, or current programs.
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
                 <Link

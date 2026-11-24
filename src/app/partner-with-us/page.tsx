@@ -15,7 +15,7 @@ export default function PartnerWithUsPage() {
       <PageHeroBanner
         kicker="Institutional Alliances"
         title="Co-investing in Africa's youth ecosystem."
-        description="Collaborating with multilateral bodies, philanthropic foundations, African sovereign ministries, and academic consortia to scale high-impact programs with a 91% survival rate."
+        description="Explore ways to collaborate with AfriYouth on youth empowerment, research, policy, and sustainable development."
       />
 
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 py-2">
@@ -37,10 +37,10 @@ export default function PartnerWithUsPage() {
               Collaboration Frameworks
             </span>
             <h2 id="collab-models-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
-              Four models of engagement.
+              Potential ways to work together.
             </h2>
             <p className="text-base text-gray-600 pt-2 leading-relaxed">
-              Every partnership is structured for verifiable social return on investment, policy adoption, and pan-African scale.
+              Define shared goals, responsibilities, and ways to assess progress together.
             </p>
           </motion.div>
 
@@ -48,42 +48,42 @@ export default function PartnerWithUsPage() {
             {[
               {
                 number: "01",
-                title: "Co-Designing Regional Cohorts & Labs",
-                summary: "Fund and co-brand specialized fellowship cohorts or innovation challenges focused on your priority sectors (e.g., Climate Adaptation, AgriTech, AI Governance, Maternal Health).",
+                title: "Co-Design Programs & Labs",
+                summary: "Explore programs and innovation activities shaped around shared priorities and the needs of young people.",
                 features: [
-                  "Customized curriculum aligned to your strategic development goals",
-                  "Joint selection committee and branded fellowship naming rights",
-                  "Full donor reporting with longitudinal MEL compliance",
+                  "Agree on shared objectives and intended participants",
+                  "Develop roles and decision-making together",
+                  "Set reporting and learning expectations at the outset",
                 ],
               },
               {
                 number: "02",
-                title: "Joint Policy Research Consortia",
-                summary: "Partner on continental youth diagnostics, representative grassroots surveys, and parliamentary white papers co-published with African universities.",
+                title: "Research & Policy Collaboration",
+                summary: "Discuss research, evidence, and policy work related to youth and sustainable development.",
                 features: [
-                  "Access to our 26-country field enumerator network",
-                  "Open data repositories adhering to FAIR and CARE principles",
-                  "Direct presentation to African Union desks and parliamentary committees",
+                  "Identify research questions and audiences",
+                  "Agree on responsible data and publication practices",
+                  "Plan how findings can inform relevant decision-makers",
                 ],
               },
               {
                 number: "03",
-                title: "Sovereign Lab & Innovation Infrastructure",
-                summary: "Equip physical prototyping facilities, digital sensor networks, and civic tech sandboxes in secondary African cities.",
+                title: "Human-Centered Design & Innovation",
+                summary: "Explore ways to bring community experience into the design of services and solutions.",
                 features: [
-                  "Co-investment in permanent grassroots community infrastructure",
-                  "Direct training of municipal civil servants in human-centered design",
-                  "Multi-year operational sustainability models",
+                  "Plan participatory design activities",
+                  "Identify skills and capacity-building needs",
+                  "Define resources and responsibilities for delivery",
                 ],
               },
               {
                 number: "04",
-                title: "Catalytic Venture Co-Investment Syndicates",
-                summary: "Deploy equity-free seed grants ($10K–$50K) paired with intensive 6-month venture acceleration to de-risk high-potential African startups.",
+                title: "Entrepreneurship & Investment Readiness",
+                summary: "Explore possible support for youth-led ventures through innovation, mentorship, and investment-readiness work.",
                 features: [
-                  "Pre-screened cohort of top 5% young African tech innovators",
-                  "91% two-year business and policy taskforce survival rate",
-                  "Curated investor demo days with top pan-African venture funds",
+                  "Discuss support needs for youth-led ideas and ventures",
+                  "Agree on shared goals, roles, and measures of progress",
+                  "Identify relevant networks and next steps",
                 ],
               },
             ].map((model, idx) => {
@@ -183,7 +183,7 @@ export default function PartnerWithUsPage() {
                     Governance & Due Diligence
                   </strong>
                   <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-                    Full compliance with international anti-corruption, ESG, and financial audit standards.
+                    Discuss governance, accountability, and due-diligence expectations for a proposed collaboration.
                   </p>
                 </div>
                 <div>
@@ -191,7 +191,7 @@ export default function PartnerWithUsPage() {
                     Sovereign Entities
                   </strong>
                   <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-                    Offices and legal entities registered across Kenya, Rwanda, Ghana, and South Africa.
+                    Share the institutions, communities, or regions relevant to your proposed work.
                   </p>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export default function PartnerWithUsPage() {
                 Partnership Expression of Interest
               </h3>
               <p className="text-xs text-gray-500 mb-8 font-normal">
-                Submit your institutional mandate and proposed collaboration scope.
+                Share your organization and the collaboration you would like to explore.
               </p>
 
               <ContactForm

@@ -33,6 +33,7 @@ export const partners: PartnerGroup[] = partnersData as unknown as PartnerGroup[
 export const about: AboutData = aboutData as unknown as AboutData;
 export const resources: Resource[] = resourcesData as unknown as Resource[];
 
+
 export function getProgramBySlug(slug: string): Program | undefined {
   return programs.find((p) => p.slug === slug);
 }

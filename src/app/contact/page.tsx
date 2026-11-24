@@ -119,7 +119,7 @@ export default function ContactPage() {
                   Send an official message
                 </h2>
                 <p className="text-xs text-gray-500 mt-2 font-normal">
-                  All inquiries receive verified acknowledgment within 24 hours.
+                  Use the form to contact AfriYouth. If it is unavailable, email the team directly.
                 </p>
               </div>
 

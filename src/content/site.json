@@ -2,8 +2,8 @@
   "name": "AfriYouth Innovation Labs",
   "shortName": "AfriYouth",
   "tagline": "Fueling Innovators for Sustainable Development",
-  "mission": "To empower Africa's youth to generate evidence, shape policy, and develop innovative solutions to Africa's most pressing socio-economic challenges through research, human-centered design, and entrepreneurship.",
-  "vision": "To build an Africa where empowered young people use evidence, innovation, and entrepreneurship to solve complex challenges, shape policies and drive inclusive and sustainable socio-economic transformation by 2050.",
+  "mission": "Broadening the critical thinking skills of the youth while enhancing their innovative ideas for sustainable development goals (SDGs) in Africa.",
+  "vision": "To become the leading business innovation labs that instills entrepreneurial leadership to the African youth by 2050.",
   "positioning": "By 2030, Africa will have the largest workforce in the world. AfriYouth Innovation Labs is a research, innovation, and policy consulting firm that identifies, nurtures, and advances promising ideas from Africa's young innovators. While most youth organizations focus on training, incubators on startups, think tanks on policy, and consulting firms on clients—AfriYouth connects all four into one integrated engine: Think → Research → Design → Build → Influence → Scale.",
   "brandKeywords": [
     "Innovation",
@@ -76,35 +76,35 @@
       "id": "research-evidence",
       "name": "Research & Evidence",
       "summary": "Generating empirical evidence on Africa's emerging socio-economic challenges.",
-      "flagshipProducts": ["AfriYouth Evidence Reports", "Youth Surveys", "Impact Studies"],
+      "flagshipProducts": ["Research", "Evidence generation", "Impact learning"],
       "icon": "Microscope"
     },
     {
       "id": "policy-governance",
       "name": "Policy & Governance",
       "summary": "Translating research into actionable policies, regulatory sandboxes, and institutional reforms.",
-      "flagshipProducts": ["AfriYouth Policy Solutions Series", "Policy Lab", "Policy Innovation Challenges"],
+      "flagshipProducts": ["Policy analysis", "Governance", "Policy innovation"],
       "icon": "Landmark"
     },
     {
       "id": "innovation-entrepreneurship",
       "name": "Innovation & Entrepreneurship",
       "summary": "Nurturing promising ideas through human-centered design into viable, scalable enterprises.",
-      "flagshipProducts": ["AfriYouth Innovation Accelerator", "HCD Lab", "Venture Prototyping"],
+      "flagshipProducts": ["Human-centered design", "Innovation", "Entrepreneurship"],
       "icon": "Rocket"
     },
     {
       "id": "foresight-futures",
       "name": "Strategic Foresight & Futures",
       "summary": "Forecasting demographic, technological, and work horizons to guide 2030/2050 decisions.",
-      "flagshipProducts": ["Africa 2050 Futures Series", "Horizon Scanning", "Scenario Planning"],
+      "flagshipProducts": ["Strategic foresight", "Future scenarios", "Emerging trends"],
       "icon": "Eye"
     },
     {
       "id": "leadership-capacity",
       "name": "Leadership & Capacity Building",
       "summary": "Transforming graduates and professionals through experiential, outcome-driven learning.",
-      "flagshipProducts": ["Employability Skills Lab", "Professional Skills Academy", "Impact & Learning Services"],
+      "flagshipProducts": ["Career development", "Professional development", "Impact learning"],
       "icon": "GraduationCap"
     }
   ],

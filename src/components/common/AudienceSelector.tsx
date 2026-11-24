@@ -10,7 +10,7 @@ export const AudienceSelector: React.FC = () => {
     {
       audience: "Youth Innovators",
       tagline: "Fellowships, grants, and venture labs",
-      description: "Direct access to catalytic seed capital, AU policy placement, and prototyping studios.",
+      description: "Explore programs and opportunity listings, then contact AfriYouth to confirm current participation steps.",
       cta: "Explore Opportunities",
       href: "/opportunities",
       stepNumber: "01",
@@ -18,15 +18,15 @@ export const AudienceSelector: React.FC = () => {
     {
       audience: "Governments & Institutions",
       tagline: "Commissioned evidence and citizen co-design",
-      description: "Representative field telemetry across 26 nations and policy youth-proofing audits.",
+      description: "Explore research, policy, innovation, impact, and capacity-building services.",
       cta: "Explore Client Services",
       href: "/services",
       stepNumber: "02",
     },
     {
       audience: "Foundations & Partners",
-      tagline: "High-survival systemic scale",
-      description: "Co-design regional cohorts with verified 91% venture survival and sovereign governance.",
+      tagline: "Research, policy, and innovation",
+      description: "Discuss collaboration around youth empowerment and sustainable development in Africa.",
       cta: "Collaborate With Us",
       href: "/partner-with-us",
       stepNumber: "03",

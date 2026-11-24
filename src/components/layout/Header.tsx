@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
     { label: "Services", href: "/services" },
     { label: "Programs", href: "/programs" },
     { label: "Opportunities", href: "/opportunities" },
-    { label: "Cases", href: "/impact#stories" },
+    { label: "Impact & Evidence", href: "/impact#stories" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -61,7 +61,7 @@ export const Header: React.FC = () => {
             {/* Book a call pill button matching exact height of Subscribe button */}
             <Link
               href="/contact?intent=service"
-              className="skeuo-btn-dark inline-flex items-center justify-center h-11 px-5 sm:px-6 rounded-full text-xs font-semibold text-white hover:bg-[#0200A7] transition-all duration-200 active:scale-95 shadow-sm font-sans shrink-0 border border-white/10"
+              className="skeuo-btn-dark inline-flex items-center justify-center h-11 px-5 sm:px-6 rounded-full text-xs font-semibold text-white transition-all duration-200 active:scale-95 shadow-sm font-sans shrink-0 border border-white/10"
             >
               <span>Book a call</span>
             </Link>
@@ -69,7 +69,7 @@ export const Header: React.FC = () => {
             {/* Circular button with two horizontal white bars - locked to exact height of buttons (w-11 h-11 / 44px) */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="w-11 h-11 rounded-full bg-[#0D0624] text-white flex items-center justify-center hover:bg-[#0200A7] transition-all duration-200 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0301FF] relative z-50 shadow-sm shrink-0 border border-white/10"
+              className="w-11 h-11 rounded-full bg-[#0D0624] text-white flex items-center justify-center hover:bg-[#0200A7] hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(3,1,255,0.28)] transition-all duration-200 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7772FF] relative z-50 shadow-sm shrink-0 border border-white/10"
               aria-expanded={menuOpen}
               aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
@@ -117,8 +117,16 @@ export const Header: React.FC = () => {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -8, scale: 0.97 }}
                 transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-                className="frost-glass-dark rounded-[24px] sm:rounded-[26px] p-5 sm:p-6 text-white"
+                className="frost-glass-dark rounded-[24px] sm:rounded-[26px] p-5 sm:p-6 pt-12 sm:pt-12 text-white relative"
               >
+                <button
+                  type="button"
+                  onClick={() => setMenuOpen(false)}
+                  aria-label="Close navigation menu"
+                  className="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center text-white/75 hover:text-white hover:bg-white/15 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80"
+                >
+                  <X className="w-4 h-4" aria-hidden="true" />
+                </button>
                 <nav className="flex flex-col space-y-2 sm:space-y-2.5" aria-label="Main Navigation Menu">
                   {navLinks.map((item) => {
                     const isActive = pathname === item.href;

@@ -1,10 +1,10 @@
 # AfriYouth Innovation Labs — Official Web Platform
 
-The official digital home for **AfriYouth Innovation Labs**, built for the **AfriYouth Web Design Challenge**.
+Website project for **AfriYouth Innovation Labs**, prepared for the **AfriYouth Web Design Challenge**.
 
 AfriYouth connects research, policy, human-centered design, entrepreneurship, and strategic foresight to transform youth evidence into systemic socio-economic policy and sustainable African enterprises.
 
-This site uses a **minimalist architectural aesthetic** (referencing `https://palladio.framer.website/`), featuring a monochromatic palette of pure white, pure black, and light gray (`#F4F4F6`), 1px hairlines, generous breathing room, a zero-scroll desktop hero section, and **Satoshi paired with Instrument Serif (non-italic)**.
+The site uses the AfriYouth dark-purple, blue, and steel-pink colors with a light neutral canvas. The current implementation uses **Satoshi paired with Instrument Serif**; the supplied competition brief specifies Poppins and Gilroy, so typography still needs alignment or written brand approval.
 
 ---
 
@@ -25,25 +25,25 @@ This site uses a **minimalist architectural aesthetic** (referencing `https://pa
 ## Core Features & Architecture
 
 - **Next.js 14 App Router + TypeScript + Tailwind CSS**: Static-first generation for maximum speed, security, and effortless hosting.
-- **Audience-Centered UX (2–3 Clicks to Action)**: Dedicated personalized entryways for:
-  1. *Youth seeking opportunities* (Understand $\rightarrow$ Explore programs $\rightarrow$ Check eligibility $\rightarrow$ Filter open calls $\rightarrow$ Apply).
+- **Audience-Centered UX**: Dedicated entryways for:
+  1. *Youth seeking opportunities* (Understand $\rightarrow$ Explore programs $\rightarrow$ Check eligibility $\rightarrow$ Filter calls $\rightarrow$ Contact the organization to confirm the application process).
   2. *Organizations seeking services* (See expertise $\rightarrow$ Explore services $\rightarrow$ View evidence $\rightarrow$ Request advisory).
   3. *Partners exploring collaboration* (Explore areas of work $\rightarrow$ Review existing programs $\rightarrow$ Collaboration models $\rightarrow$ Direct dialogue).
-- **Hero Section (Zero-Scroll & Photo-Matched)**: Fits 100% within the viewport height on desktop without any need for scrolling (`h-[calc(100vh-4rem)]`), matching the user-provided reference.
+- **Hero Section**: Designed to fit the desktop viewport; browser validation is still required at the target screen sizes.
 - **Interactive "How Our Work Connects" Nexus Visual**: Interactive five-gear engine clarifying how research, policy shaping, HCD, venture incubation, and foresight feed into each other.
-- **Interactive Opportunities Portal**: Real-time client-side filtering by Status (Open / Closed), Initiative Type (Fellowship, Grant, Challenge, Call for Papers), and Target Audience.
-- **Production-Grade Contact System**: Built-in honeypot spam protection, client & server input validation, swappable backend provider (internal Next.js API or Formspree).
-- **Typography Pairing (Instrument Serif + Satoshi)**: Upright Instrument Serif (non-italic) for editorial display statements & metrics, paired with Satoshi for body, UI, buttons, and navigation via local `.woff2` files for 0ms blocking and 100% offline reliability.
-- **Zero Dead Links & Clean Assets**: High-contrast architectural cards, authentic SVG brand marks and illustrations; no broken images or missing pages.
+- **Interactive Opportunities Portal**: Client-side filtering by status, initiative type, and audience. Dated records close automatically after the listed deadline. Opportunity data and status must be verified by the organization before publication.
+- **Contact Form**: Includes client/server validation and a honeypot. Inquiry delivery requires `NEXT_PUBLIC_CONTACT_PROVIDER=formspree` and a valid `FORMSPREE_ENDPOINT`; without these settings, the API returns an error and directs visitors to email instead of claiming delivery.
+- **Resources**: A download is shown only when a real URL is configured. Records with `#` URLs are shown as unavailable.
+- **Typography Pairing (Instrument Serif + Satoshi)**: Upright Instrument Serif for display statements and Satoshi for body and UI, using local `.woff2` files. This differs from Poppins + Gilroy in the supplied competition brief and needs brand approval or replacement.
+- **Content-Driven Pages**: Main page copy, opportunity records, services, and programs are stored in JSON. Factual claims, partner names, statistics, and contact details still require review by AfriYouth before release.
 
 ---
 
 ## Design Language & Aesthetic
 
-Referencing `https://palladio.framer.website/`:
-- **Palette**: Monochromatic palette consisting of pure white (`#FFFFFF`), pure black (`#0A0A0A` / `#000000`), and light gray canvas (`#F4F4F6`), with subtle hairlines (`#E2E2E6`).
-- **Whitespace**: Generous vertical section rhythm (`py-24 sm:py-36`) allowing content and photography to breathe.
-- **Minimalism & Restraint**: Strict elimination of loud gradients, neon glows, and heavy shadows in favor of 1px borders, subtle card elevations, and punchy editorial statements.
+- **Palette**: AfriYouth dark purple (`#0D0624`), steel pink (`#C723DF`), Duke blue (`#0200A7`), blue (`#0301FF`), white, and neutral surfaces.
+- **Whitespace**: Generous vertical section spacing and responsive card grids.
+- **Interaction**: Restrained transitions and card elevations; verify motion and contrast in a browser before handover.
 
 ---
 
@@ -152,39 +152,41 @@ All text copy, program descriptions, statistics, team members, and partner lists
 | File | Content Controlled |
 | :--- | :--- |
 | `src/content/site.json` | Organization metadata, mission, vision, brand pillars, contact info, social links |
-| `src/content/programs.json` | Flagship programs, curriculums, eligibility lists, roadmaps |
-| `src/content/opportunities.json`| Active & closed opportunities, deadlines, benefits, eligibility |
-| `src/content/services.json` | 6 Client services, deliverables, methodology steps |
-| `src/content/impact.json` | Macro metrics, 3 impact horizons, 26 countries, methodology |
-| `src/content/stories.json` | Field case studies, quotes, metrics, beneficiary details |
-| `src/content/partners.json` | Partner institutions categorized by multilateral, government, foundation |
-| `src/content/resources.json` | Open-access policy briefs, whitepapers, playbooks |
-| `src/content/about.json` | Executive leadership bios, Advisory Council members |
+| `src/content/programs.json` | Verified program records; currently empty pending approved details |
+| `src/content/opportunities.json`| Verified calls; currently empty pending approved dates, criteria, and application links |
+| `src/content/services.json` | The eight service areas named in the competition brief |
+| `src/content/impact.json` | Impact areas and methodology; no unverified performance metrics |
+| `src/content/stories.json` | Approved case studies; currently empty pending source material |
+| `src/content/partners.json` | Approved partner records; currently empty pending confirmation and logo permission |
+| `src/content/resources.json` | Approved downloadable resources; currently empty pending real publication files and URLs |
+| `src/content/about.json` | Mission, vision, and organization model; leadership profiles await approval |
+
+The empty content files are deliberate. Add opportunities, programs, results, partners, publications, and people only after AfriYouth approves the facts and any required permissions.
 
 ---
 
 ## How to Add a New Program or Opportunity
 
 ### Adding an Opportunity
-Edit `src/content/opportunities.json` and append an entry:
+Edit `src/content/opportunities.json` and append an entry. The values below are placeholders for structure only; replace them with confirmed information before publishing:
 ```json
 {
   "id": "opp-05",
   "slug": "agritech-futures-challenge-2027",
-  "title": "East Africa AgriTech Climate Adaptation Challenge",
+  "title": "Replace with a verified opportunity title",
   "type": "Innovation Challenge",
   "audience": "Young Agri-Founders (Ages 18-35)",
   "status": "open",
   "summary": "Equity-free prototyping grants and 12-week venture acceleration for smallholder resilience.",
-  "benefit": "$25,000 Equity-Free Grant + Venture Acceleration",
-  "deadline": "November 30, 2026",
-  "startDate": "January 15, 2027",
-  "location": "Nairobi, Kenya & Hybrid",
-  "eligibility": "Youth-led teams with an existing MVP deployed in Kenya, Uganda, Rwanda, or Tanzania.",
-  "description": "Full details on the initiative parameters and evaluation criteria..."
+  "benefit": "Replace with an organization-confirmed benefit",
+  "deadline": "Replace with an organization-confirmed deadline",
+  "startDate": "Replace with an organization-confirmed start date",
+  "location": "Replace with an organization-confirmed location",
+  "eligibility": "Replace with organization-confirmed eligibility",
+  "description": "Replace with organization-approved details"
 }
 ```
-The site automatically:
+After adding and verifying a record, the site:
 1. Displays the card on `/opportunities` and the homepage.
 2. Updates filter counts and search indexes.
 3. Generates the SSG page at `/opportunities/agritech-futures-challenge-2027`.
@@ -203,12 +205,13 @@ To modify the palette or typography, see `DESIGN-TOKENS.md` and adjust:
 ## Contact Form & Backend Integration
 
 The contact form operates in two modes:
-1. **Default (Zero External Setup)**: Posts to internal API route `/api/contact` which logs inquiries and validates inputs.
-2. **Formspree / Zapier / Make**: Add your Formspree endpoint ID in `.env.local`:
+1. **Unconfigured mode**: validates the request but does not store or deliver it; visitors receive an error with the contact email.
+2. **Formspree**: Set both values in `.env.local`:
    ```bash
+   NEXT_PUBLIC_CONTACT_PROVIDER=formspree
    FORMSPREE_ENDPOINT="https://formspree.io/f/your_form_id"
    ```
-   The API route will forward submissions automatically.
+   The API route forwards submissions and reports success only when Formspree accepts the request. Test with the actual production endpoint before publishing.
 
 ---
 
@@ -229,6 +232,6 @@ The contact form operates in two modes:
 
 ## Accessibility & Performance Standards
 
-- **Lighthouse Performance**: 95+ across all scores.
-- **Accessibility (WCAG 2.1 AA)**: Compliant color contrast, ARIA landmarks, visible focus rings, keyboard tab navigation, skip-to-content anchor.
-- **Zero Cumulative Layout Shift (CLS)**: Dimensioned images and local preloaded Satoshi & Instrument Serif font files prevent layout shift.
+- **Lighthouse and WCAG status**: Not measured. Run browser-based Lighthouse, keyboard, screen-reader, and contrast checks before claiming compliance.
+- **Responsive status**: Breakpoint styles are present; the requested device widths have not been browser-verified.
+- **Design handover**: No Figma source file is included in this repository.

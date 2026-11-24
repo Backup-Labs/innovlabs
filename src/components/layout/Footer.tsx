@@ -1,26 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { site } from "@/lib/content";
 import { AfriYouthLogo } from "@/components/common/AfriYouthLogo";
-import { ArrowUpRight, CheckCircle } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export const Footer: React.FC = () => {
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
-  const [error, setError] = useState("");
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email || !email.includes("@")) {
-      setError("Please enter a valid email address");
-      return;
-    }
-    setError("");
-    setSubscribed(true);
-  };
-
   return (
     <footer className="bg-[#F4F4F6] px-2 sm:px-3 lg:px-4 pb-3 sm:pb-4 pt-2 sm:pt-4" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
@@ -39,50 +25,18 @@ export const Footer: React.FC = () => {
               Grassroots data. Policy insight. Straight to your inbox.
             </h3>
             <p className="text-white/80 text-base sm:text-[18px] max-w-lg leading-relaxed font-sans font-medium">
-              Monthly synthesis of field research, open opportunity calls, and youth venture milestones across 26 countries.
+              Ask to receive updates on research, opportunities, and youth-led innovation.
             </p>
           </div>
 
           <div className="lg:col-span-5">
-            {subscribed ? (
-              <div
-                role="status"
-                className="bg-white/10 border border-white/20 p-4 rounded-xl flex items-center gap-3 text-white text-sm"
-              >
-                <CheckCircle className="w-5 h-5 text-white shrink-0" />
-                <p className="font-medium">Subscription confirmed. Welcome to the network.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubscribe} className="space-y-2">
-                <div className="flex flex-col sm:flex-row gap-2">
-                  <label htmlFor="newsletter-email" className="sr-only">
-                    Email address
-                  </label>
-                  <input
-                    id="newsletter-email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email"
-                    required
-                    aria-describedby={error ? "newsletter-error" : undefined}
-                    className="flex-1 h-11 px-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm focus:outline-none focus:border-white font-medium backdrop-blur-md shadow-inner"
-                  />
-                  <button
-                    type="submit"
-                    className="skeuo-btn-light inline-flex items-center justify-center gap-1.5 h-11 px-6 rounded-full text-xs font-semibold text-black transition-all shrink-0 active:scale-95"
-                  >
-                    <span>Subscribe</span>
-                    <ArrowUpRight className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-                {error && (
-                  <p id="newsletter-error" className="text-red-400 text-xs font-mono" role="alert">
-                    {error}
-                  </p>
-                )}
-              </form>
-            )}
+            <a
+              href={`mailto:${site.contact.email}?subject=${encodeURIComponent("Request to receive AfriYouth updates")}`}
+              className="skeuo-btn-light inline-flex items-center justify-center gap-1.5 h-11 px-6 rounded-full text-xs font-semibold text-black transition-all shrink-0 active:scale-95"
+            >
+              <span>Request updates by email</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
           </div>
         </div>
 
@@ -105,24 +59,22 @@ export const Footer: React.FC = () => {
               5 Strategic Divisions
             </h4>
             <ul className="space-y-2.5 text-xs text-white/75 font-medium">
-              <li><Link href="/services#research-evidence" className="hover:text-white transition-colors">Research & Evidence</Link></li>
-              <li><Link href="/services#policy-governance" className="hover:text-white transition-colors">Policy & Governance</Link></li>
-              <li><Link href="/services#innovation-entrepreneurship" className="hover:text-white transition-colors">Innovation & Entrepreneurship</Link></li>
-              <li><Link href="/services#strategic-foresight" className="hover:text-white transition-colors">Strategic Foresight & Futures</Link></li>
-              <li><Link href="/services#career-academy" className="hover:text-white transition-colors">Leadership & Capacity</Link></li>
+              <li><Link href="/services#research-evidence-lab" className="hover:text-white transition-colors">Research & Evidence</Link></li>
+              <li><Link href="/services#policy-governance-lab" className="hover:text-white transition-colors">Policy & Governance</Link></li>
+              <li><Link href="/services#youth-innovation-venture-lab" className="hover:text-white transition-colors">Innovation & Entrepreneurship</Link></li>
+              <li><Link href="/services#strategic-foresight-futures-lab" className="hover:text-white transition-colors">Strategic Foresight & Futures</Link></li>
+              <li><Link href="/services#career-professional-development-academy" className="hover:text-white transition-colors">Leadership & Capacity</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4 font-mono">
-              Flagship Products
+              Programs & Resources
             </h4>
             <ul className="space-y-2.5 text-xs text-white/75 font-medium">
-              <li><Link href="/programs#evidence-to-impact-accelerator" className="hover:text-white transition-colors">Evidence-to-Impact Accelerator</Link></li>
-              <li><Link href="/programs#policy-innovation-challenge" className="hover:text-white transition-colors">Policy Innovation Challenge</Link></li>
-              <li><Link href="/resources" className="hover:text-white transition-colors">Africa 2050 Futures Series</Link></li>
-              <li><Link href="/resources" className="hover:text-white transition-colors">AfriYouth Policy Solutions</Link></li>
-              <li><Link href="/programs#employability-bootcamp" className="hover:text-white transition-colors">Employability Simulations</Link></li>
+              <li><Link href="/programs" className="hover:text-white transition-colors">Program information</Link></li>
+              <li><Link href="/opportunities" className="hover:text-white transition-colors">Opportunity listings</Link></li>
+              <li><Link href="/resources" className="hover:text-white transition-colors">Research & resources</Link></li>
             </ul>
           </div>
 

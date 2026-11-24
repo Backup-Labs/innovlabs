@@ -2,11 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { impact, stories } from "@/lib/content";
+import { impact } from "@/lib/content";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { PageHeroBanner } from "@/components/common/PageHeroBanner";
 import { ImpactMetrics } from "@/components/common/ImpactMetrics";
-import { StoryCard } from "@/components/common/StoryCard";
 import { Globe } from "lucide-react";
 
 export default function ImpactPage() {
@@ -14,8 +13,8 @@ export default function ImpactPage() {
     <div className="bg-[#F4F4F6] text-black">
       {/* Curved Hero Banner matching Screenshot 3 */}
       <PageHeroBanner
-        kicker="Verified Longitudinal Telemetry"
-        title="Evidence-based transformation."
+        kicker="Impact Areas"
+        title="Evidence, innovation, and youth agency."
         description={impact.summary}
       />
 
@@ -115,13 +114,13 @@ export default function ImpactPage() {
               className="max-w-2xl mb-16 sm:mb-20 space-y-3"
             >
               <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                Continental Presence
+                Focus Areas
               </span>
               <h2 id="geo-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
-                Active footprint across 26 nations.
+                Youth and sustainable development in Africa.
               </h2>
               <p className="text-[18px] text-gray-600 pt-2 leading-relaxed">
-                Regional hubs in Nairobi, Kigali, Accra, and Johannesburg, complemented by embedded university research nodes.
+                AfriYouth's stated focus brings together youth empowerment, research, innovation, policy, and sustainable development.
               </p>
             </motion.div>
 
@@ -158,14 +157,14 @@ export default function ImpactPage() {
                             isGradient ? "text-white/80" : "text-gray-600"
                           }`}
                         >
-                          {region.countries.map((c) => (
-                            <li key={c} className="flex items-center gap-2">
+                          {region.focusAreas.map((area) => (
+                            <li key={area} className="flex items-center gap-2">
                               <span
                                 className={`w-1 h-1 rounded-full ${
                                   isGradient ? "bg-white" : "bg-black"
                                 }`}
                               />
-                              <span>{c}</span>
+                              <span>{area}</span>
                             </li>
                           ))}
                         </ul>
@@ -191,19 +190,15 @@ export default function ImpactPage() {
               className="max-w-2xl mb-16 sm:mb-20 space-y-3"
             >
               <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                Field Case Studies
+                Evidence & Learning
               </span>
               <h2 id="case-studies-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
-                Stories of systemic change.
+                Source-verified results and case studies.
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-              {stories.map((story) => (
-                <div key={story.id} className="h-full w-full flex flex-col">
-                  <StoryCard story={story} />
-                </div>
-              ))}
+            <div className="rounded-2xl bg-[#F4F4F6] border border-gray-300 p-6 sm:p-8">
+              <p className="text-base text-gray-700 leading-relaxed">No source-verified case studies were supplied with this project. Approved project evidence can be added here before publication.</p>
             </div>
           </div>
         </section>

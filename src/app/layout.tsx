@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     url: "https://afriyouth.org",
     title: "AfriYouth Innovation Labs | Research, Policy & Youth Enterprise",
     description:
-      "Transforming African youth agency into systemic socio-economic policy and sustainable ventures across 26 countries.",
+      "AfriYouth Innovation Labs broadens young people's critical thinking and advances their innovative ideas for sustainable development in Africa.",
     siteName: "AfriYouth Innovation Labs",
     images: [
       {

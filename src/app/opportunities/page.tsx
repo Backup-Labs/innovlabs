@@ -13,8 +13,8 @@ export default function OpportunitiesPage() {
       {/* Curved Hero Banner matching Screenshot 3 */}
       <PageHeroBanner
         kicker="Open Calls & Cohorts"
-        title="Fellowships, grants & challenges."
-        description="Filter by status, initiative focus, or target audience. All open calls feature living stipends or equity-free catalytic capital, expert mentorship, and direct pan-African placement."
+        title="Programs & opportunities."
+        description="Filter opportunities by current listed status, initiative type, or audience. Review each listing and contact AfriYouth to confirm its details and how to participate."
       />
 
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 py-2">

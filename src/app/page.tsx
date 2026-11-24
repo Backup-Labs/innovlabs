@@ -4,24 +4,21 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { programs, opportunities, services, stories } from "@/lib/content";
+import { programs, opportunities, services } from "@/lib/content";
+import { isOpportunityOpen } from "@/lib/opportunities";
 import { AudienceSelector } from "@/components/common/AudienceSelector";
 import { IntegratedNexusVisual } from "@/components/common/IntegratedNexusVisual";
 import { ImpactMetrics } from "@/components/common/ImpactMetrics";
 import { ProgramCard } from "@/components/common/ProgramCard";
 import { OpportunityCard } from "@/components/common/OpportunityCard";
 import { ServiceCard } from "@/components/common/ServiceCard";
-import { StoryCard } from "@/components/common/StoryCard";
 import { PartnerShowcase } from "@/components/common/PartnerShowcase";
-import { AnimatedCounter } from "@/components/common/AnimatedCounter";
-import { TestimonialsSection } from "@/components/common/TestimonialsSection";
 import { ArrowUpRight, ArrowRight, PlusCircle } from "lucide-react";
 
 export default function HomePage() {
   const featuredPrograms = programs.slice(0, 3);
-  const openOpportunities = opportunities.filter((o) => o.status === "open").slice(0, 3);
+  const openOpportunities = opportunities.filter(isOpportunityOpen).slice(0, 3);
   const featuredServices = services.slice(0, 3);
-  const featuredStories = stories.slice(0, 2);
 
   return (
     <div className="flex flex-col bg-[#F4F4F6] text-black">
@@ -80,7 +77,7 @@ export default function HomePage() {
                 className="lg:col-span-5 space-y-4"
               >
                 <p className="text-base sm:text-[18px] text-white/95 leading-relaxed font-normal font-sans">
-                  By 2030, Africa will have the largest workforce in the world. AfriYouth transforms community-driven ideas from Africa&apos;s young innovators into scalable solutions, policy reforms, and high-survival enterprises.
+                  AfriYouth broadens young people&apos;s critical thinking and advances their innovative ideas for sustainable development in Africa.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-3 pt-1">
@@ -96,7 +93,7 @@ export default function HomePage() {
                   {/* High-frost glassmorphic pill button: Explore opportunities */}
                   <Link
                     href="/opportunities"
-                    className="frost-glass-dark inline-flex items-center justify-center gap-1.5 h-11 px-6 rounded-full text-xs font-semibold text-white transition-all duration-200 active:scale-95 group font-sans border border-white/20 hover:border-white/40"
+                    className="frost-glass-dark frost-glass-dark-btn inline-flex items-center justify-center gap-1.5 h-11 px-6 rounded-full text-xs font-semibold text-white transition-all duration-200 active:scale-95 group font-sans border border-white/20 hover:border-white/40"
                   >
                     <span>Explore opportunities</span>
                     <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
@@ -108,62 +105,23 @@ export default function HomePage() {
         </section>
       </div>
 
-      {/* 2. Minimalist 4-Column Metric Ticker - Framed card with rounded corners */}
+      {/* Five areas of work */}
       <div className="w-full px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2">
         <section className="w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] bg-white border border-black/10 py-10 sm:py-14 shadow-sm overflow-hidden">
-          <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 grid grid-cols-2 lg:grid-cols-4 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <span className="text-3xl sm:text-4xl font-extrabold text-black font-sans block tracking-tight">
-                <AnimatedCounter value="48,500+" />
-              </span>
-              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider block mt-1 font-mono">
-                Leaders Engaged
-              </span>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              <span className="text-3xl sm:text-4xl font-serif font-normal text-black block tracking-tight">
-                <AnimatedCounter value="26 Nations" />
-              </span>
-              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider block mt-1 font-mono">
-                Active Operations
-              </span>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <span className="text-3xl sm:text-4xl font-serif font-normal text-black block tracking-tight">
-                <AnimatedCounter value="38 Policies" />
-              </span>
-              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider block mt-1 font-mono">
-                Frameworks Influenced
-              </span>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <span className="text-3xl sm:text-4xl font-serif font-normal text-black block tracking-tight">
-                <AnimatedCounter value="$6.4M+" />
-              </span>
-              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider block mt-1 font-mono">
-                Capital Mobilized
-              </span>
-            </motion.div>
+          <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {["Research & Evidence", "Policy & Governance", "Human-Centered Design", "Entrepreneurship", "Strategic Foresight"].map((area, index) => (
+              <motion.div
+                key={area}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="border-l border-gray-300 pl-4 sm:pl-5"
+              >
+                <span className="text-xs text-gray-400 font-semibold uppercase tracking-wider block mb-2 font-mono">0{index + 1}</span>
+                <span className="text-base sm:text-lg text-black font-semibold leading-snug block">{area}</span>
+              </motion.div>
+            ))}
           </div>
         </section>
       </div>
@@ -197,7 +155,7 @@ export default function HomePage() {
                 href="/services"
                 className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-black hover:underline transition-all shrink-0 font-sans"
               >
-                <span>View All 6 Services</span>
+                  <span>View All Services</span>
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
             </motion.div>
@@ -232,7 +190,7 @@ export default function HomePage() {
             >
               <div className="max-w-xl space-y-3">
                 <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                  Flagship Cohorts
+                  Programs & Learning
                 </span>
                 <h2 id="programs-overview-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
                   Fellowships and venture labs.
@@ -260,6 +218,11 @@ export default function HomePage() {
                   <ProgramCard program={program} featured={idx === 1} />
                 </motion.div>
               ))}
+              {featuredPrograms.length === 0 && (
+                <div className="md:col-span-3 rounded-2xl bg-[#F4F4F6] border border-gray-300 p-7 sm:p-9 text-center">
+                  <p className="text-base text-gray-700">Program listings will be added when approved details are available.</p>
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -278,17 +241,17 @@ export default function HomePage() {
             >
               <div className="max-w-xl space-y-3">
                 <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                  Live Calls & Grants
+                  Opportunities
                 </span>
                 <h2 id="opportunities-overview-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
-                  Open for applications.
+                  Explore opportunities.
                 </h2>
               </div>
               <Link
                 href="/opportunities"
                 className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-black hover:underline transition-all shrink-0 font-sans"
               >
-                <span>Filter Opportunities</span>
+                <span>View Opportunities</span>
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
             </motion.div>
@@ -306,61 +269,37 @@ export default function HomePage() {
                   <OpportunityCard opportunity={opportunity} featured={idx === 1} />
                 </motion.div>
               ))}
+              {openOpportunities.length === 0 && (
+                <div className="md:col-span-3 rounded-2xl bg-white border border-gray-300 p-7 sm:p-9 text-center">
+                  <p className="text-base text-gray-700">No verified opportunity listings are available at this time.</p>
+                  <Link href="/contact" className="inline-flex items-center gap-2 mt-4 text-xs font-bold uppercase tracking-wider text-black hover:underline">
+                    Ask AfriYouth for updates <ArrowUpRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </section>
       </div>
 
-      {/* 8. Field Case Studies - Matching Reference Screenshot */}
+      {/* Verified case studies will be published when approved source material is available. */}
       <div className="w-full px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2">
-        <section
-          className="w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] bg-white border border-black/10 py-16 sm:py-24 overflow-hidden shadow-sm"
-          aria-labelledby="home-stories-heading"
-        >
-          <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 sm:mb-20"
-            >
-              <div className="max-w-xl space-y-3">
-                <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                  Field Case Studies
-                </span>
-                <h2
-                  id="home-stories-heading"
-                  className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight"
-                >
-                  Stories of systemic change.
-                </h2>
-              </div>
-              <Link
-                href="/impact#stories"
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-black hover:underline transition-all shrink-0 font-sans"
-              >
-                <span>View All Case Studies</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </Link>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-              {featuredStories.map((story) => (
-                <div key={story.id} className="h-full w-full flex flex-col">
-                  <StoryCard story={story} />
-                </div>
-              ))}
+        <section className="w-full rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] bg-white border border-black/10 py-12 sm:py-16 shadow-sm" aria-labelledby="home-evidence-heading">
+          <div className="max-w-container mx-auto px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div className="max-w-2xl space-y-3">
+              <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">Evidence & Learning</span>
+              <h2 id="home-evidence-heading" className="font-serif font-normal text-3xl sm:text-5xl text-black tracking-tight">Our impact, grounded in evidence.</h2>
+              <p className="text-gray-600 text-base leading-relaxed">Source-verified results and case studies can be added here when approved material is available.</p>
             </div>
+            <Link href="/impact" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-black hover:underline shrink-0">
+              <span>Explore our approach</span><ArrowUpRight className="w-4 h-4" />
+            </Link>
           </div>
         </section>
       </div>
 
       {/* 9. Impact Numbers */}
       <ImpactMetrics />
-
-      {/* 9. Professional Real-World Testimonials Section matching Screenshot 1 */}
-      <TestimonialsSection />
 
       {/* 10. Partner Logos Showcase */}
       <PartnerShowcase />
@@ -383,7 +322,7 @@ export default function HomePage() {
                 Turn youth agency into continental scale.
               </h2>
               <p className="text-gray-600 text-[18px] max-w-xl mx-auto font-normal leading-relaxed font-sans">
-                Whether you are applying for a fellowship or co-funding a national lab, AfriYouth is your execution partner.
+                Learn about AfriYouth&apos;s work and get in touch to discuss a question or potential collaboration.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
@@ -391,7 +330,7 @@ export default function HomePage() {
                   href="/opportunities"
                   className="skeuo-btn-dark w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-8 rounded-full text-xs font-semibold text-white active:scale-95 transition-all font-sans"
                 >
-                  <span>Find an Open Opportunity</span>
+                  <span>Explore Opportunities</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <Link

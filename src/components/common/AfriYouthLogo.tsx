@@ -41,13 +41,13 @@ export const AfriYouthLogo: React.FC<AfriYouthLogoProps> = ({
       {/* Typography: AfriYouth Innovation Labs */}
       {showText && (
         <div className="flex flex-col leading-none">
-          <div className="flex items-center gap-1">
+          <div className="flex items-center">
             <span
-              className={`font-sans font-bold tracking-tight text-[19px] sm:text-[21px] ${
-                isWhite ? "!text-white text-[#FFFFFF]" : "text-[#0D0624]"
+              className={`font-sans font-black tracking-[-0.055em] text-[20px] sm:text-[22px] leading-none ${
+                isWhite ? "!text-white" : "text-[#0D0624]"
               }`}
             >
-              Afri<span className={isWhite ? "!text-white text-[#FFFFFF]" : "text-[#0301FF]"}>Youth</span>
+              Afri<span className={isWhite ? "!text-white" : "bg-gradient-to-r from-[#C723DF] via-[#4A20F5] to-[#0301FF] bg-clip-text text-transparent"}>Youth</span>
             </span>
           </div>
           {showTagline && (

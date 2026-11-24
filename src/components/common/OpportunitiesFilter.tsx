@@ -2,9 +2,11 @@
 
 import React, { useState, useMemo } from "react";
 import type { Opportunity } from "@/lib/types";
+import { isOpportunityOpen } from "@/lib/opportunities";
 import { OpportunityCard } from "./OpportunityCard";
 import { CustomDropdown, DropdownOption } from "./CustomDropdown";
 import { Search, RotateCcw } from "lucide-react";
+import Link from "next/link";
 
 interface OpportunitiesFilterProps {
   opportunities: Opportunity[];
@@ -14,9 +16,15 @@ export const OpportunitiesFilter: React.FC<OpportunitiesFilterProps> = ({ opport
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState<string>("all");
   const [typeFilter, setTypeFilter] = useState<string>("all");
+  const [audienceFilter, setAudienceFilter] = useState<string>("all");
 
   const types = useMemo(() => {
     const set = new Set(opportunities.map((o) => o.type));
+    return ["all", ...Array.from(set)];
+  }, [opportunities]);
+
+  const audiences = useMemo(() => {
+    const set = new Set(opportunities.map((opportunity) => opportunity.audience));
     return ["all", ...Array.from(set)];
   }, [opportunities]);
 
@@ -25,34 +33,51 @@ export const OpportunitiesFilter: React.FC<OpportunitiesFilterProps> = ({ opport
       const matchesSearch =
         searchTerm === "" ||
         item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.summary.toLowerCase().includes(searchTerm.toLowerCase());
+        item.summary.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.audience.toLowerCase().includes(searchTerm.toLowerCase());
 
       const matchesStatus =
         statusFilter === "all" ||
-        (statusFilter === "open" && item.status === "open") ||
-        (statusFilter === "closed" && item.status === "closed");
+        (statusFilter === "open" && isOpportunityOpen(item)) ||
+        (statusFilter === "closed" && !isOpportunityOpen(item));
 
       const matchesType = typeFilter === "all" || item.type === typeFilter;
+      const matchesAudience = audienceFilter === "all" || item.audience === audienceFilter;
 
-      return matchesSearch && matchesStatus && matchesType;
+      return matchesSearch && matchesStatus && matchesType && matchesAudience;
     });
-  }, [opportunities, searchTerm, statusFilter, typeFilter]);
+  }, [opportunities, searchTerm, statusFilter, typeFilter, audienceFilter]);
 
   const handleReset = () => {
     setSearchTerm("");
     setStatusFilter("all");
     setTypeFilter("all");
+    setAudienceFilter("all");
   };
 
-  const isFiltered = searchTerm !== "" || statusFilter !== "all" || typeFilter !== "all";
+  const isFiltered = searchTerm !== "" || statusFilter !== "all" || typeFilter !== "all" || audienceFilter !== "all";
+
+  if (opportunities.length === 0) {
+    return (
+      <div className="minimal-card rounded-card p-10 sm:p-12 text-center space-y-4 bg-white border border-gray-300">
+        <h3 className="text-xl font-bold text-black font-heading">No verified calls are listed right now</h3>
+        <p className="text-sm text-gray-600 max-w-xl mx-auto">Contact AfriYouth to ask about current programs and participation steps.</p>
+        <Link href="/contact" className="skeuo-btn-dark inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full text-xs font-semibold text-white">
+          Contact AfriYouth
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-12">
       {/* Minimal Filter Bar */}
       <div className="p-6 sm:p-8 rounded-card bg-[#F4F4F6] border border-gray-300 flex flex-col md:flex-row gap-6 items-center justify-between">
         <div className="relative w-full md:w-96">
+          <label htmlFor="opportunity-search" className="sr-only">Search opportunities</label>
           <Search className="w-4 h-4 text-gray-500 absolute left-4 top-1/2 -translate-y-1/2" />
           <input
+            id="opportunity-search"
             type="search"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
@@ -84,6 +109,18 @@ export const OpportunitiesFilter: React.FC<OpportunitiesFilterProps> = ({ opport
               }))}
               value={typeFilter}
               onChange={(val) => setTypeFilter(val)}
+            />
+          </div>
+
+          <div className="w-full sm:w-52">
+            <CustomDropdown
+              id="filter-audience"
+              options={audiences.map((audience) => ({
+                value: audience,
+                label: audience === "all" ? "All Audiences" : audience,
+              }))}
+              value={audienceFilter}
+              onChange={setAudienceFilter}
             />
           </div>
 

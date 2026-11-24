@@ -5,9 +5,8 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { name, email, organization, audience, subject, message, botCheckWebsite } = body;
 
-    // 1. Honeypot verification: if hidden field is filled, silently reject or fake success
+    // 1. Honeypot verification: silently accept bot submissions without storing them.
     if (botCheckWebsite && botCheckWebsite.trim() !== "") {
-      console.warn("Spam bot submission caught by honeypot:", { email, ip: req.ip });
       return NextResponse.json({ success: true, message: "Inquiry processed" });
     }
 
@@ -63,8 +62,14 @@ export async function POST(req: NextRequest) {
         throw new Error("Formspree upstream dispatch error");
       }
     } else {
-      // Local mode: log structured payload (ready for SMTP, Slack webhook, or database handover)
-      console.log("=== NEW AFRIYOUTH OFFICIAL INQUIRY ===", sanitizedData);
+      const recipient = process.env.CONTACT_RECIPIENT_EMAIL || "collaborate@afriyouth.org";
+      return NextResponse.json(
+        {
+          success: false,
+          error: `The contact form is not connected yet. Please email ${recipient} directly.`,
+        },
+        { status: 503 }
+      );
     }
 
     return NextResponse.json(

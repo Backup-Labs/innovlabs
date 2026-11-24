@@ -4,22 +4,17 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { about } from "@/lib/content";
-import { ArrowUpRight, ArrowRight, CheckCircle2, Sparkles, Layers, Target, Compass } from "lucide-react";
+import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 
 export const IntegratedNexusVisual: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
 
-  const tenStages = [
-    { step: "01", name: "Discover", desc: "Identify the problem through community research." },
-    { step: "02", name: "Diagnose", desc: "Understand root causes using systems & political-economy analysis." },
-    { step: "03", name: "Research", desc: "Generate and rigorously analyse empirical evidence." },
-    { step: "04", name: "Design", desc: "Develop a human-centered solution with citizens." },
-    { step: "05", name: "Prototype", desc: "Build and field-test the functional solution." },
-    { step: "06", name: "Policy", desc: "Develop statutory recommendations & business cases." },
-    { step: "07", name: "Finance", desc: "Connect solutions to funders, investors & DFIs." },
-    { step: "08", name: "Implement", desc: "Pilot the solution in targeted communities." },
-    { step: "09", name: "Measure", desc: "Evaluate longitudinal outcomes and verified impact." },
-    { step: "10", name: "Scale", desc: "Scale what works across continental borders." },
+  const connectedAreas = [
+    { step: "01", name: "Research & Evidence", desc: "Generate evidence on youth priorities and socio-economic challenges." },
+    { step: "02", name: "Policy & Governance", desc: "Use evidence to inform policy and public decision-making." },
+    { step: "03", name: "Human-Centered Design", desc: "Develop ideas with the needs and experience of people in mind." },
+    { step: "04", name: "Entrepreneurship", desc: "Advance young people's ideas through innovation and enterprise." },
+    { step: "05", name: "Strategic Foresight", desc: "Consider emerging challenges and opportunities for the future." },
   ];
 
   return (
@@ -43,7 +38,7 @@ export const IntegratedNexusVisual: React.FC = () => {
                 Think. Research. Design. Build. Influence. Scale.
               </h2>
               <p className="text-gray-600 text-[18px] leading-relaxed">
-                By 2030, Africa will have the largest workforce in the world. AfriYouth transforms community-driven ideas from Africa&apos;s young innovators into scalable solutions, policy reforms, and high-survival enterprises.
+                AfriYouth connects research, policy, human-centered design, entrepreneurship, and foresight to advance young people's ideas for sustainable development.
               </p>
             </div>
 
@@ -198,28 +193,28 @@ export const IntegratedNexusVisual: React.FC = () => {
             </div>
           </div>
 
-          {/* 4. Flagship: 10-Stage Evidence-to-Impact Pipeline */}
+          {/* Connected areas of work */}
           <div className="rounded-[28px] bg-[#0D0624] text-white p-6 sm:p-10 lg:p-12 border border-white/10 shadow-xl">
             <div className="max-w-2xl mb-8 space-y-2">
               <span className="text-[11px] font-semibold uppercase tracking-widest text-[#C723DF] font-mono">
-                Flagship Pipeline
+                Connected Areas of Work
               </span>
               <h3 className="font-serif font-normal text-2xl sm:text-4xl text-white tracking-tight">
-                The 10-Stage Evidence-to-Impact Accelerator
+                Five areas, one shared purpose.
               </h3>
               <p className="text-gray-300 text-sm sm:text-base">
-                Instead of disconnected programs, every initiative follows our rigorous 10-stage execution methodology from initial community discovery to continental scale.
+                AfriYouth connects research, policy, design, entrepreneurship, and foresight to advance young people's ideas for sustainable development.
               </p>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 lg:gap-4">
-              {tenStages.map((st) => (
+              {connectedAreas.map((st) => (
                 <div
                   key={st.step}
                   className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-white/30 transition-all flex flex-col justify-between"
                 >
                   <span className="text-[11px] font-mono text-[#C723DF] font-bold block mb-1">
-                    Stage {st.step}
+                    {st.step}
                   </span>
                   <strong className="text-sm font-bold text-white block mb-1.5 font-sans">
                     {st.name}
@@ -234,13 +229,13 @@ export const IntegratedNexusVisual: React.FC = () => {
             <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div className="flex items-center gap-2 text-xs font-mono text-gray-400">
                 <CheckCircle2 className="w-4 h-4 text-[#C723DF]" />
-                <span>Cross-cutting service: Resource Mobilization & Investment Readiness</span>
+                <span>Learn more about AfriYouth&apos;s service areas.</span>
               </div>
               <Link
-                href="/programs#evidence-to-impact-accelerator"
+                href="/services"
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-white text-black text-xs font-semibold hover:bg-gray-100 transition-all font-sans self-start sm:self-auto"
               >
-                <span>Explore the Flagship Accelerator</span>
+                <span>Explore Services</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>

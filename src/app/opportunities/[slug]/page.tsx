@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { opportunities, getOpportunityBySlug } from "@/lib/content";
+import { isOpportunityOpen } from "@/lib/opportunities";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { PageHeroBanner } from "@/components/common/PageHeroBanner";
 import { ContactForm } from "@/components/common/ContactForm";
@@ -36,7 +37,7 @@ export default function OpportunityDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  const isOpen = opportunity.status === "open";
+  const isOpen = isOpportunityOpen(opportunity);
 
   return (
     <div className="bg-[#F4F4F6] text-black">
@@ -45,7 +46,7 @@ export default function OpportunityDetailPage({ params }: PageProps) {
         kicker={`${opportunity.type} • ${opportunity.audience}`}
         title={opportunity.title}
         description={opportunity.summary}
-        badge={isOpen ? "Accepting Applications" : "Cohort In Session"}
+        badge={isOpen ? "Listed as Open" : "Call Closed"}
       />
 
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 py-2">
@@ -121,18 +122,6 @@ export default function OpportunityDetailPage({ params }: PageProps) {
                       {opportunity.eligibility}
                     </p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-black shrink-0 mt-0.5" />
-                    <p className="text-sm text-gray-700 leading-relaxed">
-                      Must possess legal citizenship or resident status in an African Union member state.
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-black shrink-0 mt-0.5" />
-                    <p className="text-sm text-gray-700 leading-relaxed">
-                      Commitment to adhere to AfriYouth research ethics, data sovereignty, and open-source dissemination principles.
-                    </p>
-                  </div>
                 </div>
               </div>
 
@@ -153,20 +142,18 @@ export default function OpportunityDetailPage({ params }: PageProps) {
               <div className="minimal-card rounded-card p-6 sm:p-8 lg:p-10 sticky top-28 space-y-6 bg-white border border-gray-300">
                 <div>
                   <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 block mb-2 font-mono">
-                    Application Desk
+                    Opportunity Inquiry
                   </span>
                   <h3 className="text-2xl font-bold text-black tracking-tight">
-                    {isOpen ? "Submit Candidacy Dossier" : "Register for Future Cycle"}
+                    {isOpen ? "Ask how to participate" : "Ask about the next cycle"}
                   </h3>
                   <p className="text-xs text-gray-600 mt-2 leading-relaxed">
-                    {isOpen
-                      ? "Applications are reviewed on a rolling basis. Complete the fields below to initiate your review."
-                      : "This cohort is currently in session. Register your contact details to receive direct notification upon next cycle opening."}
+                    "This form sends an inquiry only; it does not submit an application. Contact AfriYouth to confirm eligibility and participation steps."
                   </p>
                 </div>
 
                 <ContactForm
-                  initialSubject={`Application: ${opportunity.title}`}
+                  initialSubject={`Question about: ${opportunity.title}`}
                   initialAudience="youth"
                 />
               </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import type { Opportunity } from "@/lib/types";
+import { isOpportunityOpen } from "@/lib/opportunities";
 import { ArrowUpRight } from "lucide-react";
 
 interface OpportunityCardProps {
@@ -12,7 +13,7 @@ export const OpportunityCard: React.FC<OpportunityCardProps> = ({
   opportunity,
   featured = false,
 }) => {
-  const isOpen = opportunity.status === "open";
+  const isOpen = isOpportunityOpen(opportunity);
 
   return (
     <div
@@ -43,7 +44,7 @@ export const OpportunityCard: React.FC<OpportunityCardProps> = ({
                 featured ? "bg-white" : isOpen ? "bg-black" : "bg-gray-400"
               }`}
             />
-            {isOpen ? "Accepting Applications" : "Cohort In Session"}
+            {isOpen ? "Listed as Open" : "Call Closed"}
           </span>
         </div>
 
@@ -98,7 +99,7 @@ export const OpportunityCard: React.FC<OpportunityCardProps> = ({
             featured ? "text-white" : "text-black"
           }`}
         >
-          <span>{isOpen ? "Review Guidelines & Apply" : "View Cohort Profile"}</span>
+          <span>Review Opportunity</span>
           <ArrowUpRight className="w-3.5 h-3.5" />
         </Link>
       </div>

@@ -17,7 +17,7 @@ export default function ServicesPage() {
       <PageHeroBanner
         kicker="Institutional Capabilities"
         title="Advisory, applied research & venture labs."
-        description="Partnering with ministries, development banks, and foundations to commission empirical youth evidence, co-design citizen services, and operate high-survival startup incubators."
+        description="AfriYouth connects research, policy, human-centered design, entrepreneurship, impact learning, and foresight to advance youth ideas for sustainable development."
       />
 
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 py-2">
@@ -36,13 +36,13 @@ export default function ServicesPage() {
               className="max-w-2xl mb-16 sm:mb-20 space-y-3"
             >
               <span className="text-[11px] font-semibold uppercase tracking-widest text-[#0301FF] font-mono">
-                Products & Services Suite
+                Areas of Work
               </span>
               <h2 id="all-services-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
-                Our complete labs and service offerings.
+                Explore AfriYouth&apos;s services.
               </h2>
               <p className="text-[18px] text-gray-600 pt-2 leading-relaxed">
-                Operating across 5 strategic divisions with dedicated project stewardship, verifiable impact dashboards, and investor-ready deliverables.
+                The service areas below reflect AfriYouth&apos;s stated work. Contact the team to confirm scope, deliverables, and availability.
               </p>
             </motion.div>
 
@@ -55,6 +55,7 @@ export default function ServicesPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="h-full w-full flex flex-col"
+                  id={service.slug}
                 >
                   <ServiceCard service={service} featured={idx === 1} />
                 </motion.div>
@@ -76,10 +77,10 @@ export default function ServicesPage() {
               className="max-w-2xl mb-16 sm:mb-20 space-y-3"
             >
               <span className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 font-mono">
-                Commissioning Protocol
+                Getting Started
               </span>
               <h2 id="engagement-heading" className="font-serif font-normal text-3xl sm:text-5xl lg:text-6xl text-black tracking-tight">
-                Four steps from brief to adoption.
+                Start a conversation about your needs.
               </h2>
             </motion.div>
 
@@ -87,23 +88,23 @@ export default function ServicesPage() {
               {[
                 {
                   step: "01",
-                  title: "Diagnostic Scoping",
-                  desc: "Align on problem statements, geographical focus, demographic cohorts, and desired institutional outcomes.",
+                  title: "Share your needs",
+                  desc: "Describe the question, audience, and intended outcome you have in mind.",
                 },
                 {
                   step: "02",
-                  title: "Co-Design Proposal",
-                  desc: "AfriYouth submits a tailored methodology, field logistics architecture, sample size, and clear deliverables.",
+                  title: "Define a scope",
+                  desc: "Discuss relevant service areas, possible activities, and constraints.",
                 },
                 {
                   step: "03",
-                  title: "Field Deployment",
-                  desc: "Grassroots teams, enumerators, and design facilitators execute in-country with real-time client telemetry.",
+                  title: "Agree on a plan",
+                  desc: "Confirm responsibilities, timing, resources, and next steps together.",
                 },
                 {
                   step: "04",
-                  title: "Handover & Adoption",
-                  desc: "Co-present findings to steering committees, parliamentary sponsors, or boards for durable policy integration.",
+                  title: "Review progress",
+                  desc: "Agree how progress, learning, and outcomes will be reviewed.",
                 },
               ].map((st, idx) => (
                 <motion.div
@@ -167,10 +168,10 @@ export default function ServicesPage() {
               className="max-w-2xl mx-auto space-y-6"
             >
               <h2 className="font-serif font-normal text-2xl sm:text-4xl lg:text-5xl text-black tracking-tight">
-                Ready to commission research or structure an innovation lab?
+                Explore a service or start a conversation.
               </h2>
               <p className="text-gray-600 text-[18px] leading-relaxed">
-                Speak with our Directorate of Applied Research or Venture Incubation teams to define your engagement parameters.
+                Contact AfriYouth to discuss a service or potential collaboration.
               </p>
               <div className="pt-4">
                 <Link

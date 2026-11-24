@@ -15,7 +15,7 @@ export default function ProgramsPage() {
       <PageHeroBanner
         kicker="Flagship Labs & Cohorts"
         title="From evidence to systemic scale."
-        description="Operating across 5 strategic divisions: from the 10-stage Evidence-to-Impact Accelerator and Policy Innovation Challenge to the Career & Employability Academy."
+        description="Explore AfriYouth's work in research, policy, human-centered design, entrepreneurship, foresight, and youth development."
       />
 
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 py-2">
@@ -80,10 +80,10 @@ export default function ProgramsPage() {
                     </div>
                   </div>
 
-                  {/* Verified Impact */}
+                  {/* Program outcomes */}
                   <div className="p-6 rounded-card bg-white border border-gray-300">
                     <span className="text-[10px] font-semibold uppercase tracking-widest text-gray-500 block mb-2 font-mono">
-                      Verified Impact Metric
+                      Intended Outcomes
                     </span>
                     <p className="text-sm font-bold text-black font-mono">
                       {program.outcomes}
@@ -164,6 +164,13 @@ export default function ProgramsPage() {
               </div>
             </motion.article>
           ))}
+          {programs.length === 0 && (
+            <div className="rounded-2xl bg-[#F4F4F6] border border-gray-300 p-8 sm:p-10 text-center space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-black">Program details are being confirmed</h3>
+              <p className="text-base text-gray-600 max-w-2xl mx-auto">Contact AfriYouth for current program information, eligibility, and participation steps.</p>
+              <Link href="/contact" className="skeuo-btn-dark inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full text-xs font-semibold text-white">Contact AfriYouth</Link>
+            </div>
+          )}
         </div>
       </section>
     </div>
